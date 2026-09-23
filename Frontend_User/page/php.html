@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code_Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/page.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/navbar.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> PHP Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា PHP?</a></li>
+                <li><a href="#setup">1.2. ការដំឡើង</a></li>
+                <li><a href="#first-script">1.3. Script ដំបូង</a></li>
+                <li><a href="#syntax">1.4. Syntax</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Variables & Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#variables">2.1. Variables</a></li>
+                <li><a href="#data-types">2.2. Data Types</a></li>
+                <li><a href="#constants">2.3. Constants</a></li>
+                <li><a href="#superglobals">2.4. Superglobals</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Operators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arithmetic">3.1. Arithmetic</a></li>
+                <li><a href="#comparison">3.2. Comparison</a></li>
+                <li><a href="#logical">3.3. Logical</a></li>
+                <li><a href="#string-op">3.4. String Operators</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Control Flow
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else">4.1. if / else</a></li>
+                <li><a href="#switch">4.2. switch</a></li>
+                <li><a href="#loops">4.3. Loops</a></li>
+                <li><a href="#foreach">4.4. foreach</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Functions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#func-basics">5.1. Basics</a></li>
+                <li><a href="#params">5.2. Parameters</a></li>
+                <li><a href="#return">5.3. Return</a></li>
+                <li><a href="#default">5.4. Default Values</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Arrays
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#indexed">6.1. Indexed Arrays</a></li>
+                <li><a href="#assoc">6.2. Associative</a></li>
+                <li><a href="#multi">6.3. Multidimensional</a></li>
+                <li><a href="#array-func">6.4. Array Functions</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Strings
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#string-func">7.1. String Functions</a></li>
+                <li><a href="#concat">7.2. Concatenation</a></li>
+                <li><a href="#str-replace">7.3. Replace</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Forms & Input
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#get-post">8.1. GET vs POST</a></li>
+                <li><a href="#form-handling">8.2. Form Handling</a></li>
+                <li><a href="#validation">8.3. Validation</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Sessions & Cookies
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#sessions">9.1. Sessions</a></li>
+                <li><a href="#cookies">9.2. Cookies</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> File Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#file-read">10.1. Read File</a></li>
+                <li><a href="#file-write">10.2. Write File</a></li>
+                <li><a href="#file-upload">10.3. Upload</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> OOP in PHP
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#classes">11.1. Classes & Objects</a></li>
+                <li><a href="#constructors">11.2. Constructors</a></li>
+                <li><a href="#inheritance">11.3. Inheritance</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> Database (MySQL)
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#connect">12.1. Connect</a></li>
+                <li><a href="#query">12.2. Query</a></li>
+                <li><a href="#prepared">12.3. Prepared Statements</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Error Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#try-catch">13.1. try / catch</a></li>
+                <li><a href="#throw">13.2. throw</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Security Best Practices
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#xss">14.1. XSS Prevention</a></li>
+                <li><a href="#sql-inject">14.2. SQL Injection</a></li>
+                <li><a href="#hash">14.3. Password Hashing</a></li>
+            </ul>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> PHP Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. PHP Introduction - ការណែនាំ PHP</h2>
+
+            <h3 id="intro">1.1 អ្វីជា PHP?</h3>
+            <p>PHP (PHP: Hypertext Preprocessor) គឺជាភាសា <strong>server-side scripting</strong> ដែលប្រើសម្រាប់បង្កើតគេហទំព័រឌីណាមិក។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> PHP ដំណើរការនៅលើ <em>server</em> (ម៉ាស៊ីនបម្រើ) មុនពេលផ្ញើ HTML ទៅ browser។ វាអាចភ្ជាប់ជាមួយ database ដើម្បីបង្កើតប្រព័ន្ធដូចជា៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>WordPress</strong> — ប្រព័ន្ធគ្រប់គ្រងមាតិកា</li>
+                    <li><strong>Facebook</strong> — ដំបូងបង្កើតដោយ PHP</li>
+                    <li><strong>Wikipedia</strong> — សព្វវចនាធិប្បាយ</li>
+                    <li><strong>Laravel</strong> — PHP Framework ពេញនិយម</li>
+                </ul>
+            </div>
+
+            <h3 id="setup">1.2 ការដំឡើង</h3>
+            <ul>
+                <li><strong>XAMPP</strong> — Windows, Mac, Linux (ងាយស្រួលបំផុត)</li>
+                <li><strong>MAMP</strong> — Mac / Windows</li>
+                <li><strong>Laragon</strong> — Windows</li>
+                <li><strong>PHP + MySQL</strong> ដំឡើងដោយផ្ទាល់</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>XAMPP</em> គឺជាកញ្ចប់ដែលរួមមាន Apache (Web Server), PHP, និង MySQL។ ដំឡើងរួច អ្នកអាចដាក់ file PHP ក្នុង folder <code>htdocs</code> ហើយបើកតាម <code>http://localhost/</code>។
+            </div>
+
+            <h3 id="first-script">1.3 Script ដំបូង</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">echo</span> <span class="str">"Hello, PHP!"</span>;
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> កូដ PHP ត្រូវដាក់ក្នុង <code>&lt;?php ... ?&gt;</code>។ <code>echo</code> គឺជាមុខងារសម្រាប់បង្ហាញអត្ថបទ។
+            </div>
+
+            <h3 id="syntax">1.4 Syntax</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="comment">// Statement ត្រូវបញ្ចប់ដោយ ;</span>
+    <span class="keyword">echo</span> <span class="str">"Line 1"</span>;
+    <span class="keyword">echo</span> <span class="str">"Line 2"</span>;
+<span class="php-tag">?&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Variables & Data Types</h2>
+
+            <h3 id="variables">2.1 Variables</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$name</span> = <span class="str">"Dara"</span>;
+    <span class="var">$age</span> = <span class="num-val">20</span>;
+    <span class="var">$price</span> = <span class="num-val">9.99</span>;
+    <span class="keyword">echo</span> <span class="var">$name</span>;
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Variable ក្នុង PHP ចាប់ផ្តើមដោយសញ្ញា <code>$</code>។ មិនចាំបាច់ប្រកាស type ទេ — PHP ស្គាល់ដោយស្វ័យប្រវត្តិ។
+            </div>
+
+            <h3 id="data-types">2.2 Data Types</h3>
+            <ul>
+                <li><code>String</code> — "Hello"</li>
+                <li><code>Integer</code> — 100</li>
+                <li><code>Float</code> — 3.14</li>
+                <li><code>Boolean</code> — true / false</li>
+                <li><code>Array</code> — [1, 2, 3]</li>
+                <li><code>NULL</code> — គ្មានតម្លៃ</li>
+                <li><code>Object</code> — Instance នៃ class</li>
+            </ul>
+
+            <h3 id="constants">2.3 Constants</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="func">define</span>(<span class="str">"PI"</span>, <span class="num-val">3.14159</span>);
+    <span class="keyword">echo</span> PI;
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Constant មិនអាចផ្លាស់ប្តូរតម្លៃបានទេ។ ប្រើ <code>define()</code> ឬ <code>const</code> ។ មិនប្រើ <code>$</code> ទេ។
+            </div>
+
+            <h3 id="superglobals">2.4 Superglobals</h3>
+            <ul>
+                <li><code>$_GET</code> — ទិន្នន័យពី URL</li>
+                <li><code>$_POST</code> — ទិន្នន័យពី Form</li>
+                <li><code>$_SESSION</code> — ទិន្នន័យ session</li>
+                <li><code>$_COOKIE</code> — ទិន្នន័យ cookie</li>
+                <li><code>$_SERVER</code> — ព័ត៌មាន server</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Superglobals គឺ variables ដែលអាចចូលបានពីគ្រប់ទីកន្លែងក្នុងកូដ។ មានប្រយោជន៍សម្រាប់ទទួលទិន្នន័យពី user។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Operators</h2>
+
+            <h3 id="arithmetic">3.1 Arithmetic</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">echo</span> <span class="num-val">5</span> + <span class="num-val">3</span>;   <span class="comment">// 8</span>
+    <span class="keyword">echo</span> <span class="num-val">10</span> % <span class="num-val">3</span>;  <span class="comment">// 1</span>
+    <span class="keyword">echo</span> <span class="num-val">2</span> ** <span class="num-val">3</span>;  <span class="comment">// 8 (power)</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="comparison">3.2 Comparison</h3>
+            <div class="code-block">
+==   <span class="comment">// ស្មើ (មិនខ្វល់ type)</span>
+===  <span class="comment">// ស្មើ (ខ្វល់ type)</span>
+!=   <span class="comment">// មិនស្មើ</span>
+&gt;  &lt;  &gt;=  &lt;=
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>==</code> ប្រៀបធៀបតម្លៃតែប៉ុណ្ណោះ ខណៈ <code>===</code> ប្រៀបធៀបទាំងតម្លៃ និង type។ ឧទាហរណ៍ <code>"5" == 5</code> គឺ true ប៉ុន្តែ <code>"5" === 5</code> គឺ false។
+            </div>
+
+            <h3 id="logical">3.3 Logical</h3>
+            <div class="code-block">
+&amp;&amp;  <span class="comment">// AND</span>
+||  <span class="comment">// OR</span>
+!   <span class="comment">// NOT</span>
+            </div>
+
+            <h3 id="string-op">3.4 String Operators</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$a</span> = <span class="str">"Hello"</span>;
+    <span class="var">$b</span> = <span class="str">" World"</span>;
+    <span class="keyword">echo</span> <span class="var">$a</span> . <span class="var">$b</span>;  <span class="comment">// Hello World</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ក្នុង PHP ប្រើ <code>.</code> (dot) សម្រាប់ភ្ជាប់ string (មិនដូច JavaScript ដែលប្រើ <code>+</code>)។
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Control Flow</h2>
+
+            <h3 id="if-else">4.1 if / else</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$age</span> = <span class="num-val">20</span>;
+    <span class="keyword">if</span> (<span class="var">$age</span> &gt;= <span class="num-val">18</span>) {
+        <span class="keyword">echo</span> <span class="str">"Adult"</span>;
+    } <span class="keyword">elseif</span> (<span class="var">$age</span> &gt;= <span class="num-val">13</span>) {
+        <span class="keyword">echo</span> <span class="str">"Teen"</span>;
+    } <span class="keyword">else</span> {
+        <span class="keyword">echo</span> <span class="str">"Child"</span>;
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="switch">4.2 switch</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$day</span> = <span class="num-val">1</span>;
+    <span class="keyword">switch</span> (<span class="var">$day</span>) {
+        <span class="keyword">case</span> <span class="num-val">1</span>: <span class="keyword">echo</span> <span class="str">"Monday"</span>; <span class="keyword">break</span>;
+        <span class="keyword">case</span> <span class="num-val">2</span>: <span class="keyword">echo</span> <span class="str">"Tuesday"</span>; <span class="keyword">break</span>;
+        <span class="keyword">default</span>: <span class="keyword">echo</span> <span class="str">"Unknown"</span>;
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="loops">4.3 Loops</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="comment">// for loop</span>
+    <span class="keyword">for</span> (<span class="var">$i</span> = <span class="num-val">0</span>; <span class="var">$i</span> &lt; <span class="num-val">5</span>; <span class="var">$i</span>++) {
+        <span class="keyword">echo</span> <span class="var">$i</span> . <span class="str">" "</span>;
+    }
+
+    <span class="comment">// while loop</span>
+    <span class="var">$j</span> = <span class="num-val">0</span>;
+    <span class="keyword">while</span> (<span class="var">$j</span> &lt; <span class="num-val">5</span>) {
+        <span class="keyword">echo</span> <span class="var">$j</span>;
+        <span class="var">$j</span>++;
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="foreach">4.4 foreach</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$colors</span> = [<span class="str">"red"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>];
+    <span class="keyword">foreach</span> (<span class="var">$colors</span> <span class="keyword">as</span> <span class="var">$color</span>) {
+        <span class="keyword">echo</span> <span class="var">$color</span> . <span class="str">" "</span>;
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>foreach</code> គឺ loop ពិសេសសម្រាប់ array។ វាឆ្លងកាត់គ្រប់ element ដោយស្វ័យប្រវត្តិ ដោយមិនចាំបាច់ប្រើ index។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Functions</h2>
+
+            <h3 id="func-basics">5.1 Basics</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">function</span> <span class="func">greet</span>() {
+        <span class="keyword">echo</span> <span class="str">"Hello!"</span>;
+    }
+    <span class="func">greet</span>();  <span class="comment">// ហៅ function</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="params">5.2 Parameters</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">function</span> <span class="func">greet</span>(<span class="var">$name</span>) {
+        <span class="keyword">echo</span> <span class="str">"Hello, "</span> . <span class="var">$name</span>;
+    }
+    <span class="func">greet</span>(<span class="str">"Dara"</span>);
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="return">5.3 Return</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">function</span> <span class="func">add</span>(<span class="var">$a</span>, <span class="var">$b</span>) {
+        <span class="keyword">return</span> <span class="var">$a</span> + <span class="var">$b</span>;
+    }
+    <span class="var">$sum</span> = <span class="func">add</span>(<span class="num-val">2</span>, <span class="num-val">3</span>);
+    <span class="keyword">echo</span> <span class="var">$sum</span>;  <span class="comment">// 5</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="default">5.4 Default Values</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">function</span> <span class="func">greet</span>(<span class="var">$name</span> = <span class="str">"Guest"</span>) {
+        <span class="keyword">echo</span> <span class="str">"Hello, "</span> . <span class="var">$name</span>;
+    }
+    <span class="func">greet</span>();         <span class="comment">// Hello, Guest</span>
+    <span class="func">greet</span>(<span class="str">"Dara"</span>);   <span class="comment">// Hello, Dara</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Function ជួយកូដឡើងវិញ។ Parameter អាចមាន default value ដែលប្រើនៅពេលអ្នកមិនបញ្ជូន argument។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Arrays</h2>
+
+            <h3 id="indexed">6.1 Indexed Arrays</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$fruits</span> = [<span class="str">"Apple"</span>, <span class="str">"Banana"</span>, <span class="str">"Cherry"</span>];
+    <span class="keyword">echo</span> <span class="var">$fruits</span>[<span class="num-val">0</span>];  <span class="comment">// Apple</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="assoc">6.2 Associative</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$user</span> = [
+        <span class="str">"name"</span> =&gt; <span class="str">"Dara"</span>,
+        <span class="str">"age"</span> =&gt; <span class="num-val">20</span>
+    ];
+    <span class="keyword">echo</span> <span class="var">$user</span>[<span class="str">"name"</span>];  <span class="comment">// Dara</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="multi">6.3 Multidimensional</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$users</span> = [
+        [<span class="str">"name"</span> =&gt; <span class="str">"Dara"</span>, <span class="str">"age"</span> =&gt; <span class="num-val">20</span>],
+        [<span class="str">"name"</span> =&gt; <span class="str">"Sok"</span>, <span class="str">"age"</span> =&gt; <span class="num-val">25</span>]
+    ];
+    <span class="keyword">echo</span> <span class="var">$users</span>[<span class="num-val">0</span>][<span class="str">"name"</span>];  <span class="comment">// Dara</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="array-func">6.4 Array Functions</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="func">count</span>(<span class="var">$arr</span>);           <span class="comment">// ចំនួន element</span>
+    <span class="func">array_push</span>(<span class="var">$arr</span>, <span class="num-val">4</span>);  <span class="comment">// បន្ថែម</span>
+    <span class="func">array_pop</span>(<span class="var">$arr</span>);        <span class="comment">// ដកចេញ</span>
+    <span class="func">sort</span>(<span class="var">$arr</span>);             <span class="comment">// តម្រៀប</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Strings</h2>
+
+            <h3 id="string-func">7.1 String Functions</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="func">strlen</span>(<span class="str">"Hello"</span>);            <span class="comment">// 5</span>
+    <span class="func">strtoupper</span>(<span class="str">"hello"</span>);       <span class="comment">// HELLO</span>
+    <span class="func">strtolower</span>(<span class="str">"HELLO"</span>);       <span class="comment">// hello</span>
+    <span class="func">trim</span>(<span class="str">"  hi  "</span>);            <span class="comment">// "hi"</span>
+    <span class="func">substr</span>(<span class="str">"Hello"</span>, <span class="num-val">0</span>, <span class="num-val">3</span>);      <span class="comment">// "Hel"</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="concat">7.2 Concatenation</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$first</span> = <span class="str">"Hello"</span>;
+    <span class="var">$last</span> = <span class="str">"World"</span>;
+    <span class="keyword">echo</span> <span class="var">$first</span> . <span class="str">" "</span> . <span class="var">$last</span>;
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="str-replace">7.3 Replace</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">echo</span> <span class="func">str_replace</span>(<span class="str">"World"</span>, <span class="str">"Dara"</span>, <span class="str">"Hello World"</span>);
+    <span class="comment">// Hello Dara</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Forms & Input</h2>
+
+            <h3 id="get-post">8.1 GET vs POST</h3>
+            <ul>
+                <li><strong>GET</strong> — ទិន្នន័យបង្ហាញក្នុង URL (មិនសុវត្ថិភាព)</li>
+                <li><strong>POST</strong> — ទិន្នន័យបញ្ជូនក្នុង body (សុវត្ថិភាពជាង)</li>
+            </ul>
+
+            <h3 id="form-handling">8.2 Form Handling</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- form.html --&gt;</span>
+<span class="tag">&lt;form</span> <span class="attr">method</span>=<span class="str">"post"</span> <span class="attr">action</span>=<span class="str">"submit.php"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">name</span>=<span class="str">"name"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="str">"submit"</span><span class="tag">&gt;</span><span class="text">បញ្ជូន</span><span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+
+<span class="comment">&lt;!-- submit.php --&gt;</span>
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">if</span> (<span class="var">$_SERVER</span>[<span class="str">"REQUEST_METHOD"</span>] == <span class="str">"POST"</span>) {
+        <span class="var">$name</span> = <span class="var">$_POST</span>[<span class="str">"name"</span>];
+        <span class="keyword">echo</span> <span class="str">"Hello, "</span> . <span class="func">htmlspecialchars</span>(<span class="var">$name</span>);
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="validation">8.3 Validation</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$email</span> = <span class="var">$_POST</span>[<span class="str">"email"</span>];
+    <span class="keyword">if</span> (!<span class="func">filter_var</span>(<span class="var">$email</span>, <span class="var">FILTER_VALIDATE_EMAIL</span>)) {
+        <span class="keyword">echo</span> <span class="str">"Invalid email"</span>;
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ត្រូវ <em>validate</em> ទិន្នន័យពី user ជានិច្ច។ ប្រើ <code>filter_var</code> សម្រាប់ email, URL ជាដើម។ ប្រើ <code>htmlspecialchars</code> ដើម្បីការពារ XSS។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Sessions & Cookies</h2>
+
+            <h3 id="sessions">9.1 Sessions</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="func">session_start</span>();
+    <span class="var">$_SESSION</span>[<span class="str">"user"</span>] = <span class="str">"Dara"</span>;
+    <span class="keyword">echo</span> <span class="var">$_SESSION</span>[<span class="str">"user"</span>];
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Session ផ្ទុកទិន្នន័យនៅលើ <em>server</em> ហើយប្រើ <code>session_id</code> ដើម្បីចងចាំ user។ ត្រូវហៅ <code>session_start()</code> មុនប្រើ។ ល្អសម្រាប់ login។
+            </div>
+
+            <h3 id="cookies">9.2 Cookies</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="func">setcookie</span>(<span class="str">"user"</span>, <span class="str">"Dara"</span>, <span class="func">time</span>() + <span class="num-val">86400</span>);
+    <span class="keyword">echo</span> <span class="var">$_COOKIE</span>[<span class="str">"user"</span>];
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Cookie ផ្ទុកទិន្នន័យនៅលើ <em>browser</em> របស់ user។ កំណត់រយៈពេលផុតកំណត់ជា seconds (86400 = 1 ថ្ងៃ)។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. File Handling</h2>
+
+            <h3 id="file-read">10.1 Read File</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$content</span> = <span class="func">file_get_contents</span>(<span class="str">"data.txt"</span>);
+    <span class="keyword">echo</span> <span class="var">$content</span>;
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="file-write">10.2 Write File</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="func">file_put_contents</span>(<span class="str">"data.txt"</span>, <span class="str">"Hello!"</span>);
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="file-upload">10.3 Upload</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">if</span> (<span class="var">$_FILES</span>[<span class="str">"file"</span>][<span class="str">"error"</span>] == <span class="num-val">0</span>) {
+        <span class="func">move_uploaded_file</span>(
+            <span class="var">$_FILES</span>[<span class="str">"file"</span>][<span class="str">"tmp_name"</span>],
+            <span class="str">"uploads/"</span> . <span class="var">$_FILES</span>[<span class="str">"file"</span>][<span class="str">"name"</span>]
+        );
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>file_get_contents</code> និង <code>file_put_contents</code> គឺវិធីងាយស្រួលបំផុតក្នុងការអាន/សរសេរ file។ សម្រាប់ upload ប្រើ <code>$_FILES</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. OOP in PHP</h2>
+
+            <h3 id="classes">11.1 Classes & Objects</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">class</span> Student {
+        <span class="keyword">public</span> <span class="var">$name</span>;
+        <span class="keyword">public</span> <span class="var">$age</span>;
+
+        <span class="keyword">public function</span> <span class="func">greet</span>() {
+            <span class="keyword">return</span> <span class="str">"Hi, I'm "</span> . <span class="var">$this</span>-&gt;name;
+        }
+    }
+
+    <span class="var">$s1</span> = <span class="keyword">new</span> Student();
+    <span class="var">$s1</span>-&gt;name = <span class="str">"Dara"</span>;
+    <span class="keyword">echo</span> <span class="var">$s1</span>-&gt;<span class="func">greet</span>();
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="constructors">11.2 Constructors</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">class</span> Student {
+        <span class="keyword">public</span> <span class="var">$name</span>;
+
+        <span class="keyword">public function</span> <span class="func">__construct</span>(<span class="var">$name</span>) {
+            <span class="var">$this</span>-&gt;name = <span class="var">$name</span>;
+        }
+    }
+
+    <span class="var">$s</span> = <span class="keyword">new</span> Student(<span class="str">"Dara"</span>);
+    <span class="keyword">echo</span> <span class="var">$s</span>-&gt;name;
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="inheritance">11.3 Inheritance</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">class</span> Animal {
+        <span class="keyword">public function</span> <span class="func">eat</span>() {
+            <span class="keyword">echo</span> <span class="str">"Eating"</span>;
+        }
+    }
+
+    <span class="keyword">class</span> Dog <span class="keyword">extends</span> Animal {
+        <span class="keyword">public function</span> <span class="func">bark</span>() {
+            <span class="keyword">echo</span> <span class="str">"Woof"</span>;
+        }
+    }
+
+    <span class="var">$dog</span> = <span class="keyword">new</span> Dog();
+    <span class="var">$dog</span>-&gt;<span class="func">eat</span>();   <span class="comment">// ទទួលពី Animal</span>
+    <span class="var">$dog</span>-&gt;<span class="func">bark</span>();  <span class="comment">// របស់ Dog</span>
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> OOP ជួយកូដមានរចនាសម្ព័ន្ធ។ <code>$this</code> ជា reference ទៅ object បច្ចុប្បន្ន។ <code>extends</code> សម្រាប់ inheritance។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. Database (MySQL)</h2>
+
+            <h3 id="connect">12.1 Connect</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$conn</span> = <span class="keyword">new</span> <span class="func">mysqli</span>(<span class="str">"localhost"</span>, <span class="str">"root"</span>, <span class="str">""</span>, <span class="str">"mydb"</span>);
+
+    <span class="keyword">if</span> (<span class="var">$conn</span>-&gt;connect_error) {
+        <span class="keyword">die</span>(<span class="str">"Connection failed"</span>);
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="query">12.2 Query</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$result</span> = <span class="var">$conn</span>-&gt;<span class="func">query</span>(<span class="str">"SELECT * FROM users"</span>);
+    <span class="keyword">while</span> (<span class="var">$row</span> = <span class="var">$result</span>-&gt;<span class="func">fetch_assoc</span>()) {
+        <span class="keyword">echo</span> <span class="var">$row</span>[<span class="str">"name"</span>];
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="prepared">12.3 Prepared Statements</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$stmt</span> = <span class="var">$conn</span>-&gt;<span class="func">prepare</span>(<span class="str">"SELECT * FROM users WHERE id = ?"</span>);
+    <span class="var">$stmt</span>-&gt;<span class="func">bind_param</span>(<span class="str">"i"</span>, <span class="var">$id</span>);
+    <span class="var">$stmt</span>-&gt;<span class="func">execute</span>();
+    <span class="var">$result</span> = <span class="var">$stmt</span>-&gt;<span class="func">get_result</span>();
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Prepared Statements</em> ការពារការ SQL Injection។ ប្រើ <code>?</code> ជា placeholder ហើយ <code>bind_param</code> ភ្ជាប់តម្លៃពិត។ ត្រូវប្រើជានិច្ច។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Error Handling</h2>
+
+            <h3 id="try-catch">13.1 try / catch</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">try</span> {
+        <span class="keyword">throw new</span> Exception(<span class="str">"Something went wrong"</span>);
+    } <span class="keyword">catch</span> (Exception <span class="var">$e</span>) {
+        <span class="keyword">echo</span> <span class="str">"Error: "</span> . <span class="var">$e</span>-&gt;<span class="func">getMessage</span>();
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="throw">13.2 throw</h3>
+            <p>ប្រើ <code>throw</code> ដើម្បីបោះ exception នៅពេលមានបញ្ហា។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Exception ជួយចាប់កំហុសដោយមិនធ្វើឲ្យកម្មវិធីឈប់ភ្លាម។ ប្រើ <code>try-catch</code> សម្រាប់ដោះស្រាយដោយរលូន។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Security Best Practices</h2>
+
+            <h3 id="xss">14.1 XSS Prevention</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">echo</span> <span class="func">htmlspecialchars</span>(<span class="var">$userInput</span>, <span class="var">ENT_QUOTES</span>, <span class="str">"UTF-8"</span>);
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <h3 id="sql-inject">14.2 SQL Injection</h3>
+            <p>ប្រើ <strong>Prepared Statements</strong> ជានិច្ច ដើម្បីការពារ SQL injection។</p>
+
+            <h3 id="hash">14.3 Password Hashing</h3>
+            <div class="code-block">
+<span class="php-tag">&lt;?php</span>
+    <span class="var">$hash</span> = <span class="func">password_hash</span>(<span class="var">$password</span>, <span class="var">PASSWORD_DEFAULT</span>);
+    <span class="keyword">if</span> (<span class="func">password_verify</span>(<span class="var">$input</span>, <span class="var">$hash</span>)) {
+        <span class="comment">// ត្រឹមត្រូវ</span>
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> កុំផ្ទុក password ជា plain text! ប្រើ <code>password_hash</code> និង <code>password_verify</code>។ ប្រើ <code>htmlspecialchars</code> ពេលបង្ហាញទិន្នន័យពី user ដើម្បីការពារ XSS។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. PHP Project</h2>
+            <p>សាកល្បងបង្កើតទំព័រ <strong>Contact Form</strong> ដែលទទួលទិន្នន័យ និងបង្ហាញវាត្រឡប់មកវិញ៖</p>
+            <div class="code-block">
+<span class="comment">&lt;!-- contact.php --&gt;</span>
+<span class="tag">&lt;form</span> <span class="attr">method</span>=<span class="str">"post"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">name</span>=<span class="str">"name"</span> <span class="attr">placeholder</span>=<span class="str">"ឈ្មោះ"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"email"</span> <span class="attr">name</span>=<span class="str">"email"</span> <span class="attr">placeholder</span>=<span class="str">"អ៊ីមែល"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;textarea</span> <span class="attr">name</span>=<span class="str">"message"</span> <span class="attr">placeholder</span>=<span class="str">"សារ"</span><span class="tag">&gt;&lt;/textarea&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="str">"submit"</span><span class="tag">&gt;</span><span class="text">ផ្ញើ</span><span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+
+<span class="php-tag">&lt;?php</span>
+    <span class="keyword">if</span> (<span class="var">$_SERVER</span>[<span class="str">"REQUEST_METHOD"</span>] == <span class="str">"POST"</span>) {
+        <span class="var">$name</span> = <span class="func">htmlspecialchars</span>(<span class="var">$_POST</span>[<span class="str">"name"</span>]);
+        <span class="var">$email</span> = <span class="func">filter_var</span>(<span class="var">$_POST</span>[<span class="str">"email"</span>], <span class="var">FILTER_VALIDATE_EMAIL</span>);
+        <span class="var">$message</span> = <span class="func">htmlspecialchars</span>(<span class="var">$_POST</span>[<span class="str">"message"</span>]);
+
+        <span class="keyword">if</span> (<span class="var">$name</span> &amp;&amp; <span class="var">$email</span> &amp;&amp; <span class="var">$message</span>) {
+            <span class="keyword">echo</span> <span class="str">"&lt;h3&gt;សូមអរគុណ, $name!&lt;/h3&gt;"</span>;
+            <span class="keyword">echo</span> <span class="str">"&lt;p&gt;យើងនឹងទាក់ទងទៅ $email&lt;/p&gt;"</span>;
+        } <span class="keyword">else</span> {
+            <span class="keyword">echo</span> <span class="str">"សូមបំពេញព័ត៌មានឲ្យបានត្រឹមត្រូវ"</span>;
+        }
+    }
+<span class="php-tag">?&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li>Form ជាមួយ <code>method="post"</code></li>
+                    <li>Superglobal <code>$_POST</code> ទទួលទិន្នន័យ</li>
+                    <li><code>htmlspecialchars</code> ការពារ XSS</li>
+                    <li><code>filter_var</code> validate email</li>
+                </ul>
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖</strong> សាកល្បងធ្វើគម្រោងតូចៗ ដូចជា To-do List, Login System, Blog។ វានឹងជួយអ្នកយល់ PHP លឿនជាងអានទ្រឹស្តី។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fab fa-php"></i> index.php</div>
+            <div class="preview-body">
+<pre><span style="color:#f472b6">&lt;?php</span>
+    <span style="color:#c084fc">echo</span> <span style="color:#86efac">"Hello, PHP!"</span>;
+<span style="color:#f472b6">?&gt;</span></pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, PHP!
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">PHP Basics</a></li>
+                <li><a href="#">MySQL & PDO</a></li>
+                <li><a href="#">Laravel</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

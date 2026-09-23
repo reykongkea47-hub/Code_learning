@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> CodeLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/page.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+   
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> Java Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា Java?</a></li>
+                <li><a href="#jvm-jre-jdk">1.2. JVM / JRE / JDK</a></li>
+                <li><a href="#setup">1.3. ការដំឡើង</a></li>
+                <li><a href="#first-program">1.4. កម្មវិធីដំបូង</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Variables & Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#variables">2.1. Variables</a></li>
+                <li><a href="#primitives">2.2. Primitive Types</a></li>
+                <li><a href="#casting">2.3. Type Casting</a></li>
+                <li><a href="#constants">2.4. Constants</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Operators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arithmetic">3.1. Arithmetic</a></li>
+                <li><a href="#comparison">3.2. Comparison</a></li>
+                <li><a href="#logical">3.3. Logical</a></li>
+                <li><a href="#ternary">3.4. Ternary</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Control Flow
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else">4.1. if / else</a></li>
+                <li><a href="#switch">4.2. switch</a></li>
+                <li><a href="#loops">4.3. Loops</a></li>
+                <li><a href="#enhanced-for">4.4. Enhanced For</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Methods
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#method-basics">5.1. Basics</a></li>
+                <li><a href="#params-return">5.2. Params & Return</a></li>
+                <li><a href="#overload">5.3. Overloading</a></li>
+                <li><a href="#recursion">5.4. Recursion</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Arrays & Strings
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arrays">6.1. Arrays</a></li>
+                <li><a href="#multi-arrays">6.2. 2D Arrays</a></li>
+                <li><a href="#strings">6.3. Strings</a></li>
+                <li><a href="#stringbuilder">6.4. StringBuilder</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> OOP - Classes
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#classes">7.1. Classes & Objects</a></li>
+                <li><a href="#constructors">7.2. Constructors</a></li>
+                <li><a href="#encapsulation">7.3. Encapsulation</a></li>
+                <li><a href="#static">7.4. static</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Inheritance & Polymorphism
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#inheritance">8.1. Inheritance</a></li>
+                <li><a href="#super">8.2. super</a></li>
+                <li><a href="#overriding">8.3. Overriding</a></li>
+                <li><a href="#abstract">8.4. Abstract & Interface</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Collections
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#list">9.1. List (ArrayList)</a></li>
+                <li><a href="#set">9.2. Set (HashSet)</a></li>
+                <li><a href="#map">9.3. Map (HashMap)</a></li>
+                <li><a href="#iterator">9.4. Iterator</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Generics
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#generic-class">10.1. Generic Classes</a></li>
+                <li><a href="#generic-method">10.2. Generic Methods</a></li>
+                <li><a href="#wildcard">10.3. Wildcards</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Exception Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#try-catch">11.1. try / catch</a></li>
+                <li><a href="#throws">11.2. throws</a></li>
+                <li><a href="#custom-exc">11.3. Custom Exception</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> File I/O
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#read-file">12.1. Read File</a></li>
+                <li><a href="#write-file">12.2. Write File</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Multithreading
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#thread-basic">13.1. Thread Basics</a></li>
+                <li><a href="#runnable">13.2. Runnable</a></li>
+                <li><a href="#sync">13.3. Synchronization</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Modern Java (8+)
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#lambda">14.1. Lambda</a></li>
+                <li><a href="#stream">14.2. Stream API</a></li>
+                <li><a href="#optional">14.3. Optional</a></li>
+            </ul>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> Java Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. Java Introduction - ការណែនាំ Java</h2>
+
+            <h3 id="intro">1.1 អ្វីជា Java?</h3>
+            <p>Java គឺជាភាសា <strong>Object-Oriented</strong> ដែលបង្កើតឡើងដោយ <strong>James Gosling</strong> នៅ Sun Microsystems ក្នុងឆ្នាំ 1995។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> Java មានគោលការណ៍ <em>"Write Once, Run Anywhere"</em> (សរសេរម្តង រត់បានគ្រប់ទីកន្លែង)។ កូដ Java ត្រូវបាន compile ទៅជា <em>bytecode</em> ដែលអាចរត់លើគ្រប់ platform ដែលមាន JVM។ ប្រើសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Android Apps</strong> — កម្មវិធីទូរស័ព្ទ</li>
+                    <li><strong>Enterprise Systems</strong> — ប្រព័ន្ធសហគ្រាស</li>
+                    <li><strong>Web Backend</strong> — Spring Boot</li>
+                    <li><strong>Big Data</strong> — Hadoop, Spark</li>
+                </ul>
+            </div>
+
+            <h3 id="jvm-jre-jdk">1.2 JVM / JRE / JDK</h3>
+            <ul>
+                <li><strong>JVM</strong> — Java Virtual Machine (ដំណើរការ bytecode)</li>
+                <li><strong>JRE</strong> — Java Runtime Environment (JVM + libraries)</li>
+                <li><strong>JDK</strong> — Java Development Kit (JRE + tools សម្រាប់អភិវឌ្ឍន៍)</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> បើអ្នកចង់ <em>សរសេរកូដ</em> Java ត្រូវការ <strong>JDK</strong>។ បើគ្រាន់តែ <em>រត់</em> កម្មវិធី Java ត្រូវការ <strong>JRE</strong>។ JVM គឺជាកម្មវិធីដែលរត់ bytecode។
+            </div>
+
+            <h3 id="setup">1.3 ការដំឡើង</h3>
+            <ul>
+                <li>ទាញយក <strong>JDK</strong> ពី oracle.com ឬ adoptium.net</li>
+                <li><strong>IDE:</strong> IntelliJ IDEA, Eclipse, VS Code</li>
+                <li>ពិនិត្យដោយ: <code>java -version</code></li>
+            </ul>
+
+            <h3 id="first-program">1.4 កម្មវិធីដំបូង</h3>
+            <div class="code-block">
+<span class="keyword">public class</span> <span class="type">Hello</span> {
+    <span class="keyword">public static void</span> <span class="func">main</span>(String[] args) {
+        System.out.<span class="func">println</span>(<span class="str">"Hello, Java!"</span>);
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់លម្អិត៖:</strong>
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><code>public class Hello</code> — ឈ្មោះ class ត្រូវតែដូចឈ្មោះ file (Hello.java)</li>
+                    <li><code>public static void main(String[] args)</code> — ចំណុចចាប់ផ្តើមរបស់កម្មវិធី</li>
+                    <li><code>System.out.println()</code> — បង្ហាញអត្ថបទ និងបន្ទាត់ថ្មី</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Variables & Data Types</h2>
+
+            <h3 id="variables">2.1 Variables</h3>
+            <div class="code-block">
+<span class="type">int</span> age = <span class="num-val">20</span>;
+<span class="type">double</span> price = <span class="num-val">9.99</span>;
+<span class="type">char</span> grade = <span class="str">'A'</span>;
+<span class="type">boolean</span> isActive = <span class="keyword">true</span>;
+String name = <span class="str">"Dara"</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Java ជាភាសា <em>statically-typed</em> — ត្រូវប្រកាស type ជានិច្ច។ មិនដូច JavaScript/PHP ដែល type ប្រែប្រួលបាន។
+            </div>
+
+            <h3 id="primitives">2.2 Primitive Types</h3>
+            <ul>
+                <li><code>byte</code> — 1 byte (-128 ដល់ 127)</li>
+                <li><code>short</code> — 2 bytes</li>
+                <li><code>int</code> — 4 bytes (ចំនួនគត់ធម្មតា)</li>
+                <li><code>long</code> — 8 bytes</li>
+                <li><code>float</code> — 4 bytes</li>
+                <li><code>double</code> — 8 bytes (ទសភាគធម្មតា)</li>
+                <li><code>char</code> — 2 bytes (អក្សរ)</li>
+                <li><code>boolean</code> — true / false</li>
+            </ul>
+
+            <h3 id="casting">2.3 Type Casting</h3>
+            <div class="code-block">
+<span class="comment">// Widening (auto)</span>
+<span class="type">int</span> x = <span class="num-val">10</span>;
+<span class="type">double</span> y = x;
+
+<span class="comment">// Narrowing (manual)</span>
+<span class="type">double</span> d = <span class="num-val">9.99</span>;
+<span class="type">int</span> i = (<span class="type">int</span>) d;  <span class="comment">// 9</span>
+            </div>
+
+            <h3 id="constants">2.4 Constants</h3>
+            <div class="code-block">
+<span class="keyword">final</span> <span class="type">double</span> PI = <span class="num-val">3.14159</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>final</code> ធ្វើឲ្យ variable មិនអាចផ្លាស់ប្តូរតម្លៃបាន។ ប្រើ <code>static final</code> សម្រាប់ constants កម្រិត class។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Operators</h2>
+
+            <h3 id="arithmetic">3.1 Arithmetic</h3>
+            <div class="code-block">
+<span class="type">int</span> sum = <span class="num-val">5</span> + <span class="num-val">3</span>;   <span class="comment">// 8</span>
+<span class="type">int</span> mod = <span class="num-val">10</span> % <span class="num-val">3</span>;   <span class="comment">// 1</span>
+<span class="type">double</span> pow = Math.<span class="func">pow</span>(<span class="num-val">2</span>, <span class="num-val">3</span>);  <span class="comment">// 8.0</span>
+            </div>
+
+            <h3 id="comparison">3.2 Comparison</h3>
+            <div class="code-block">
+==  !=  &gt;  &lt;  &gt;=  &lt;=
+            </div>
+
+            <h3 id="logical">3.3 Logical</h3>
+            <div class="code-block">
+&amp;&amp;  <span class="comment">// AND</span>
+||  <span class="comment">// OR</span>
+!   <span class="comment">// NOT</span>
+            </div>
+
+            <h3 id="ternary">3.4 Ternary</h3>
+            <div class="code-block">
+String result = (age &gt;= <span class="num-val">18</span>) ? <span class="str">"Adult"</span> : <span class="str">"Minor"</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Ternary គឺជាមធ្យោបាយខ្លីសម្រាប់ <code>if-else</code> ។ ទម្រង់: <code>condition ? valueIfTrue : valueIfFalse</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Control Flow</h2>
+
+            <h3 id="if-else">4.1 if / else</h3>
+            <div class="code-block">
+<span class="keyword">if</span> (age &gt;= <span class="num-val">18</span>) {
+    System.out.<span class="func">println</span>(<span class="str">"Adult"</span>);
+} <span class="keyword">else if</span> (age &gt;= <span class="num-val">13</span>) {
+    System.out.<span class="func">println</span>(<span class="str">"Teen"</span>);
+} <span class="keyword">else</span> {
+    System.out.<span class="func">println</span>(<span class="str">"Child"</span>);
+}
+            </div>
+
+            <h3 id="switch">4.2 switch</h3>
+            <div class="code-block">
+<span class="keyword">switch</span> (day) {
+    <span class="keyword">case</span> <span class="num-val">1</span>: System.out.<span class="func">println</span>(<span class="str">"Mon"</span>); <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="num-val">2</span>: System.out.<span class="func">println</span>(<span class="str">"Tue"</span>); <span class="keyword">break</span>;
+    <span class="keyword">default</span>: System.out.<span class="func">println</span>(<span class="str">"?"</span>);
+}
+            </div>
+
+            <h3 id="loops">4.3 Loops</h3>
+            <div class="code-block">
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">5</span>; i++) {
+    System.out.<span class="func">print</span>(i + <span class="str">" "</span>);
+}
+
+<span class="type">int</span> j = <span class="num-val">0</span>;
+<span class="keyword">while</span> (j &lt; <span class="num-val">5</span>) { j++; }
+
+<span class="keyword">do</span> { j++; } <span class="keyword">while</span> (j &lt; <span class="num-val">10</span>);
+            </div>
+
+            <h3 id="enhanced-for">4.4 Enhanced For</h3>
+            <div class="code-block">
+<span class="type">int</span>[] nums = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>};
+<span class="keyword">for</span> (<span class="type">int</span> n : nums) {
+    System.out.<span class="func">println</span>(n);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Enhanced for (for-each) ប្រើសម្រាប់ loop លើ array ឬ collection ដោយមិនចាំបាច់ប្រើ index។ ខ្លី និងសុវត្ថិភាពជាង។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Methods</h2>
+
+            <h3 id="method-basics">5.1 Basics</h3>
+            <div class="code-block">
+<span class="keyword">public static void</span> <span class="func">greet</span>() {
+    System.out.<span class="func">println</span>(<span class="str">"Hello!"</span>);
+}
+            </div>
+
+            <h3 id="params-return">5.2 Params & Return</h3>
+            <div class="code-block">
+<span class="keyword">public static int</span> <span class="func">add</span>(<span class="type">int</span> a, <span class="type">int</span> b) {
+    <span class="keyword">return</span> a + b;
+}
+            </div>
+
+            <h3 id="overload">5.3 Overloading</h3>
+            <div class="code-block">
+<span class="keyword">public static int</span> <span class="func">add</span>(<span class="type">int</span> a, <span class="type">int</span> b) { <span class="keyword">return</span> a + b; }
+<span class="keyword">public static double</span> <span class="func">add</span>(<span class="type">double</span> a, <span class="type">double</span> b) { <span class="keyword">return</span> a + b; }
+            </div>
+
+            <h3 id="recursion">5.4 Recursion</h3>
+            <div class="code-block">
+<span class="keyword">public static int</span> <span class="func">factorial</span>(<span class="type">int</span> n) {
+    <span class="keyword">if</span> (n &lt;= <span class="num-val">1</span>) <span class="keyword">return</span> <span class="num-val">1</span>;
+    <span class="keyword">return</span> n * <span class="func">factorial</span>(n - <span class="num-val">1</span>);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Method ជាកូដដែលអាចហៅឡើងវិញ។ <code>static</code> មានន័យថាមិនចាំបាច់បង្កើត object។ Overloading អនុញ្ញាតឈ្មោះដូចគ្នា ប៉ុន្តែ parameters ខុសគ្នា។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Arrays & Strings</h2>
+
+            <h3 id="arrays">6.1 Arrays</h3>
+            <div class="code-block">
+<span class="type">int</span>[] nums = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>};
+System.out.<span class="func">println</span>(nums[<span class="num-val">0</span>]);  <span class="comment">// 1</span>
+System.out.<span class="func">println</span>(nums.length); <span class="comment">// 3</span>
+            </div>
+
+            <h3 id="multi-arrays">6.2 2D Arrays</h3>
+            <div class="code-block">
+<span class="type">int</span>[][] matrix = {{<span class="num-val">1</span>,<span class="num-val">2</span>}, {<span class="num-val">3</span>,<span class="num-val">4</span>}};
+System.out.<span class="func">println</span>(matrix[<span class="num-val">1</span>][<span class="num-val">0</span>]);  <span class="comment">// 3</span>
+            </div>
+
+            <h3 id="strings">6.3 Strings</h3>
+            <div class="code-block">
+String name = <span class="str">"Dara"</span>;
+name.<span class="func">length</span>();              <span class="comment">// 4</span>
+name.<span class="func">toUpperCase</span>();          <span class="comment">// DARA</span>
+name.<span class="func">charAt</span>(<span class="num-val">0</span>);             <span class="comment">// D</span>
+name.<span class="func">substring</span>(<span class="num-val">0</span>, <span class="num-val">2</span>);        <span class="comment">// Da</span>
+name.<span class="func">equals</span>(<span class="str">"Dara"</span>);          <span class="comment">// true</span>
+            </div>
+
+            <h3 id="stringbuilder">6.4 StringBuilder</h3>
+            <div class="code-block">
+StringBuilder sb = <span class="keyword">new</span> StringBuilder();
+sb.<span class="func">append</span>(<span class="str">"Hello"</span>);
+sb.<span class="func">append</span>(<span class="str">" World"</span>);
+System.out.<span class="func">println</span>(sb.<span class="func">toString</span>());
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> String ក្នុង Java គឺ <em>immutable</em> (មិនអាចផ្លាស់ប្តូរ)។ បើកែ string ច្រើនដង គួរប្រើ <code>StringBuilder</code> ដែលលឿនជាង។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. OOP - Classes</h2>
+
+            <h3 id="classes">7.1 Classes & Objects</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span> {
+    String name;
+    <span class="type">int</span> age;
+
+    <span class="keyword">void</span> <span class="func">greet</span>() {
+        System.out.<span class="func">println</span>(<span class="str">"Hi, I'm "</span> + name);
+    }
+}
+
+<span class="type">Student</span> s1 = <span class="keyword">new</span> <span class="type">Student</span>();
+s1.name = <span class="str">"Dara"</span>;
+s1.<span class="func">greet</span>();
+            </div>
+
+            <h3 id="constructors">7.2 Constructors</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span> {
+    String name;
+
+    <span class="type">Student</span>(String n) {
+        <span class="keyword">this</span>.name = n;
+    }
+}
+
+<span class="type">Student</span> s = <span class="keyword">new</span> <span class="type">Student</span>(<span class="str">"Dara"</span>);
+            </div>
+
+            <h3 id="encapsulation">7.3 Encapsulation</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Bank</span> {
+    <span class="keyword">private double</span> balance;
+
+    <span class="keyword">public void</span> <span class="func">deposit</span>(<span class="type">double</span> amt) {
+        <span class="keyword">if</span> (amt &gt; <span class="num-val">0</span>) balance += amt;
+    }
+
+    <span class="keyword">public double</span> <span class="func">getBalance</span>() {
+        <span class="keyword">return</span> balance;
+    }
+}
+            </div>
+
+            <h3 id="static">7.4 static</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Counter</span> {
+    <span class="keyword">static int</span> count = <span class="num-val">0</span>;
+
+    <span class="type">Counter</span>() { count++; }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>private</code> លាក់ data ពីខាងក្រៅ។ <code>this</code> ជា reference ទៅ object បច្ចុប្បន្ន។ <code>static</code> មានន័យថាជាកម្មសិទ្ធិរបស់ class មិនមែន object។
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Inheritance & Polymorphism</h2>
+
+            <h3 id="inheritance">8.1 Inheritance</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Animal</span> {
+    <span class="keyword">void</span> <span class="func">eat</span>() { System.out.<span class="func">println</span>(<span class="str">"Eating"</span>); }
+}
+
+<span class="keyword">class</span> <span class="type">Dog</span> <span class="keyword">extends</span> <span class="type">Animal</span> {
+    <span class="keyword">void</span> <span class="func">bark</span>() { System.out.<span class="func">println</span>(<span class="str">"Woof"</span>); }
+}
+            </div>
+
+            <h3 id="super">8.2 super</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Dog</span> <span class="keyword">extends</span> <span class="type">Animal</span> {
+    <span class="type">Dog</span>() {
+        <span class="keyword">super</span>();  <span class="comment">// ហៅ constructor របស់ parent</span>
+    }
+}
+            </div>
+
+            <h3 id="overriding">8.3 Overriding</h3>
+            <div class="code-block">
+<span class="annotation">@Override</span>
+<span class="keyword">void</span> <span class="func">sound</span>() {
+    System.out.<span class="func">println</span>(<span class="str">"Woof woof"</span>);
+}
+            </div>
+
+            <h3 id="abstract">8.4 Abstract & Interface</h3>
+            <div class="code-block">
+<span class="keyword">abstract class</span> <span class="type">Shape</span> {
+    <span class="keyword">abstract void</span> <span class="func">draw</span>();
+}
+
+<span class="keyword">interface</span> <span class="type">Flyable</span> {
+    <span class="keyword">void</span> <span class="func">fly</span>();
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Inheritance</em> ឲ្យ class កូនទទួលមរតកពី class មេ។ <em>Abstract class</em> មិនអាចបង្កើត object ផ្ទាល់បាន។ <em>Interface</em> ជាកិច្ចសន្យាដែល class ត្រូវអនុវត្ត។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Collections</h2>
+
+            <h3 id="list">9.1 List (ArrayList)</h3>
+            <div class="code-block">
+<span class="keyword">import</span> java.util.ArrayList;
+
+ArrayList&lt;String&gt; names = <span class="keyword">new</span> ArrayList&lt;&gt;();
+names.<span class="func">add</span>(<span class="str">"Dara"</span>);
+names.<span class="func">add</span>(<span class="str">"Sok"</span>);
+names.<span class="func">get</span>(<span class="num-val">0</span>);       <span class="comment">// Dara</span>
+names.<span class="func">size</span>();         <span class="comment">// 2</span>
+            </div>
+
+            <h3 id="set">9.2 Set (HashSet)</h3>
+            <div class="code-block">
+<span class="keyword">import</span> java.util.HashSet;
+
+HashSet&lt;Integer&gt; nums = <span class="keyword">new</span> HashSet&lt;&gt;();
+nums.<span class="func">add</span>(<span class="num-val">1</span>);
+nums.<span class="func">add</span>(<span class="num-val">1</span>);  <span class="comment">// មិនបន្ថែមទេ (duplicate)</span>
+            </div>
+
+            <h3 id="map">9.3 Map (HashMap)</h3>
+            <div class="code-block">
+<span class="keyword">import</span> java.util.HashMap;
+
+HashMap&lt;String, Integer&gt; ages = <span class="keyword">new</span> HashMap&lt;&gt;();
+ages.<span class="func">put</span>(<span class="str">"Dara"</span>, <span class="num-val">20</span>);
+ages.<span class="func">get</span>(<span class="str">"Dara"</span>);  <span class="comment">// 20</span>
+            </div>
+
+            <h3 id="iterator">9.4 Iterator</h3>
+            <div class="code-block">
+Iterator&lt;String&gt; it = names.<span class="func">iterator</span>();
+<span class="keyword">while</span> (it.<span class="func">hasNext</span>()) {
+    System.out.<span class="func">println</span>(it.<span class="func">next</span>());
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Collections ជាប្រព័ន្ធផ្ទុកទិន្នន័យដែលបត់បែនបាន។ <code>List</code> រក្សាលំដាប់, <code>Set</code> មិនឲ្យ duplicate, <code>Map</code> ផ្ទុក key-value។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Generics</h2>
+
+            <h3 id="generic-class">10.1 Generic Classes</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Box</span>&lt;T&gt; {
+    <span class="keyword">private</span> T value;
+
+    <span class="keyword">public void</span> <span class="func">set</span>(T value) { <span class="keyword">this</span>.value = value; }
+    <span class="keyword">public</span> T <span class="func">get</span>() { <span class="keyword">return</span> value; }
+}
+
+<span class="type">Box</span>&lt;String&gt; b = <span class="keyword">new</span> <span class="type">Box</span>&lt;&gt;();
+b.<span class="func">set</span>(<span class="str">"Hello"</span>);
+            </div>
+
+            <h3 id="generic-method">10.2 Generic Methods</h3>
+            <div class="code-block">
+<span class="keyword">public static</span> &lt;T&gt; <span class="keyword">void</span> <span class="func">print</span>(T item) {
+    System.out.<span class="func">println</span>(item);
+}
+            </div>
+
+            <h3 id="wildcard">10.3 Wildcards</h3>
+            <div class="code-block">
+<span class="keyword">public void</span> <span class="func">printList</span>(List&lt;?&gt; list) {
+    <span class="keyword">for</span> (Object o : list) System.out.<span class="func">println</span>(o);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Generics អនុញ្ញាតឲ្យសរសេរកូដដែលដំណើរការជាមួយ type ណាមួយ ដោយរក្សា type safety។ ឧទាហរណ៍ <code>List&lt;String&gt;</code> មានន័យថា list នៃ String។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Exception Handling</h2>
+
+            <h3 id="try-catch">11.1 try / catch</h3>
+            <div class="code-block">
+<span class="keyword">try</span> {
+    <span class="type">int</span> result = <span class="num-val">10</span> / <span class="num-val">0</span>;
+} <span class="keyword">catch</span> (ArithmeticException e) {
+    System.out.<span class="func">println</span>(<span class="str">"Error: "</span> + e.<span class="func">getMessage</span>());
+} <span class="keyword">finally</span> {
+    System.out.<span class="func">println</span>(<span class="str">"Always runs"</span>);
+}
+            </div>
+
+            <h3 id="throws">11.2 throws</h3>
+            <div class="code-block">
+<span class="keyword">public void</span> <span class="func">readFile</span>() <span class="keyword">throws</span> IOException {
+    <span class="comment">// ...</span>
+}
+            </div>
+
+            <h3 id="custom-exc">11.3 Custom Exception</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">MyException</span> <span class="keyword">extends</span> Exception {
+    <span class="type">MyException</span>(String msg) {
+        <span class="keyword">super</span>(msg);
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Java ប្រើ <code>try-catch-finally</code> សម្រាប់ចាប់ exception។ <code>finally</code> តែងតែដំណើរការ (ទោះមាន error ឬអត់)។ ប្រើសម្រាប់បិទ file/connection។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. File I/O</h2>
+
+            <h3 id="read-file">12.1 Read File</h3>
+            <div class="code-block">
+<span class="keyword">import</span> java.io.File;
+<span class="keyword">import</span> java.util.Scanner;
+
+File file = <span class="keyword">new</span> File(<span class="str">"data.txt"</span>);
+Scanner sc = <span class="keyword">new</span> Scanner(file);
+<span class="keyword">while</span> (sc.<span class="func">hasNextLine</span>()) {
+    System.out.<span class="func">println</span>(sc.<span class="func">nextLine</span>());
+}
+sc.<span class="func">close</span>();
+            </div>
+
+            <h3 id="write-file">12.2 Write File</h3>
+            <div class="code-block">
+<span class="keyword">import</span> java.io.FileWriter;
+<span class="keyword">import</span> java.io.IOException;
+
+<span class="keyword">try</span> {
+    FileWriter w = <span class="keyword">new</span> FileWriter(<span class="str">"data.txt"</span>);
+    w.<span class="func">write</span>(<span class="str">"Hello File!"</span>);
+    w.<span class="func">close</span>();
+} <span class="keyword">catch</span> (IOException e) {
+    e.<span class="func">printStackTrace</span>();
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Java ប្រើ <code>Scanner</code> សម្រាប់អាន និង <code>FileWriter</code> សម្រាប់សរសេរ file។ ត្រូវបិទ resource ជានិច្ច (<code>close()</code>) ដើម្បីការពារ memory leak។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Multithreading</h2>
+
+            <h3 id="thread-basic">13.1 Thread Basics</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">MyThread</span> <span class="keyword">extends</span> Thread {
+    <span class="keyword">public void</span> <span class="func">run</span>() {
+        System.out.<span class="func">println</span>(<span class="str">"Running in thread"</span>);
+    }
+}
+
+MyThread t = <span class="keyword">new</span> MyThread();
+t.<span class="func">start</span>();
+            </div>
+
+            <h3 id="runnable">13.2 Runnable</h3>
+            <div class="code-block">
+Runnable r = () -&gt; System.out.<span class="func">println</span>(<span class="str">"Running"</span>);
+Thread t = <span class="keyword">new</span> Thread(r);
+t.<span class="func">start</span>();
+            </div>
+
+            <h3 id="sync">13.3 Synchronization</h3>
+            <div class="code-block">
+<span class="keyword">synchronized void</span> <span class="func">increment</span>() {
+    count++;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Multithreading អនុញ្ញាតឲ្យកម្មវិធីធ្វើការច្រើនក្នុងពេលតែមួយ។ <code>synchronized</code> ការពារការប៉ះទង្គិចគ្នានៃ threads។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Modern Java (8+)</h2>
+
+            <h3 id="lambda">14.1 Lambda</h3>
+            <div class="code-block">
+List&lt;Integer&gt; nums = Arrays.<span class="func">asList</span>(<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>);
+nums.<span class="func">forEach</span>(n -&gt; System.out.<span class="func">println</span>(n));
+            </div>
+
+            <h3 id="stream">14.2 Stream API</h3>
+            <div class="code-block">
+List&lt;String&gt; names = Arrays.<span class="func">asList</span>(<span class="str">"Dara"</span>, <span class="str">"Sok"</span>, <span class="str">"Anna"</span>);
+
+List&lt;String&gt; result = names.<span class="func">stream</span>()
+    .<span class="func">filter</span>(n -&gt; n.<span class="func">startsWith</span>(<span class="str">"D"</span>))
+    .<span class="func">map</span>(String::toUpperCase)
+    .<span class="func">collect</span>(Collectors.<span class="func">toList</span>());
+            </div>
+
+            <h3 id="optional">14.3 Optional</h3>
+            <div class="code-block">
+Optional&lt;String&gt; opt = Optional.<span class="func">of</span>(<span class="str">"Hello"</span>);
+opt.<span class="func">ifPresent</span>(System.out::println);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Java 8 បន្ថែម Lambda, Stream API និង Optional ដែលធ្វើឲ្យកូដខ្លី និងមាន performance ខ្ពស់។ <code>Optional</code> ជួយជៀសវាង <code>NullPointerException</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. Java Project</h2>
+            <p>សាកល្បងបង្កើតកម្មវិធី <strong>Student Manager</strong> តូចមួយ៖</p>
+            <div class="code-block">
+<span class="keyword">import</span> java.util.ArrayList;
+
+<span class="keyword">class</span> <span class="type">Student</span> {
+    String name;
+    <span class="type">int</span> age;
+
+    <span class="type">Student</span>(String name, <span class="type">int</span> age) {
+        <span class="keyword">this</span>.name = name;
+        <span class="keyword">this</span>.age = age;
+    }
+
+    <span class="keyword">public</span> String <span class="func">toString</span>() {
+        <span class="keyword">return</span> name + <span class="str">" ("</span> + age + <span class="str">")"</span>;
+    }
+}
+
+<span class="keyword">public class</span> <span class="type">StudentManager</span> {
+    <span class="keyword">public static void</span> <span class="func">main</span>(String[] args) {
+        ArrayList&lt;Student&gt; students = <span class="keyword">new</span> ArrayList&lt;&gt;();
+        students.<span class="func">add</span>(<span class="keyword">new</span> <span class="type">Student</span>(<span class="str">"Dara"</span>, <span class="num-val">20</span>));
+        students.<span class="func">add</span>(<span class="keyword">new</span> <span class="type">Student</span>(<span class="str">"Sok"</span>, <span class="num-val">22</span>));
+
+        <span class="keyword">for</span> (Student s : students) {
+            System.out.<span class="func">println</span>(s);
+        }
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ class, constructor, <code>toString()</code>, ArrayList និង enhanced for។ សាកល្បងបន្ថែមមុខងារ៖ លុប, កែ, ឬរកមើល។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖</strong> សាកល្បងគម្រោងតូចៗ ដូចជា To-do List, Calculator, Bank System។ វានឹងជួយអ្នកយល់ Java លឿនជាងអានទ្រឹស្តី។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fab fa-java"></i> Hello.java</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">public class</span> <span style="color:#fbbf24">Hello</span> {
+    <span style="color:#c084fc">public static void</span> <span style="color:#38bdf8">main</span>(String[] args) {
+        System.out.<span style="color:#38bdf8">println</span>(<span style="color:#86efac">"Hello, Java!"</span>);
+    }
+}</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, Java!
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">Java Basics</a></li>
+                <li><a href="#">OOP Concepts</a></li>
+                <li><a href="#">Spring Boot</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

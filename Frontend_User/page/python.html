@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>មេរៀន Python - CodeKhmerLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/page.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/page.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> Python Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា Python?</a></li>
+                <li><a href="#setup">1.2. ការដំឡើង</a></li>
+                <li><a href="#first-program">1.3. កម្មវិធីដំបូង</a></li>
+                <li><a href="#comments">1.4. Comment</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Variables & Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#variables">2.1. Variables</a></li>
+                <li><a href="#data-types">2.2. Data Types</a></li>
+                <li><a href="#type-casting">2.3. Type Casting</a></li>
+                <li><a href="#f-strings">2.4. f-strings</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Operators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arithmetic">3.1. Arithmetic</a></li>
+                <li><a href="#comparison">3.2. Comparison</a></li>
+                <li><a href="#logical">3.3. Logical</a></li>
+                <li><a href="#membership">3.4. Membership</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Control Flow
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else">4.1. if / elif / else</a></li>
+                <li><a href="#match">4.2. match / case</a></li>
+                <li><a href="#loops">4.3. Loops</a></li>
+                <li><a href="#comprehensions">4.4. Comprehensions</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Functions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#func-basics">5.1. Basics</a></li>
+                <li><a href="#params">5.2. Parameters</a></li>
+                <li><a href="#lambda">5.3. Lambda</a></li>
+                <li><a href="#decorators">5.4. Decorators</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Lists, Tuples, Sets
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#lists">6.1. Lists</a></li>
+                <li><a href="#tuples">6.2. Tuples</a></li>
+                <li><a href="#sets">6.3. Sets</a></li>
+                <li><a href="#dicts">6.4. Dictionaries</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Strings
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#string-methods">7.1. String Methods</a></li>
+                <li><a href="#slicing">7.2. Slicing</a></li>
+                <li><a href="#format">7.3. Formatting</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> File I/O
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#read-file">8.1. Read File</a></li>
+                <li><a href="#write-file">8.2. Write File</a></li>
+                <li><a href="#with-statement">8.3. with Statement</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> OOP - Classes
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#classes">9.1. Classes & Objects</a></li>
+                <li><a href="#init">9.2. __init__</a></li>
+                <li><a href="#inheritance">9.3. Inheritance</a></li>
+                <li><a href="#dunder">9.4. Dunder Methods</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Modules & Packages
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#import">10.1. import</a></li>
+                <li><a href="#pip">10.2. pip</a></li>
+                <li><a href="#custom-module">10.3. Custom Module</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Error Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#try-except">11.1. try / except</a></li>
+                <li><a href="#finally">11.2. finally</a></li>
+                <li><a href="#raise">11.3. raise</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> Iterators & Generators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#iterators">12.1. Iterators</a></li>
+                <li><a href="#generators">12.2. Generators</a></li>
+                <li><a href="#yield">12.3. yield</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Advanced Topics
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#args-kwargs">13.1. *args / **kwargs</a></li>
+                <li><a href="#context-manager">13.2. Context Manager</a></li>
+                <li><a href="#virtual-env">13.3. Virtual Environment</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Best Practices
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> Python Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. Python Introduction - ការណែនាំ Python</h2>
+
+            <h3 id="intro">1.1 អ្វីជា Python?</h3>
+            <p>Python គឺជាភាសា <strong>high-level, interpreted</strong> ដែលបង្កើតឡើងដោយ <strong>Guido van Rossum</strong> ក្នុងឆ្នាំ 1991។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Python មាន syntax សាមញ្ញ អានងាយ ដូចភាសាអង់គ្លេស។ វាជាភាសាដ៏ពេញនិយមបំផុតសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Data Science</strong> — NumPy, Pandas</li>
+                    <li><strong>Machine Learning</strong> — TensorFlow, PyTorch</li>
+                    <li><strong>Web Development</strong> — Django, Flask</li>
+                    <li><strong>Automation</strong> — Scripts, Bots</li>
+                    <li><strong>AI & Chatbots</strong></li>
+                </ul>
+            </div>
+
+            <h3 id="setup">1.2 ការដំឡើង</h3>
+            <ul>
+                <li>ទាញយកពី <strong>python.org</strong></li>
+                <li><strong>IDE:</strong> VS Code, PyCharm, Jupyter</li>
+                <li><strong>Online:</strong> replit.com, Google Colab</li>
+            </ul>
+
+            <div class="code-block">
+<span class="comment"># ពិនិត្យការដំឡើង</span>
+python --version
+python3 --version
+
+<span class="comment"># រត់ file</span>
+python hello.py
+            </div>
+
+            <h3 id="first-program">1.3 កម្មវិធីដំបូង</h3>
+            <div class="code-block">
+<span class="func">print</span>(<span class="str">"Hello, Python!"</span>)
+
+name = <span class="str">"Dara"</span>
+<span class="func">print</span>(<span class="str">f"Hello, {name}!"</span>)
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់លម្អិត៖:</strong>
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><code>print()</code> — បង្ហាញអត្ថបទ</li>
+                    <li>Python ប្រើ <em>indentation</em> (space) ជំនួស <code>{ }</code></li>
+                    <li>មិនចាំបាច់ <code>;</code> នៅចុងបន្ទាត់</li>
+                    <li>Variable មិនចាំបាច់ប្រកាស type</li>
+                </ul>
+            </div>
+
+            <h3 id="comments">1.4 Comment</h3>
+            <div class="code-block">
+<span class="comment"># Single-line comment</span>
+
+<span class="comment">"""
+Multi-line
+comment (docstring)
+"""</span>
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Variables & Data Types</h2>
+
+            <h3 id="variables">2.1 Variables</h3>
+            <div class="code-block">
+name = <span class="str">"Dara"</span>       <span class="comment"># string</span>
+age = <span class="num-val">20</span>          <span class="comment"># int</span>
+price = <span class="num-val">9.99</span>      <span class="comment"># float</span>
+is_active = <span class="bool">True</span>   <span class="comment"># bool</span>
+nothing = <span class="bool">None</span>    <span class="comment"># NoneType</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Python ជាភាសា <em>dynamically-typed</em> — type ត្រូវកំណត់នៅ runtime។ Variable អាចផ្លាស់ប្តូរ type បាន។
+            </div>
+
+            <h3 id="data-types">2.2 Data Types</h3>
+            <table>
+                <thead>
+                    <tr><th>Type</th><th>ឧទាហរណ៍</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>int</code></td><td>10, -5, 100</td></tr>
+                    <tr><td><code>float</code></td><td>3.14, -0.5</td></tr>
+                    <tr><td><code>str</code></td><td>"Hello", 'Dara'</td></tr>
+                    <tr><td><code>bool</code></td><td>True, False</td></tr>
+                    <tr><td><code>list</code></td><td>[1, 2, 3]</td></tr>
+                    <tr><td><code>tuple</code></td><td>(1, 2, 3)</td></tr>
+                    <tr><td><code>set</code></td><td>{1, 2, 3}</td></tr>
+                    <tr><td><code>dict</code></td><td>{"name": "Dara"}</td></tr>
+                    <tr><td><code>NoneType</code></td><td>None</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="type-casting">2.3 Type Casting</h3>
+            <div class="code-block">
+x = <span class="func">int</span>(<span class="str">"10"</span>)       <span class="comment"># 10</span>
+y = <span class="func">float</span>(<span class="str">"3.14"</span>)   <span class="comment"># 3.14</span>
+z = <span class="func">str</span>(<span class="num-val">100</span>)        <span class="comment"># "100"</span>
+b = <span class="func">bool</span>(<span class="num-val">1</span>)          <span class="comment"># True</span>
+l = <span class="func">list</span>(<span class="str">"abc"</span>)      <span class="comment"># ['a', 'b', 'c']</span>
+            </div>
+
+            <h3 id="f-strings">2.4 f-strings</h3>
+            <div class="code-block">
+name = <span class="str">"Dara"</span>
+age = <span class="num-val">20</span>
+
+<span class="func">print</span>(<span class="str">f"Hello, {name}!"</span>)
+<span class="func">print</span>(<span class="str">f"Next year: {age + 1}"</span>)
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> f-strings ត្រូវបានណែនាំក្នុង Python 3.6។ ប្រើ prefix <code>f</code> និង <code>{}</code> សម្រាប់បញ្ចូល expression។ លឿន និងអានងាយជាងវិធីចាស់។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Operators</h2>
+
+            <h3 id="arithmetic">3.1 Arithmetic</h3>
+            <div class="code-block">
+<span class="num-val">5</span> + <span class="num-val">3</span>       <span class="comment"># 8</span>
+<span class="num-val">10</span> - <span class="num-val">4</span>      <span class="comment"># 6</span>
+<span class="num-val">3</span> * <span class="num-val">4</span>       <span class="comment"># 12</span>
+<span class="num-val">10</span> / <span class="num-val">3</span>      <span class="comment"># 3.333...</span>
+<span class="num-val">10</span> // <span class="num-val">3</span>     <span class="comment"># 3 (floor division)</span>
+<span class="num-val">10</span> % <span class="num-val">3</span>      <span class="comment"># 1 (modulo)</span>
+<span class="num-val">2</span> ** <span class="num-val">3</span>      <span class="comment"># 8 (power)</span>
+            </div>
+
+            <h3 id="comparison">3.2 Comparison</h3>
+            <div class="code-block">
+==  !=  &gt;  &lt;  &gt;=  &lt;=
+            </div>
+
+            <h3 id="logical">3.3 Logical</h3>
+            <div class="code-block">
+<span class="keyword">and</span>  <span class="comment"># AND</span>
+<span class="keyword">or</span>   <span class="comment"># OR</span>
+<span class="keyword">not</span>  <span class="comment"># NOT</span>
+            </div>
+
+            <h3 id="membership">3.4 Membership</h3>
+            <div class="code-block">
+<span class="str">"a"</span> <span class="keyword">in</span> <span class="str">"cat"</span>           <span class="comment"># True</span>
+<span class="num-val">3</span> <span class="keyword">in</span> [<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>]        <span class="comment"># True</span>
+<span class="num-val">5</span> <span class="keyword">not in</span> [<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>]    <span class="comment"># True</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Python ប្រើ <code>and</code>, <code>or</code>, <code>not</code> ជំនួស <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>។ <code>in</code> ត្រួតពិនិត្យថាតម្លៃស្ថិតក្នុង collection ឬអត់។
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Control Flow</h2>
+
+            <h3 id="if-else">4.1 if / elif / else</h3>
+            <div class="code-block">
+<span class="keyword">if</span> age &gt;= <span class="num-val">18</span>:
+    <span class="func">print</span>(<span class="str">"Adult"</span>)
+<span class="keyword">elif</span> age &gt;= <span class="num-val">13</span>:
+    <span class="func">print</span>(<span class="str">"Teen"</span>)
+<span class="keyword">else</span>:
+    <span class="func">print</span>(<span class="str">"Child"</span>)
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Python ប្រើ <strong>indentation</strong> (4 spaces ជាទូទៅ) សម្រាប់ block។ មិនប្រើ <code>{ }</code> ដូច C/Java។
+            </div>
+
+            <h3 id="match">4.2 match / case</h3>
+            <div class="code-block">
+<span class="keyword">match</span> day:
+    <span class="keyword">case</span> <span class="num-val">1</span>:
+        <span class="func">print</span>(<span class="str">"Monday"</span>)
+    <span class="keyword">case</span> <span class="num-val">2</span>:
+        <span class="func">print</span>(<span class="str">"Tuesday"</span>)
+    <span class="keyword">case</span> _:
+        <span class="func">print</span>(<span class="str">"Unknown"</span>)
+            </div>
+
+            <h3 id="loops">4.3 Loops</h3>
+            <div class="code-block">
+<span class="comment"># for loop</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="func">range</span>(<span class="num-val">5</span>):
+    <span class="func">print</span>(i)
+
+<span class="comment"># while loop</span>
+i = <span class="num-val">0</span>
+<span class="keyword">while</span> i &lt; <span class="num-val">5</span>:
+    <span class="func">print</span>(i)
+    i += <span class="num-val">1</span>
+            </div>
+
+            <h3 id="comprehensions">4.4 Comprehensions</h3>
+            <div class="code-block">
+<span class="comment"># List comprehension</span>
+squares = [n**<span class="num-val">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="func">range</span>(<span class="num-val">5</span>)]
+<span class="comment"># [0, 1, 4, 9, 16]</span>
+
+<span class="comment"># មាន condition</span>
+evens = [n <span class="keyword">for</span> n <span class="keyword">in</span> <span class="func">range</span>(<span class="num-val">10</span>) <span class="keyword">if</span> n % <span class="num-val">2</span> == <span class="num-val">0</span>]
+
+<span class="comment"># Dict comprehension</span>
+squares = {n: n**<span class="num-val">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="func">range</span>(<span class="num-val">3</span>)}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Comprehensions ជាមុខងារពិសេសរបស់ Python។ វាបង្កើត list/dict/set ក្នុងបន្ទាត់តែមួយ ជំនួស loop ធម្មតា។ លឿន និងស្អាតជាង។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Functions</h2>
+
+            <h3 id="func-basics">5.1 Basics</h3>
+            <div class="code-block">
+<span class="keyword">def</span> <span class="func">greet</span>():
+    <span class="func">print</span>(<span class="str">"Hello!"</span>)
+
+<span class="func">greet</span>()
+            </div>
+
+            <h3 id="params">5.2 Parameters & Return</h3>
+            <div class="code-block">
+<span class="keyword">def</span> <span class="func">add</span>(a, b):
+    <span class="keyword">return</span> a + b
+
+result = <span class="func">add</span>(<span class="num-val">2</span>, <span class="num-val">3</span>)   <span class="comment"># 5</span>
+
+<span class="comment"># Default parameter</span>
+<span class="keyword">def</span> <span class="func">greet</span>(name=<span class="str">"Guest"</span>):
+    <span class="keyword">return</span> <span class="str">f"Hello, {name}!"</span>
+            </div>
+
+            <h3 id="lambda">5.3 Lambda</h3>
+            <div class="code-block">
+<span class="comment"># Anonymous function</span>
+add = <span class="keyword">lambda</span> a, b: a + b
+<span class="func">add</span>(<span class="num-val">2</span>, <span class="num-val">3</span>)   <span class="comment"># 5</span>
+
+<span class="comment"># ប្រើជាមួយ sort</span>
+users = [{<span class="str">"name"</span>: <span class="str">"Dara"</span>, <span class="str">"age"</span>: <span class="num-val">20</span>}]
+users.<span class="func">sort</span>(key=<span class="keyword">lambda</span> u: u[<span class="str">"age"</span>])
+            </div>
+
+            <h3 id="decorators">5.4 Decorators</h3>
+            <div class="code-block">
+<span class="keyword">def</span> <span class="func">uppercase</span>(func):
+    <span class="keyword">def</span> <span class="func">wrapper</span>(*args):
+        result = <span class="func">func</span>(*args)
+        <span class="keyword">return</span> result.<span class="func">upper</span>()
+    <span class="keyword">return</span> wrapper
+
+<span class="decorator">@uppercase</span>
+<span class="keyword">def</span> <span class="func">greet</span>(name):
+    <span class="keyword">return</span> <span class="str">f"Hello, {name}"</span>
+
+<span class="func">greet</span>(<span class="str">"Dara"</span>)   <span class="comment"># "HELLO, DARA"</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Decorator ជា function ដែល "wrap" function ផ្សេង ដើម្បីបន្ថែម functionality ដោយមិនកែ function ដើម។ ប្រើ <code>@decorator_name</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Lists, Tuples, Sets, Dictionaries</h2>
+
+            <h3 id="lists">6.1 Lists</h3>
+            <div class="code-block">
+nums = [<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>]
+nums.<span class="func">append</span>(<span class="num-val">4</span>)        <span class="comment"># [1, 2, 3, 4]</span>
+nums.<span class="func">insert</span>(<span class="num-val">0</span>, <span class="num-val">0</span>)      <span class="comment"># [0, 1, 2, 3, 4]</span>
+nums.<span class="func">remove</span>(<span class="num-val">2</span>)         <span class="comment"># [0, 1, 3, 4]</span>
+nums.<span class="func">pop</span>()              <span class="comment"># ដកចេញ element ចុងក្រោយ</span>
+<span class="func">len</span>(nums)              <span class="comment"># ចំនួន element</span>
+            </div>
+
+            <h3 id="tuples">6.2 Tuples</h3>
+            <div class="code-block">
+point = (<span class="num-val">3</span>, <span class="num-val">4</span>)
+x, y = point           <span class="comment"># unpacking</span>
+
+<span class="comment"># tuple មិនអាចផ្លាស់ប្តូរ (immutable)</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Tuple ដូច List ប៉ុន្តែ <em>immutable</em> (មិនអាចកែ)។ ប្រើសម្រាប់ data ដែលមិនគួរផ្លាស់ប្តូរ ដូចជា coordinates, RGB colors។ លឿនជាង List។
+            </div>
+
+            <h3 id="sets">6.3 Sets</h3>
+            <div class="code-block">
+nums = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>}
+nums.<span class="func">add</span>(<span class="num-val">4</span>)
+nums.<span class="func">add</span>(<span class="num-val">1</span>)   <span class="comment"># មិនបន្ថែមទេ (duplicate)</span>
+
+<span class="comment"># Set operations</span>
+a = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>}
+b = {<span class="num-val">3</span>, <span class="num-val">4</span>, <span class="num-val">5</span>}
+a | b    <span class="comment"># union</span>
+a &amp; b    <span class="comment"># intersection</span>
+a - b    <span class="comment"># difference</span>
+            </div>
+
+            <h3 id="dicts">6.4 Dictionaries</h3>
+            <div class="code-block">
+user = {<span class="str">"name"</span>: <span class="str">"Dara"</span>, <span class="str">"age"</span>: <span class="num-val">20</span>}
+
+user[<span class="str">"name"</span>]           <span class="comment"># "Dara"</span>
+user.<span class="func">get</span>(<span class="str">"age"</span>)        <span class="comment"># 20</span>
+user.<span class="func">keys</span>()             <span class="comment"># keys</span>
+user.<span class="func">values</span>()           <span class="comment"># values</span>
+user.<span class="func">items</span>()            <span class="comment"># key-value pairs</span>
+
+<span class="keyword">for</span> key, val <span class="keyword">in</span> user.<span class="func">items</span>():
+    <span class="func">print</span>(key, val)
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Dict ជា collection នៃ key-value។ Key ត្រូវតែ unique និង immutable។ ប្រើ <code>.get()</code> ជំនួស <code>[]</code> ដើម្បីជៀសវាង KeyError។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Strings</h2>
+
+            <h3 id="string-methods">7.1 String Methods</h3>
+            <div class="code-block">
+s = <span class="str">"Hello, World!"</span>
+
+s.<span class="func">upper</span>()           <span class="comment"># HELLO, WORLD!</span>
+s.<span class="func">lower</span>()           <span class="comment"># hello, world!</span>
+s.<span class="func">split</span>(<span class="str">", "</span>)       <span class="comment"># ["Hello", "World!"]</span>
+s.<span class="func">replace</span>(<span class="str">"World"</span>, <span class="str">"Python"</span>)
+s.<span class="func">strip</span>()           <span class="comment"># លុប space ចុងចុង</span>
+s.<span class="func">startswith</span>(<span class="str">"Hello"</span>)  <span class="comment"># True</span>
+s.<span class="func">find</span>(<span class="str">"World"</span>)      <span class="comment"># 7</span>
+            </div>
+
+            <h3 id="slicing">7.2 Slicing</h3>
+            <div class="code-block">
+s = <span class="str">"Python"</span>
+
+s[<span class="num-val">0</span>]      <span class="comment"># 'P'</span>
+s[<span class="num-val">-1</span>]     <span class="comment"># 'n'</span>
+s[<span class="num-val">1</span>:<span class="num-val">4</span>]   <span class="comment"># 'yth'</span>
+s[:<span class="num-val">3</span>]    <span class="comment"># 'Pyt'</span>
+s[<span class="num-val">3</span>:]    <span class="comment"># 'hon'</span>
+s[::<span class="num-val">2</span>]   <span class="comment"># 'Pto'</span>
+s[::<span class="num-val">-1</span>]  <span class="comment"># 'nohtyP' (reverse)</span>
+            </div>
+
+            <h3 id="format">7.3 Formatting</h3>
+            <div class="code-block">
+name = <span class="str">"Dara"</span>
+age = <span class="num-val">20</span>
+
+<span class="func">print</span>(<span class="str">f"Name: {name}, Age: {age}"</span>)
+<span class="func">print</span>(<span class="str">"Pi: {:.2f}"</span>.<span class="func">format</span>(<span class="num-val">3.14159</span>))
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. File I/O</h2>
+
+            <h3 id="read-file">8.1 Read File</h3>
+            <div class="code-block">
+<span class="keyword">with</span> <span class="func">open</span>(<span class="str">"data.txt"</span>, <span class="str">"r"</span>) <span class="keyword">as</span> f:
+    content = f.<span class="func">read</span>()
+    <span class="func">print</span>(content)
+
+<span class="comment"># អានម្តងមួយបន្ទាត់</span>
+<span class="keyword">with</span> <span class="func">open</span>(<span class="str">"data.txt"</span>) <span class="keyword">as</span> f:
+    <span class="keyword">for</span> line <span class="keyword">in</span> f:
+        <span class="func">print</span>(line.<span class="func">strip</span>())
+            </div>
+
+            <h3 id="write-file">8.2 Write File</h3>
+            <div class="code-block">
+<span class="keyword">with</span> <span class="func">open</span>(<span class="str">"data.txt"</span>, <span class="str">"w"</span>) <span class="keyword">as</span> f:
+    f.<span class="func">write</span>(<span class="str">"Hello, File!\n"</span>)
+    f.<span class="func">writelines</span>([<span class="str">"Line 1\n"</span>, <span class="str">"Line 2\n"</span>])
+
+<span class="comment"># បន្ថែម (append)</span>
+<span class="keyword">with</span> <span class="func">open</span>(<span class="str">"data.txt"</span>, <span class="str">"a"</span>) <span class="keyword">as</span> f:
+    f.<span class="func">write</span>(<span class="str">"More\n"</span>)
+            </div>
+
+            <h3 id="with-statement">8.3 with Statement</h3>
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>with</code> statement បិទ file ដោយស្វ័យប្រវត្តិ ទោះមាន error ឬអត់។ ត្រូវប្រើជានិច្ច ដើម្បីការពារ resource leak។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. OOP - Classes</h2>
+
+            <h3 id="classes">9.1 Classes & Objects</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span>:
+    <span class="keyword">def</span> <span class="func">greet</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="str">f"Hi, I'm {self.name}"</span>
+
+s1 = <span class="type">Student</span>()
+s1.name = <span class="str">"Dara"</span>
+s1.<span class="func">greet</span>()
+            </div>
+
+            <h3 id="init">9.2 __init__</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span>:
+    <span class="keyword">def</span> <span class="func">__init__</span>(<span class="keyword">self</span>, name, age):
+        <span class="keyword">self</span>.name = name
+        <span class="keyword">self</span>.age = age
+
+s1 = <span class="type">Student</span>(<span class="str">"Dara"</span>, <span class="num-val">20</span>)
+            </div>
+
+            <h3 id="inheritance">9.3 Inheritance</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Animal</span>:
+    <span class="keyword">def</span> <span class="func">eat</span>(<span class="keyword">self</span>):
+        <span class="func">print</span>(<span class="str">"Eating"</span>)
+
+<span class="keyword">class</span> <span class="type">Dog</span>(<span class="type">Animal</span>):
+    <span class="keyword">def</span> <span class="func">bark</span>(<span class="keyword">self</span>):
+        <span class="func">print</span>(<span class="str">"Woof"</span>)
+
+d = <span class="type">Dog</span>()
+d.<span class="func">eat</span>()      <span class="comment"># ទទួលពី Animal</span>
+d.<span class="func">bark</span>()     <span class="comment"># របស់ Dog</span>
+            </div>
+
+            <h3 id="dunder">9.4 Dunder Methods</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Point</span>:
+    <span class="keyword">def</span> <span class="func">__init__</span>(<span class="keyword">self</span>, x, y):
+        <span class="keyword">self</span>.x = x
+        <span class="keyword">self</span>.y = y
+
+    <span class="keyword">def</span> <span class="func">__str__</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="str">f"({self.x}, {self.y})"</span>
+
+    <span class="keyword">def</span> <span class="func">__add__</span>(<span class="keyword">self</span>, other):
+        <span class="keyword">return</span> <span class="type">Point</span>(<span class="keyword">self</span>.x + other.x, <span class="keyword">self</span>.y + other.y)
+
+p = <span class="type">Point</span>(<span class="num-val">1</span>, <span class="num-val">2</span>)
+<span class="func">print</span>(p)   <span class="comment"># (1, 2)</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>self</code> ជា reference ទៅ object បច្ចុប្បន្ន។ <code>__init__</code> ជា constructor។ Dunder methods (double underscore) ដូច <code>__str__</code>, <code>__add__</code> កំណត់ behavior របស់ object។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Modules & Packages</h2>
+
+            <h3 id="import">10.1 import</h3>
+            <div class="code-block">
+<span class="keyword">import</span> math
+math.<span class="func">sqrt</span>(<span class="num-val">16</span>)   <span class="comment"># 4.0</span>
+
+<span class="keyword">from</span> math <span class="keyword">import</span> sqrt, pi
+<span class="func">sqrt</span>(<span class="num-val">25</span>)          <span class="comment"># 5.0</span>
+
+<span class="keyword">import</span> random
+random.<span class="func">randint</span>(<span class="num-val">1</span>, <span class="num-val">10</span>)
+            </div>
+
+            <h3 id="pip">10.2 pip</h3>
+            <div class="code-block">
+<span class="comment"># ដំឡើង package</span>
+pip install requests
+
+<span class="comment"># មើលរាយការណ៍</span>
+pip list
+
+<span class="comment"># ដំឡើងតាម file</span>
+pip install -r requirements.txt
+            </div>
+
+            <h3 id="custom-module">10.3 Custom Module</h3>
+            <div class="code-block">
+<span class="comment"># mymath.py</span>
+<span class="keyword">def</span> <span class="func">add</span>(a, b):
+    <span class="keyword">return</span> a + b
+
+<span class="comment"># main.py</span>
+<span class="keyword">import</span> mymath
+mymath.<span class="func">add</span>(<span class="num-val">2</span>, <span class="num-val">3</span>)
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Error Handling</h2>
+
+            <h3 id="try-except">11.1 try / except</h3>
+            <div class="code-block">
+<span class="keyword">try</span>:
+    result = <span class="num-val">10</span> / <span class="num-val">0</span>
+<span class="keyword">except</span> ZeroDivisionError <span class="keyword">as</span> e:
+    <span class="func">print</span>(<span class="str">f"Error: {e}"</span>)
+<span class="keyword">except</span> Exception <span class="keyword">as</span> e:
+    <span class="func">print</span>(<span class="str">f"Unknown: {e}"</span>)
+            </div>
+
+            <h3 id="finally">11.2 finally</h3>
+            <div class="code-block">
+<span class="keyword">try</span>:
+    f = <span class="func">open</span>(<span class="str">"data.txt"</span>)
+<span class="keyword">except</span> FileNotFoundError:
+    <span class="func">print</span>(<span class="str">"File not found"</span>)
+<span class="keyword">finally</span>:
+    <span class="func">print</span>(<span class="str">"Always runs"</span>)
+            </div>
+
+            <h3 id="raise">11.3 raise</h3>
+            <div class="code-block">
+<span class="keyword">def</span> <span class="func">divide</span>(a, b):
+    <span class="keyword">if</span> b == <span class="num-val">0</span>:
+        <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="str">"Cannot divide by zero"</span>)
+    <span class="keyword">return</span> a / b
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Python មាន exceptions ជាច្រើនដូចជា <code>ValueError</code>, <code>TypeError</code>, <code>KeyError</code>, <code>FileNotFoundError</code>។ ត្រូវចាប់ exception ជាក់លាក់មុន exception ទូទៅ។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. Iterators & Generators</h2>
+
+            <h3 id="iterators">12.1 Iterators</h3>
+            <div class="code-block">
+nums = [<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>]
+it = <span class="func">iter</span>(nums)
+
+<span class="func">next</span>(it)   <span class="comment"># 1</span>
+<span class="func">next</span>(it)   <span class="comment"># 2</span>
+            </div>
+
+            <h3 id="generators">12.2 Generators</h3>
+            <div class="code-block">
+<span class="keyword">def</span> <span class="func">count_up_to</span>(n):
+    i = <span class="num-val">1</span>
+    <span class="keyword">while</span> i &lt;= n:
+        <span class="keyword">yield</span> i
+        i += <span class="num-val">1</span>
+
+<span class="keyword">for</span> num <span class="keyword">in</span> <span class="func">count_up_to</span>(<span class="num-val">3</span>):
+    <span class="func">print</span>(num)   <span class="comment"># 1 2 3</span>
+            </div>
+
+            <h3 id="yield">12.3 yield</h3>
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>yield</code> ធ្វើឲ្យ function ក្លាយជា generator។ វា return តម្លៃម្តងមួយ ហើយចងចាំ state រវាងការហៅ។ សន្សំ memory ជាង list ពេល data ច្រើន។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Advanced Topics</h2>
+
+            <h3 id="args-kwargs">13.1 *args / **kwargs</h3>
+            <div class="code-block">
+<span class="keyword">def</span> <span class="func">sum_all</span>(*args):
+    <span class="keyword">return</span> <span class="func">sum</span>(args)
+
+<span class="func">sum_all</span>(<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>, <span class="num-val">4</span>)   <span class="comment"># 10</span>
+
+<span class="keyword">def</span> <span class="func">show</span>(**kwargs):
+    <span class="keyword">for</span> key, val <span class="keyword">in</span> kwargs.<span class="func">items</span>():
+        <span class="func">print</span>(key, val)
+
+<span class="func">show</span>(name=<span class="str">"Dara"</span>, age=<span class="num-val">20</span>)
+            </div>
+
+            <h3 id="context-manager">13.2 Context Manager</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">MyFile</span>:
+    <span class="keyword">def</span> <span class="func">__init__</span>(<span class="keyword">self</span>, filename):
+        <span class="keyword">self</span>.filename = filename
+
+    <span class="keyword">def</span> <span class="func">__enter__</span>(<span class="keyword">self</span>):
+        <span class="keyword">self</span>.file = <span class="func">open</span>(<span class="keyword">self</span>.filename)
+        <span class="keyword">return</span> <span class="keyword">self</span>.file
+
+    <span class="keyword">def</span> <span class="func">__exit__</span>(<span class="keyword">self</span>, *args):
+        <span class="keyword">self</span>.file.<span class="func">close</span>()
+            </div>
+
+            <h3 id="virtual-env">13.3 Virtual Environment</h3>
+            <div class="code-block">
+<span class="comment"># បង្កើត virtual environment</span>
+python -m venv myenv
+
+<span class="comment"># Activate</span>
+<span class="comment"># Windows:</span>
+myenv\Scripts\activate
+<span class="comment"># Mac/Linux:</span>
+<span class="keyword">source</span> myenv/bin/activate
+
+<span class="comment"># Deactivate</span>
+deactivate
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Virtual environment ជាប្រអប់ដែលរក្សា packages ដោយឡែកសម្រាប់គម្រោងនីមួយៗ ដើម្បីជៀសវាងបញ្ហា version conflict។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Best Practices</h2>
+            <ul>
+                <li>ប្រើ <strong>PEP 8</strong> ជាស្តង់ដារ style</li>
+                <li>ដាក់ឈ្មោះ variable ជា <code>snake_case</code></li>
+                <li>ប្រើ list comprehensions ជំនួស loop ធម្មតា</li>
+                <li>ប្រើ f-strings ជំនួស concatenation</li>
+                <li>ប្រើ <code>with</code> statement សម្រាប់ file</li>
+                <li>ប្រើ <code>try/except</code> ជាមួយ exception ជាក់លាក់</li>
+                <li>ប្រើ virtual environment</li>
+                <li>សរសេរ docstring សម្រាប់ functions</li>
+                <li>ប្រើ type hints</li>
+                <li>សរសេរ unit tests</li>
+            </ul>
+
+            <div class="code-block">
+<span class="comment"># Type hints ឧទាហរណ៍</span>
+<span class="keyword">def</span> <span class="func">add</span>(a: <span class="type">int</span>, b: <span class="type">int</span>) -&gt; <span class="type">int</span>:
+    <span class="str">"""Add two numbers."""</span>
+    <span class="keyword">return</span> a + b
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. Python Project</h2>
+            <p>សាកល្បងបង្កើត <strong>Todo List</strong> តូចមួយ៖</p>
+            <div class="code-block">
+<span class="keyword">import</span> json
+<span class="keyword">import</span> os
+
+TODO_FILE = <span class="str">"todos.json"</span>
+
+<span class="keyword">def</span> <span class="func">load_todos</span>():
+    <span class="keyword">if</span> os.path.<span class="func">exists</span>(TODO_FILE):
+        <span class="keyword">with</span> <span class="func">open</span>(TODO_FILE) <span class="keyword">as</span> f:
+            <span class="keyword">return</span> json.<span class="func">load</span>(f)
+    <span class="keyword">return</span> []
+
+<span class="keyword">def</span> <span class="func">save_todos</span>(todos):
+    <span class="keyword">with</span> <span class="func">open</span>(TODO_FILE, <span class="str">"w"</span>) <span class="keyword">as</span> f:
+        json.<span class="func">dump</span>(todos, f, indent=<span class="num-val">2</span>)
+
+<span class="keyword">def</span> <span class="func">add_todo</span>(todos, text):
+    todos.<span class="func">append</span>({<span class="str">"id"</span>: <span class="func">len</span>(todos) + <span class="num-val">1</span>, <span class="str">"text"</span>: text, <span class="str">"done"</span>: <span class="bool">False</span>})
+    <span class="func">save_todos</span>(todos)
+    <span class="func">print</span>(<span class="str">f"✅ Added: {text}"</span>)
+
+<span class="keyword">def</span> <span class="func">list_todos</span>(todos):
+    <span class="keyword">if</span> <span class="keyword">not</span> todos:
+        <span class="func">print</span>(<span class="str">"📋 No todos yet"</span>)
+        <span class="keyword">return</span>
+    <span class="keyword">for</span> todo <span class="keyword">in</span> todos:
+        status = <span class="str">"✅"</span> <span class="keyword">if</span> todo[<span class="str">"done"</span>] <span class="keyword">else</span> <span class="str">"⬜"</span>
+        <span class="func">print</span>(<span class="str">f"{status} [{todo['id']}] {todo['text']}"</span>)
+
+<span class="keyword">def</span> <span class="func">main</span>():
+    todos = <span class="func">load_todos</span>()
+    <span class="func">add_todo</span>(todos, <span class="str">"រៀន Python"</span>)
+    <span class="func">add_todo</span>(todos, <span class="str">"ធ្វើលំហាត់"</span>)
+    <span class="func">list_todos</span>(todos)
+
+<span class="keyword">if</span> __name__ == <span class="str">"__main__"</span>:
+    <span class="func">main</span>()
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ function, list, dict, file I/O និង JSON។ សាកល្បងបន្ថែម៖ menu, delete, mark as done, ឬ user input។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> Python ល្អសម្រាប់អ្នកចង់ចាប់ផ្តើម programming និងធ្វើគម្រោងជាក់ស្តែង។ សាកល្បងគម្រោងតូចៗ — Calculator, Weather App, Web Scraper, ឬ Bot Telegram។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fab fa-python"></i> hello.py</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">def</span> <span style="color:#38bdf8">greet</span>(name):
+    <span style="color:#c084fc">return</span> <span style="color:#86efac">f"Hello, {name}!"</span>
+
+<span style="color:#38bdf8">print</span>(<span style="color:#38bdf8">greet</span>(<span style="color:#86efac">"Dara"</span>))
+
+<span style="color:#c084fc">for</span> i <span style="color:#c084fc">in</span> <span style="color:#38bdf8">range</span>(<span style="color:#fbbf24">3</span>):
+    <span style="color:#38bdf8">print</span>(i)</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#ffd43b;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, Dara!<br>
+                0<br>
+                1<br>
+                2
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">Python Basics</a></li>
+                <li><a href="#">OOP in Python</a></li>
+                <li><a href="#">Data Science</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

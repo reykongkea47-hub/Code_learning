@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code_Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg: #f8fafc;
+    --bg-2: #f1f5f9;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --border-light: #f1f5f9;
+    --text: #0f172a;
+    --text-light: #475569;
+    --text-muted: #94a3b8;
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --purple: #7c3aed;
+    --sky: #0ea5e9;
+    --emerald: #10b981;
+    --amber: #f59e0b;
+    --rose: #f43f5e;
+    --gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+    --gradient-soft: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 4px 20px rgba(79, 70, 229, 0.08);
+    --shadow-lg: 0 20px 60px rgba(79, 70, 229, 0.12);
+    --shadow-glow: 0 0 40px rgba(79, 70, 229, 0.15);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Soft pastel background blobs */
+body::before {
+    content: "";
+    position: fixed;
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.12), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.1), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    position: relative;
+    z-index: 10;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.4px;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+}
+
+.brand-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brand-admin {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #047857;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.nav-pill i {
+    font-size: 0.7rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* AUTH WRAP — Bento Grid Layout */
+.auth-wrap {
+    position: relative;
+    z-index: 5;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 980px;
+    width: 100%;
+    background: var(--surface);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    border: 1px solid var(--border);
+    animation: containerIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes containerIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* LEFT PANEL — Info/Branding */
+.auth-info {
+    background: var(--gradient);
+    padding: 3rem 2.5rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.auth-info::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.auth-info::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.auth-info-content {
+    position: relative;
+    z-index: 1;
+}
+
+.auth-info .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(6px);
+}
+
+.auth-info h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    margin-bottom: 1rem;
+}
+
+.auth-info h2 span {
+    opacity: 0.75;
+}
+
+.auth-info p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.65;
+    max-width: 340px;
+}
+
+/* Feature list */
+.auth-features {
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.feature-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Footer info */
+.auth-info-footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-top: 2rem;
+}
+
+.auth-info-footer i {
+    font-size: 0.85rem;
+}
+
+/* RIGHT PANEL — Form */
+.auth-panel {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-panel h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.auth-panel .sub {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+}
+
+/* FORM MESSAGE */
+.form-msg {
+    display: none;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    animation: msgIn 0.3s ease;
+}
+
+@keyframes msgIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-msg.error {
+    display: flex;
+    background: #fef2f2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+}
+
+.form-msg.success {
+    display: flex;
+    background: #ecfdf5;
+    border-left: 4px solid var(--emerald);
+    color: #065f46;
+}
+
+.form-msg i { font-size: 1rem; }
+
+/* FORM */
+.field {
+    margin-bottom: 1.2rem;
+}
+
+.field label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.field label i {
+    color: var(--primary);
+    font-size: 0.75rem;
+}
+
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrap .input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+.input-wrap:focus-within .input-icon {
+    color: var(--primary);
+}
+
+.field input {
+    width: 100%;
+    padding: 0.95rem 1rem 0.95rem 2.8rem;
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.field input::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.field input:focus {
+    border-color: var(--primary);
+    background: var(--surface);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Remember + Forgot row */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.checkbox-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+    font-weight: 500;
+    user-select: none;
+}
+
+.checkbox-wrap input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    letter-spacing: 0.2px;
+}
+
+.btn-primary {
+    width: 100%;
+    background: var(--gradient);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-primary span,
+.btn-primary i {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 32px rgba(79, 70, 229, 0.45),
+        0 0 40px rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary:hover::before { opacity: 1; }
+
+.btn-primary:active { transform: translateY(-1px); }
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-primary .fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* Security footer */
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.auth-footer p {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.auth-footer i {
+    color: var(--emerald);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+    .auth-info {
+        padding: 2rem 2rem 1.5rem;
+    }
+    .auth-info h2 {
+        font-size: 1.5rem;
+    }
+    .auth-info p {
+        display: none;
+    }
+    .auth-features {
+        margin-top: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    .feature-item {
+        font-size: 0.75rem;
+    }
+    .feature-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+    }
+    .auth-info-footer {
+        display: none;
+    }
+    .auth-panel {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar { padding: 1rem 1.2rem; }
+    .brand { font-size: 1rem; }
+    .brand-icon { width: 32px; height: 32px; }
+    .brand-admin { font-size: 0.8rem; }
+    .nav-pill { font-size: 0.65rem; padding: 0.3rem 0.7rem; }
+    .auth-wrap { padding: 1rem; }
+    .auth-container { border-radius: 18px; }
+    .auth-panel { padding: 1.8rem 1.5rem; }
+    .auth-panel h1 { font-size: 1.4rem; }
+    .auth-info { padding: 1.5rem; }
+    .auth-info h2 { font-size: 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="brand">
+        <div class="brand-icon"><i class="fas fa-code"></i></div>
+        <span class="brand-text">Code_Learning</span>
+        <span class="brand-admin">/ admin</span>
+    </div>
+    <div class="nav-right">
+        <div class="nav-pill">
+            <i class="fas fa-circle"></i> Online
+        </div>
+    </div>
+</nav>
+
+<!-- AUTH WRAP -->
+<div class="auth-wrap">
+    <div class="auth-container">
+
+        <!-- LEFT PANEL — Info -->
+        <div class="auth-info">
+            <div class="auth-info-content">
+                <div class="badge">
+                    <i class="fas fa-shield-halved"></i> Admin Access
+                </div>
+
+                <h2>
+                    Welcome back to<br>
+                    <span>your dashboard.</span>
+                </h2>
+
+                <p>
+                    Sign in to manage users, courses, reports, and monitor the entire CodeLearning platform.
+                </p>
+
+                <div class="auth-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <span>User Management</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <span>Analytics & Reports</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-cog"></i></div>
+                        <span>System Settings</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-info-footer">
+                <i class="fas fa-lock"></i>
+                <span>256-bit SSL Encrypted Connection</span>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL — Form -->
+        <div class="auth-panel">
+            <h1>Admin Login</h1>
+            <p class="sub">Enter your credentials to access the dashboard.</p>
+
+            <div class="form-msg" id="form-msg"></div>
+
+            <form id="login-form" novalidate>
+
+                <div class="field">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <div class="input-wrap">
+                        <i class="fas fa-at input-icon"></i>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="admin@codelearning.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="password">
+                        <i class="fas fa-key"></i> Password
+                    </label>
+                    <div class="input-wrap">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="••••••••"
+                            required
+                            autocomplete="current-password"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label class="checkbox-wrap">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submit-btn">
+                    <i class="fas fa-right-to-bracket"></i>
+                    <span>Sign In</span>
+                </button>
+
+            </form>
+
+            <div class="divider">Protected Area</div>
+
+            <div class="auth-footer">
+                <p>
+                    <i class="fas fa-circle-check"></i>
+                    Authorized personnel only — all activity is logged.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('login-form');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const rememberCheck = document.getElementById('remember');
+    const submitBtn = document.getElementById('submit-btn');
+    const msgBox = document.getElementById('form-msg');
+
+    // Demo credentials
+    const ADMIN_EMAIL = 'admin@codelearning.com';
+    const ADMIN_PASSWORD = 'admin123';
+
+    // Remember email
+    const savedEmail = localStorage.getItem('code_learning_admin_email');
+    if (savedEmail) {
+        emailInput.value = savedEmail;
+        rememberCheck.checked = true;
+    }
+
+    function showMessage(text, type = 'error') {
+        const icons = {
+            error: 'fa-circle-exclamation',
+            success: 'fa-circle-check'
+        };
+        msgBox.className = `form-msg ${type}`;
+        msgBox.innerHTML = `<i class="fas ${icons[type]}"></i> <span>${text}</span>`;
+    }
+
+    function hideMessage() {
+        msgBox.className = 'form-msg';
+        msgBox.innerHTML = '';
+    }
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        hideMessage();
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        // Validate
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showMessage('Please enter a valid email address', 'error');
+            emailInput.focus();
+            return;
+        }
+
+        if (password.length < 6) {
+            showMessage('Password must be at least 6 characters', 'error');
+            passwordInput.focus();
+            return;
+        }
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner"></i> <span>Signing in...</span>';
+
+        // Simulate API
+        setTimeout(() => {
+            if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+                showMessage('Login successful! Redirecting...', 'success');
+
+                // Save session
+                localStorage.setItem('code_learning_admin', JSON.stringify({
+                    email: email,
+                    role: 'admin',
+                    loginAt: new Date().toISOString()
+                }));
+
+                // Remember email
+                if (rememberCheck.checked) {
+                    localStorage.setItem('code_learning_admin_email', email);
+                } else {
+                    localStorage.removeItem('code_learning_admin_email');
+                }
+
+                setTimeout(() => {
+                    window.location.href = 'AdminDashboard.html';
+                }, 1000);
+            } else {
+                showMessage('Invalid email or password', 'error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-right-to-bracket"></i> <span>Sign In</span>';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }, 1000);
+    });
+
+    // Clear error on input
+    [emailInput, passwordInput].forEach(input => {
+        input.addEventListener('input', hideMessage);
+    });
+});
+</script>
+
+</body>
+</html>

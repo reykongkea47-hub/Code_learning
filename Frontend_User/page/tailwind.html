@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>មេរៀន Tailwind CSS - CodeKhmerLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../languages.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+ <nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+   
+</nav>
+ <!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> សេចក្តីផ្តើម Tailwind
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា Tailwind?</a></li>
+                <li><a href="#why">1.2. ហេតុអ្វីប្រើ?</a></li>
+                <li><a href="#install">1.3. ការដំឡើង</a></li>
+                <li><a href="#first-example">1.4. ឧទាហរណ៍ដំបូង</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Utility Classes
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#text-colors">2.1. Text Colors</a></li>
+                <li><a href="#bg-colors">2.2. Background</a></li>
+                <li><a href="#text-size">2.3. Text Size</a></li>
+                <li><a href="#text-style">2.4. Text Style</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Layout — Flex & Grid
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#flexbox">3.1. Flexbox</a></li>
+                <li><a href="#grid">3.2. CSS Grid</a></li>
+                <li><a href="#responsive-grid">3.3. Responsive Grid</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Spacing
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#padding">4.1. Padding</a></li>
+                <li><a href="#margin">4.2. Margin</a></li>
+                <li><a href="#gap">4.3. Gap</a></li>
+                <li><a href="#width-height">4.4. Width & Height</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Borders & Shadows
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#border">5.1. Border</a></li>
+                <li><a href="#radius">5.2. Border Radius</a></li>
+                <li><a href="#shadow">5.3. Box Shadow</a></li>
+                <li><a href="#hover">5.4. Hover Effects</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Responsive Design
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#breakpoints">6.1. Breakpoints</a></li>
+                <li><a href="#responsive-nav">6.2. Responsive Nav</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Forms & Buttons
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#inputs">7.1. Inputs</a></li>
+                <li><a href="#buttons">7.2. Buttons</a></li>
+                <li><a href="#full-form">7.3. Full Form</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Animations & Transitions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#transitions">8.1. Transitions</a></li>
+                <li><a href="#animations">8.2. Animations</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Components
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#card">9.1. Card</a></li>
+                <li><a href="#modal">9.2. Modal</a></li>
+                <li><a href="#alert">9.3. Alert</a></li>
+                <li><a href="#avatar-badge">9.4. Avatar & Badge</a></li>
+                <li><a href="#table-comp">9.5. Table</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Customization
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#config">10.1. Config</a></li>
+                <li><a href="#custom-css">10.2. Custom CSS</a></li>
+                <li><a href="#dark-mode">10.3. Dark Mode</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- ==================== LESSON 1 ==================== -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. សេចក្តីផ្តើម Tailwind CSS</h2>
+
+            <h3 id="intro">1.1 តើ Tailwind CSS គឺជាអ្វី?</h3>
+            <p>Tailwind CSS គឺជា <strong>CSS Utility Framework</strong> ដែលអនុញ្ញាតឱ្យអ្នកសរសេរ CSS ដោយប្រើ class ដែលមានរួចរាល់ក្នុង HTML។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> ជាធម្មតា អ្នកត្រូវសរសេរ CSS ដោយឡែក ដូចជា <code>.btn { padding: 10px; }</code>។ ប៉ុន្តែ Tailwind អនុញ្ញាតឱ្យអ្នកប្រើ class ដែលមានស្រាប់ ដូចជា <code>px-4 py-2 bg-blue-500</code> ដោយផ្ទាល់ក្នុង HTML។ នេះធ្វើឱ្យកូដខ្លី និងលឿនជាង។
+            </div>
+
+            <h3 id="why">1.2 ហេតុអ្វីបានជាប្រើ Tailwind CSS?</h3>
+            <ul>
+                <li><strong>រហ័ស</strong> — មិនចាំបាច់សរសេរ CSS ច្រើន</li>
+                <li><strong>Responsive</strong> — ងាយស្រួលធ្វើឱ្យទាក់ទងនឹងគ្រប់ទំហំអេក្រង់</li>
+                <li><strong>Customizable</strong> — អាចកែប្រែតាមតម្រូវការ</li>
+                <li><strong>Popular</strong> — ប្រើប្រាស់យ៉ាងទូលំទូលាយក្នុងឧស្សាហកម្ម</li>
+            </ul>
+
+            <h3 id="install">1.3 ការដំឡើង</h3>
+
+            <h4>វិធី ១៖ ប្រើ CDN (ងាយស្រួលបំផុត)</h4>
+            <div class="code-block">
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"https://cdn.tailwindcss.com"</span><span class="tag">&gt;&lt;/script&gt;</span>
+            </div>
+
+            <h4>វិធី ២៖ ដំឡើងក្នុងគម្រោង</h4>
+            <div class="code-block">
+npm install -D tailwindcss
+npx tailwindcss init
+            </div>
+
+            <h3 id="first-example">1.4 ឧទាហរណ៍ដំបូង</h3>
+            <div class="code-block">
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"https://cdn.tailwindcss.com"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="str">"bg-gray-100 p-8"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="str">"text-3xl font-bold text-blue-600"</span><span class="tag">&gt;</span>
+    សួស្តី Tailwind CSS!
+  <span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖</strong> Tailwind ល្អសម្រាប់អ្នកដែលចូលចិត្តសរសេរ markup ជាមួយ styles តែម្តង។ បើអ្នកចូលចិត្ត CSS បែបប្រពៃណី អាចប្រើបានដែរ — វាមាន <code>@apply</code> សម្រាប់បង្កើត custom classes។
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 2 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Utility Classes — ពណ៌ និងអត្ថបទ</h2>
+
+            <h3 id="text-colors">2.1 ការកំណត់ពណ៌អត្ថបទ (Text Colors)</h3>
+            <table>
+                <thead>
+                    <tr><th>Class</th><th>ពណ៌</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>text-red-500</code></td><td>ក្រហម</td></tr>
+                    <tr><td><code>text-blue-500</code></td><td>ខៀវ</td></tr>
+                    <tr><td><code>text-green-500</code></td><td>បៃតង</td></tr>
+                    <tr><td><code>text-yellow-500</code></td><td>លឿង</td></tr>
+                    <tr><td><code>text-gray-500</code></td><td>ប្រផេះ</td></tr>
+                    <tr><td><code>text-white</code></td><td>ស</td></tr>
+                    <tr><td><code>text-black</code></td><td>ខ្មៅ</td></tr>
+                </tbody>
+            </table>
+
+            <div class="code-block">
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-red-500"</span><span class="tag">&gt;</span>អត្ថបទពណ៌ក្រហម<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-blue-700"</span><span class="tag">&gt;</span>អត្ថបទពណ៌ខៀវខ្មៅ<span class="tag">&lt;/p&gt;</span>
+            </div>
+
+            <h3 id="bg-colors">2.2 ការកំណត់ពណ៌ផ្ទៃខាងក្រោយ (Background Colors)</h3>
+            <table>
+                <thead>
+                    <tr><th>Class</th><th>ពណ៌</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>bg-red-500</code></td><td>ផ្ទៃក្រោយក្រហម</td></tr>
+                    <tr><td><code>bg-blue-500</code></td><td>ផ្ទៃក្រោយខៀវ</td></tr>
+                    <tr><td><code>bg-green-500</code></td><td>ផ្ទៃក្រោយបៃតង</td></tr>
+                    <tr><td><code>bg-yellow-500</code></td><td>ផ្ទៃក្រោយលឿង</td></tr>
+                    <tr><td><code>bg-white</code></td><td>ផ្ទៃក្រោយស</td></tr>
+                    <tr><td><code>bg-gray-100</code></td><td>ផ្ទៃក្រោយប្រផេះស្រាល</td></tr>
+                </tbody>
+            </table>
+
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white p-4"</span><span class="tag">&gt;</span>
+  ប្រអប់ខៀវ
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="text-size">2.3 ទំហំអត្ថបទ (Text Size)</h3>
+            <table>
+                <thead>
+                    <tr><th>Class</th><th>ទំហំ</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>text-xs</code></td><td>តូចបំផុត (12px)</td></tr>
+                    <tr><td><code>text-sm</code></td><td>តូច (14px)</td></tr>
+                    <tr><td><code>text-base</code></td><td>ធម្មតា (16px)</td></tr>
+                    <tr><td><code>text-lg</code></td><td>ធំ (18px)</td></tr>
+                    <tr><td><code>text-xl</code></td><td>ធំបន្តិច (20px)</td></tr>
+                    <tr><td><code>text-2xl</code></td><td>ធំ (24px)</td></tr>
+                    <tr><td><code>text-4xl</code></td><td>ធំបំផុត (36px)</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="text-style">2.4 ទម្រង់អត្ថបទ (Text Style)</h3>
+            <ul>
+                <li><code>font-bold</code> — ដិត</li>
+                <li><code>font-semibold</code> — ដិតបន្តិច</li>
+                <li><code>italic</code> — អក្សរផ្អៀង</li>
+                <li><code>underline</code> — បន្ទាត់ក្រោម</li>
+                <li><code>line-through</code> — បន្ទាត់កាត់</li>
+                <li><code>uppercase</code> — អក្សរធំ</li>
+            </ul>
+
+            <div class="code-block">
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"font-bold text-lg"</span><span class="tag">&gt;</span>អត្ថបទដិត<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"italic text-gray-600"</span><span class="tag">&gt;</span>អត្ថបទផ្អៀង<span class="tag">&lt;/p&gt;</span>
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 3 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Layout — Flexbox និង Grid</h2>
+
+            <h3 id="flexbox">3.1 Flexbox</h3>
+            <table>
+                <thead>
+                    <tr><th>Class</th><th>និយមន័យ</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>flex</code></td><td>បើក flexbox</td></tr>
+                    <tr><td><code>flex-row</code></td><td>ជួរផ្តេក</td></tr>
+                    <tr><td><code>flex-col</code></td><td>ជួរបញ្ឈរ</td></tr>
+                    <tr><td><code>justify-center</code></td><td>ដាក់កណ្តាលផ្តេក</td></tr>
+                    <tr><td><code>justify-between</code></td><td>ដាក់ចន្លោះស្មើ</td></tr>
+                    <tr><td><code>items-center</code></td><td>ដាក់កណ្តាលបញ្ឈរ</td></tr>
+                    <tr><td><code>gap-4</code></td><td>ចន្លោះ 16px</td></tr>
+                </tbody>
+            </table>
+
+            <div class="code-block">
+<span class="comment">&lt;!-- ជួរផ្តេក កណ្តាល --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"flex justify-center items-center gap-4"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white p-4"</span><span class="tag">&gt;</span>ប្រអប់ ១<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-green-500 text-white p-4"</span><span class="tag">&gt;</span>ប្រអប់ ២<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="grid">3.2 CSS Grid</h3>
+            <table>
+                <thead>
+                    <tr><th>Class</th><th>និយមន័យ</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>grid</code></td><td>បើក grid</td></tr>
+                    <tr><td><code>grid-cols-2</code></td><td>២ ជួរ</td></tr>
+                    <tr><td><code>grid-cols-3</code></td><td>៣ ជួរ</td></tr>
+                    <tr><td><code>col-span-2</code></td><td>កាត់ ២ ជួរ</td></tr>
+                    <tr><td><code>gap-4</code></td><td>ចន្លោះ 16px</td></tr>
+                </tbody>
+            </table>
+
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"grid grid-cols-3 gap-4"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white p-4"</span><span class="tag">&gt;</span>ប្រអប់ ១<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-green-500 text-white p-4"</span><span class="tag">&gt;</span>ប្រអប់ ២<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-red-500 text-white p-4"</span><span class="tag">&gt;</span>ប្រអប់ ៣<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="responsive-grid">3.3 Responsive Grid</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- ១ ជួរលើទូរស័ព្ទ ២ ជួរលើ tablet ៣ ជួរលើ desktop --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"</span><span class="tag">&gt;</span>
+  ...
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>md:</code> មានន័យថា "apply class នេះតែនៅពេល screen width ≥ 768px"។ នេះជាវិធីធ្វើឱ្យ design សម្របតាមទំហំអេក្រង់។
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 4 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Spacing — ការបែងចែកចន្លោះ</h2>
+
+            <h3 id="padding">4.1 Padding (ការបំពេញខាងក្នុង)</h3>
+            <table>
+                <thead><tr><th>Class</th><th>ទំហំ</th></tr></thead>
+                <tbody>
+                    <tr><td><code>p-0</code></td><td>0px</td></tr>
+                    <tr><td><code>p-1</code></td><td>4px</td></tr>
+                    <tr><td><code>p-2</code></td><td>8px</td></tr>
+                    <tr><td><code>p-4</code></td><td>16px</td></tr>
+                    <tr><td><code>p-6</code></td><td>24px</td></tr>
+                    <tr><td><code>p-8</code></td><td>32px</td></tr>
+                    <tr><td><code>p-12</code></td><td>48px</td></tr>
+                </tbody>
+            </table>
+
+            <h4>Padding ទៅទិសដៅជាក់លាក់</h4>
+            <ul>
+                <li><code>px-4</code> — ឆ្វេង និងស្តាំ 16px</li>
+                <li><code>py-4</code> — លើ និងក្រោម 16px</li>
+                <li><code>pt-4</code> / <code>pb-4</code> — លើ / ក្រោម</li>
+                <li><code>pl-4</code> / <code>pr-4</code> — ឆ្វេង / ស្តាំ</li>
+            </ul>
+
+            <h3 id="margin">4.2 Margin (ការបែងចែកក្រៅ)</h3>
+            <ul>
+                <li><code>m-4</code> — margin 16px គ្រប់ទិស</li>
+                <li><code>mx-auto</code> — ឆ្វេង និងស្តាំ auto (កណ្តាល)</li>
+                <li><code>mt-4</code> / <code>mb-4</code> — លើ / ក្រោម</li>
+                <li><code>ml-4</code> / <code>mr-4</code> — ឆ្វេង / ស្តាំ</li>
+            </ul>
+
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mx-auto max-w-md"</span><span class="tag">&gt;</span>
+  ប្រអប់ដែលនៅកណ្តាល
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="gap">4.3 Gap (ចន្លោះរវាងធាតុ)</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"flex gap-4"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 p-4"</span><span class="tag">&gt;</span>ប្រអប់ ១<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-green-500 p-4"</span><span class="tag">&gt;</span>ប្រអប់ ២<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="width-height">4.4 Width & Height</h3>
+            <ul>
+                <li><code>w-full</code> — 100% ទទឹង</li>
+                <li><code>w-1/2</code> — 50%</li>
+                <li><code>w-screen</code> — 100vw</li>
+                <li><code>h-screen</code> — 100vh</li>
+                <li><code>min-h-screen</code> — អប្បបរមា 100vh</li>
+            </ul>
+        </section>
+
+        <!-- ==================== LESSON 5 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Borders និង Shadows</h2>
+
+            <h3 id="border">5.1 Border (បន្ទាត់គែម)</h3>
+            <table>
+                <thead><tr><th>Class</th><th>និយមន័យ</th></tr></thead>
+                <tbody>
+                    <tr><td><code>border</code></td><td>បន្ទាត់ 1px</td></tr>
+                    <tr><td><code>border-2</code></td><td>បន្ទាត់ 2px</td></tr>
+                    <tr><td><code>border-4</code></td><td>បន្ទាត់ 4px</td></tr>
+                    <tr><td><code>border-0</code></td><td>មិនមានបន្ទាត់</td></tr>
+                    <tr><td><code>border-dashed</code></td><td>បន្ទាត់ដាច់ៗ</td></tr>
+                    <tr><td><code>border-dotted</code></td><td>បន្ទាត់ចំណុច</td></tr>
+                    <tr><td><code>border-blue-500</code></td><td>បន្ទាត់ខៀវ</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="radius">5.2 Border Radius</h3>
+            <ul>
+                <li><code>rounded-none</code> — មិនមានជ្រុង</li>
+                <li><code>rounded</code> — 4px</li>
+                <li><code>rounded-lg</code> — 8px</li>
+                <li><code>rounded-xl</code> — 12px</li>
+                <li><code>rounded-2xl</code> — 16px</li>
+                <li><code>rounded-full</code> — រង្វង់</li>
+            </ul>
+
+            <h3 id="shadow">5.3 Box Shadow</h3>
+            <ul>
+                <li><code>shadow-sm</code> — តូច</li>
+                <li><code>shadow</code> — ធម្មតា</li>
+                <li><code>shadow-md</code> — កណ្តាល</li>
+                <li><code>shadow-lg</code> — ធំ</li>
+                <li><code>shadow-xl</code> — ធំបំផុត</li>
+                <li><code>shadow-2xl</code> — ធំបំផុត</li>
+            </ul>
+
+            <h3 id="hover">5.4 Hover Effects</h3>
+            <div class="code-block">
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 hover:shadow-lg transition-all duration-300"</span><span class="tag">&gt;</span>
+  ប៊ូតុង
+<span class="tag">&lt;/button&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>hover:</code> ធ្វើឱ្យ class អនុវត្តតែនៅពេល mouse ចូលលើ element។ <code>transition-all</code> ធ្វើឱ្យការផ្លាស់ប្តូរមានភាពរលូន។
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 6 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Responsive Design</h2>
+
+            <h3 id="breakpoints">6.1 Breakpoints</h3>
+            <table>
+                <thead><tr><th>Class</th><th>ទំហំអេក្រង់</th><th>ឧទាហរណ៍</th></tr></thead>
+                <tbody>
+                    <tr><td><code>sm:</code></td><td>640px ឡើង</td><td>ទូរស័ព្ទធំ</td></tr>
+                    <tr><td><code>md:</code></td><td>768px ឡើង</td><td>Tablet</td></tr>
+                    <tr><td><code>lg:</code></td><td>1024px ឡើង</td><td>Laptop</td></tr>
+                    <tr><td><code>xl:</code></td><td>1280px ឡើង</td><td>Desktop</td></tr>
+                    <tr><td><code>2xl:</code></td><td>1536px ឡើង</td><td>Large Desktop</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="responsive-nav">6.2 Responsive Navigation</h3>
+            <div class="code-block">
+<span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="str">"bg-blue-600 text-white p-4"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container mx-auto flex flex-col md:flex-row justify-between items-center"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="str">"text-xl font-bold"</span><span class="tag">&gt;</span>Logo<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"flex flex-col md:flex-row gap-4"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"hover:text-blue-200"</span><span class="tag">&gt;</span>ទំព័រដើម<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"hover:text-blue-200"</span><span class="tag">&gt;</span>អំពីយើង<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 7 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Forms និង Buttons</h2>
+
+            <h3 id="inputs">7.1 Input</h3>
+            <div class="code-block">
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span>
+       <span class="attr">class</span>=<span class="str">"border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"</span>
+       <span class="attr">placeholder</span>=<span class="str">"បញ្ចូលឈ្មោះ..."</span><span class="tag">&gt;</span>
+            </div>
+
+            <h3 id="buttons">7.2 Buttons</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- ប៊ូតុងធម្មតា --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"</span><span class="tag">&gt;</span>
+  ចុចនៅទីនេះ
+<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- ប៊ូតុង Outline --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"bg-white text-blue-500 px-4 py-2 rounded-lg border border-blue-500 hover:bg-blue-50"</span><span class="tag">&gt;</span>
+  Outline
+<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- ប៊ូតុង Pill --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600"</span><span class="tag">&gt;</span>
+  Pill
+<span class="tag">&lt;/button&gt;</span>
+            </div>
+
+            <h3 id="full-form">7.3 Form ពេញលក្ខណៈ</h3>
+            <div class="code-block">
+<span class="tag">&lt;form</span> <span class="attr">class</span>=<span class="str">"max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="str">"text-2xl font-bold mb-6 text-center"</span><span class="tag">&gt;</span>សមាជិកភាព<span class="tag">&lt;/h2&gt;</span>
+
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mb-4"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;label</span> <span class="attr">class</span>=<span class="str">"block text-gray-700 text-sm font-bold mb-2"</span><span class="tag">&gt;</span>ឈ្មោះ<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">class</span>=<span class="str">"border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-blue-500"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="str">"submit"</span> <span class="attr">class</span>=<span class="str">"w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"</span><span class="tag">&gt;</span>
+    ផ្ញើសារ
+  <span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 8 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Animations និង Transitions</h2>
+
+            <h3 id="transitions">8.1 Transitions</h3>
+            <table>
+                <thead><tr><th>Class</th><th>និយមន័យ</th></tr></thead>
+                <tbody>
+                    <tr><td><code>transition-all</code></td><td>ផ្លាស់ប្តូរទាំងអស់</td></tr>
+                    <tr><td><code>transition-colors</code></td><td>ផ្លាស់ប្តូរពណ៌</td></tr>
+                    <tr><td><code>transition-transform</code></td><td>ផ្លាស់ប្តូរទំហំ/ទីតាំង</td></tr>
+                    <tr><td><code>duration-300</code></td><td>300ms</td></tr>
+                    <tr><td><code>duration-500</code></td><td>500ms</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="animations">8.2 Animations</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- Bounce --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"animate-bounce bg-blue-500 text-white p-4 rounded-lg"</span><span class="tag">&gt;</span>លោត<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Pulse --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"animate-pulse bg-green-500 text-white p-4 rounded-lg"</span><span class="tag">&gt;</span>ប៉ុស្តិ៍<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Spin --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"animate-spin bg-red-500 text-white p-4 rounded-lg"</span><span class="tag">&gt;</span>វិល<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Tailwind មាន animation ដែលរួចរាល់ដូចជា <code>animate-bounce</code>, <code>animate-pulse</code>, <code>animate-spin</code>, <code>animate-ping</code>។ អ្នកអាចបង្កើតផ្ទាល់ខ្លួនបានក្នុង <code>tailwind.config.js</code>។
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 9 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Components — សមាសធាតុ</h2>
+
+            <h3 id="card">9.1 Card (ប្រអប់)</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-white rounded-lg shadow-lg overflow-hidden"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">class</span>=<span class="str">"w-full h-48 object-cover"</span> <span class="attr">alt</span>=<span class="str">"រូបភាព"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"p-6"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h3</span> <span class="attr">class</span>=<span class="str">"text-xl font-bold mb-2"</span><span class="tag">&gt;</span>ចំណងជើង<span class="tag">&lt;/h3&gt;</span>
+    <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-gray-600 mb-4"</span><span class="tag">&gt;</span>អត្ថបទពិពណ៌នា...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"</span><span class="tag">&gt;</span>
+      ស្វែងយល់បន្ថែម
+    <span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="modal">9.2 Modal (ប្រអប់លោត)</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h3</span> <span class="attr">class</span>=<span class="str">"text-xl font-bold mb-4"</span><span class="tag">&gt;</span>ចំណងជើង<span class="tag">&lt;/h3&gt;</span>
+    <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-gray-600 mb-6"</span><span class="tag">&gt;</span>អត្ថបទ...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"bg-blue-500 text-white px-4 py-2 rounded"</span><span class="tag">&gt;</span>យល់ព្រម<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="alert">9.3 Alert (សារជូនដំណឹង)</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- ជោគជ័យ --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded"</span><span class="tag">&gt;</span>
+  <strong>ជោគជ័យ!</strong> សកម្មភាពបានជោគជ័យ។
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- កំហុស --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"</span><span class="tag">&gt;</span>
+  <strong>កំហុស!</strong> មានបញ្ហា។
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="avatar-badge">9.4 Avatar និង Badge</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- Avatar --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"avatar.jpg"</span> <span class="attr">class</span>=<span class="str">"w-10 h-10 rounded-full"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- Avatar ជាមួយ Status --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"relative inline-block"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"avatar.jpg"</span> <span class="attr">class</span>=<span class="str">"w-12 h-12 rounded-full"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"</span><span class="tag">&gt;&lt;/span&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Badge --&gt;</span>
+<span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"</span><span class="tag">&gt;</span>
+  ថ្មី
+<span class="tag">&lt;/span&gt;</span>
+            </div>
+
+            <h3 id="table-comp">9.5 Table (តារាង)</h3>
+            <div class="code-block">
+<span class="tag">&lt;table</span> <span class="attr">class</span>=<span class="str">"min-w-full bg-white border border-gray-200"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr</span> <span class="attr">class</span>=<span class="str">"bg-gray-100"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;th</span> <span class="attr">class</span>=<span class="str">"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"</span><span class="tag">&gt;</span>ឈ្មោះ<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th</span> <span class="attr">class</span>=<span class="str">"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"</span><span class="tag">&gt;</span>អ៊ីមែល<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+  <span class="tag">&lt;tbody</span> <span class="attr">class</span>=<span class="str">"divide-y divide-gray-200"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="str">"px-6 py-4"</span><span class="tag">&gt;</span>Dara<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="str">"px-6 py-4"</span><span class="tag">&gt;</span>dara@example.com<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </div>
+        </section>
+
+        <!-- ==================== LESSON 10 ==================== -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Customization និង Advanced</h2>
+
+            <h3 id="config">10.1 Custom Configuration</h3>
+            <div class="code-block">
+<span class="comment">// tailwind.config.js</span>
+module.exports = {
+  content: [<span class="str">"./src/**/*.{html,js}"</span>],
+  theme: {
+    extend: {
+      colors: {
+        primary: <span class="str">'#0ea5e9'</span>,
+        secondary: <span class="str">'#64748b'</span>,
+      },
+      fontFamily: {
+        sans: [<span class="str">'Inter'</span>, <span class="str">'sans-serif'</span>],
+      },
+    },
+  },
+  plugins: [],
+}
+            </div>
+
+            <h3 id="custom-css">10.2 Custom CSS with @apply</h3>
+            <div class="code-block">
+<span class="comment">/* styles.css */</span>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors;
+  }
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6;
+  }
+}
+            </div>
+
+            <h3 id="dark-mode">10.3 Dark Mode</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"dark:bg-gray-900 dark:text-white p-4"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="str">"dark:text-white"</span><span class="tag">&gt;</span>ចំណងជើង<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"dark:text-gray-300"</span><span class="tag">&gt;</span>អត្ថបទ...<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>dark:</code> prefix ធ្វើឱ្យ class អនុវត្តតែនៅពេល dark mode ត្រូវបានបើក។ ត្រូវកំណត់ <code>darkMode: 'class'</code> ក្នុង config ដើម្បីគ្រប់គ្រងដោយ class។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> Tailwind មិនមែនជាការជំនួស CSS ទេ — វាជាឧបករណ៍ជំនួយដែលធ្វើឱ្យការសរសេរ CSS លឿនជាង។ ព្យាយាមបង្កើតគម្រោងតូចៗ ដើម្បីយល់បានលឿន។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fas fa-wind"></i> index.html</div>
+            <div class="preview-body">
+<pre><span style="color:#f472b6">&lt;!DOCTYPE html&gt;</span>
+<span style="color:#f472b6">&lt;html&gt;</span>
+<span style="color:#f472b6">&lt;head&gt;</span>
+  <span style="color:#f472b6">&lt;script</span> <span style="color:#fbbf24">src</span>=<span style="color:#86efac">"https://cdn.tailwindcss.com"</span><span style="color:#f472b6">&gt;&lt;/script&gt;</span>
+<span style="color:#f472b6">&lt;/head&gt;</span>
+<span style="color:#f472b6">&lt;body</span> <span style="color:#fbbf24">class</span>=<span style="color:#86efac">"bg-gray-100 p-8"</span><span style="color:#f472b6">&gt;</span>
+  <span style="color:#f472b6">&lt;h1</span> <span style="color:#fbbf24">class</span>=<span style="color:#86efac">"text-3xl font-bold text-blue-600"</span><span style="color:#f472b6">&gt;</span>
+    Hello Tailwind!
+  <span style="color:#f472b6">&lt;/h1&gt;</span>
+<span style="color:#f472b6">&lt;/body&gt;</span>
+<span style="color:#f472b6">&lt;/html&gt;</span></pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#06b6d4;">
+                <i class="fas fa-eye"></i> លទ្ធផល
+            </div>
+            <div class="output-box">
+                <h2 style="font-size:1.4rem;color:#0ea5e9;margin-bottom:0.5rem;">Hello Tailwind!</h2>
+                <p style="color:#475569;font-size:0.85rem;">Powered by Tailwind CSS</p>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">Tailwind Basics</a></li>
+                <li><a href="#">Responsive Design</a></li>
+                <li><a href="#">Components</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>មេរៀន JavaScript - CodeKhmerLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/page.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> JavaScript Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា JS?</a></li>
+                <li><a href="#setup">1.2. ការដំឡើង</a></li>
+                <li><a href="#console">1.3. Console</a></li>
+                <li><a href="#syntax">1.4. Syntax</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Variables & Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#var-let-const">2.1. var / let / const</a></li>
+                <li><a href="#data-types">2.2. Data Types</a></li>
+                <li><a href="#type-coercion">2.3. Type Coercion</a></li>
+                <li><a href="#template-literals">2.4. Template Literals</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Operators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arithmetic">3.1. Arithmetic</a></li>
+                <li><a href="#comparison">3.2. Comparison</a></li>
+                <li><a href="#logical">3.3. Logical</a></li>
+                <li><a href="#ternary">3.4. Ternary</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Control Flow
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else">4.1. if / else</a></li>
+                <li><a href="#switch">4.2. switch</a></li>
+                <li><a href="#loops">4.3. Loops</a></li>
+                <li><a href="#for-of-in">4.4. for...of / for...in</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Functions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#func-basics">5.1. Function Basics</a></li>
+                <li><a href="#arrow">5.2. Arrow Functions</a></li>
+                <li><a href="#default">5.3. Default Params</a></li>
+                <li><a href="#closure">5.4. Closures</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Arrays & Objects
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arrays">6.1. Arrays</a></li>
+                <li><a href="#array-methods">6.2. Array Methods</a></li>
+                <li><a href="#objects">6.3. Objects</a></li>
+                <li><a href="#destructure">6.4. Destructuring</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> DOM Manipulation
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#select">7.1. Selecting</a></li>
+                <li><a href="#modify">7.2. Modifying</a></li>
+                <li><a href="#events">7.3. Events</a></li>
+                <li><a href="#create">7.4. Creating Elements</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> ES6+ Features
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#spread">8.1. Spread / Rest</a></li>
+                <li><a href="#modules">8.2. Modules</a></li>
+                <li><a href="#classes">8.3. Classes</a></li>
+                <li><a href="#promises">8.4. Promises</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Async / Await
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#async-basics">9.1. Async Basics</a></li>
+                <li><a href="#fetch">9.2. Fetch API</a></li>
+                <li><a href="#error-handling">9.3. Error Handling</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Advanced Concepts
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#higher-order">10.1. Higher-Order Functions</a></li>
+                <li><a href="#this">10.2. this Keyword</a></li>
+                <li><a href="#storage">10.3. localStorage</a></li>
+                <li><a href="#json">10.4. JSON</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Error Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#try-catch">11.1. try / catch</a></li>
+                <li><a href="#throw">11.2. throw</a></li>
+                <li><a href="#debugging">11.3. Debugging</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> Regular Expressions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#regex-basics">12.1. Basics</a></li>
+                <li><a href="#regex-methods">12.2. Methods</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Modern JS (ES2020+)
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#optional-chaining">13.1. Optional Chaining</a></li>
+                <li><a href="#nullish">13.2. Nullish Coalescing</a></li>
+                <li><a href="#bigint">13.3. BigInt</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Best Practices
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> JavaScript Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. JavaScript Introduction - ការណែនាំ JS</h2>
+
+            <h3 id="intro">1.1 អ្វីជា JavaScript?</h3>
+            <p>JavaScript គឺជាភាសា <strong>programming language</strong> ដែលប្រើសម្រាប់បន្ថែម interactivity ទៅគេហទំព័រ។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> JavaScript ដំណើរការនៅលើ <em>browser</em> (client-side)។ វាអាចកែ DOM, ឆ្លើយតបនឹង events, ទាញ data ពី server និងច្រើនទៀត។ ប្រើសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Web Frontend</strong> — Interactive UI</li>
+                    <li><strong>Backend</strong> — Node.js</li>
+                    <li><strong>Mobile Apps</strong> — React Native</li>
+                    <li><strong>Desktop Apps</strong> — Electron</li>
+                </ul>
+            </div>
+
+            <h3 id="setup">1.2 ការដំឡើង</h3>
+            <ul>
+                <li><strong>Browser</strong> — Chrome, Firefox (F12 → Console)</li>
+                <li><strong>Node.js</strong> — សម្រាប់រត់ JS ក្រៅ browser</li>
+                <li><strong>VS Code</strong> — Editor ពេញនិយម</li>
+            </ul>
+
+            <div class="code-block">
+<span class="comment">&lt;!-- បញ្ចូល JS ក្នុង HTML --&gt;</span>
+<span class="keyword">&lt;script</span> <span class="type">src</span>=<span class="str">"app.js"</span><span class="keyword">&gt;&lt;/script&gt;</span>
+
+<span class="comment">&lt;!-- ឬ inline --&gt;</span>
+<span class="keyword">&lt;script&gt;</span>
+    console.<span class="func">log</span>(<span class="str">"Hello!"</span>);
+<span class="keyword">&lt;/script&gt;</span>
+            </div>
+
+            <h3 id="console">1.3 Console</h3>
+            <div class="code-block">
+console.<span class="func">log</span>(<span class="str">"Hello, World!"</span>);   <span class="comment">// បង្ហាញសារ</span>
+console.<span class="func">error</span>(<span class="str">"Error!"</span>);         <span class="comment">// កំហុស</span>
+console.<span class="func">warn</span>(<span class="str">"Warning!"</span>);        <span class="comment">// ព្រមាន</span>
+console.<span class="func">table</span>([<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>]);      <span class="comment">// តារាង</span>
+            </div>
+
+            <h3 id="syntax">1.4 Syntax</h3>
+            <div class="code-block">
+<span class="comment">// Statement បញ្ចប់ដោយ ;</span>
+<span class="keyword">let</span> name = <span class="str">"Dara"</span>;
+console.<span class="func">log</span>(name);
+
+<span class="comment">// Comments</span>
+<span class="comment">// Single line</span>
+<span class="comment">/* Multi-line */</span>
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Variables & Data Types</h2>
+
+            <h3 id="var-let-const">2.1 var / let / const</h3>
+            <div class="code-block">
+<span class="keyword">var</span> old = <span class="str">"ចាស់"</span>;         <span class="comment">// Function scope (មិនគួរប្រើ)</span>
+<span class="keyword">let</span> age = <span class="num-val">20</span>;              <span class="comment">// Block scope (អាចផ្លាស់ប្តូរ)</span>
+<span class="keyword">const</span> PI = <span class="num-val">3.14</span>;           <span class="comment">// Block scope (មិនអាចផ្លាស់ប្តូរ)</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ប្រើ <code>const</code> ជាលំនាំដើម។ ប្រើ <code>let</code> តែនៅពេលត្រូវការផ្លាស់ប្តូរតម្លៃ។ <strong>កុំប្រើ <code>var</code></strong> ព្រោះវាមានបញ្ហា scope។
+            </div>
+
+            <h3 id="data-types">2.2 Data Types</h3>
+            <ul>
+                <li><strong>Primitive:</strong> <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code></li>
+                <li><strong>Reference:</strong> <code>object</code>, <code>array</code>, <code>function</code></li>
+            </ul>
+
+            <div class="code-block">
+<span class="keyword">let</span> name = <span class="str">"Dara"</span>;        <span class="comment">// string</span>
+<span class="keyword">let</span> age = <span class="num-val">20</span>;             <span class="comment">// number</span>
+<span class="keyword">let</span> isActive = <span class="bool">true</span>;      <span class="comment">// boolean</span>
+<span class="keyword">let</span> nothing = <span class="bool">null</span>;       <span class="comment">// null</span>
+<span class="keyword">let</span> undef;                  <span class="comment">// undefined</span>
+<span class="keyword">let</span> user = { name: <span class="str">"Dara"</span> }; <span class="comment">// object</span>
+<span class="keyword">let</span> nums = [<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>];       <span class="comment">// array</span>
+            </div>
+
+            <h3 id="type-coercion">2.3 Type Coercion</h3>
+            <div class="code-block">
+<span class="str">"5"</span> + <span class="num-val">3</span>       <span class="comment">// "53" (string)</span>
+<span class="str">"5"</span> - <span class="num-val">3</span>       <span class="comment">// 2 (number)</span>
+<span class="num-val">5</span> == <span class="str">"5"</span>       <span class="comment">// true (loose)</span>
+<span class="num-val">5</span> === <span class="str">"5"</span>      <span class="comment">// false (strict)</span>
+            </div>
+
+            <h3 id="template-literals">2.4 Template Literals</h3>
+            <div class="code-block">
+<span class="keyword">let</span> name = <span class="str">"Dara"</span>;
+<span class="keyword">let</span> greeting = <span class="str">`Hello, ${name}!`</span>;
+console.<span class="func">log</span>(greeting);   <span class="comment">// Hello, Dara!</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Template literal ប្រើ <code>`</code> (backtick) និង <code>${}</code> សម្រាប់បញ្ចូល expression។ វាងាយស្រួលជាង concatenation ដោយ <code>+</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Operators</h2>
+
+            <h3 id="arithmetic">3.1 Arithmetic</h3>
+            <div class="code-block">
+<span class="num-val">5</span> + <span class="num-val">3</span>    <span class="comment">// 8</span>
+<span class="num-val">10</span> - <span class="num-val">4</span>   <span class="comment">// 6</span>
+<span class="num-val">3</span> * <span class="num-val">4</span>    <span class="comment">// 12</span>
+<span class="num-val">10</span> / <span class="num-val">3</span>   <span class="comment">// 3.333...</span>
+<span class="num-val">10</span> % <span class="num-val">3</span>   <span class="comment">// 1 (modulo)</span>
+<span class="num-val">2</span> ** <span class="num-val">3</span>   <span class="comment">// 8 (power)</span>
+            </div>
+
+            <h3 id="comparison">3.2 Comparison</h3>
+            <div class="code-block">
+<span class="num-val">5</span> == <span class="str">"5"</span>     <span class="comment">// true (loose)</span>
+<span class="num-val">5</span> === <span class="str">"5"</span>    <span class="comment">// false (strict)</span>
+<span class="num-val">5</span> != <span class="str">"5"</span>     <span class="comment">// false</span>
+<span class="num-val">5</span> !== <span class="str">"5"</span>    <span class="comment">// true</span>
+<span class="num-val">5</span> &gt; <span class="num-val">3</span>      <span class="comment">// true</span>
+<span class="num-val">5</span> &lt;= <span class="num-val">5</span>     <span class="comment">// true</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <strong>ត្រូវប្រើ <code>===</code> និង <code>!==</code></strong> ជានិច្ច ដើម្បីជៀសវាង bug ពី type coercion។ <code>==</code> នឹងបំប្លែង type ដោយស្វ័យប្រវត្តិ។
+            </div>
+
+            <h3 id="logical">3.3 Logical</h3>
+            <div class="code-block">
+<span class="bool">true</span> &amp;&amp; <span class="bool">false</span>    <span class="comment">// false (AND)</span>
+<span class="bool">true</span> || <span class="bool">false</span>    <span class="comment">// true (OR)</span>
+!<span class="bool">true</span>            <span class="comment">// false (NOT)</span>
+            </div>
+
+            <h3 id="ternary">3.4 Ternary</h3>
+            <div class="code-block">
+<span class="keyword">let</span> result = age &gt;= <span class="num-val">18</span> ? <span class="str">"Adult"</span> : <span class="str">"Minor"</span>;
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Control Flow</h2>
+
+            <h3 id="if-else">4.1 if / else</h3>
+            <div class="code-block">
+<span class="keyword">if</span> (age &gt;= <span class="num-val">18</span>) {
+    console.<span class="func">log</span>(<span class="str">"Adult"</span>);
+} <span class="keyword">else if</span> (age &gt;= <span class="num-val">13</span>) {
+    console.<span class="func">log</span>(<span class="str">"Teen"</span>);
+} <span class="keyword">else</span> {
+    console.<span class="func">log</span>(<span class="str">"Child"</span>);
+}
+            </div>
+
+            <h3 id="switch">4.2 switch</h3>
+            <div class="code-block">
+<span class="keyword">switch</span> (day) {
+    <span class="keyword">case</span> <span class="num-val">1</span>:
+        console.<span class="func">log</span>(<span class="str">"Monday"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="num-val">2</span>:
+        console.<span class="func">log</span>(<span class="str">"Tuesday"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        console.<span class="func">log</span>(<span class="str">"Unknown"</span>);
+}
+            </div>
+
+            <h3 id="loops">4.3 Loops</h3>
+            <div class="code-block">
+<span class="comment">// for loop</span>
+<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">5</span>; i++) {
+    console.<span class="func">log</span>(i);
+}
+
+<span class="comment">// while loop</span>
+<span class="keyword">let</span> j = <span class="num-val">0</span>;
+<span class="keyword">while</span> (j &lt; <span class="num-val">5</span>) { j++; }
+
+<span class="comment">// do-while</span>
+<span class="keyword">do</span> { j++; } <span class="keyword">while</span> (j &lt; <span class="num-val">10</span>);
+            </div>
+
+            <h3 id="for-of-in">4.4 for...of / for...in</h3>
+            <div class="code-block">
+<span class="comment">// for...of — តម្លៃ</span>
+<span class="keyword">for</span> (<span class="keyword">const</span> num <span class="keyword">of</span> [<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>]) {
+    console.<span class="func">log</span>(num);
+}
+
+<span class="comment">// for...in — key</span>
+<span class="keyword">const</span> user = { name: <span class="str">"Dara"</span>, age: <span class="num-val">20</span> };
+<span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> user) {
+    console.<span class="func">log</span>(key, user[key]);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>for...of</code> ប្រើសម្រាប់ array (តម្លៃ)។ <code>for...in</code> ប្រើសម្រាប់ object (key)។ កុំច្រឡំ!
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Functions</h2>
+
+            <h3 id="func-basics">5.1 Function Basics</h3>
+            <div class="code-block">
+<span class="comment">// Function declaration</span>
+<span class="keyword">function</span> <span class="func">greet</span>(name) {
+    <span class="keyword">return</span> <span class="str">`Hello, ${name}!`</span>;
+}
+
+<span class="comment">// Function expression</span>
+<span class="keyword">const</span> <span class="func">add</span> = <span class="keyword">function</span>(a, b) {
+    <span class="keyword">return</span> a + b;
+};
+            </div>
+
+            <h3 id="arrow">5.2 Arrow Functions</h3>
+            <div class="code-block">
+<span class="keyword">const</span> <span class="func">greet</span> = (name) =&gt; <span class="str">`Hello, ${name}!`</span>;
+<span class="keyword">const</span> <span class="func">add</span> = (a, b) =&gt; a + b;
+<span class="keyword">const</span> <span class="func">square</span> = x =&gt; x * x;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Arrow function ខ្លីជាង និង <strong>មិនមាន <code>this</code> ផ្ទាល់ខ្លួន</strong>។ បើ body មានតែ return statement អាចសរសេរខ្លីបាន។
+            </div>
+
+            <h3 id="default">5.3 Default Parameters</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">greet</span>(name = <span class="str">"Guest"</span>) {
+    <span class="keyword">return</span> <span class="str">`Hello, ${name}!`</span>;
+}
+
+<span class="func">greet</span>();         <span class="comment">// Hello, Guest!</span>
+<span class="func">greet</span>(<span class="str">"Dara"</span>);   <span class="comment">// Hello, Dara!</span>
+            </div>
+
+            <h3 id="closure">5.4 Closures</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">counter</span>() {
+    <span class="keyword">let</span> count = <span class="num-val">0</span>;
+    <span class="keyword">return</span> () =&gt; ++count;
+}
+
+<span class="keyword">const</span> next = <span class="func">counter</span>();
+<span class="func">next</span>();  <span class="comment">// 1</span>
+<span class="func">next</span>();  <span class="comment">// 2</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Closure គឺ function ដែលចងចាំ variable ពី scope ខាងក្រៅ ទោះបី function នោះត្រូវបានហៅនៅកន្លែងផ្សេងក៏ដោយ។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Arrays & Objects</h2>
+
+            <h3 id="arrays">6.1 Arrays</h3>
+            <div class="code-block">
+<span class="keyword">const</span> nums = [<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>];
+nums[<span class="num-val">0</span>];        <span class="comment">// 1</span>
+nums.length;     <span class="comment">// 3</span>
+nums.<span class="func">push</span>(<span class="num-val">4</span>);    <span class="comment">// បន្ថែម</span>
+nums.<span class="func">pop</span>();       <span class="comment">// ដកចេញ</span>
+            </div>
+
+            <h3 id="array-methods">6.2 Array Methods</h3>
+            <div class="code-block">
+<span class="comment">// map — បំប្លែងគ្រប់ element</span>
+[<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>].<span class="func">map</span>(n =&gt; n * <span class="num-val">2</span>);   <span class="comment">// [2, 4, 6]</span>
+
+<span class="comment">// filter — ជម្រើស element</span>
+[<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>, <span class="num-val">4</span>].<span class="func">filter</span>(n =&gt; n &gt; <span class="num-val">2</span>);  <span class="comment">// [3, 4]</span>
+
+<span class="comment">// reduce — បូកសរុប</span>
+[<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>].<span class="func">reduce</span>((sum, n) =&gt; sum + n, <span class="num-val">0</span>);  <span class="comment">// 6</span>
+
+<span class="comment">// find, some, every</span>
+nums.<span class="func">find</span>(n =&gt; n &gt; <span class="num-val">2</span>);   <span class="comment">// 3</span>
+nums.<span class="func">some</span>(n =&gt; n &gt; <span class="num-val">5</span>);   <span class="comment">// false</span>
+nums.<span class="func">every</span>(n =&gt; n &gt; <span class="num-val">0</span>);  <span class="comment">// true</span>
+            </div>
+
+            <h3 id="objects">6.3 Objects</h3>
+            <div class="code-block">
+<span class="keyword">const</span> user = {
+    name: <span class="str">"Dara"</span>,
+    age: <span class="num-val">20</span>,
+    <span class="func">greet</span>() {
+        <span class="keyword">return</span> <span class="str">`Hi, I'm ${this.name}`</span>;
+    }
+};
+
+user.name;        <span class="comment">// "Dara"</span>
+user[<span class="str">"age"</span>];      <span class="comment">// 20</span>
+user.<span class="func">greet</span>();     <span class="comment">// "Hi, I'm Dara"</span>
+            </div>
+
+            <h3 id="destructure">6.4 Destructuring</h3>
+            <div class="code-block">
+<span class="comment">// Object</span>
+<span class="keyword">const</span> { name, age } = user;
+
+<span class="comment">// Array</span>
+<span class="keyword">const</span> [first, second] = [<span class="num-val">1</span>, <span class="num-val">2</span>];
+
+<span class="comment">// Default values</span>
+<span class="keyword">const</span> { city = <span class="str">"Phnom Penh"</span> } = user;
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. DOM Manipulation</h2>
+
+            <h3 id="select">7.1 Selecting Elements</h3>
+            <div class="code-block">
+document.<span class="func">getElementById</span>(<span class="str">"app"</span>);
+document.<span class="func">querySelector</span>(<span class="str">".btn"</span>);
+document.<span class="func">querySelectorAll</span>(<span class="str">"li"</span>);
+            </div>
+
+            <h3 id="modify">7.2 Modifying</h3>
+            <div class="code-block">
+el.textContent = <span class="str">"New text"</span>;
+el.innerHTML = <span class="str">"&lt;b&gt;Bold&lt;/b&gt;"</span>;
+el.style.color = <span class="str">"red"</span>;
+el.classList.<span class="func">add</span>(<span class="str">"active"</span>);
+el.classList.<span class="func">remove</span>(<span class="str">"active"</span>);
+el.classList.<span class="func">toggle</span>(<span class="str">"active"</span>);
+            </div>
+
+            <h3 id="events">7.3 Events</h3>
+            <div class="code-block">
+<span class="keyword">const</span> btn = document.<span class="func">querySelector</span>(<span class="str">"#btn"</span>);
+
+btn.<span class="func">addEventListener</span>(<span class="str">"click"</span>, (e) =&gt; {
+    console.<span class="func">log</span>(<span class="str">"Clicked!"</span>, e.target);
+});
+
+<span class="comment">// Common events</span>
+<span class="comment">// click, submit, input, change, keydown, mouseover</span>
+            </div>
+
+            <h3 id="create">7.4 Creating Elements</h3>
+            <div class="code-block">
+<span class="keyword">const</span> li = document.<span class="func">createElement</span>(<span class="str">"li"</span>);
+li.textContent = <span class="str">"New item"</span>;
+document.<span class="func">querySelector</span>(<span class="str">"ul"</span>).<span class="func">appendChild</span>(li);
+
+<span class="comment">// Modern way</span>
+container.<span class="func">append</span>(li);
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. ES6+ Features</h2>
+
+            <h3 id="spread">8.1 Spread / Rest</h3>
+            <div class="code-block">
+<span class="comment">// Spread — ពង្រាយ</span>
+<span class="keyword">const</span> arr = [...[<span class="num-val">1</span>, <span class="num-val">2</span>], <span class="num-val">3</span>, <span class="num-val">4</span>];  <span class="comment">// [1, 2, 3, 4]</span>
+<span class="keyword">const</span> user = { ...{ name: <span class="str">"Dara"</span> }, age: <span class="num-val">20</span> };
+
+<span class="comment">// Rest — ប្រមូល</span>
+<span class="keyword">function</span> <span class="func">sum</span>(...nums) {
+    <span class="keyword">return</span> nums.<span class="func">reduce</span>((a, b) =&gt; a + b, <span class="num-val">0</span>);
+}
+            </div>
+
+            <h3 id="modules">8.2 Modules</h3>
+            <div class="code-block">
+<span class="comment">// math.js</span>
+<span class="keyword">export const</span> PI = <span class="num-val">3.14</span>;
+<span class="keyword">export function</span> <span class="func">add</span>(a, b) { <span class="keyword">return</span> a + b; }
+
+<span class="comment">// app.js</span>
+<span class="keyword">import</span> { PI, add } <span class="keyword">from</span> <span class="str">"./math.js"</span>;
+            </div>
+
+            <h3 id="classes">8.3 Classes</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span> {
+    <span class="func">constructor</span>(name) {
+        <span class="keyword">this</span>.name = name;
+    }
+
+    <span class="func">greet</span>() {
+        <span class="keyword">return</span> <span class="str">`Hi, I'm ${this.name}`</span>;
+    }
+}
+
+<span class="keyword">class</span> <span class="type">Graduate</span> <span class="keyword">extends</span> <span class="type">Student</span> {
+    <span class="func">constructor</span>(name, degree) {
+        <span class="keyword">super</span>(name);
+        <span class="keyword">this</span>.degree = degree;
+    }
+}
+            </div>
+
+            <h3 id="promises">8.4 Promises</h3>
+            <div class="code-block">
+<span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="type">Promise</span>((resolve, reject) =&gt; {
+    <span class="keyword">setTimeout</span>(() =&gt; <span class="func">resolve</span>(<span class="str">"Done!"</span>), <span class="num-val">1000</span>);
+});
+
+promise
+    .<span class="func">then</span>(result =&gt; console.<span class="func">log</span>(result))
+    .<span class="func">catch</span>(err =&gt; console.<span class="func">error</span>(err));
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Async / Await</h2>
+
+            <h3 id="async-basics">9.1 Async Basics</h3>
+            <div class="code-block">
+<span class="keyword">async function</span> <span class="func">fetchData</span>() {
+    <span class="keyword">return</span> <span class="str">"Data"</span>;
+}
+
+<span class="func">fetchData</span>().<span class="func">then</span>(data =&gt; console.<span class="func">log</span>(data));
+            </div>
+
+            <h3 id="fetch">9.2 Fetch API</h3>
+            <div class="code-block">
+<span class="keyword">async function</span> <span class="func">getUsers</span>() {
+    <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="func">fetch</span>(<span class="str">"https://api.example.com/users"</span>);
+    <span class="keyword">const</span> data = <span class="keyword">await</span> response.<span class="func">json</span>();
+    <span class="keyword">return</span> data;
+}
+            </div>
+
+            <h3 id="error-handling">9.3 Error Handling</h3>
+            <div class="code-block">
+<span class="keyword">async function</span> <span class="func">getUsers</span>() {
+    <span class="keyword">try</span> {
+        <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="func">fetch</span>(<span class="str">"url"</span>);
+        <span class="keyword">if</span> (!res.ok) <span class="keyword">throw new</span> <span class="type">Error</span>(<span class="str">"HTTP error"</span>);
+        <span class="keyword">return</span> <span class="keyword">await</span> res.<span class="func">json</span>();
+    } <span class="keyword">catch</span> (err) {
+        console.<span class="func">error</span>(<span class="str">"Failed:"</span>, err);
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>async/await</code> ធ្វើឲ្យកូដ asynchronous មើលទៅដូច synchronous។ ល្អសម្រាប់ API calls និង I/O operations។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Advanced Concepts</h2>
+
+            <h3 id="higher-order">10.1 Higher-Order Functions</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">multiplyBy</span>(factor) {
+    <span class="keyword">return</span> (n) =&gt; n * factor;
+}
+
+<span class="keyword">const</span> double = <span class="func">multiplyBy</span>(<span class="num-val">2</span>);
+<span class="func">double</span>(<span class="num-val">5</span>);   <span class="comment">// 10</span>
+            </div>
+
+            <h3 id="this">10.2 this Keyword</h3>
+            <div class="code-block">
+<span class="keyword">const</span> obj = {
+    name: <span class="str">"Dara"</span>,
+    <span class="func">greet</span>() {
+        console.<span class="func">log</span>(<span class="keyword">this</span>.name);
+    }
+};
+obj.<span class="func">greet</span>();  <span class="comment">// "Dara"</span>
+            </div>
+
+            <h3 id="storage">10.3 localStorage</h3>
+            <div class="code-block">
+localStorage.<span class="func">setItem</span>(<span class="str">"user"</span>, <span class="str">"Dara"</span>);
+localStorage.<span class="func">getItem</span>(<span class="str">"user"</span>);    <span class="comment">// "Dara"</span>
+localStorage.<span class="func">removeItem</span>(<span class="str">"user"</span>);
+localStorage.<span class="func">clear</span>();
+            </div>
+
+            <h3 id="json">10.4 JSON</h3>
+            <div class="code-block">
+<span class="keyword">const</span> user = { name: <span class="str">"Dara"</span>, age: <span class="num-val">20</span> };
+
+<span class="comment">// Object → JSON string</span>
+<span class="keyword">const</span> json = JSON.<span class="func">stringify</span>(user);
+
+<span class="comment">// JSON string → Object</span>
+<span class="keyword">const</span> obj = JSON.<span class="func">parse</span>(json);
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Error Handling</h2>
+
+            <h3 id="try-catch">11.1 try / catch</h3>
+            <div class="code-block">
+<span class="keyword">try</span> {
+    <span class="func">riskyOperation</span>();
+} <span class="keyword">catch</span> (error) {
+    console.<span class="func">error</span>(error.message);
+} <span class="keyword">finally</span> {
+    console.<span class="func">log</span>(<span class="str">"Always runs"</span>);
+}
+            </div>
+
+            <h3 id="throw">11.2 throw</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">divide</span>(a, b) {
+    <span class="keyword">if</span> (b === <span class="num-val">0</span>) {
+        <span class="keyword">throw new</span> <span class="type">Error</span>(<span class="str">"Cannot divide by zero"</span>);
+    }
+    <span class="keyword">return</span> a / b;
+}
+            </div>
+
+            <h3 id="debugging">11.3 Debugging</h3>
+            <div class="code-block">
+console.<span class="func">log</span>();       <span class="comment">// បង្ហាញតម្លៃ</span>
+console.<span class="func">table</span>();     <span class="comment">// តារាង</span>
+console.<span class="func">time</span>();      <span class="comment">// ចាប់ផ្តើមកត់ពេល</span>
+console.<span class="func">timeEnd</span>();   <span class="comment">// បញ្ចប់កត់ពេល</span>
+debugger;          <span class="comment">// បញ្ឈប់នៅចំណុចនេះ</span>
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. Regular Expressions</h2>
+
+            <h3 id="regex-basics">12.1 Basics</h3>
+            <div class="code-block">
+<span class="keyword">const</span> regex = <span class="str">/[a-z]+/</span>;
+<span class="keyword">const</span> regex2 = <span class="keyword">new</span> <span class="type">RegExp</span>(<span class="str">"[a-z]+"</span>, <span class="str">"g"</span>);
+
+<span class="comment">// Common patterns</span>
+<span class="comment">// \d  — លេខ</span>
+<span class="comment">// \w  — អក្សរ ឬ លេខ</span>
+<span class="comment">// \s  — ចន្លោះ</span>
+<span class="comment">// .   — តួអក្សរណាមួយ</span>
+<span class="comment">// *   — 0 ឬច្រើន</span>
+<span class="comment">// +   — 1 ឬច្រើន</span>
+            </div>
+
+            <h3 id="regex-methods">12.2 Methods</h3>
+            <div class="code-block">
+<span class="keyword">const</span> str = <span class="str">"Hello 123 World 456"</span>;
+
+str.<span class="func">match</span>(<span class="str">/\d+/g</span>);     <span class="comment">// ["123", "456"]</span>
+str.<span class="func">replace</span>(<span class="str">/\d+/g</span>, <span class="str">"#"</span>); <span class="comment">// "Hello # World #"</span>
+str.<span class="func">test</span>(<span class="str">/\d+/</span>);        <span class="comment">// true</span>
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Modern JS (ES2020+)</h2>
+
+            <h3 id="optional-chaining">13.1 Optional Chaining</h3>
+            <div class="code-block">
+<span class="keyword">const</span> user = { name: <span class="str">"Dara"</span> };
+user?.name;              <span class="comment">// "Dara"</span>
+user?.address?.city;     <span class="comment">// undefined (មិន error)</span>
+            </div>
+
+            <h3 id="nullish">13.2 Nullish Coalescing</h3>
+            <div class="code-block">
+<span class="keyword">const</span> name = <span class="bool">null</span>;
+<span class="keyword">const</span> display = name ?? <span class="str">"Guest"</span>;  <span class="comment">// "Guest"</span>
+
+<span class="comment">// ?? ផ្ទុយពី ||</span>
+<span class="num-val">0</span> || <span class="str">"default"</span>       <span class="comment">// "default"</span>
+<span class="num-val">0</span> ?? <span class="str">"default"</span>       <span class="comment">// 0</span>
+            </div>
+
+            <h3 id="bigint">13.3 BigInt</h3>
+            <div class="code-block">
+<span class="keyword">const</span> big = <span class="num-val">9007199254740991n</span>;
+<span class="keyword">const</span> bigger = big + <span class="num-val">1n</span>;
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Best Practices</h2>
+            <ul>
+                <li>ប្រើ <code>const</code> ជាលំនាំដើម, <code>let</code> តែនៅពេលចាំបាច់</li>
+                <li>ប្រើ <code>===</code> ជំនួស <code>==</code></li>
+                <li>ប្រើ arrow functions សម្រាប់ callbacks</li>
+                <li>ប្រើ <code>async/await</code> ជំនួស promise chains</li>
+                <li>ប្រើ <code>try/catch</code> ជាមួយ async</li>
+                <li>ប្រើ destructuring និង spread</li>
+                <li>រក្សា functions តូច និងធ្វើរឿងតែមួយ</li>
+                <li>សរសេរ comments តែនៅពេលចាំបាច់</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> JavaScript មាន flexibility ខ្ពស់ — អាចសរសេរបានច្រើនរបៀប។ ការអនុវត្តតាម best practices នឹងជួយឲ្យកូដអានងាយ ថែទាំងាយ និងមាន bug តិច។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. JavaScript Project</h2>
+            <p>សាកល្បងបង្កើត <strong>Todo List</strong> តូចមួយ៖</p>
+            <div class="code-block">
+<span class="comment">&lt;!-- HTML --&gt;</span>
+<span class="keyword">&lt;input</span> <span class="type">id</span>=<span class="str">"input"</span> <span class="type">placeholder</span>=<span class="str">"បន្ថែម..."</span><span class="keyword">&gt;</span>
+<span class="keyword">&lt;button</span> <span class="type">id</span>=<span class="str">"addBtn"</span><span class="keyword">&gt;</span>បន្ថែម<span class="keyword">&lt;/button&gt;</span>
+<span class="keyword">&lt;ul</span> <span class="type">id</span>=<span class="str">"list"</span><span class="keyword">&gt;&lt;/ul&gt;</span>
+
+<span class="comment">// JavaScript</span>
+<span class="keyword">const</span> input = document.<span class="func">getElementById</span>(<span class="str">"input"</span>);
+<span class="keyword">const</span> btn = document.<span class="func">getElementById</span>(<span class="str">"addBtn"</span>);
+<span class="keyword">const</span> list = document.<span class="func">getElementById</span>(<span class="str">"list"</span>);
+
+btn.<span class="func">addEventListener</span>(<span class="str">"click"</span>, () =&gt; {
+    <span class="keyword">const</span> text = input.value.<span class="func">trim</span>();
+    <span class="keyword">if</span> (!text) <span class="keyword">return</span>;
+
+    <span class="keyword">const</span> li = document.<span class="func">createElement</span>(<span class="str">"li"</span>);
+    li.textContent = text;
+    li.<span class="func">addEventListener</span>(<span class="str">"click"</span>, () =&gt; li.<span class="func">remove</span>());
+    list.<span class="func">append</span>(li);
+    input.value = <span class="str">""</span>;
+});
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ DOM selection, events, createElement និង arrow functions។ សាកល្បងបន្ថែម៖ edit, filter, ឬ localStorage សម្រាប់ save data។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> សាកល្បងគម្រោងតូចៗ — Calculator, Weather App, Quiz, ឬ Simple Game — វានឹងជួយអ្នកយល់ JavaScript លឿនជាងអានទ្រឹស្តី។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fab fa-js"></i> app.js</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">const</span> name = <span style="color:#86efac">"Dara"</span>;
+<span style="color:#38bdf8">console</span>.<span style="color:#fbbf24">log</span>(<span style="color:#86efac">`Hello, ${name}!`</span>);
+
+<span style="color:#c084fc">const</span> nums = [<span style="color:#fbbf24">1</span>, <span style="color:#fbbf24">2</span>, <span style="color:#fbbf24">3</span>];
+nums.<span style="color:#fbbf24">forEach</span>(n =&gt; <span style="color:#38bdf8">console</span>.<span style="color:#fbbf24">log</span>(n));</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, Dara!<br>
+                1<br>
+                2<br>
+                3
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">JS Basics</a></li>
+                <li><a href="#">DOM Manipulation</a></li>
+                <li><a href="#">Async / Await</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

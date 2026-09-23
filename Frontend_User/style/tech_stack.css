@@ -1,0 +1,100 @@
+/* ----- TECH STACK BAR ----- */
+.tech-bar {
+    display: flex;
+    align-items: center;
+    background: #282a35;
+    color: #ffffff;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Scrollable track */
+.tech-scroll {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;              /* Firefox */
+    -ms-overflow-style: none;           /* IE/Edge */
+    flex: 1;
+    height: 100%;
+}
+
+.tech-scroll::-webkit-scrollbar {
+    display: none;                      /* Chrome/Safari */
+}
+
+/* Each tech link */
+.tech-scroll a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.tech-scroll a:hover {
+    background: #04aa6d;
+    color: #ffffff;
+}
+
+/* Left/right arrow buttons */
+.scroll-btn {
+    background: #282a35;
+    border: none;
+    color: #ffffff;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.scroll-btn:hover {
+    background: #04aa6d;
+}
+
+.scroll-left {
+    border-right: 1px solid #3a3d4a;
+}
+
+.scroll-right {
+    border-left: 1px solid #3a3d4a;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 720px) {
+    .tech-scroll a {
+        padding: 0 1rem;
+        font-size: 0.75rem;
+    }
+
+    .scroll-btn {
+        width: 32px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-bar {
+        height: 42px;
+    }
+
+    .tech-scroll a {
+        padding: 0 0.85rem;
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Code_Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link rel="stylesheet" href="./style/navbar.css">
+<link rel="stylesheet" href="./style/footer.css">
+<link rel="stylesheet" href="./style/community.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+    <a href="./2.html" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <ul class="nav-links">
+        <li><a href="./2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="./project.html"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="./Community.html"><i class="fas fa-users"></i> Community</a></li>
+        <li><a href="#"><i class="fas fa-newspaper"></i> Blog</a></li>
+    </ul>
+
+    <div class="nav-cta" id="nav-cta"></div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="community-hero">
+    <div class="hero-content">
+        <span class="hero-badge">
+            <i class="fas fa-users"></i> Join 10,000+ Developers
+        </span>
+        <h1>
+            Code, Share, <span>Grow Together</span>
+        </h1>
+        <p>
+            Connect with developers worldwide, ask questions, share projects, and level up your skills together.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#" class="btn-hero-primary">
+                <i class="fas fa-user-plus"></i> Join Community
+            </a>
+            <a href="#discussions" class="btn-hero-ghost">
+                <i class="fas fa-comments"></i> Browse Discussions
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== MAIN ========== -->
+<div class="community-container">
+
+    <!-- STATS -->
+    <div class="community-stats">
+        <div class="cstat-card">
+            <div class="cstat-icon"><i class="fas fa-users"></i></div>
+            <h3>10,248</h3>
+            <p>Members</p>
+        </div>
+        <div class="cstat-card">
+            <div class="cstat-icon"><i class="fas fa-comments"></i></div>
+            <h3>3,567</h3>
+            <p>Discussions</p>
+        </div>
+        <div class="cstat-card">
+            <div class="cstat-icon"><i class="fas fa-code-branch"></i></div>
+            <h3>1,892</h3>
+            <p>Projects</p>
+        </div>
+        <div class="cstat-card">
+            <div class="cstat-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>28</h3>
+            <p>Events</p>
+        </div>
+    </div>
+
+    <!-- TOP MEMBERS -->
+    <div class="section-header">
+        <h2><i class="fas fa-star"></i> Top Contributors</h2>
+        <a href="#" class="see-all">See All <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="members-grid" id="members-grid"></div>
+
+    <!-- DISCUSSIONS -->
+    <div class="section-header" id="discussions">
+        <h2><i class="fas fa-comments"></i> Recent Discussions</h2>
+        <a href="#" class="see-all">View All <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="discussions-list" id="discussions-list"></div>
+
+    <!-- EVENTS -->
+    <div class="section-header">
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+        <a href="#" class="see-all">View Calendar <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="events-grid" id="events-grid"></div>
+
+    <!-- CTA -->
+    <div class="community-cta">
+        <h2>Ready to join the conversation? 🚀</h2>
+        <p>Become a member today and connect with thousands of developers learning and building together.</p>
+        <a href="#" class="btn-hero-primary">
+            <i class="fas fa-user-plus"></i> Create Free Account
+        </a>
+    </div>
+
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                Learn to code, build real projects, and grow with a community of developers.
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="./2.html">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> hello@codelearning.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+                <li><i class="fas fa-map-marker-alt"></i> Phnom Penh, Cambodia</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> ·
+            <a href="#">Terms of Service</a>
+        </p>
+    </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="js/app.js"></script>
+<script>
+/* ============================================================
+   MEMBERS DATA
+   ============================================================ */
+const MEMBERS = [
+    {
+        id: 1,
+        name: 'Dara Sok',
+        role: 'Full Stack Developer',
+        bio: 'Passionate about building web apps with React and Node.js.',
+        skills: ['React', 'Node.js', 'MongoDB'],
+        projects: 24,
+        followers: '1.2k',
+        status: 'online',
+        gradient: 1
+    },
+    {
+        id: 2,
+        name: 'Anna Chen',
+        role: 'Frontend Engineer',
+        bio: 'CSS wizard · loves animations and design systems.',
+        skills: ['CSS', 'Figma', 'Vue'],
+        projects: 18,
+        followers: '890',
+        status: 'online',
+        gradient: 2
+    },
+    {
+        id: 3,
+        name: 'Sokha Vann',
+        role: 'Python Developer',
+        bio: 'Data science, machine learning, and automation enthusiast.',
+        skills: ['Python', 'Pandas', 'ML'],
+        projects: 32,
+        followers: '1.5k',
+        status: 'away',
+        gradient: 3
+    },
+    {
+        id: 4,
+        name: 'Maria Santos',
+        role: 'Mobile Developer',
+        bio: 'Building beautiful iOS and Android apps with React Native.',
+        skills: ['React Native', 'Swift', 'Firebase'],
+        projects: 15,
+        followers: '720',
+        status: 'online',
+        gradient: 4
+    },
+    {
+        id: 5,
+        name: 'Kevin Lee',
+        role: 'Backend Engineer',
+        bio: 'APIs, microservices, and database design.',
+        skills: ['Node.js', 'PostgreSQL', 'Docker'],
+        projects: 21,
+        followers: '950',
+        status: 'offline',
+        gradient: 5
+    },
+    {
+        id: 6,
+        name: 'Lisa Park',
+        role: 'UI/UX Designer',
+        bio: 'Designing delightful user experiences · Figma expert.',
+        skills: ['Figma', 'UI', 'Prototyping'],
+        projects: 12,
+        followers: '680',
+        status: 'online',
+        gradient: 6
+    },
+    {
+        id: 7,
+        name: 'Rithy Chea',
+        role: 'DevOps Engineer',
+        bio: 'CI/CD pipelines, cloud infrastructure, and automation.',
+        skills: ['AWS', 'Kubernetes', 'Terraform'],
+        projects: 28,
+        followers: '1.1k',
+        status: 'online',
+        gradient: 1
+    },
+    {
+        id: 8,
+        name: 'Sophie Miller',
+        role: 'Junior Developer',
+        bio: 'Learning web development · loving JavaScript!',
+        skills: ['HTML', 'CSS', 'JS'],
+        projects: 8,
+        followers: '320',
+        status: 'online',
+        gradient: 2
+    }
+];
+
+/* ============================================================
+   DISCUSSIONS DATA
+   ============================================================ */
+const DISCUSSIONS = [
+    {
+        id: 1,
+        author: 'Dara Sok',
+        time: '2 hours ago',
+        category: 'react',
+        categoryName: 'React',
+        title: 'How to optimize React re-renders with useMemo?',
+        body: 'My component re-renders too often on state changes. What is the best approach to memoize expensive computations?',
+        tags: ['react', 'performance', 'hooks'],
+        votes: 42,
+        replies: 12,
+        views: '580'
+    },
+    {
+        id: 2,
+        author: 'Anna Chen',
+        time: '5 hours ago',
+        category: 'css',
+        categoryName: 'CSS',
+        title: 'Best way to create responsive grid layouts in 2026?',
+        body: 'I am still using float layouts. Should I switch to CSS Grid and Flexbox? What are the best practices?',
+        tags: ['css', 'grid', 'layout'],
+        votes: 38,
+        replies: 8,
+        views: '420'
+    },
+    {
+        id: 3,
+        author: 'Sokha Vann',
+        time: '1 day ago',
+        category: 'python',
+        categoryName: 'Python',
+        title: 'How to handle large CSV files efficiently in Pandas?',
+        body: 'My CSV file is 2GB and Pandas takes too long to load. What is the best approach to handle large files?',
+        tags: ['python', 'pandas', 'data'],
+        votes: 56,
+        replies: 15,
+        views: '890'
+    },
+    {
+        id: 4,
+        author: 'Kevin Lee',
+        time: '1 day ago',
+        category: 'js',
+        categoryName: 'JavaScript',
+        title: 'Explain event loop and microtasks like I am 5',
+        body: 'I am confused about the difference between microtasks and macrotasks. Can someone explain?',
+        tags: ['js', 'async', 'event-loop'],
+        votes: 89,
+        replies: 22,
+        views: '1.5k'
+    },
+    {
+        id: 5,
+        author: 'Maria Santos',
+        time: '2 days ago',
+        category: 'general',
+        categoryName: 'General',
+        title: 'What project should I build to get my first job?',
+        body: 'I know HTML, CSS, and JS basics. What kind of project will help me land my first dev job?',
+        tags: ['career', 'portfolio', 'jobs'],
+        votes: 67,
+        replies: 34,
+        views: '1.2k'
+    },
+    {
+        id: 6,
+        author: 'Lisa Park',
+        time: '3 days ago',
+        category: 'html',
+        categoryName: 'HTML',
+        title: 'Semantic HTML — does it really matter for SEO?',
+        body: 'Does using semantic tags like <article>, <section> really improve SEO ranking? Any evidence?',
+        tags: ['html', 'seo', 'semantic'],
+        votes: 45,
+        replies: 11,
+        views: '620'
+    }
+];
+
+/* ============================================================
+   EVENTS DATA
+   ============================================================ */
+const EVENTS = [
+    {
+        id: 1,
+        title: 'React Basics Workshop',
+        desc: 'Learn React from scratch — components, state, hooks, and building your first app.',
+        date: '15',
+        month: 'Oct',
+        time: '6:00 PM',
+        location: 'Online · Zoom',
+        icon: 'fab fa-react',
+        gradient: 'g1',
+        attendees: 128,
+        maxAttendees: 200
+    },
+    {
+        id: 2,
+        title: 'Python for Data Science',
+        desc: 'Hands-on workshop with Pandas, NumPy, and Matplotlib.',
+        date: '22',
+        month: 'Oct',
+        time: '7:00 PM',
+        location: 'Online · Google Meet',
+        icon: 'fab fa-python',
+        gradient: 'g3',
+        attendees: 92,
+        maxAttendees: 150
+    },
+    {
+        id: 3,
+        title: 'CSS Animation Masterclass',
+        desc: 'Create stunning animations with CSS — transitions, keyframes, and transforms.',
+        date: '28',
+        month: 'Oct',
+        time: '5:30 PM',
+        location: 'Online · Zoom',
+        icon: 'fab fa-css3-alt',
+        gradient: 'g2',
+        attendees: 76,
+        maxAttendees: 100
+    }
+];
+
+/* ============================================================
+   RENDER MEMBERS
+   ============================================================ */
+function renderMembers() {
+    const grid = document.getElementById('members-grid');
+    if (!grid) return;
+
+    grid.innerHTML = MEMBERS.map(m => {
+        const initial = m.name.charAt(0).toUpperCase();
+        const statusClass = m.status === 'online' ? '' : m.status === 'away' ? 'away' : 'offline';
+
+        return `
+            <div class="member-card" onclick="viewMember(${m.id})">
+                <div class="member-avatar">
+                    ${initial}
+                    <span class="status-dot ${statusClass}"></span>
+                </div>
+                <h4>${m.name}</h4>
+                <div class="member-role">${m.role}</div>
+                <p class="member-bio">${m.bio}</p>
+
+                <div class="member-skills">
+                    ${m.skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}
+                </div>
+
+                <div class="member-stats">
+                    <span><i class="fas fa-code-branch"></i> ${m.projects}</span>
+                    <span><i class="fas fa-users"></i> ${m.followers}</span>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+/* ============================================================
+   RENDER DISCUSSIONS
+   ============================================================ */
+function renderDiscussions() {
+    const list = document.getElementById('discussions-list');
+    if (!list) return;
+
+    list.innerHTML = DISCUSSIONS.map(d => {
+        const initial = d.author.charAt(0).toUpperCase();
+
+        return `
+            <div class="discussion-card" onclick="viewDiscussion(${d.id})">
+                <div class="discussion-votes">
+                    <button class="vote-btn" onclick="event.stopPropagation(); vote(${d.id}, 'up')">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                    <strong>${d.votes}</strong>
+                    <button class="vote-btn" onclick="event.stopPropagation(); vote(${d.id}, 'down')">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="discussion-content">
+                    <div class="discussion-header">
+                        <div class="discussion-author-avatar">${initial}</div>
+                        <span class="discussion-author">${d.author}</span>
+                        <span class="discussion-time">· ${d.time}</span>
+                        <span class="discussion-category cat-${d.category}">${d.categoryName}</span>
+                    </div>
+
+                    <h3 class="discussion-title">${d.title}</h3>
+                    <p class="discussion-body">${d.body}</p>
+
+                    <div class="discussion-tags">
+                        ${d.tags.map(t => `<span class="skill-tag">#${t}</span>`).join('')}
+                    </div>
+
+                    <div class="discussion-meta">
+                        <span><i class="fas fa-comment"></i> ${d.replies} replies</span>
+                        <span><i class="fas fa-eye"></i> ${d.views} views</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+/* ============================================================
+   RENDER EVENTS
+   ============================================================ */
+function renderEvents() {
+    const grid = document.getElementById('events-grid');
+    if (!grid) return;
+
+    grid.innerHTML = EVENTS.map(e => {
+        return `
+            <div class="event-card">
+                <div class="event-banner ${e.gradient}">
+                    <i class="${e.icon}"></i>
+                    <div class="event-date-badge">
+                        <small>${e.month}</small>
+                        ${e.date}
+                    </div>
+                </div>
+
+                <div class="event-body">
+                    <h3 class="event-title">${e.title}</h3>
+                    <p class="event-desc">${e.desc}</p>
+
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> ${e.time}</span>
+                        <span><i class="fas fa-map-marker-alt"></i> ${e.location}</span>
+                        <span><i class="fas fa-users"></i> ${e.attendees}/${e.maxAttendees} attending</span>
+                    </div>
+
+                    <div class="event-footer">
+                        <div class="event-attendees">
+                            <div class="mini-avatar">D</div>
+                            <div class="mini-avatar">A</div>
+                            <div class="mini-avatar">S</div>
+                            <div class="mini-avatar">M</div>
+                            <span class="more">+${e.attendees - 4}</span>
+                        </div>
+                        <button class="btn-join" onclick="event.stopPropagation(); joinEvent(${e.id}, this)">
+                            <i class="fas fa-plus"></i> Join
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+/* ============================================================
+   INTERACTIONS
+   ============================================================ */
+function vote(id, dir) {
+    const discussion = DISCUSSIONS.find(d => d.id === id);
+    if (!discussion) return;
+
+    // Demo: just show toast
+    showToast(`${dir === 'up' ? '👍 Upvoted' : '👎 Downvoted'} "${discussion.title.substring(0, 30)}..."`, 'info');
+}
+
+function joinEvent(id, btn) {
+    const event = EVENTS.find(e => e.id === id);
+    if (!event) return;
+
+    if (btn.classList.contains('joined')) {
+        btn.classList.remove('joined');
+        btn.innerHTML = '<i class="fas fa-plus"></i> Join';
+        showToast('Left event', 'info');
+    } else {
+        btn.classList.add('joined');
+        btn.innerHTML = '<i class="fas fa-check"></i> Joined';
+        showToast(`✅ You joined "${event.title}"`, 'success');
+    }
+}
+
+function viewMember(id) {
+    const member = MEMBERS.find(m => m.id === id);
+    if (!member) return;
+
+    showToast(`👤 Opening ${member.name}'s profile...`, 'info');
+}
+
+function viewDiscussion(id) {
+    const d = DISCUSSIONS.find(x => x.id === id);
+    if (!d) return;
+
+    showToast(`💬 Opening "${d.title.substring(0, 40)}..."`, 'info');
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function showToast(message, type = 'info') {
+    const existing = document.querySelector('.dash-toast');
+    if (existing) existing.remove();
+
+    const colors = {
+        success: { bg: '#ecfdf5', border: '#10b981', color: '#065f46', icon: 'fa-check-circle' },
+        error: { bg: '#fef2f2', border: '#ef4444', color: '#991b1b', icon: 'fa-circle-exclamation' },
+        info: { bg: '#eff6ff', border: '#4f46e5', color: '#1e40af', icon: 'fa-info-circle' }
+    };
+
+    const c = colors[type] || colors.info;
+
+    if (!document.querySelector('#toast-styles')) {
+        const style = document.createElement('style');
+        style.id = 'toast-styles';
+        style.textContent = `
+            .dash-toast {
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                display: flex;
+                align-items: center;
+                gap: 0.65rem;
+                padding: 0.9rem 1.4rem;
+                border-radius: 12px;
+                box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+                font-size: 0.88rem;
+                font-weight: 600;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                z-index: 99999;
+                animation: toastSlide 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+                max-width: 340px;
+            }
+            @keyframes toastSlide {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    const toast = document.createElement('div');
+    toast.className = 'dash-toast';
+    toast.style.background = c.bg;
+    toast.style.borderLeft = `4px solid ${c.border}`;
+    toast.style.color = c.color;
+    toast.innerHTML = `<i class="fas ${c.icon}" style="color:${c.border};"></i> <span>${message}</span>`;
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(20px)';
+        toast.style.transition = 'all 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+    }, 2800);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    renderMembers();
+    renderDiscussions();
+    renderEvents();
+});
+</script>
+
+</body>
+</html>

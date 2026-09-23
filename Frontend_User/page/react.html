@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>មេរៀន React - CodeKhmerLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/page.css">
+
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+ <!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> React Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា React?</a></li>
+                <li><a href="#setup">1.2. ការដំឡើង</a></li>
+                <li><a href="#first-app">1.3. App ដំបូង</a></li>
+                <li><a href="#folder">1.4. Folder Structure</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> JSX
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#jsx-basics">2.1. JSX Basics</a></li>
+                <li><a href="#jsx-expr">2.2. Expressions</a></li>
+                <li><a href="#jsx-attr">2.3. Attributes</a></li>
+                <li><a href="#jsx-frag">2.4. Fragments</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Components
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#function-comp">3.1. Function Components</a></li>
+                <li><a href="#class-comp">3.2. Class Components</a></li>
+                <li><a href="#nested">3.3. Nested Components</a></li>
+                <li><a href="#export-import">3.4. Export / Import</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Props
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#props-basic">4.1. Passing Props</a></li>
+                <li><a href="#props-destructure">4.2. Destructuring</a></li>
+                <li><a href="#children">4.3. children</a></li>
+                <li><a href="#default-props">4.4. Default Props</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> State (useState)
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#usestate-basic">5.1. useState Basics</a></li>
+                <li><a href="#usestate-update">5.2. Updating State</a></li>
+                <li><a href="#usestate-object">5.3. Object State</a></li>
+                <li><a href="#usestate-array">5.4. Array State</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Event Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#click-event">6.1. onClick</a></li>
+                <li><a href="#input-event">6.2. Input Events</a></li>
+                <li><a href="#form-event">6.3. Form Events</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Conditional Rendering
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else-render">7.1. if / else</a></li>
+                <li><a href="#ternary-render">7.2. Ternary</a></li>
+                <li><a href="#and-render">7.3. Logical AND</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Lists & Keys
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#map-render">8.1. Rendering Lists</a></li>
+                <li><a href="#keys">8.2. Keys</a></li>
+                <li><a href="#list-filter">8.3. Filter List</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> useEffect
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#useeffect-basic">9.1. Basics</a></li>
+                <li><a href="#useeffect-deps">9.2. Dependencies</a></li>
+                <li><a href="#fetch-api">9.3. Fetch API</a></li>
+                <li><a href="#cleanup">9.4. Cleanup</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Forms & Controlled
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#controlled">10.1. Controlled Inputs</a></li>
+                <li><a href="#form-submit">10.2. Form Submit</a></li>
+                <li><a href="#validation">10.3. Validation</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Context API
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#create-context">11.1. createContext</a></li>
+                <li><a href="#provider">11.2. Provider</a></li>
+                <li><a href="#usecontext">11.3. useContext</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> React Router
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#install-router">12.1. Install</a></li>
+                <li><a href="#routes">12.2. Routes & Links</a></li>
+                <li><a href="#params">12.3. URL Params</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Custom Hooks
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#custom-hook">13.1. Creating Hooks</a></li>
+                <li><a href="#usefetch">13.2. useFetch Example</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Performance
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#memo">14.1. React.memo</a></li>
+                <li><a href="#usememo">14.2. useMemo</a></li>
+                <li><a href="#usecallback">14.3. useCallback</a></li>
+            </ul>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> React Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. React Introduction - ការណែនាំ React</h2>
+
+            <h3 id="intro">1.1 អ្វីជា React?</h3>
+            <p>React គឺជា <strong>JavaScript Library</strong> ដែលបង្កើតឡើងដោយ <strong>Facebook</strong> ក្នុងឆ្នាំ 2013 សម្រាប់បង្កើត UI។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> React ជួយបង្កើត <em>Single Page Application (SPA)</em> ដែលផ្លាស់ប្តូរខ្លឹមសារដោយមិនចាំបាច់ reload ទំព័រ។ វាប្រើ <strong>Component</strong> ជាដុំៗ និង <strong>Virtual DOM</strong> សម្រាប់ performance ខ្ពស់។ ប្រើដោយ៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Facebook</strong>, <strong>Instagram</strong></li>
+                    <li><strong>Netflix</strong>, <strong>Airbnb</strong></li>
+                    <li><strong>YouTube</strong>, <strong>WhatsApp Web</strong></li>
+                </ul>
+            </div>
+
+            <h3 id="setup">1.2 ការដំឡើង</h3>
+            <ul>
+                <li><strong>Node.js</strong> — ត្រូវដំឡើងមុន</li>
+                <li><strong>Vite</strong> — លឿនបំផុត (recommended)</li>
+                <li><strong>Create React App</strong> — ចាស់បន្តិច</li>
+                <li><strong>Next.js</strong> — framework ពេញលេញ</li>
+            </ul>
+
+            <div class="code-block">
+<span class="comment"># បង្កើត project ថ្មីជាមួយ Vite</span>
+npm create vite@latest my-app -- --template react
+cd my-app
+npm install
+npm run dev
+            </div>
+
+            <h3 id="first-app">1.3 App ដំបូង</h3>
+            <div class="code-block">
+<span class="comment">// App.jsx</span>
+<span class="keyword">function</span> <span class="func">App</span>() {
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;div&gt;</span>
+            <span class="tag">&lt;h1&gt;</span>Hello, React!<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    );
+}
+
+<span class="keyword">export default</span> App;
+            </div>
+
+            <h3 id="folder">1.4 Folder Structure</h3>
+            <div class="code-block">
+my-app/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── components/
+│   └── assets/
+├── public/
+├── package.json
+└── vite.config.js
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>main.jsx</code> ជាចំណុចចាប់ផ្តើមដែល render <code>App</code>។ អ្នកអាចបង្កើត components ថ្មីៗនៅក្នុង folder <code>components</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. JSX</h2>
+
+            <h3 id="jsx-basics">2.1 JSX Basics</h3>
+            <div class="code-block">
+<span class="keyword">const</span> element = <span class="tag">&lt;h1&gt;</span>Hello World<span class="tag">&lt;/h1&gt;</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> JSX (JavaScript XML) អនុញ្ញាតឲ្យសរសេរ HTML នៅក្នុង JavaScript។ វាមិនមែន HTML ពិតទេ ប៉ុន្តែ React បំប្លែងទៅ <code>React.createElement()</code>។
+            </div>
+
+            <h3 id="jsx-expr">2.2 Expressions</h3>
+            <div class="code-block">
+<span class="keyword">const</span> name = <span class="str">"Dara"</span>;
+<span class="keyword">const</span> greeting = <span class="tag">&lt;h1&gt;</span>Hello, {name}!<span class="tag">&lt;/h1&gt;</span>;
+
+<span class="comment">// ក៏អាចប្រើ expression</span>
+<span class="tag">&lt;p&gt;</span>{<span class="num-val">2</span> + <span class="num-val">3</span>}<span class="tag">&lt;/p&gt;</span>  <span class="comment">// 5</span>
+            </div>
+
+            <h3 id="jsx-attr">2.3 Attributes</h3>
+            <div class="code-block">
+<span class="tag">&lt;img</span> <span class="jsx">src</span>=<span class="str">"logo.png"</span> <span class="jsx">alt</span>=<span class="str">"Logo"</span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;div</span> <span class="jsx">className</span>=<span class="str">"box"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ក្នុង JSX ប្រើ <code>className</code> ជំនួស <code>class</code>, <code>htmlFor</code> ជំនួស <code>for</code>។ ប្រើ <code>{}</code> សម្រាប់បញ្ចូល JavaScript expression។
+            </div>
+
+            <h3 id="jsx-frag">2.4 Fragments</h3>
+            <div class="code-block">
+<span class="keyword">return</span> (
+    <span class="tag">&lt;&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Title<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Text<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/&gt;</span>
+);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Fragment (<code>&lt;&gt;...&lt;/&gt;</code>) អនុញ្ញាតឲ្យ return ច្រើន elements ដោយមិនចាំបាច់ដាក់ <code>&lt;div&gt;</code> បន្ថែម។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Components</h2>
+
+            <h3 id="function-comp">3.1 Function Components</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Welcome</span>() {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Welcome!<span class="tag">&lt;/h1&gt;</span>;
+}
+            </div>
+
+            <h3 id="class-comp">3.2 Class Components</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { Component } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">class</span> <span class="type">Welcome</span> <span class="keyword">extends</span> Component {
+    <span class="func">render</span>() {
+        <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Welcome!<span class="tag">&lt;/h1&gt;</span>;
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> បច្ចុប្បន្ន ប្រើ <em>Function Components</em> ជាមួយ <em>Hooks</em> ជាធម្មតា។ Class Components គឺជារបៀបចាស់។
+            </div>
+
+            <h3 id="nested">3.3 Nested Components</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Header</span>() {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Header<span class="tag">&lt;/h1&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="func">App</span>() {
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;div&gt;</span>
+            <span class="tag">&lt;Header /&gt;</span>
+            <span class="tag">&lt;p&gt;</span>Content<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    );
+}
+            </div>
+
+            <h3 id="export-import">3.4 Export / Import</h3>
+            <div class="code-block">
+<span class="comment">// Header.jsx</span>
+<span class="keyword">export default function</span> <span class="func">Header</span>() {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Header<span class="tag">&lt;/h1&gt;</span>;
+}
+
+<span class="comment">// App.jsx</span>
+<span class="keyword">import</span> Header <span class="keyword">from</span> <span class="str">'./Header'</span>;
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Props</h2>
+
+            <h3 id="props-basic">4.1 Passing Props</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Greeting</span>(props) {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {props.name}!<span class="tag">&lt;/h1&gt;</span>;
+}
+
+<span class="comment">// ប្រើ</span>
+<span class="tag">&lt;Greeting</span> <span class="jsx">name</span>=<span class="str">"Dara"</span> <span class="tag">/&gt;</span>
+            </div>
+
+            <h3 id="props-destructure">4.2 Destructuring</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Greeting</span>({ name, age }) {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {name} ({age})<span class="tag">&lt;/h1&gt;</span>;
+}
+            </div>
+
+            <h3 id="children">4.3 children</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Card</span>({ children }) {
+    <span class="keyword">return</span> <span class="tag">&lt;div</span> <span class="jsx">className</span>=<span class="str">"card"</span><span class="tag">&gt;</span>{children}<span class="tag">&lt;/div&gt;</span>;
+}
+
+<span class="tag">&lt;Card&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Hello!<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/Card&gt;</span>
+            </div>
+
+            <h3 id="default-props">4.4 Default Props</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Greeting</span>({ name = <span class="str">"Guest"</span> }) {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {name}<span class="tag">&lt;/h1&gt;</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Props ជាទិន្នន័យដែលបញ្ជូនពី parent ទៅ child component។ វាជា <em>read-only</em> — child មិនអាចកែបានទេ។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. State (useState)</h2>
+
+            <h3 id="usestate-basic">5.1 useState Basics</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { useState } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">function</span> <span class="func">Counter</span>() {
+    <span class="keyword">const</span> [count, setCount] = <span class="func">useState</span>(<span class="num-val">0</span>);
+
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;div&gt;</span>
+            <span class="tag">&lt;p&gt;</span>Count: {count}<span class="tag">&lt;/p&gt;</span>
+            <span class="tag">&lt;button</span> <span class="jsx">onClick</span>={() =&gt; <span class="func">setCount</span>(count + <span class="num-val">1</span>)}<span class="tag">&gt;</span>
+                +1
+            <span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    );
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>useState()</code> return array 2 element៖ តម្លៃបច្ចុប្បន្ន និង function សម្រាប់ update។ នៅពេល state ផ្លាស់ប្តូរ React នឹង re-render component ដោយស្វ័យប្រវត្តិ។
+            </div>
+
+            <h3 id="usestate-update">5.2 Updating State</h3>
+            <div class="code-block">
+<span class="comment">// ប្រើ function form (ល្អបំផុត)</span>
+<span class="func">setCount</span>(prev =&gt; prev + <span class="num-val">1</span>);
+            </div>
+
+            <h3 id="usestate-object">5.3 Object State</h3>
+            <div class="code-block">
+<span class="keyword">const</span> [user, setUser] = <span class="func">useState</span>({ name: <span class="str">"Dara"</span>, age: <span class="num-val">20</span> });
+
+<span class="comment">// ត្រូវ copy object មុន</span>
+<span class="func">setUser</span>({ ...user, age: <span class="num-val">21</span> });
+            </div>
+
+            <h3 id="usestate-array">5.4 Array State</h3>
+            <div class="code-block">
+<span class="keyword">const</span> [items, setItems] = <span class="func">useState</span>([<span class="str">"a"</span>, <span class="str">"b"</span>]);
+
+<span class="comment">// បន្ថែម</span>
+<span class="func">setItems</span>([...items, <span class="str">"c"</span>]);
+
+<span class="comment">// លុប</span>
+<span class="func">setItems</span>(items.<span class="func">filter</span>(i =&gt; i !== <span class="str">"a"</span>));
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> កុំកែ state ផ្ទាល់! ត្រូវបង្កើត copy ថ្មី (spread operator <code>...</code>)។ វិធីនេះធានាថា React ដឹងពីការផ្លាស់ប្តូរ។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Event Handling</h2>
+
+            <h3 id="click-event">6.1 onClick</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Button</span>() {
+    <span class="keyword">function</span> <span class="func">handleClick</span>() {
+        <span class="func">alert</span>(<span class="str">"Clicked!"</span>);
+    }
+
+    <span class="keyword">return</span> <span class="tag">&lt;button</span> <span class="jsx">onClick</span>={handleClick}<span class="tag">&gt;</span>Click<span class="tag">&lt;/button&gt;</span>;
+}
+            </div>
+
+            <h3 id="input-event">6.2 Input Events</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Input</span>() {
+    <span class="keyword">function</span> <span class="func">handleChange</span>(e) {
+        <span class="func">console</span>.<span class="func">log</span>(e.target.value);
+    }
+
+    <span class="keyword">return</span> <span class="tag">&lt;input</span> <span class="jsx">onChange</span>={handleChange} <span class="tag">/&gt;</span>;
+}
+            </div>
+
+            <h3 id="form-event">6.3 Form Events</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Form</span>() {
+    <span class="keyword">function</span> <span class="func">handleSubmit</span>(e) {
+        e.<span class="func">preventDefault</span>();  <span class="comment">// បញ្ឈប់ reload</span>
+        <span class="func">alert</span>(<span class="str">"Submitted!"</span>);
+    }
+
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;form</span> <span class="jsx">onSubmit</span>={handleSubmit}<span class="tag">&gt;</span>
+            <span class="tag">&lt;button&gt;</span>Submit<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;/form&gt;</span>
+    );
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Event ក្នុង React ជា camelCase (<code>onClick</code> មិនមែន <code>onclick</code>)។ បញ្ជូន function មិនមែន string។ <code>e.preventDefault()</code> ការពារ default behavior។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Conditional Rendering</h2>
+
+            <h3 id="if-else-render">7.1 if / else</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Greeting</span>({ isLoggedIn }) {
+    <span class="keyword">if</span> (isLoggedIn) {
+        <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Welcome back!<span class="tag">&lt;/h1&gt;</span>;
+    }
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Please log in.<span class="tag">&lt;/h1&gt;</span>;
+}
+            </div>
+
+            <h3 id="ternary-render">7.2 Ternary</h3>
+            <div class="code-block">
+<span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+        {isLoggedIn ? <span class="tag">&lt;h1&gt;</span>Welcome!<span class="tag">&lt;/h1&gt;</span> : <span class="tag">&lt;h1&gt;</span>Log in<span class="tag">&lt;/h1&gt;</span>}
+    <span class="tag">&lt;/div&gt;</span>
+);
+            </div>
+
+            <h3 id="and-render">7.3 Logical AND</h3>
+            <div class="code-block">
+{isAdmin &amp;&amp; <span class="tag">&lt;button&gt;</span>Delete<span class="tag">&lt;/button&gt;</span>}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&amp;&amp;</code> បង្ហាញធាតុតែនៅពេល condition ពិត។ ឧទាហរណ៍ <code>isAdmin &amp;&amp; &lt;button /&gt;</code> បង្ហាញប៊ូតុងតែនៅពេល user ជា admin។
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Lists & Keys</h2>
+
+            <h3 id="map-render">8.1 Rendering Lists</h3>
+            <div class="code-block">
+<span class="keyword">const</span> fruits = [<span class="str">"Apple"</span>, <span class="str">"Banana"</span>, <span class="str">"Cherry"</span>];
+
+<span class="keyword">return</span> (
+    <span class="tag">&lt;ul&gt;</span>
+        {fruits.<span class="func">map</span>((fruit, i) =&gt; <span class="tag">&lt;li</span> <span class="jsx">key</span>={i}<span class="tag">&gt;</span>{fruit}<span class="tag">&lt;/li&gt;</span>)}
+    <span class="tag">&lt;/ul&gt;</span>
+);
+            </div>
+
+            <h3 id="keys">8.2 Keys</h3>
+            <div class="code-block">
+<span class="comment">// ល្អបំផុតប្រើ id ជា key</span>
+{users.<span class="func">map</span>(user =&gt; (
+    <span class="tag">&lt;div</span> <span class="jsx">key</span>={user.id}<span class="tag">&gt;</span>{user.name}<span class="tag">&lt;/div&gt;</span>
+))}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>key</code> ជួយ React ដឹងថា element ណាផ្លាស់ប្តូរ។ ត្រូវប្រើ <em>unique</em> និង <em>stable</em> — ល្អបំផុតគឺ database id។ កុំប្រើ index បើ list អាចផ្លាស់ប្តូរលំដាប់។
+            </div>
+
+            <h3 id="list-filter">8.3 Filter List</h3>
+            <div class="code-block">
+<span class="keyword">const</span> adults = users.<span class="func">filter</span>(u =&gt; u.age &gt;= <span class="num-val">18</span>);
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. useEffect</h2>
+
+            <h3 id="useeffect-basic">9.1 Basics</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { useEffect, useState } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">function</span> <span class="func">Timer</span>() {
+    <span class="keyword">const</span> [count, setCount] = <span class="func">useState</span>(<span class="num-val">0</span>);
+
+    <span class="func">useEffect</span>(() =&gt; {
+        <span class="func">console</span>.<span class="func">log</span>(<span class="str">"Count changed: "</span> + count);
+    }, [count]);
+
+    <span class="keyword">return</span> <span class="tag">&lt;button</span> <span class="jsx">onClick</span>={() =&gt; <span class="func">setCount</span>(count + <span class="num-val">1</span>)}<span class="tag">&gt;</span>{count}<span class="tag">&lt;/button&gt;</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>useEffect</code> ដំណើរការ <em>side effects</em> — ដូចជា fetch data, subscribe, ឬកែ DOM។ វាដំណើរការបន្ទាប់ពី render។
+            </div>
+
+            <h3 id="useeffect-deps">9.2 Dependencies</h3>
+            <div class="code-block">
+<span class="func">useEffect</span>(() =&gt; { ... }, []);         <span class="comment">// ដំណើរការម្តង</span>
+<span class="func">useEffect</span>(() =&gt; { ... }, [count]);   <span class="comment">// ពេល count ផ្លាស់ប្តូរ</span>
+<span class="func">useEffect</span>(() =&gt; { ... });            <span class="comment">// រាល់ render</span>
+            </div>
+
+            <h3 id="fetch-api">9.3 Fetch API</h3>
+            <div class="code-block">
+<span class="func">useEffect</span>(() =&gt; {
+    <span class="func">fetch</span>(<span class="str">"https://api.example.com/users"</span>)
+        .<span class="func">then</span>(res =&gt; res.<span class="func">json</span>())
+        .<span class="func">then</span>(data =&gt; <span class="func">setUsers</span>(data));
+}, []);
+            </div>
+
+            <h3 id="cleanup">9.4 Cleanup</h3>
+            <div class="code-block">
+<span class="func">useEffect</span>(() =&gt; {
+    <span class="keyword">const</span> timer = <span class="func">setInterval</span>(() =&gt; {}, <span class="num-val">1000</span>);
+
+    <span class="keyword">return</span> () =&gt; <span class="func">clearInterval</span>(timer);  <span class="comment">// cleanup</span>
+}, []);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Cleanup function ជួយបញ្ឈប់ subscriptions, timers ជាដើម នៅពេល component ត្រូវ unmount។ ជួយការពារ memory leak។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Forms & Controlled</h2>
+
+            <h3 id="controlled">10.1 Controlled Inputs</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Form</span>() {
+    <span class="keyword">const</span> [name, setName] = <span class="func">useState</span>(<span class="str">""</span>);
+
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;input</span>
+            <span class="jsx">value</span>={name}
+            <span class="jsx">onChange</span>={(e) =&gt; <span class="func">setName</span>(e.target.value)}
+        <span class="tag">/&gt;</span>
+    );
+}
+            </div>
+
+            <h3 id="form-submit">10.2 Form Submit</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">Form</span>() {
+    <span class="keyword">const</span> [email, setEmail] = <span class="func">useState</span>(<span class="str">""</span>);
+
+    <span class="keyword">function</span> <span class="func">handleSubmit</span>(e) {
+        e.<span class="func">preventDefault</span>();
+        <span class="func">console</span>.<span class="func">log</span>(<span class="str">"Email:"</span>, email);
+    }
+
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;form</span> <span class="jsx">onSubmit</span>={handleSubmit}<span class="tag">&gt;</span>
+            <span class="tag">&lt;input</span> <span class="jsx">value</span>={email} <span class="jsx">onChange</span>={(e) =&gt; <span class="func">setEmail</span>(e.target.value)} <span class="tag">/&gt;</span>
+            <span class="tag">&lt;button&gt;</span>Submit<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;/form&gt;</span>
+    );
+}
+            </div>
+
+            <h3 id="validation">10.3 Validation</h3>
+            <div class="code-block">
+<span class="keyword">const</span> [error, setError] = <span class="func">useState</span>(<span class="str">""</span>);
+
+<span class="keyword">function</span> <span class="func">handleSubmit</span>(e) {
+    e.<span class="func">preventDefault</span>();
+    <span class="keyword">if</span> (!email.<span class="func">includes</span>(<span class="str">"@"</span>)) {
+        <span class="func">setError</span>(<span class="str">"Invalid email"</span>);
+        <span class="keyword">return</span>;
+    }
+    <span class="comment">// submit...</span>
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Controlled input មានន័យថា React គ្រប់គ្រងតម្លៃ input តាម state។ នេះធ្វើឲ្យការ validate និង handle ងាយស្រួល។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Context API</h2>
+
+            <h3 id="create-context">11.1 createContext</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { createContext } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">const</span> ThemeContext = <span class="func">createContext</span>(<span class="str">"light"</span>);
+            </div>
+
+            <h3 id="provider">11.2 Provider</h3>
+            <div class="code-block">
+<span class="tag">&lt;ThemeContext.Provider</span> <span class="jsx">value</span>=<span class="str">"dark"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;App /&gt;</span>
+<span class="tag">&lt;/ThemeContext.Provider&gt;</span>
+            </div>
+
+            <h3 id="usecontext">11.3 useContext</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { useContext } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">function</span> <span class="func">Button</span>() {
+    <span class="keyword">const</span> theme = <span class="func">useContext</span>(ThemeContext);
+    <span class="keyword">return</span> <span class="tag">&lt;button</span> <span class="jsx">className</span>={theme}<span class="tag">&gt;</span>Click<span class="tag">&lt;/button&gt;</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Context ជួយចែករំលែកទិន្នន័យរវាង components ច្រើន ដោយមិនចាំបាច់បញ្ជូន props ជាបន្តបន្ទាប់ (prop drilling)។ ល្អសម្រាប់ theme, language, ឬ auth user។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. React Router</h2>
+
+            <h3 id="install-router">12.1 Install</h3>
+            <div class="code-block">
+npm install react-router-dom
+            </div>
+
+            <h3 id="routes">12.2 Routes & Links</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { BrowserRouter, Routes, Route, Link } <span class="keyword">from</span> <span class="str">'react-router-dom'</span>;
+
+<span class="keyword">function</span> <span class="func">App</span>() {
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;BrowserRouter&gt;</span>
+            <span class="tag">&lt;nav&gt;</span>
+                <span class="tag">&lt;Link</span> <span class="jsx">to</span>=<span class="str">"/"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/Link&gt;</span>
+                <span class="tag">&lt;Link</span> <span class="jsx">to</span>=<span class="str">"/about"</span><span class="tag">&gt;</span>About<span class="tag">&lt;/Link&gt;</span>
+            <span class="tag">&lt;/nav&gt;</span>
+
+            <span class="tag">&lt;Routes&gt;</span>
+                <span class="tag">&lt;Route</span> <span class="jsx">path</span>=<span class="str">"/"</span> <span class="jsx">element</span>=<span class="str">{&lt;Home /&gt;}</span> <span class="tag">/&gt;</span>
+                <span class="tag">&lt;Route</span> <span class="jsx">path</span>=<span class="str">"/about"</span> <span class="jsx">element</span>=<span class="str">{&lt;About /&gt;}</span> <span class="tag">/&gt;</span>
+            <span class="tag">&lt;/Routes&gt;</span>
+        <span class="tag">&lt;/BrowserRouter&gt;</span>
+    );
+}
+            </div>
+
+            <h3 id="params">12.3 URL Params</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { useParams } <span class="keyword">from</span> <span class="str">'react-router-dom'</span>;
+
+<span class="tag">&lt;Route</span> <span class="jsx">path</span>=<span class="str">"/user/:id"</span> <span class="jsx">element</span>=<span class="str">{&lt;User /&gt;}</span> <span class="tag">/&gt;</span>
+
+<span class="keyword">function</span> <span class="func">User</span>() {
+    <span class="keyword">const</span> { id } = <span class="func">useParams</span>();
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>User ID: {id}<span class="tag">&lt;/h1&gt;</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> React Router អនុញ្ញាតឲ្យបង្កើត SPA ដែលមាន URL ច្រើន ដោយមិនចាំបាច់ reload។ <code>&lt;Link&gt;</code> ជំនួស <code>&lt;a&gt;</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Custom Hooks</h2>
+
+            <h3 id="custom-hook">13.1 Creating Hooks</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { useState } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">function</span> <span class="func">useCounter</span>(initial = <span class="num-val">0</span>) {
+    <span class="keyword">const</span> [count, setCount] = <span class="func">useState</span>(initial);
+
+    <span class="keyword">const</span> increment = () =&gt; <span class="func">setCount</span>(c =&gt; c + <span class="num-val">1</span>);
+    <span class="keyword">const</span> decrement = () =&gt; <span class="func">setCount</span>(c =&gt; c - <span class="num-val">1</span>);
+
+    <span class="keyword">return</span> { count, increment, decrement };
+}
+            </div>
+
+            <h3 id="usefetch">13.2 useFetch Example</h3>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="func">useFetch</span>(url) {
+    <span class="keyword">const</span> [data, setData] = <span class="func">useState</span>(<span class="keyword">null</span>);
+    <span class="keyword">const</span> [loading, setLoading] = <span class="func">useState</span>(<span class="keyword">true</span>);
+
+    <span class="func">useEffect</span>(() =&gt; {
+        <span class="func">fetch</span>(url)
+            .<span class="func">then</span>(res =&gt; res.<span class="func">json</span>())
+            .<span class="func">then</span>(d =&gt; { <span class="func">setData</span>(d); <span class="func">setLoading</span>(<span class="keyword">false</span>); });
+    }, [url]);
+
+    <span class="keyword">return</span> { data, loading };
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Custom Hook គឺ function ដែលចាប់ផ្តើមដោយ <code>use</code> និងអាចប្រើ Hooks ផ្សេងទៀត។ វាជួយកូដឡើងវិញ និងបំបែក logic។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Performance</h2>
+
+            <h3 id="memo">14.1 React.memo</h3>
+            <div class="code-block">
+<span class="keyword">import</span> { memo } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">const</span> Header = <span class="func">memo</span>(<span class="keyword">function</span> <span class="func">Header</span>({ title }) {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>{title}<span class="tag">&lt;/h1&gt;</span>;
+});
+            </div>
+
+            <h3 id="usememo">14.2 useMemo</h3>
+            <div class="code-block">
+<span class="keyword">const</span> expensive = <span class="func">useMemo</span>(() =&gt; {
+    <span class="keyword">return</span> <span class="func">computeExpensive</span>(value);
+}, [value]);
+            </div>
+
+            <h3 id="usecallback">14.3 useCallback</h3>
+            <div class="code-block">
+<span class="keyword">const</span> handleClick = <span class="func">useCallback</span>(() =&gt; {
+    <span class="func">setCount</span>(c =&gt; c + <span class="num-val">1</span>);
+}, []);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> React.memo ការពារ re-render បើ props ដូចដើម។ <code>useMemo</code> cache តម្លៃគណនា។ <code>useCallback</code> cache function។ ប្រើតែនៅពេលមានបញ្ហា performance ជាក់ស្តែង។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. React Project</h2>
+            <p>សាកល្បងបង្កើត <strong>Todo List</strong> តូចមួយជាមួយ React៖</p>
+            <div class="code-block">
+<span class="keyword">import</span> { useState } <span class="keyword">from</span> <span class="str">'react'</span>;
+
+<span class="keyword">function</span> <span class="func">TodoApp</span>() {
+    <span class="keyword">const</span> [todos, setTodos] = <span class="func">useState</span>([]);
+    <span class="keyword">const</span> [input, setInput] = <span class="func">useState</span>(<span class="str">""</span>);
+
+    <span class="keyword">function</span> <span class="func">addTodo</span>(e) {
+        e.<span class="func">preventDefault</span>();
+        <span class="keyword">if</span> (!input) <span class="keyword">return</span>;
+        <span class="func">setTodos</span>([...todos, { id: Date.<span class="func">now</span>(), text: input }]);
+        <span class="func">setInput</span>(<span class="str">""</span>);
+    }
+
+    <span class="keyword">function</span> <span class="func">removeTodo</span>(id) {
+        <span class="func">setTodos</span>(todos.<span class="func">filter</span>(t =&gt; t.id !== id));
+    }
+
+    <span class="keyword">return</span> (
+        <span class="tag">&lt;div&gt;</span>
+            <span class="tag">&lt;h1&gt;</span>Todo List<span class="tag">&lt;/h1&gt;</span>
+            <span class="tag">&lt;form</span> <span class="jsx">onSubmit</span>={addTodo}<span class="tag">&gt;</span>
+                <span class="tag">&lt;input</span>
+                    <span class="jsx">value</span>={input}
+                    <span class="jsx">onChange</span>={(e) =&gt; <span class="func">setInput</span>(e.target.value)}
+                    <span class="jsx">placeholder</span>=<span class="str">"បន្ថែម..."</span>
+                <span class="tag">/&gt;</span>
+                <span class="tag">&lt;button&gt;</span>Add<span class="tag">&lt;/button&gt;</span>
+            <span class="tag">&lt;/form&gt;</span>
+
+            <span class="tag">&lt;ul&gt;</span>
+                {todos.<span class="func">map</span>(t =&gt; (
+                    <span class="tag">&lt;li</span> <span class="jsx">key</span>={t.id}<span class="tag">&gt;</span>
+                        {t.text}
+                        <span class="tag">&lt;button</span> <span class="jsx">onClick</span>={() =&gt; <span class="func">removeTodo</span>(t.id)}<span class="tag">&gt;</span>×<span class="tag">&lt;/button&gt;</span>
+                    <span class="tag">&lt;/li&gt;</span>
+                ))}
+            <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    );
+}
+
+<span class="keyword">export default</span> TodoApp;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ useState, form handling, list rendering និង <code>key</code>។ សាកល្បងបន្ថែម៖ edit, filter, ឬ localStorage។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> សាកល្បងគម្រោងតូចៗ — Todo List, Weather App, Shopping Cart — វានឹងជួយអ្នកយល់ React លឿនជាងអានទ្រឹស្តី។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fab fa-react"></i> App.jsx</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">function</span> <span style="color:#38bdf8">App</span>() {
+  <span style="color:#c084fc">return</span> (
+    <span style="color:#f472b6">&lt;h1&gt;</span>Hello, React!<span style="color:#f472b6">&lt;/h1&gt;</span>
+  );
+}
+
+<span style="color:#c084fc">export default</span> App;</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, React!
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">React Basics</a></li>
+                <li><a href="#">Hooks</a></li>
+                <li><a href="#">Next.js</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code_Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="./style/information.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="brand">
+        <div class="brand-icon"><i class="fas fa-code"></i></div>
+        <span class="brand-text">Code_Learning</span>
+    </div>
+    <div class="nav-links">
+        <a href="2.html">Courses</a>
+        <a href="signup.html">Login</a>
+    </div>
+</nav>
+
+<!-- AUTH WRAP -->
+<div class="auth-wrap">
+    <div class="auth-container">
+
+        <!-- LEFT PANEL — Info -->
+        <div class="auth-info">
+            <div class="auth-info-content">
+                <div class="badge">
+                    <i class="fas fa-rocket"></i> Free Forever
+                </div>
+
+                <h2>
+                    Start your coding<br>
+                    <span>journey today.</span>
+                </h2>
+
+                <p>
+                    Join thousands of learners mastering web development, data science, and more — all at your own pace.
+                </p>
+
+                <div class="auth-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-play"></i></div>
+                        <span>50+ Free Courses</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                        <span>Certificate on Completion</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <span>Active Community</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-stats">
+                <div class="stat-item">
+                    <h3>10K+</h3>
+                    <p>Students</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Courses</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.9★</h3>
+                    <p>Rating</p>
+                </div>
+            </div>
+
+            <div class="auth-info-footer">
+                <i class="fas fa-shield-halved"></i>
+                <span>Your data is encrypted and secure.</span>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL — Form -->
+        <div class="auth-panel">
+            <h1>Create your account</h1>
+            <p class="sub">Sign up for free and start learning today.</p>
+
+            <div class="form-msg" id="form-msg"></div>
+
+            <form id="signup-form" novalidate>
+
+                <div class="field">
+                    <label for="name">
+                        <i class="fas fa-user"></i> Full Name
+                    </label>
+                    <div class="input-wrap">
+                        <i class="fas fa-user input-icon"></i>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="John Doe"
+                            required
+                            autocomplete="name"
+                        >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <div class="input-wrap">
+                        <i class="fas fa-at input-icon"></i>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="password">
+                        <i class="fas fa-key"></i> Password
+                    </label>
+                    <div class="input-wrap">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="At least 8 characters"
+                            required
+                            minlength="8"
+                            autocomplete="new-password"
+                        >
+                        <button type="button" class="toggle-pass" data-target="password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="strength" id="strength">
+                        <div class="strength-bar"></div>
+                        <div class="strength-bar"></div>
+                        <div class="strength-bar"></div>
+                        <div class="strength-bar"></div>
+                    </div>
+                    <div class="strength-text" id="strength-text">Password strength</div>
+                </div>
+
+                <label class="checkbox-wrap">
+                    <input type="checkbox" id="agree" required>
+                    <span>
+                        I agree to the
+                        <a href="#">Terms of Service</a>
+                        and
+                        <a href="#">Privacy Policy</a>
+                    </span>
+                </label>
+
+                <button type="submit" class="btn btn-primary" id="submit-btn">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Account</span>
+                </button>
+
+            </form>
+
+            <div class="divider">or sign up with</div>
+
+            <div class="social-row">
+                <a href="#" class="btn-social google">
+                    <i class="fab fa-google"></i> Google
+                </a>
+                <a href="#" class="btn-social github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+
+            <div class="switch-auth">
+                Already have an account?
+                <a href="login.html">Log in</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signup-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const agreeCheck = document.getElementById('agree');
+    const submitBtn = document.getElementById('submit-btn');
+    const msgBox = document.getElementById('form-msg');
+    const strengthBars = document.querySelectorAll('#strength .strength-bar');
+    const strengthText = document.getElementById('strength-text');
+
+    // Toggle password
+    document.querySelectorAll('.toggle-pass').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const input = document.getElementById(btn.dataset.target);
+            const icon = btn.querySelector('i');
+            const isPass = input.type === 'password';
+            input.type = isPass ? 'text' : 'password';
+            icon.classList.toggle('fa-eye', !isPass);
+            icon.classList.toggle('fa-eye-slash', isPass);
+        });
+    });
+
+    // Password strength
+    passwordInput.addEventListener('input', () => {
+        const val = passwordInput.value;
+        let score = 0;
+        if (val.length >= 8) score++;
+        if (val.length >= 12) score++;
+        if (/[A-Z]/.test(val) && /[a-z]/.test(val)) score++;
+        if (/\d/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+
+        let level = 0;
+        let label = 'Password strength';
+        let cls = '';
+
+        if (val.length === 0) {
+            level = 0;
+        } else if (score <= 2) {
+            level = 1; label = 'Weak password'; cls = 'weak';
+        } else if (score <= 3) {
+            level = 2; label = 'Medium password'; cls = 'medium';
+        } else if (score <= 4) {
+            level = 3; label = 'Good password'; cls = 'medium';
+        } else {
+            level = 4; label = 'Strong password'; cls = 'strong';
+        }
+
+        strengthBars.forEach((bar, i) => {
+            bar.classList.remove('active', 'weak', 'medium', 'strong');
+            if (i < level) bar.classList.add('active', cls);
+        });
+
+        strengthText.textContent = label;
+    });
+
+    // Message helper
+    function showMessage(text, type = 'error') {
+        const icons = {
+            error: 'fa-circle-exclamation',
+            success: 'fa-circle-check'
+        };
+        msgBox.className = `form-msg ${type}`;
+        msgBox.innerHTML = `<i class="fas ${icons[type]}"></i> <span>${text}</span>`;
+    }
+
+    function hideMessage() {
+        msgBox.className = 'form-msg';
+        msgBox.innerHTML = '';
+    }
+
+    // Submit
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        hideMessage();
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        if (name.length < 2) {
+            showMessage('Please enter your full name', 'error');
+            nameInput.focus();
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showMessage('Please enter a valid email', 'error');
+            emailInput.focus();
+            return;
+        }
+
+        if (password.length < 8) {
+            showMessage('Password must be at least 8 characters', 'error');
+            passwordInput.focus();
+            return;
+        }
+
+        if (!agreeCheck.checked) {
+            showMessage('You must agree to the Terms of Service', 'error');
+            return;
+        }
+
+        // Loading
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner"></i> <span>Creating account...</span>';
+
+        // Check existing users
+        const users = JSON.parse(localStorage.getItem('code_learning_users') || '[]');
+
+        setTimeout(() => {
+            if (users.find(u => u.email === email)) {
+                showMessage('This email is already registered', 'error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-user-plus"></i> <span>Create Account</span>';
+                return;
+            }
+
+            // Save user
+            const newUser = {
+                id: Date.now(),
+                name: name,
+                email: email,
+                password: password,
+                joined: new Date().toISOString()
+            };
+
+            users.push(newUser);
+            localStorage.setItem('code_learning_users', JSON.stringify(users));
+
+            showMessage('Account created! Redirecting to login...', 'success');
+
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1200);
+        }, 1000);
+    });
+
+    // Clear errors on input
+    [nameInput, emailInput, passwordInput].forEach(input => {
+        input.addEventListener('input', hideMessage);
+    });
+});
+</script>
+
+</body>
+</html>

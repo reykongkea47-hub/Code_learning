@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>មេរៀន HTML - CodeKhmerLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/page.css">
+<link rel="stylesheet" href="../style/navbar.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+ <!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> HTML Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា HTML?</a></li>
+                <li><a href="#structure">1.2. រចនាសម្ព័ន្ធ</a></li>
+                <li><a href="#first-page">1.3. ទំព័រដំបូង</a></li>
+                <li><a href="#comments">1.4. Comment</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Basic Tags
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#headings">2.1. Headings</a></li>
+                <li><a href="#paragraph">2.2. Paragraph</a></li>
+                <li><a href="#line-break">2.3. Line Break</a></li>
+                <li><a href="#hr">2.4. Horizontal Rule</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Text Formatting
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#bold">3.1. Bold & Strong</a></li>
+                <li><a href="#italic">3.2. Italic & Em</a></li>
+                <li><a href="#underline">3.3. Underline</a></li>
+                <li><a href="#mark">3.4. Mark & Small</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Links & Images
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#links">4.1. Anchor Tags</a></li>
+                <li><a href="#target">4.2. Target Attribute</a></li>
+                <li><a href="#images">4.3. Images</a></li>
+                <li><a href="#alt">4.4. Alt Text</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Lists
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#ul">5.1. Unordered List</a></li>
+                <li><a href="#ol">5.2. Ordered List</a></li>
+                <li><a href="#dl">5.3. Description List</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Tables
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#table-basic">6.1. Basic Table</a></li>
+                <li><a href="#thead-tbody">6.2. thead & tbody</a></li>
+                <li><a href="#colspan">6.3. Colspan & Rowspan</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Forms
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#form-basic">7.1. Form Basics</a></li>
+                <li><a href="#inputs">7.2. Input Types</a></li>
+                <li><a href="#labels">7.3. Labels</a></li>
+                <li><a href="#select-textarea">7.4. Select & Textarea</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Semantic HTML
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#header-footer">8.1. header & footer</a></li>
+                <li><a href="#nav-main">8.2. nav & main</a></li>
+                <li><a href="#section-article">8.3. section & article</a></li>
+                <li><a href="#aside">8.4. aside</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Multimedia
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#audio">9.1. Audio</a></li>
+                <li><a href="#video">9.2. Video</a></li>
+                <li><a href="#iframe">9.3. iframe</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Attributes
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#global-attr">10.1. Global</a></li>
+                <li><a href="#id-class">10.2. id & class</a></li>
+                <li><a href="#data-attr">10.3. data-*</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Meta Tags & SEO
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#meta-charset">11.1. Charset</a></li>
+                <li><a href="#meta-viewport">11.2. Viewport</a></li>
+                <li><a href="#meta-desc">11.3. Description</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> HTML5 New Elements
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#figure">12.1. figure</a></li>
+                <li><a href="#details">12.2. details</a></li>
+                <li><a href="#progress">12.3. progress</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Block vs Inline
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#block">13.1. Block</a></li>
+                <li><a href="#inline">13.2. Inline</a></li>
+                <li><a href="#inline-block">13.3. Inline-block</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Best Practices
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> HTML Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. HTML Introduction - ការណែនាំ HTML</h2>
+
+            <h3 id="intro">1.1 អ្វីជា HTML?</h3>
+            <p>HTML (HyperText Markup Language) គឺជាភាសាសម្រាប់បង្កើតរចនាសម្ព័ន្ធនៃគេហទំព័រ។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> HTML គឺជា <em>មូលដ្ឋានគ្រឹះ</em> នៃគេហទំព័រ។ វាកំណត់ថាតើមានអ្វីនៅលើទំព័រ — ចំណងជើង អត្ថបទ រូបភាព តំណភ្ជាប់ ជាដើម។ វាមិនមែនជាភាសាសរសេរកម្មវិធី (programming language) ទេ តែជាភាសា <em>markup</em> ដែលប្រើ <strong>tags</strong> ដើម្បីសម្គាល់អត្ថន័យ។
+            </div>
+
+            <h3 id="structure">1.2 រចនាសម្ព័ន្ធ HTML</h3>
+            <div class="code-block">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="text">ចំណងជើងទំព័រ</span><span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span><span class="text">សូមស្វាគមន៍!</span><span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong>
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><code>&lt;!DOCTYPE html&gt;</code> — ប្រាប់ browser ថាជា HTML5</li>
+                    <li><code>&lt;html&gt;</code> — ធាតុឫស (root)</li>
+                    <li><code>&lt;head&gt;</code> — ព័ត៌មានមេតា (មិនបង្ហាញ)</li>
+                    <li><code>&lt;body&gt;</code> — ខ្លឹមសារដែលបង្ហាញ</li>
+                </ul>
+            </div>
+
+            <h3 id="first-page">1.3 ទំព័រដំបូង</h3>
+            <div class="code-block">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"km"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="text">Hello</span><span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span><span class="text">សូមស្វាគមន៍មកកាន់ HTML</span><span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </div>
+
+            <h3 id="comments">1.4 Comment</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- នេះគឺជា comment --&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> Comment មិនត្រូវបានបង្ហាញនៅលើ browser ទេ។ ប្រើសម្រាប់កត់ត្រា ឬពន្យល់កូដ។
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Basic Tags - ធាតុមូលដ្ឋាន</h2>
+
+            <h3 id="headings">2.1 Headings</h3>
+            <div class="code-block">
+<span class="tag">&lt;h1&gt;</span><span class="text">ចំណងជើង 1</span><span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span><span class="text">ចំណងជើង 2</span><span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span><span class="text">ចំណងជើង 3</span><span class="tag">&lt;/h3&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> មាន <code>&lt;h1&gt;</code> ដល់ <code>&lt;h6&gt;</code> ។ <code>&lt;h1&gt;</code> ធំបំផុត ហើយ <code>&lt;h6&gt;</code> តូចបំផុត។ ប្រើសម្រាប់ចំណងជើង និងរចនាសម្ព័ន្ធទំព័រ។
+            </div>
+
+            <h3 id="paragraph">2.2 Paragraph</h3>
+            <div class="code-block">
+<span class="tag">&lt;p&gt;</span><span class="text">នេះគឺជាកថាខណ្ឌមួយ។</span><span class="tag">&lt;/p&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;p&gt;</code> បង្កើតកថាខណ្ឌ (paragraph)។ Browser បន្ថែមចន្លោះខាងលើ និងខាងក្រោមដោយស្វ័យប្រវត្តិ។
+            </div>
+
+            <h3 id="line-break">2.3 Line Break</h3>
+            <div class="code-block">
+<span class="text">បន្ទាត់ទី 1</span><span class="tag">&lt;br&gt;</span>
+<span class="text">បន្ទាត់ទី 2</span>
+            </div>
+
+            <h3 id="hr">2.4 Horizontal Rule</h3>
+            <div class="code-block">
+<span class="tag">&lt;hr&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;br&gt;</code> បំបែកបន្ទាត់។ <code>&lt;hr&gt;</code> បង្កើតបន្ទាត់ផ្ដេកសម្រាប់បែងចែកផ្នែក។ ទាំងពីរជា void element (គ្មាន closing tag)។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Text Formatting - ការតុបតែងអក្សរ</h2>
+
+            <h3 id="bold">3.1 Bold & Strong</h3>
+            <div class="code-block">
+<span class="tag">&lt;b&gt;</span><span class="text">Bold</span><span class="tag">&lt;/b&gt;</span>
+<span class="tag">&lt;strong&gt;</span><span class="text">សំខាន់</span><span class="tag">&lt;/strong&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;b&gt;</code> ធ្វើអក្សរដិត (មិនបញ្ជាក់អត្ថន័យ)។ <code>&lt;strong&gt;</code> ក៏ដិតដែរ ប៉ុន្តែបញ្ជាក់ថា<em>សំខាន់</em> (semantic)។ ប្រើ <code>&lt;strong&gt;</code> ល្អជាងសម្រាប់ SEO។
+            </div>
+
+            <h3 id="italic">3.2 Italic & Em</h3>
+            <div class="code-block">
+<span class="tag">&lt;i&gt;</span><span class="text">Italic</span><span class="tag">&lt;/i&gt;</span>
+<span class="tag">&lt;em&gt;</span><span class="text">សង្កត់ធ្ងន់</span><span class="tag">&lt;/em&gt;</span>
+            </div>
+
+            <h3 id="underline">3.3 Underline</h3>
+            <div class="code-block">
+<span class="tag">&lt;u&gt;</span><span class="text">គូសបន្ទាត់ក្រោម</span><span class="tag">&lt;/u&gt;</span>
+            </div>
+
+            <h3 id="mark">3.4 Mark & Small</h3>
+            <div class="code-block">
+<span class="tag">&lt;mark&gt;</span><span class="text">បន្លិច</span><span class="tag">&lt;/mark&gt;</span>
+<span class="tag">&lt;small&gt;</span><span class="text">អក្សរតូច</span><span class="tag">&lt;/small&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;mark&gt;</code> បន្លិចអត្ថបទដូច highlighter។ <code>&lt;small&gt;</code> បង្ហាញអក្សរតូចជាងធម្មតា។
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Links & Images</h2>
+
+            <h3 id="links">4.1 Anchor Tags</h3>
+            <div class="code-block">
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"https://example.com"</span><span class="tag">&gt;</span><span class="text">ចុចទីនេះ</span><span class="tag">&lt;/a&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;a&gt;</code> បង្កើតតំណភ្ជាប់។ <code>href</code> ជាគោលដៅ។ អាចភ្ជាប់ទៅទំព័រផ្សេង ឬផ្នែកក្នុងទំព័រតែមួយ (<code>#id</code>)។
+            </div>
+
+            <h3 id="target">4.2 Target Attribute</h3>
+            <div class="code-block">
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"https://example.com"</span> <span class="attr">target</span>=<span class="str">"_blank"</span><span class="tag">&gt;</span><span class="text">បើកផ្ទាំងថ្មី</span><span class="tag">&lt;/a&gt;</span>
+            </div>
+
+            <h3 id="images">4.3 Images</h3>
+            <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"logo.png"</span> <span class="attr">alt</span>=<span class="str">"រូបសញ្ញា"</span><span class="tag">&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;img&gt;</code> បង្ហាញរូបភាព។ <code>src</code> ជាផ្លូវទៅរូប, <code>alt</code> ជាអត្ថបទជំនួស នៅពេលរូបមិនអាចបង្ហាញ។
+            </div>
+
+            <h3 id="alt">4.4 Alt Text</h3>
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>alt</code> មានប្រយោជន៍សម្រាប់ <em>accessibility</em> (អ្នកមើលពិការភ្នែក) និង SEO។ គួរសរសេរឲ្យពិពណ៌នាច្បាស់។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Lists - បញ្ជី</h2>
+
+            <h3 id="ul">5.1 Unordered List</h3>
+            <div class="code-block">
+<span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="text">ចំណុច 1</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="text">ចំណុច 2</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+            </div>
+
+            <h3 id="ol">5.2 Ordered List</h3>
+            <div class="code-block">
+<span class="tag">&lt;ol&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="text">ទីមួយ</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="text">ទីពីរ</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+            </div>
+
+            <h3 id="dl">5.3 Description List</h3>
+            <div class="code-block">
+<span class="tag">&lt;dl&gt;</span>
+    <span class="tag">&lt;dt&gt;</span><span class="text">HTML</span><span class="tag">&lt;/dt&gt;</span>
+    <span class="tag">&lt;dd&gt;</span><span class="text">ភាសាបង្កើតគេហទំព័រ</span><span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;ul&gt;</code> បញ្ជីគ្មានលេខ (bullet)។ <code>&lt;ol&gt;</code> បញ្ជីមានលេខ។ <code>&lt;dl&gt;</code> បញ្ជីពន្យល់ (term + description)។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Tables - តារាង</h2>
+
+            <h3 id="table-basic">6.1 Basic Table</h3>
+            <div class="code-block">
+<span class="tag">&lt;table&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;th&gt;</span><span class="text">ឈ្មោះ</span><span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;th&gt;</span><span class="text">អាយុ</span><span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;td&gt;</span><span class="text">Dara</span><span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;td&gt;</span><span class="text">20</span><span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;table&gt;</code> បង្កើតតារាង។ <code>&lt;tr&gt;</code> ជួរដេក, <code>&lt;th&gt;</code> ក្បាលតារាង, <code>&lt;td&gt;</code> ទិន្នន័យ។
+            </div>
+
+            <h3 id="thead-tbody">6.2 thead & tbody</h3>
+            <div class="code-block">
+<span class="tag">&lt;table&gt;</span>
+    <span class="tag">&lt;thead&gt;</span>
+        <span class="tag">&lt;tr&gt;&lt;th&gt;</span><span class="text">ឈ្មោះ</span><span class="tag">&lt;/th&gt;&lt;/tr&gt;</span>
+    <span class="tag">&lt;/thead&gt;</span>
+    <span class="tag">&lt;tbody&gt;</span>
+        <span class="tag">&lt;tr&gt;&lt;td&gt;</span><span class="text">Dara</span><span class="tag">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </div>
+
+            <h3 id="colspan">6.3 Colspan & Rowspan</h3>
+            <div class="code-block">
+<span class="tag">&lt;td</span> <span class="attr">colspan</span>=<span class="str">"2"</span><span class="tag">&gt;</span><span class="text">រួមពីរជួរឈរ</span><span class="tag">&lt;/td&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>colspan</code> បញ្ចូលជួរឈរ, <code>rowspan</code> បញ្ចូលជួរដេក។ ប្រើសម្រាប់ header ឬ cell ពិសេស។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Forms - ទម្រង់បញ្ចូល</h2>
+
+            <h3 id="form-basic">7.1 Form Basics</h3>
+            <div class="code-block">
+<span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="str">"/submit"</span> <span class="attr">method</span>=<span class="str">"post"</span><span class="tag">&gt;</span>
+    <span class="comment">&lt;!-- ធាតុបញ្ចូល --&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </div>
+
+            <h3 id="inputs">7.2 Input Types</h3>
+            <div class="code-block">
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">name</span>=<span class="str">"name"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"email"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"password"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"checkbox"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"radio"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"submit"</span> <span class="attr">value</span>=<span class="str">"បញ្ជូន"</span><span class="tag">&gt;</span>
+            </div>
+
+            <h3 id="labels">7.3 Labels</h3>
+            <div class="code-block">
+<span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="str">"email"</span><span class="tag">&gt;</span><span class="text">អ៊ីមែល</span><span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"email"</span> <span class="attr">id</span>=<span class="str">"email"</span><span class="tag">&gt;</span>
+            </div>
+
+            <h3 id="select-textarea">7.4 Select & Textarea</h3>
+            <div class="code-block">
+<span class="tag">&lt;select&gt;</span>
+    <span class="tag">&lt;option&gt;</span><span class="text">ជម្រើស 1</span><span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option&gt;</span><span class="text">ជម្រើស 2</span><span class="tag">&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span>
+
+<span class="tag">&lt;textarea</span> <span class="attr">rows</span>=<span class="str">"4"</span><span class="tag">&gt;&lt;/textarea&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Form ប្រើសម្រាប់បញ្ចូលទិន្នន័យ។ <code>&lt;label&gt;</code> ភ្ជាប់ជាមួយ <code>input</code> តាម <code>for</code> និង <code>id</code> ដើម្បីភាពងាយស្រួលក្នុងការចុច។
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Semantic HTML - អត្ថន័យ</h2>
+
+            <h3 id="header-footer">8.1 header & footer</h3>
+            <div class="code-block">
+<span class="tag">&lt;header&gt;</span><span class="text">... ក្បាលទំព័រ</span><span class="tag">&lt;/header&gt;</span>
+<span class="tag">&lt;footer&gt;</span><span class="text">... ជើងទំព័រ</span><span class="tag">&lt;/footer&gt;</span>
+            </div>
+
+            <h3 id="nav-main">8.2 nav & main</h3>
+            <div class="code-block">
+<span class="tag">&lt;nav&gt;</span><span class="text">... ម៉ឺនុយ</span><span class="tag">&lt;/nav&gt;</span>
+<span class="tag">&lt;main&gt;</span><span class="text">... ខ្លឹមសារចម្បង</span><span class="tag">&lt;/main&gt;</span>
+            </div>
+
+            <h3 id="section-article">8.3 section & article</h3>
+            <div class="code-block">
+<span class="tag">&lt;section&gt;</span><span class="text">... ផ្នែកមួយ</span><span class="tag">&lt;/section&gt;</span>
+<span class="tag">&lt;article&gt;</span><span class="text">... អត្ថបទមួយ</span><span class="tag">&lt;/article&gt;</span>
+            </div>
+
+            <h3 id="aside">8.4 aside</h3>
+            <div class="code-block">
+<span class="tag">&lt;aside&gt;</span><span class="text">... ព័ត៌មានបន្ថែម</span><span class="tag">&lt;/aside&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Semantic HTML ប្រើ tags ដែលបញ្ជាក់<em>អត្ថន័យ</em> ជំនួស <code>&lt;div&gt;</code>។ វាជួយ SEO និងភាពងាយស្រួលអានកូដ។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Multimedia</h2>
+
+            <h3 id="audio">9.1 Audio</h3>
+            <div class="code-block">
+<span class="tag">&lt;audio</span> <span class="attr">controls</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="str">"song.mp3"</span> <span class="attr">type</span>=<span class="str">"audio/mpeg"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/audio&gt;</span>
+            </div>
+
+            <h3 id="video">9.2 Video</h3>
+            <div class="code-block">
+<span class="tag">&lt;video</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="str">"400"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="str">"clip.mp4"</span> <span class="attr">type</span>=<span class="str">"video/mp4"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/video&gt;</span>
+            </div>
+
+            <h3 id="iframe">9.3 iframe</h3>
+            <div class="code-block">
+<span class="tag">&lt;iframe</span> <span class="attr">src</span>=<span class="str">"https://example.com"</span><span class="tag">&gt;&lt;/iframe&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;audio&gt;</code> និង <code>&lt;video&gt;</code> បង្ហាញមេឌៀ។ <code>controls</code> បន្ថែមប៊ូតុង play/pause។ <code>&lt;iframe&gt;</code> បង្កប់ទំព័រផ្សេងក្នុងទំព័ររបស់អ្នក (ដូច YouTube)។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Attributes - គុណលក្ខណៈ</h2>
+
+            <h3 id="global-attr">10.1 Global Attributes</h3>
+            <ul>
+                <li><code>id</code> — សម្គាល់តែមួយគត់</li>
+                <li><code>class</code> — ចងជាក្រុម</li>
+                <li><code>style</code> — កំណត់ CSS ផ្ទាល់</li>
+                <li><code>title</code> — អត្ថបទពន្យល់</li>
+                <li><code>hidden</code> — លាក់ធាតុ</li>
+            </ul>
+
+            <h3 id="id-class">10.2 id & class</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">id</span>=<span class="str">"header"</span> <span class="attr">class</span>=<span class="str">"box large"</span><span class="tag">&gt;&lt;/div&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>id</code> ត្រូវតែមានតែមួយក្នុងទំព័រ។ <code>class</code> អាចប្រើច្រើនដង។ ប្រើក្នុង CSS ដើម្បីកំណត់ style។
+            </div>
+
+            <h3 id="data-attr">10.3 data-*</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">data-user-id</span>=<span class="str">"123"</span><span class="tag">&gt;&lt;/div&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>data-*</code> ផ្ទុកទិន្នន័យផ្ទាល់ខ្លួន ដែល JavaScript អាចអានបាន។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Meta Tags & SEO</h2>
+
+            <h3 id="meta-charset">11.1 Charset</h3>
+            <div class="code-block">
+<span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">&gt;</span>
+            </div>
+
+            <h3 id="meta-viewport">11.2 Viewport</h3>
+            <div class="code-block">
+<span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"viewport"</span> <span class="attr">content</span>=<span class="str">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+            </div>
+
+            <h3 id="meta-desc">11.3 Description</h3>
+            <div class="code-block">
+<span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"description"</span> <span class="attr">content</span>=<span class="str">"រៀន HTML ជាភាសាខ្មែរ"</span><span class="tag">&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Meta tags ផ្តល់ព័ត៌មានអំពីទំព័រ។ <code>charset</code> កំណត់ encoding (UTF-8 គាំទ្រខ្មែរ)។ <code>viewport</code> សម្រាប់ responsive។ <code>description</code> បង្ហាញលើលទ្ធផលស្វែងរក។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. HTML5 New Elements</h2>
+
+            <h3 id="figure">12.1 figure</h3>
+            <div class="code-block">
+<span class="tag">&lt;figure&gt;</span>
+    <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"pic.jpg"</span> <span class="attr">alt</span>=<span class="str">"រូបភាព"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;figcaption&gt;</span><span class="text">ការពិពណ៌នា</span><span class="tag">&lt;/figcaption&gt;</span>
+<span class="tag">&lt;/figure&gt;</span>
+            </div>
+
+            <h3 id="details">12.2 details</h3>
+            <div class="code-block">
+<span class="tag">&lt;details&gt;</span>
+    <span class="tag">&lt;summary&gt;</span><span class="text">ចុចមើល</span><span class="tag">&lt;/summary&gt;</span>
+    <span class="text">ខ្លឹមសារលាក់</span>
+<span class="tag">&lt;/details&gt;</span>
+            </div>
+
+            <h3 id="progress">12.3 progress</h3>
+            <div class="code-block">
+<span class="tag">&lt;progress</span> <span class="attr">value</span>=<span class="str">"70"</span> <span class="attr">max</span>=<span class="str">"100"</span><span class="tag">&gt;&lt;/progress&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>&lt;figure&gt;</code> ភ្ជាប់រូបភាព + caption។ <code>&lt;details&gt;</code> បង្កើត accordion គ្មាន JavaScript។ <code>&lt;progress&gt;</code> បង្ហាញរបារភាគរយ។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Block vs Inline</h2>
+
+            <h3 id="block">13.1 Block</h3>
+            <p><code>div, p, h1-h6, section, article</code> — យកទទឹងពេញ និងចាប់ជួរថ្មី។</p>
+
+            <h3 id="inline">13.2 Inline</h3>
+            <p><code>span, a, b, i, em, strong</code> — យកទទឹងតាមខ្លឹមសារ និងមិនចាប់ជួរថ្មី។</p>
+
+            <h3 id="inline-block">13.3 Inline-block</h3>
+            <p>ប្រើ <code>display: inline-block</code> ដើម្បីឲ្យដូច inline ប៉ុន្តែកំណត់ width/height បាន។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Block elements បង្កើតប្លុកថ្មី ខណៈ Inline elements នៅជាប់គ្នា។ ការយល់ពីភាពខុសគ្នានេះ ជួយក្នុងការរៀបចំ layout។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Best Practices</h2>
+            <ul>
+                <li>ប្រើ Semantic tags ជំនួស <code>&lt;div&gt;</code></li>
+                <li>ដាក់ <code>alt</code> លើរូបភាពទាំងអស់</li>
+                <li>ប្រើ <code>label</code> ភ្ជាប់ជាមួយ input</li>
+                <li>រក្សា indentation ឲ្យស្អាត</li>
+                <li>ប្រើ <code>meta viewport</code> សម្រាប់ responsive</li>
+                <li>Validate HTML ជាមួយ W3C Validator</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> កូដ HTML ល្អ មិនត្រឹមតែដំណើរការបានទេ តែត្រូវអានងាយ ថែទាំងាយ និង SEO ល្អ។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. HTML Project</h2>
+            <p>សាកល្បងបង្កើតទំព័រ profile តូចមួយដោយប្រើអ្វីដែលបានរៀន៖</p>
+            <div class="code-block">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"km"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="text">ប្រវត្តិរូប</span><span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;header&gt;</span>
+        <span class="tag">&lt;h1&gt;</span><span class="text">Dara Sok</span><span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"avatar.jpg"</span> <span class="attr">alt</span>=<span class="str">"រូបភាព"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;/header&gt;</span>
+    <span class="tag">&lt;main&gt;</span>
+        <span class="tag">&lt;section&gt;</span>
+            <span class="tag">&lt;h2&gt;</span><span class="text">អំពីខ្ញុំ</span><span class="tag">&lt;/h2&gt;</span>
+            <span class="tag">&lt;p&gt;</span><span class="text">ខ្ញុំជាអ្នកអភិវឌ្ឍន៍វេបសាយ។</span><span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;/section&gt;</span>
+        <span class="tag">&lt;section&gt;</span>
+            <span class="tag">&lt;h2&gt;</span><span class="text">ជំនាញ</span><span class="tag">&lt;/h2&gt;</span>
+            <span class="tag">&lt;ul&gt;</span>
+                <span class="tag">&lt;li&gt;</span><span class="text">HTML</span><span class="tag">&lt;/li&gt;</span>
+                <span class="tag">&lt;li&gt;</span><span class="text">CSS</span><span class="tag">&lt;/li&gt;</span>
+                <span class="tag">&lt;li&gt;</span><span class="text">JavaScript</span><span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/section&gt;</span>
+    <span class="tag">&lt;/main&gt;</span>
+    <span class="tag">&lt;footer&gt;</span>
+        <span class="tag">&lt;p&gt;</span><span class="text">© 2026 Dara Sok</span><span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/footer&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើអ្វីៗដែលបានរៀនទាំងអស់ — headings, paragraphs, images, lists, semantic tags។ សាកល្បងបន្ថែម CSS ដើម្បីឲ្យស្អាត។
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fab fa-html5"></i> index.html</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">&lt;!DOCTYPE html&gt;</span>
+<span style="color:#f472b6">&lt;html</span> <span style="color:#fbbf24">lang</span>=<span style="color:#86efac">"km"</span><span style="color:#f472b6">&gt;</span>
+<span style="color:#f472b6">&lt;head&gt;</span>
+  <span style="color:#f472b6">&lt;title&gt;</span>Hello<span style="color:#f472b6">&lt;/title&gt;</span>
+<span style="color:#f472b6">&lt;/head&gt;</span>
+<span style="color:#f472b6">&lt;body&gt;</span>
+  <span style="color:#f472b6">&lt;h1&gt;</span>Welcome!<span style="color:#f472b6">&lt;/h1&gt;</span>
+<span style="color:#f472b6">&lt;/body&gt;</span>
+<span style="color:#f472b6">&lt;/html&gt;</span></pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#e44d26;">
+                <i class="fas fa-eye"></i> លទ្ធផល
+            </div>
+            <div class="output-box">
+                <h1 style="font-size:1.5rem;color:#0f172a;margin-bottom:0.3rem;">Welcome!</h1>
+                <p style="color:#475569;font-size:0.85rem;">This is a simple HTML page.</p>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">HTML Basics</a></li>
+                <li><a href="#">CSS & Flexbox</a></li>
+                <li><a href="#">JavaScript ES6</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

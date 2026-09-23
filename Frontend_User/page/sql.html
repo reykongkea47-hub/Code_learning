@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Code_Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/page.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+  
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> MySQL Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា MySQL?</a></li>
+                <li><a href="#rdbms">1.2. RDBMS</a></li>
+                <li><a href="#setup">1.3. ការដំឡើង</a></li>
+                <li><a href="#connect">1.4. ការភ្ជាប់</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Databases & Tables
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#create-db">2.1. CREATE DATABASE</a></li>
+                <li><a href="#use-db">2.2. USE / DROP</a></li>
+                <li><a href="#create-table">2.3. CREATE TABLE</a></li>
+                <li><a href="#alter-table">2.4. ALTER TABLE</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#numeric">3.1. Numeric</a></li>
+                <li><a href="#string-type">3.2. String</a></li>
+                <li><a href="#date-type">3.3. Date & Time</a></li>
+                <li><a href="#enum-json">3.4. ENUM / JSON</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> CRUD Operations
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#insert">4.1. INSERT</a></li>
+                <li><a href="#select">4.2. SELECT</a></li>
+                <li><a href="#update">4.3. UPDATE</a></li>
+                <li><a href="#delete">4.4. DELETE</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> WHERE Clause
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#where-basic">5.1. WHERE Basics</a></li>
+                <li><a href="#and-or">5.2. AND / OR</a></li>
+                <li><a href="#in-between">5.3. IN / BETWEEN</a></li>
+                <li><a href="#like">5.4. LIKE</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Sorting & Limiting
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#order-by">6.1. ORDER BY</a></li>
+                <li><a href="#limit">6.2. LIMIT</a></li>
+                <li><a href="#distinct">6.3. DISTINCT</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Functions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#agg-func">7.1. Aggregate</a></li>
+                <li><a href="#string-func">7.2. String</a></li>
+                <li><a href="#date-func">7.3. Date</a></li>
+                <li><a href="#null-func">7.4. NULL Handling</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Group By & Having
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#group-by">8.1. GROUP BY</a></li>
+                <li><a href="#having">8.2. HAVING</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Joins
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#inner-join">9.1. INNER JOIN</a></li>
+                <li><a href="#left-join">9.2. LEFT / RIGHT JOIN</a></li>
+                <li><a href="#cross-join">9.3. CROSS JOIN</a></li>
+                <li><a href="#self-join">9.4. SELF JOIN</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Subqueries
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#subquery-basic">10.1. Basics</a></li>
+                <li><a href="#in-subquery">10.2. IN / EXISTS</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Keys & Constraints
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#primary-key">11.1. PRIMARY KEY</a></li>
+                <li><a href="#foreign-key">11.2. FOREIGN KEY</a></li>
+                <li><a href="#unique">11.3. UNIQUE</a></li>
+                <li><a href="#not-null">11.4. NOT NULL / DEFAULT</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> Indexes & Views
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#index">12.1. Indexes</a></li>
+                <li><a href="#view">12.2. Views</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Stored Procedures
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#procedure">13.1. Procedures</a></li>
+                <li><a href="#function">13.2. Functions</a></li>
+                <li><a href="#trigger">13.3. Triggers</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Transactions & Security
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#transaction">14.1. Transactions</a></li>
+                <li><a href="#users">14.2. Users & Privileges</a></li>
+                <li><a href="#backup">14.3. Backup</a></li>
+            </ul>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> MySQL Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. MySQL Introduction - ការណែនាំ MySQL</h2>
+
+            <h3 id="intro">1.1 អ្វីជា MySQL?</h3>
+            <p>MySQL គឺជា <strong>Relational Database Management System (RDBMS)</strong> ដែលប្រើភាសា SQL សម្រាប់គ្រប់គ្រងទិន្នន័យ។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> MySQL គឺជាប្រព័ន្ធគ្រប់គ្រង database ដែលពេញនិយមបំផុតមួយក្នុងពិភពលោក។ វាជា <em>open-source</em> និងឥតគិតថ្លៃ។ ប្រើសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>WordPress</strong> — គេហទំព័ររាប់លាន</li>
+                    <li><strong>Facebook</strong> — ផ្ទុកទិន្នន័យ user</li>
+                    <li><strong>YouTube</strong> — metadata វីដេអូ</li>
+                    <li><strong>Shopify</strong>, <strong>Twitter</strong> ជាដើម</li>
+                </ul>
+            </div>
+
+            <h3 id="rdbms">1.2 RDBMS</h3>
+            <p>RDBMS គឺជាប្រព័ន្ធដែលរក្សាទិន្នន័យជា <strong>តារាង (Tables)</strong> ដែលមានទំនាក់ទំនងគ្នា។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> RDBMS ប្រើ <em>relations</em> (តារាង) ដើម្បីផ្ទុកទិន្នន័យ។ ឧទាហរណ៍ តារាង <code>users</code> និង <code>orders</code> អាចភ្ជាប់គ្នាតាម <code>user_id</code>។
+            </div>
+
+            <h3 id="setup">1.3 ការដំឡើង</h3>
+            <ul>
+                <li><strong>XAMPP / MAMP</strong> — ងាយស្រួលបំផុត</li>
+                <li><strong>MySQL Community Server</strong> — ដំឡើងដោយផ្ទាល់</li>
+                <li><strong>MySQL Workbench</strong> — GUI tool</li>
+                <li><strong>phpMyAdmin</strong> — Web-based interface</li>
+            </ul>
+
+            <h3 id="connect">1.4 ការភ្ជាប់</h3>
+            <div class="code-block">
+<span class="comment"># Terminal</span>
+mysql -u root -p
+
+<span class="comment"># ក្នុង XAMPP ចូល phpMyAdmin</span>
+http://localhost/phpmyadmin
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ប្រើ <code>mysql -u root -p</code> ដើម្បីចូល CLI។ បញ្ចូល password រួចចាប់ផ្តើមបញ្ជា SQL។ ឬប្រើ GUI tool ដូចជា phpMyAdmin ឬ MySQL Workbench។
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Databases & Tables</h2>
+
+            <h3 id="create-db">2.1 CREATE DATABASE</h3>
+            <div class="code-block">
+<span class="keyword">CREATE DATABASE</span> <span class="table">mydb</span>;
+
+<span class="comment">-- បង្កើតបើមិនទាន់មាន</span>
+<span class="keyword">CREATE DATABASE IF NOT EXISTS</span> <span class="table">mydb</span>;
+            </div>
+
+            <h3 id="use-db">2.2 USE / DROP</h3>
+            <div class="code-block">
+<span class="keyword">USE</span> <span class="table">mydb</span>;
+
+<span class="keyword">DROP DATABASE</span> <span class="table">mydb</span>;  <span class="comment">-- លុបទាំងស្រុង</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>USE</code> ជ្រើសរើស database បច្ចុប្បន្ន។ <code>DROP DATABASE</code> លុបទាំង database និង tables ទាំងអស់ — ប្រុងប្រយ័ត្ន!
+            </div>
+
+            <h3 id="create-table">2.3 CREATE TABLE</h3>
+            <div class="code-block">
+<span class="keyword">CREATE TABLE</span> <span class="table">users</span> (
+    <span class="column">id</span> <span class="type">INT</span> <span class="keyword">AUTO_INCREMENT PRIMARY KEY</span>,
+    <span class="column">name</span> <span class="type">VARCHAR</span>(<span class="num-val">50</span>) <span class="keyword">NOT NULL</span>,
+    <span class="column">email</span> <span class="type">VARCHAR</span>(<span class="num-val">100</span>) <span class="keyword">UNIQUE</span>,
+    <span class="column">age</span> <span class="type">INT</span>,
+    <span class="column">created_at</span> <span class="type">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
+);
+            </div>
+
+            <h3 id="alter-table">2.4 ALTER TABLE</h3>
+            <div class="code-block">
+<span class="keyword">ALTER TABLE</span> <span class="table">users</span> <span class="keyword">ADD</span> <span class="column">phone</span> <span class="type">VARCHAR</span>(<span class="num-val">20</span>);
+<span class="keyword">ALTER TABLE</span> <span class="table">users</span> <span class="keyword">DROP COLUMN</span> <span class="column">phone</span>;
+<span class="keyword">ALTER TABLE</span> <span class="table">users</span> <span class="keyword">MODIFY</span> <span class="column">name</span> <span class="type">VARCHAR</span>(<span class="num-val">100</span>);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>AUTO_INCREMENT</code> បង្កើត id ស្វ័យប្រវត្តិ។ <code>PRIMARY KEY</code> ជាកូនសោចម្បងដែលមិនអាចស្ទួន។ <code>ALTER TABLE</code> ប្រើសម្រាប់កែរចនាសម្ព័ន្ធ table។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Data Types</h2>
+
+            <h3 id="numeric">3.1 Numeric</h3>
+            <ul>
+                <li><code>INT</code> — ចំនួនគត់ (4 bytes)</li>
+                <li><code>BIGINT</code> — ចំនួនធំ (8 bytes)</li>
+                <li><code>DECIMAL(10,2)</code> — ទសភាគច្បាស់លាស់ (សម្រាប់លុយ)</li>
+                <li><code>FLOAT</code>, <code>DOUBLE</code> — ទសភាគប្រហែល</li>
+            </ul>
+
+            <h3 id="string-type">3.2 String</h3>
+            <ul>
+                <li><code>VARCHAR(255)</code> — អត្ថបទអថេរ (ពេញនិយម)</li>
+                <li><code>CHAR(10)</code> — អត្ថបទថេរ</li>
+                <li><code>TEXT</code> — អត្ថបទវែង</li>
+                <li><code>BLOB</code> — ទិន្នន័យ binary</li>
+            </ul>
+
+            <h3 id="date-type">3.3 Date & Time</h3>
+            <ul>
+                <li><code>DATE</code> — YYYY-MM-DD</li>
+                <li><code>TIME</code> — HH:MM:SS</li>
+                <li><code>DATETIME</code> — ទាំង date និង time</li>
+                <li><code>TIMESTAMP</code> — ជាមួយ timezone</li>
+                <li><code>YEAR</code> — ឆ្នាំ</li>
+            </ul>
+
+            <h3 id="enum-json">3.4 ENUM / JSON</h3>
+            <div class="code-block">
+<span class="column">status</span> <span class="type">ENUM</span>(<span class="str">'active'</span>, <span class="str">'inactive'</span>, <span class="str">'banned'</span>)
+<span class="column">settings</span> <span class="type">JSON</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ជ្រើសរើស type ឲ្យសមស្រប — <code>DECIMAL</code> សម្រាប់លុយ (កុំប្រើ FLOAT)។ <code>VARCHAR</code> សម្រាប់អត្ថបទខ្លី។ <code>ENUM</code> សម្រាប់តម្លៃជាក់លាក់។
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. CRUD Operations</h2>
+
+            <h3 id="insert">4.1 INSERT</h3>
+            <div class="code-block">
+<span class="keyword">INSERT INTO</span> <span class="table">users</span> (<span class="column">name</span>, <span class="column">email</span>, <span class="column">age</span>)
+<span class="keyword">VALUES</span> (<span class="str">'Dara'</span>, <span class="str">'dara@example.com'</span>, <span class="num-val">20</span>);
+
+<span class="comment">-- ច្រើនជួរក្នុងពេលតែមួយ</span>
+<span class="keyword">INSERT INTO</span> <span class="table">users</span> (<span class="column">name</span>, <span class="column">age</span>) <span class="keyword">VALUES</span>
+(<span class="str">'Sok'</span>, <span class="num-val">25</span>),
+(<span class="str">'Anna'</span>, <span class="num-val">22</span>);
+            </div>
+
+            <h3 id="select">4.2 SELECT</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>;
+<span class="keyword">SELECT</span> <span class="column">name</span>, <span class="column">age</span> <span class="keyword">FROM</span> <span class="table">users</span>;
+            </div>
+
+            <h3 id="update">4.3 UPDATE</h3>
+            <div class="code-block">
+<span class="keyword">UPDATE</span> <span class="table">users</span>
+<span class="keyword">SET</span> <span class="column">age</span> = <span class="num-val">21</span>
+<span class="keyword">WHERE</span> <span class="column">name</span> = <span class="str">'Dara'</span>;
+            </div>
+
+            <h3 id="delete">4.4 DELETE</h3>
+            <div class="code-block">
+<span class="keyword">DELETE FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> &lt; <span class="num-val">18</span>;
+
+<span class="comment">-- លុបទាំងអស់ (ប្រុងប្រយ័ត្ន!)</span>
+<span class="keyword">TRUNCATE TABLE</span> <span class="table">users</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>INSERT</code> បន្ថែម, <code>SELECT</code> អាន, <code>UPDATE</code> កែ, <code>DELETE</code> លុប។ <strong>ត្រូវប្រើ WHERE ជាមួយ UPDATE/DELETE ជានិច្ច</strong> — បើមិនដូច្នេះ វានឹងប៉ះពាល់គ្រប់ជួរ!
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. WHERE Clause</h2>
+
+            <h3 id="where-basic">5.1 WHERE Basics</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> = <span class="num-val">20</span>;
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> &gt; <span class="num-val">18</span>;
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> != <span class="num-val">20</span>;
+            </div>
+
+            <h3 id="and-or">5.2 AND / OR</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">WHERE</span> <span class="column">age</span> &gt; <span class="num-val">18</span> <span class="keyword">AND</span> <span class="column">age</span> &lt; <span class="num-val">60</span>;
+
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">WHERE</span> <span class="column">name</span> = <span class="str">'Dara'</span> <span class="keyword">OR</span> <span class="column">name</span> = <span class="str">'Sok'</span>;
+            </div>
+
+            <h3 id="in-between">5.3 IN / BETWEEN</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> <span class="keyword">IN</span> (<span class="num-val">18</span>, <span class="num-val">20</span>, <span class="num-val">25</span>);
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> <span class="keyword">BETWEEN</span> <span class="num-val">18</span> <span class="keyword">AND</span> <span class="num-val">30</span>;
+            </div>
+
+            <h3 id="like">5.4 LIKE</h3>
+            <div class="code-block">
+<span class="comment">-- ចាប់ផ្តើមដោយ D</span>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">name</span> <span class="keyword">LIKE</span> <span class="str">'D%'</span>;
+
+<span class="comment">-- មាន "ar" នៅក្នុង</span>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">name</span> <span class="keyword">LIKE</span> <span class="str">'%ar%'</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>%</code> តំណាងឲ្យ 0 ឬច្រើនតួអក្សរ។ <code>_</code> តំណាងឲ្យ 1 តួអក្សរ។ <code>IN</code> ជាជម្រើសនៃតម្លៃច្រើន។ <code>BETWEEN</code> ជាជួរតម្លៃ។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Sorting & Limiting</h2>
+
+            <h3 id="order-by">6.1 ORDER BY</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">ORDER BY</span> <span class="column">age</span> <span class="keyword">ASC</span>;   <span class="comment">-- តូចទៅធំ</span>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">ORDER BY</span> <span class="column">age</span> <span class="keyword">DESC</span>;  <span class="comment">-- ធំទៅតូច</span>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">ORDER BY</span> <span class="column">age</span> <span class="keyword">DESC</span>, <span class="column">name</span> <span class="keyword">ASC</span>;
+            </div>
+
+            <h3 id="limit">6.2 LIMIT</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">LIMIT</span> <span class="num-val">10</span>;
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">LIMIT</span> <span class="num-val">10</span> <span class="keyword">OFFSET</span> <span class="num-val">20</span>;  <span class="comment">-- ទំព័រទី 3</span>
+            </div>
+
+            <h3 id="distinct">6.3 DISTINCT</h3>
+            <div class="code-block">
+<span class="keyword">SELECT DISTINCT</span> <span class="column">age</span> <span class="keyword">FROM</span> <span class="table">users</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>ORDER BY</code> តម្រៀបលទ្ធផល។ <code>LIMIT</code> កំណត់ចំនួនជួរ (ល្អសម្រាប់ pagination)។ <code>DISTINCT</code> លុបតម្លៃស្ទួន។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Functions</h2>
+
+            <h3 id="agg-func">7.1 Aggregate</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> <span class="func">COUNT</span>(*) <span class="keyword">FROM</span> <span class="table">users</span>;              <span class="comment">-- ចំនួន</span>
+<span class="keyword">SELECT</span> <span class="func">SUM</span>(<span class="column">price</span>) <span class="keyword">FROM</span> <span class="table">orders</span>;            <span class="comment">-- ផលបូក</span>
+<span class="keyword">SELECT</span> <span class="func">AVG</span>(<span class="column">age</span>) <span class="keyword">FROM</span> <span class="table">users</span>;               <span class="comment">-- មធ្យមភាគ</span>
+<span class="keyword">SELECT</span> <span class="func">MAX</span>(<span class="column">age</span>), <span class="func">MIN</span>(<span class="column">age</span>) <span class="keyword">FROM</span> <span class="table">users</span>;   <span class="comment">-- អតិបរមា/អប្បបរមា</span>
+            </div>
+
+            <h3 id="string-func">7.2 String</h3>
+            <div class="code-block">
+<span class="func">CONCAT</span>(<span class="column">first</span>, <span class="str">' '</span>, <span class="column">last</span>)
+<span class="func">UPPER</span>(<span class="column">name</span>), <span class="func">LOWER</span>(<span class="column">name</span>)
+<span class="func">LENGTH</span>(<span class="column">name</span>)
+<span class="func">SUBSTRING</span>(<span class="column">name</span>, <span class="num-val">1</span>, <span class="num-val">3</span>)
+<span class="func">TRIM</span>(<span class="column">name</span>)
+<span class="func">REPLACE</span>(<span class="column">name</span>, <span class="str">'a'</span>, <span class="str">'A'</span>)
+            </div>
+
+            <h3 id="date-func">7.3 Date</h3>
+            <div class="code-block">
+<span class="func">NOW</span>(), <span class="func">CURDATE</span>(), <span class="func">CURTIME</span>()
+<span class="func">YEAR</span>(<span class="column">created_at</span>), <span class="func">MONTH</span>(<span class="column">created_at</span>)
+<span class="func">DATEDIFF</span>(<span class="column">end_date</span>, <span class="column">start_date</span>)
+<span class="func">DATE_FORMAT</span>(<span class="column">created_at</span>, <span class="str">'%Y-%m-%d'</span>)
+            </div>
+
+            <h3 id="null-func">7.4 NULL Handling</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> <span class="func">IFNULL</span>(<span class="column">phone</span>, <span class="str">'N/A'</span>) <span class="keyword">FROM</span> <span class="table">users</span>;
+<span class="keyword">SELECT</span> <span class="func">COALESCE</span>(<span class="column">phone</span>, <span class="column">email</span>, <span class="str">'N/A'</span>) <span class="keyword">FROM</span> <span class="table">users</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>IFNULL</code> ជំនួស NULL ដោយតម្លៃផ្សេង។ <code>COALESCE</code> return តម្លៃមិន NULL ដំបូង។ មានប្រយោជន៍ពេលបង្ហាញទិន្នន័យ។
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Group By & Having</h2>
+
+            <h3 id="group-by">8.1 GROUP BY</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> <span class="column">age</span>, <span class="func">COUNT</span>(*) <span class="keyword">AS</span> total
+<span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">GROUP BY</span> <span class="column">age</span>;
+            </div>
+
+            <h3 id="having">8.2 HAVING</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> <span class="column">age</span>, <span class="func">COUNT</span>(*) <span class="keyword">AS</span> total
+<span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">GROUP BY</span> <span class="column">age</span>
+<span class="keyword">HAVING</span> total &gt; <span class="num-val">5</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>GROUP BY</code> ប្រមូលជួរជាក្រុម (ឧ. តាមអាយុ)។ <code>HAVING</code> ជា WHERE សម្រាប់ក្រុម — ត្រូវប្រើបន្ទាប់ពី GROUP BY។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Joins</h2>
+
+            <h3 id="inner-join">9.1 INNER JOIN</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> u.<span class="column">name</span>, o.<span class="column">total</span>
+<span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">INNER JOIN</span> <span class="table">orders</span> o <span class="keyword">ON</span> u.<span class="column">id</span> = o.<span class="column">user_id</span>;
+            </div>
+
+            <h3 id="left-join">9.2 LEFT / RIGHT JOIN</h3>
+            <div class="code-block">
+<span class="comment">-- យក user ទាំងអស់ ទោះគ្មាន order</span>
+<span class="keyword">SELECT</span> u.<span class="column">name</span>, o.<span class="column">total</span>
+<span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">LEFT JOIN</span> <span class="table">orders</span> o <span class="keyword">ON</span> u.<span class="column">id</span> = o.<span class="column">user_id</span>;
+            </div>
+
+            <h3 id="cross-join">9.3 CROSS JOIN</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">colors</span> <span class="keyword">CROSS JOIN</span> <span class="table">sizes</span>;
+            </div>
+
+            <h3 id="self-join">9.4 SELF JOIN</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> a.<span class="column">name</span> <span class="keyword">AS</span> employee, b.<span class="column">name</span> <span class="keyword">AS</span> manager
+<span class="keyword">FROM</span> <span class="table">employees</span> a
+<span class="keyword">JOIN</span> <span class="table">employees</span> b <span class="keyword">ON</span> a.<span class="column">manager_id</span> = b.<span class="column">id</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>INNER JOIN</code> យកតែជួរដែលត្រូវគ្នាទាំងពីរ table។ <code>LEFT JOIN</code> យកទាំងអស់ពី table ឆ្វេង ទោះគ្មានក្នុង table ស្តាំ។ <code>SELF JOIN</code> ភ្ជាប់ table ខ្លួនឯង (ដូច employee-manager)។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Subqueries</h2>
+
+            <h3 id="subquery-basic">10.1 Basics</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">WHERE</span> <span class="column">age</span> &gt; (<span class="keyword">SELECT</span> <span class="func">AVG</span>(<span class="column">age</span>) <span class="keyword">FROM</span> <span class="table">users</span>);
+            </div>
+
+            <h3 id="in-subquery">10.2 IN / EXISTS</h3>
+            <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">WHERE</span> <span class="column">id</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> <span class="column">user_id</span> <span class="keyword">FROM</span> <span class="table">orders</span>);
+
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">WHERE EXISTS</span> (<span class="keyword">SELECT</span> <span class="num-val">1</span> <span class="keyword">FROM</span> <span class="table">orders</span> <span class="keyword">WHERE</span> <span class="column">user_id</span> = u.<span class="column">id</span>);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Subquery ជា query ក្នុង query។ ប្រើ <code>IN</code> នៅពេល return តម្លៃច្រើន, <code>EXISTS</code> នៅពេលគ្រាន់តែចង់ដឹងថាមានឬអត់។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Keys & Constraints</h2>
+
+            <h3 id="primary-key">11.1 PRIMARY KEY</h3>
+            <div class="code-block">
+<span class="keyword">CREATE TABLE</span> <span class="table">users</span> (
+    <span class="column">id</span> <span class="type">INT</span> <span class="keyword">AUTO_INCREMENT PRIMARY KEY</span>,
+    <span class="column">name</span> <span class="type">VARCHAR</span>(<span class="num-val">50</span>)
+);
+            </div>
+
+            <h3 id="foreign-key">11.2 FOREIGN KEY</h3>
+            <div class="code-block">
+<span class="keyword">CREATE TABLE</span> <span class="table">orders</span> (
+    <span class="column">id</span> <span class="type">INT</span> <span class="keyword">PRIMARY KEY AUTO_INCREMENT</span>,
+    <span class="column">user_id</span> <span class="type">INT</span>,
+    <span class="keyword">FOREIGN KEY</span> (<span class="column">user_id</span>) <span class="keyword">REFERENCES</span> <span class="table">users</span>(<span class="column">id</span>)
+    <span class="keyword">ON DELETE CASCADE</span>
+);
+            </div>
+
+            <h3 id="unique">11.3 UNIQUE</h3>
+            <div class="code-block">
+<span class="column">email</span> <span class="type">VARCHAR</span>(<span class="num-val">100</span>) <span class="keyword">UNIQUE</span>
+            </div>
+
+            <h3 id="not-null">11.4 NOT NULL / DEFAULT</h3>
+            <div class="code-block">
+<span class="column">name</span> <span class="type">VARCHAR</span>(<span class="num-val">50</span>) <span class="keyword">NOT NULL</span>,
+<span class="column">status</span> <span class="type">VARCHAR</span>(<span class="num-val">20</span>) <span class="keyword">DEFAULT</span> <span class="str">'active'</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>PRIMARY KEY</code> សម្គាល់ជួរនីមួយៗ (unique + not null)។ <code>FOREIGN KEY</code> ភ្ជាប់ទៅ table ផ្សេង (<em>referential integrity</em>)។ <code>ON DELETE CASCADE</code> លុបជួរកូន ពេលលុបជួរមេ។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. Indexes & Views</h2>
+
+            <h3 id="index">12.1 Indexes</h3>
+            <div class="code-block">
+<span class="keyword">CREATE INDEX</span> idx_name <span class="keyword">ON</span> <span class="table">users</span>(<span class="column">name</span>);
+<span class="keyword">DROP INDEX</span> idx_name <span class="keyword">ON</span> <span class="table">users</span>;
+
+<span class="comment">-- មើល indexes</span>
+<span class="keyword">SHOW INDEX FROM</span> <span class="table">users</span>;
+            </div>
+
+            <h3 id="view">12.2 Views</h3>
+            <div class="code-block">
+<span class="keyword">CREATE VIEW</span> active_users <span class="keyword">AS</span>
+<span class="keyword">SELECT</span> <span class="column">id</span>, <span class="column">name</span>, <span class="column">email</span>
+<span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">WHERE</span> <span class="column">status</span> = <span class="str">'active'</span>;
+
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> active_users;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Index</em> បង្កើនល្បឿន query (ដូច index ក្នុងសៀវភៅ)។ <em>View</em> ជា query ដែលរក្សាទុកជាតារាង virtual — មានប្រយោជន៍សម្រាប់ query ស្មុគស្មាញដដែលៗ។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Stored Procedures</h2>
+
+            <h3 id="procedure">13.1 Procedures</h3>
+            <div class="code-block">
+<span class="keyword">DELIMITER</span> //
+<span class="keyword">CREATE PROCEDURE</span> <span class="func">GetUsers</span>()
+<span class="keyword">BEGIN</span>
+    <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>;
+<span class="keyword">END</span> //
+<span class="keyword">DELIMITER</span> ;
+
+<span class="keyword">CALL</span> <span class="func">GetUsers</span>();
+            </div>
+
+            <h3 id="function">13.2 Functions</h3>
+            <div class="code-block">
+<span class="keyword">DELIMITER</span> //
+<span class="keyword">CREATE FUNCTION</span> <span class="func">DoubleAge</span>(age <span class="type">INT</span>)
+<span class="keyword">RETURNS INT</span>
+<span class="keyword">DETERMINISTIC</span>
+<span class="keyword">BEGIN</span>
+    <span class="keyword">RETURN</span> age * <span class="num-val">2</span>;
+<span class="keyword">END</span> //
+<span class="keyword">DELIMITER</span> ;
+
+<span class="keyword">SELECT</span> <span class="func">DoubleAge</span>(<span class="num-val">20</span>);  <span class="comment">-- 40</span>
+            </div>
+
+            <h3 id="trigger">13.3 Triggers</h3>
+            <div class="code-block">
+<span class="keyword">CREATE TRIGGER</span> before_insert_user
+<span class="keyword">BEFORE INSERT ON</span> <span class="table">users</span>
+<span class="keyword">FOR EACH ROW</span>
+<span class="keyword">SET</span> NEW.<span class="column">created_at</span> = <span class="func">NOW</span>();
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Stored Procedure</em> ជាកូដ SQL ដែលរក្សាទុកក្នុង database។ <em>Function</em> return តម្លៃ។ <em>Trigger</em> ដំណើរការស្វ័យប្រវត្តិនៅពេលមាន event (INSERT/UPDATE/DELETE)។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Transactions & Security</h2>
+
+            <h3 id="transaction">14.1 Transactions</h3>
+            <div class="code-block">
+<span class="keyword">START TRANSACTION</span>;
+
+<span class="keyword">UPDATE</span> <span class="table">accounts</span> <span class="keyword">SET</span> <span class="column">balance</span> = <span class="column">balance</span> - <span class="num-val">100</span> <span class="keyword">WHERE</span> <span class="column">id</span> = <span class="num-val">1</span>;
+<span class="keyword">UPDATE</span> <span class="table">accounts</span> <span class="keyword">SET</span> <span class="column">balance</span> = <span class="column">balance</span> + <span class="num-val">100</span> <span class="keyword">WHERE</span> <span class="column">id</span> = <span class="num-val">2</span>;
+
+<span class="keyword">COMMIT</span>;      <span class="comment">-- រក្សាទុក</span>
+<span class="comment">-- ឬ ROLLBACK; -- បោះបង់</span>
+            </div>
+
+            <h3 id="users">14.2 Users & Privileges</h3>
+            <div class="code-block">
+<span class="keyword">CREATE USER</span> <span class="str">'app'</span>@<span class="str">'localhost'</span> <span class="keyword">IDENTIFIED BY</span> <span class="str">'password'</span>;
+<span class="keyword">GRANT SELECT, INSERT ON</span> mydb.* <span class="keyword">TO</span> <span class="str">'app'</span>@<span class="str">'localhost'</span>;
+<span class="keyword">REVOKE INSERT ON</span> mydb.* <span class="keyword">FROM</span> <span class="str">'app'</span>@<span class="str">'localhost'</span>;
+<span class="keyword">FLUSH PRIVILEGES</span>;
+            </div>
+
+            <h3 id="backup">14.3 Backup</h3>
+            <div class="code-block">
+<span class="comment"># Backup</span>
+mysqldump -u root -p mydb &gt; backup.sql
+
+<span class="comment"># Restore</span>
+mysql -u root -p mydb &lt; backup.sql
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Transaction</em> ធានាថាប្រតិបត្តិការទាំងអស់ជោគជ័យ ឬបរាជ័យទាំងអស់ (ACID)។ ត្រូវប្រើសម្រាប់ការផ្ទេរលុយ។ កំណត់ user privileges ឲ្យតិចបំផុតតាមតម្រូវការ។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. MySQL Project</h2>
+            <p>សាកល្បងបង្កើត <strong>Simple Blog Database</strong> តូចមួយ៖</p>
+            <div class="code-block">
+<span class="comment">-- បង្កើត database</span>
+<span class="keyword">CREATE DATABASE</span> <span class="table">blog</span>;
+<span class="keyword">USE</span> <span class="table">blog</span>;
+
+<span class="comment">-- តារាង users</span>
+<span class="keyword">CREATE TABLE</span> <span class="table">users</span> (
+    <span class="column">id</span> <span class="type">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    <span class="column">username</span> <span class="type">VARCHAR</span>(<span class="num-val">50</span>) <span class="keyword">UNIQUE NOT NULL</span>,
+    <span class="column">email</span> <span class="type">VARCHAR</span>(<span class="num-val">100</span>) <span class="keyword">UNIQUE NOT NULL</span>,
+    <span class="column">created_at</span> <span class="type">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
+);
+
+<span class="comment">-- តារាង posts</span>
+<span class="keyword">CREATE TABLE</span> <span class="table">posts</span> (
+    <span class="column">id</span> <span class="type">INT AUTO_INCREMENT PRIMARY KEY</span>,
+    <span class="column">user_id</span> <span class="type">INT NOT NULL</span>,
+    <span class="column">title</span> <span class="type">VARCHAR</span>(<span class="num-val">200</span>) <span class="keyword">NOT NULL</span>,
+    <span class="column">body</span> <span class="type">TEXT</span>,
+    <span class="column">published</span> <span class="type">BOOLEAN DEFAULT FALSE</span>,
+    <span class="column">created_at</span> <span class="type">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>,
+    <span class="keyword">FOREIGN KEY</span> (<span class="column">user_id</span>) <span class="keyword">REFERENCES</span> <span class="table">users</span>(<span class="column">id</span>) <span class="keyword">ON DELETE CASCADE</span>
+);
+
+<span class="comment">-- បញ្ចូលទិន្នន័យ</span>
+<span class="keyword">INSERT INTO</span> <span class="table">users</span> (<span class="column">username</span>, <span class="column">email</span>) <span class="keyword">VALUES</span>
+(<span class="str">'dara'</span>, <span class="str">'dara@blog.com'</span>),
+(<span class="str">'sok'</span>, <span class="str">'sok@blog.com'</span>);
+
+<span class="keyword">INSERT INTO</span> <span class="table">posts</span> (<span class="column">user_id</span>, <span class="column">title</span>, <span class="column">body</span>, <span class="column">published</span>) <span class="keyword">VALUES</span>
+(<span class="num-val">1</span>, <span class="str">'Hello MySQL'</span>, <span class="str">'My first post!'</span>, <span class="keyword">TRUE</span>),
+(<span class="num-val">1</span>, <span class="str">'Draft'</span>, <span class="str">'Not ready'</span>, <span class="keyword">FALSE</span>);
+
+<span class="comment">-- ស្វែងរក post ដែលបាន publish ជាមួយឈ្មោះអ្នកនិពន្ធ</span>
+<span class="keyword">SELECT</span> p.<span class="column">title</span>, u.<span class="column">username</span>
+<span class="keyword">FROM</span> <span class="table">posts</span> p
+<span class="keyword">JOIN</span> <span class="table">users</span> u <span class="keyword">ON</span> p.<span class="column">user_id</span> = u.<span class="column">id</span>
+<span class="keyword">WHERE</span> p.<span class="column">published</span> = <span class="keyword">TRUE</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ CREATE TABLE, FOREIGN KEY, INSERT, SELECT, JOIN និង WHERE។ សាកល្បងបន្ថែម comments table, tags, ឬ full-text search។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> សាកល្បងគម្រោងតូចៗ — Blog, Shop, School System — វានឹងជួយអ្នកយល់ MySQL លឿនជាងអានទ្រឹស្តី។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fas fa-database"></i> query.sql</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">SELECT</span> * <span style="color:#c084fc">FROM</span> <span style="color:#f472b6">users</span>
+<span style="color:#c084fc">WHERE</span> <span style="color:#86efac">age</span> &gt; <span style="color:#fbbf24">18</span>
+<span style="color:#c084fc">ORDER BY</span> <span style="color:#86efac">name</span>;</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-table"></i> Result
+            </div>
+            <div class="output-box">
+                <table class="table-preview">
+                    <thead>
+                        <tr><th>id</th><th>name</th><th>age</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Anna</td><td>22</td></tr>
+                        <tr><td>2</td><td>Dara</td><td>20</td></tr>
+                        <tr><td>3</td><td>Sok</td><td>25</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">SQL Basics</a></li>
+                <li><a href="#">MySQL Joins</a></li>
+                <li><a href="#">Database Design</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

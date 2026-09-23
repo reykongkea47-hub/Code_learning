@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>មេរៀន C++ - CodeKhmerLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/page.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> C++ Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា C++?</a></li>
+                <li><a href="#setup">1.2. ការដំឡើង Compiler</a></li>
+                <li><a href="#first-program">1.3. កម្មវិធីដំបូង</a></li>
+                <li><a href="#comments">1.4. Comment</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Variables & Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#variables">2.1. Variables</a></li>
+                <li><a href="#data-types">2.2. Data Types</a></li>
+                <li><a href="#constants">2.3. Constants</a></li>
+                <li><a href="#type-casting">2.4. Type Casting</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Operators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arithmetic">3.1. Arithmetic</a></li>
+                <li><a href="#comparison">3.2. Comparison</a></li>
+                <li><a href="#logical">3.3. Logical</a></li>
+                <li><a href="#assignment">3.4. Assignment</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Control Flow
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else">4.1. if / else</a></li>
+                <li><a href="#switch">4.2. switch</a></li>
+                <li><a href="#for-loop">4.3. for Loop</a></li>
+                <li><a href="#while-loop">4.4. while / do-while</a></li>
+                <li><a href="#break-continue">4.5. break / continue</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Functions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#func-basics">5.1. Basics</a></li>
+                <li><a href="#params">5.2. Parameters</a></li>
+                <li><a href="#overload">5.3. Overloading</a></li>
+                <li><a href="#recursion">5.4. Recursion</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Arrays & Strings
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arrays">6.1. Arrays</a></li>
+                <li><a href="#multi-arrays">6.2. Multi-dim</a></li>
+                <li><a href="#cstrings">6.3. C-Strings</a></li>
+                <li><a href="#std-string">6.4. std::string</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Pointers & References
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#pointers">7.1. Pointers</a></li>
+                <li><a href="#references">7.2. References</a></li>
+                <li><a href="#dynamic">7.3. Dynamic Memory</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> OOP - Classes
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#classes">8.1. Classes & Objects</a></li>
+                <li><a href="#constructors">8.2. Constructors</a></li>
+                <li><a href="#encapsulation">8.3. Encapsulation</a></li>
+                <li><a href="#this">8.4. this Pointer</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Inheritance & Polymorphism
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#inheritance">9.1. Inheritance</a></li>
+                <li><a href="#polymorphism">9.2. Polymorphism</a></li>
+                <li><a href="#virtual">9.3. Virtual</a></li>
+                <li><a href="#abstract">9.4. Abstract Classes</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Templates & STL
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#templates">10.1. Templates</a></li>
+                <li><a href="#vector">10.2. Vector</a></li>
+                <li><a href="#map">10.3. Map</a></li>
+                <li><a href="#algorithms">10.4. Algorithms</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Exception Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#try-catch">11.1. try / catch</a></li>
+                <li><a href="#throw">11.2. throw</a></li>
+                <li><a href="#custom-exc">11.3. Custom</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> File I/O
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#file-write">12.1. Write</a></li>
+                <li><a href="#file-read">12.2. Read</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Smart Pointers
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#unique-ptr">13.1. unique_ptr</a></li>
+                <li><a href="#shared-ptr">13.2. shared_ptr</a></li>
+                <li><a href="#weak-ptr">13.3. weak_ptr</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Modern C++
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#auto">14.1. auto</a></li>
+                <li><a href="#lambda">14.2. Lambda</a></li>
+                <li><a href="#range-for">14.3. Range-for</a></li>
+            </ul>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> Best Practices
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. C++ Introduction - ការណែនាំ C++</h2>
+
+            <h3 id="intro">1.1 អ្វីជា C++?</h3>
+            <p>C++ គឺជាភាសាសរសេរកម្មវិធីដ៏មានឥទ្ធិឫទ្ធិមួយ ដែលបង្កើតឡើងដោយ <strong>Bjarne Stroustrup</strong> ក្នុងឆ្នាំ 1979 នៅ Bell Labs។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> C++ គឺជាភាសាដែលត្រូវបាន <em>compile</em> (បំប្លែងទៅជា machine code) មុនពេលដំណើរការ។ វាលឿនខ្លាំង ហើយអាចគ្រប់គ្រង memory បានផ្ទាល់។ ប្រើសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Game Engine</strong> — ដូចជា Unreal Engine</li>
+                    <li><strong>Operating System</strong> — Windows, Linux</li>
+                    <li><strong>Browser</strong> — Chrome, Firefox</li>
+                    <li><strong>Database</strong> — MySQL, MongoDB</li>
+                </ul>
+            </div>
+
+            <h3 id="setup">1.2 ការដំឡើង Compiler</h3>
+            <p>ដើម្បីសរសេរ C++ អ្នកត្រូវការ <strong>Compiler</strong> និង <strong>IDE</strong>។</p>
+            <ul>
+                <li><strong>Compiler:</strong> g++, clang++, MSVC</li>
+                <li><strong>IDE:</strong> VS Code, CLion, Dev-C++</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <em>Compiler</em> គឺជាកម្មវិធីដែលបំប្លែងកូដ C++ ទៅជាភាសាដែលកុំព្យូទ័រយល់។ <em>IDE</em> គឺជាកម្មវិធីសម្រាប់សរសេរ និងរត់កូដ។
+            </div>
+
+            <h3 id="first-program">1.3 កម្មវិធីដំបូង</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="type">int</span> <span class="func">main</span>() {
+    cout &lt;&lt; <span class="str">"Hello, C++!"</span> &lt;&lt; endl;
+    <span class="keyword">return</span> <span class="num-val">0</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់លម្អិត៖</strong>
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><code>#include &lt;iostream&gt;</code> — បញ្ចូល library សម្រាប់ input/output</li>
+                    <li><code>using namespace std;</code> — អនុញ្ញាតឲ្យប្រើ <code>cout</code>, <code>endl</code> ដោយមិនចាំបាច់សរសេរ <code>std::</code></li>
+                    <li><code>int main()</code> — ជាចំណុចចាប់ផ្តើមរបស់កម្មវិធី</li>
+                    <li><code>cout &lt;&lt; ...</code> — បង្ហាញអត្ថបទលើអេក្រង់</li>
+                    <li><code>return 0;</code> — បញ្ជាក់ថាកម្មវិធីបញ្ចប់ដោយជោគជ័យ</li>
+                </ul>
+            </div>
+
+            <h3 id="comments">1.4 Comment</h3>
+            <div class="code-block">
+<span class="comment">// Single-line comment</span>
+<span class="comment">/* Multi-line
+   comment */</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> Comment គឺជាអត្ថបទដែល Compiler មិនអាន ដើម្បីពន្យល់កូដ ឬកត់ត្រាការងារ។ ប្រើ <code>//</code> សម្រាប់មួយបន្ទាត់ និង <code>/* */</code> សម្រាប់ច្រើនបន្ទាត់។
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Variables & Data Types</h2>
+
+            <h3 id="variables">2.1 Variables</h3>
+            <div class="code-block">
+<span class="type">int</span> age = <span class="num-val">20</span>;
+<span class="type">double</span> price = <span class="num-val">9.99</span>;
+<span class="type">char</span> grade = <span class="str">'A'</span>;
+<span class="type">bool</span> isActive = <span class="keyword">true</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <em>Variable</em> គឺជាប្រអប់សម្រាប់ផ្ទុកទិន្នន័យ។ រាល់ Variable ត្រូវមាន <strong>type</strong> និង <strong>ឈ្មោះ</strong>។ ឧទាហរណ៍ <code>int age = 20;</code> មានន័យថា បង្កើត variable ឈ្មោះ <code>age</code> ដែលផ្ទុកលេខ 20។
+            </div>
+
+            <h3 id="data-types">2.2 Data Types</h3>
+            <ul>
+                <li><code>int</code> — ចំនួនគត់ (1, 2, 100, -5)</li>
+                <li><code>float</code> / <code>double</code> — ចំនួនទសភាគ (3.14, 9.99)</li>
+                <li><code>char</code> — តួអក្សរមួយ ('A', 'b')</li>
+                <li><code>bool</code> — ពិត ឬ មិនពិត (true / false)</li>
+                <li><code>string</code> — អត្ថបទ ("Hello")</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> Data Type កំណត់ថា variable អាចផ្ទុកអ្វី និងប្រើ memory ប៉ុន្មាន។ ឧទាហរណ៍ <code>int</code> ប្រើ 4 bytes ខណៈ <code>char</code> ប្រើ 1 byte។
+            </div>
+
+            <h3 id="constants">2.3 Constants</h3>
+            <div class="code-block">
+<span class="keyword">const</span> <span class="type">double</span> PI = <span class="num-val">3.14159</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <code>const</code> ធ្វើឲ្យ variable មិនអាចផ្លាស់ប្តូរតម្លៃបានទេ។ ប្រើសម្រាប់តម្លៃថេរ ដូចជា PI, gravity ។ល។
+            </div>
+
+            <h3 id="type-casting">2.4 Type Casting</h3>
+            <div class="code-block">
+<span class="type">int</span> x = <span class="num-val">10</span>;
+<span class="type">double</span> y = (<span class="type">double</span>)x;  <span class="comment">// 10.0</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <em>Type Casting</em> គឺការបំប្លែង type មួយទៅ type មួយទៀត។ ឧទាហរណ៍ បំប្លែង <code>int</code> ទៅ <code>double</code> ដើម្បីទទួលបានចំនួនទសភាគ។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Operators</h2>
+
+            <h3 id="arithmetic">3.1 Arithmetic</h3>
+            <div class="code-block">
+<span class="type">int</span> sum = <span class="num-val">5</span> + <span class="num-val">3</span>;   <span class="comment">// 8</span>
+<span class="type">int</span> diff = <span class="num-val">10</span> - <span class="num-val">4</span>;  <span class="comment">// 6</span>
+<span class="type">int</span> prod = <span class="num-val">3</span> * <span class="num-val">4</span>;   <span class="comment">// 12</span>
+<span class="type">int</span> div = <span class="num-val">10</span> / <span class="num-val">3</span>;   <span class="comment">// 3</span>
+<span class="type">int</span> mod = <span class="num-val">10</span> % <span class="num-val">3</span>;   <span class="comment">// 1 (សំណល់)</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> Operator ទាំងនេះប្រើសម្រាប់គណនាលេខ។ <code>%</code> គឺ <em>modulo</em> ដែលឲ្យសំណល់នៃការចែក (10 ចែក 3 សល់ 1)។
+            </div>
+
+            <h3 id="comparison">3.2 Comparison</h3>
+            <div class="code-block">
+==  <span class="comment">// ស្មើ</span>
+!=  <span class="comment">// មិនស្មើ</span>
+&gt;   <span class="comment">// ធំជាង</span>
+&lt;   <span class="comment">// តូចជាង</span>
+&gt;=  <span class="comment">// ធំជាង ឬស្មើ</span>
+&lt;=  <span class="comment">// តូចជាង ឬស្មើ</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> Comparison Operator ត្រឡប់ <code>true</code> ឬ <code>false</code>។ ឧទាហរណ៍ <code>5 &gt; 3</code> ត្រឡប់ <code>true</code>។
+            </div>
+
+            <h3 id="logical">3.3 Logical</h3>
+            <div class="code-block">
+&amp;&amp;  <span class="comment">// AND — ពិតទាំងពីរ</span>
+||  <span class="comment">// OR — ពិតមួយក៏បាន</span>
+!   <span class="comment">// NOT — បញ្ច្រាស</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> Logical Operator ប្រើសម្រាប់ភ្ជាប់ conditions។ ឧទាហរណ៍ <code>(age &gt; 18) &amp;&amp; (age &lt; 60)</code> ត្រូវពិតទាំងពីរ។
+            </div>
+
+            <h3 id="assignment">3.4 Assignment</h3>
+            <div class="code-block">
+=    <span class="comment">// កំណត់តម្លៃ</span>
++=   <span class="comment">// បូកបន្ថែម</span>
+-=   <span class="comment">// ដកចេញ</span>
+*=   <span class="comment">// គុណ</span>
+/=   <span class="comment">// ចែក</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <code>x += 5</code> ស្មើនឹង <code>x = x + 5</code>។ វាជួយសរសេរកូដខ្លី និងអានងាយ។
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Control Flow</h2>
+
+            <h3 id="if-else">4.1 if / else</h3>
+            <div class="code-block">
+<span class="keyword">if</span> (age &gt;= <span class="num-val">18</span>) {
+    cout &lt;&lt; <span class="str">"Adult"</span>;
+} <span class="keyword">else</span> {
+    cout &lt;&lt; <span class="str">"Minor"</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <code>if</code> ពិនិត្យលក្ខខណ្ឌ។ បើពិត ធ្វើកូដក្នុង <code>{ }</code>។ បើមិនពិត ទៅ <code>else</code>។ ឧទាហរណ៍ បើ <code>age &gt;= 18</code> បង្ហាញ "Adult" បើមិនដូច្នេះ "Minor"។
+            </div>
+
+            <h3 id="switch">4.2 switch</h3>
+            <div class="code-block">
+<span class="keyword">switch</span> (day) {
+    <span class="keyword">case</span> <span class="num-val">1</span>: cout &lt;&lt; <span class="str">"Mon"</span>; <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="num-val">2</span>: cout &lt;&lt; <span class="str">"Tue"</span>; <span class="keyword">break</span>;
+    <span class="keyword">default</span>: cout &lt;&lt; <span class="str">"?"</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <code>switch</code> ជាជម្រើសជំនួស <code>if-else</code> ច្រើន។ <code>case</code> ជាតម្លៃដែលត្រូវផ្គូផ្គង។ <code>break</code> បញ្ឈប់ការត្រួតពិនិត្យ <code>default</code> ជា fallback។
+            </div>
+
+            <h3 id="for-loop">4.3 for Loop</h3>
+            <div class="code-block">
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">5</span>; i++) {
+    cout &lt;&lt; i &lt;&lt; <span class="str">" "</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <code>for</code> ប្រើសម្រាប់ធ្វើម្តងទៀតតាមចំនួនជាក់លាក់។ វាមាន 3 ផ្នែក៖ <em>init</em> (i=0), <em>condition</em> (i&lt;5), និង <em>update</em> (i++)។
+            </div>
+
+            <h3 id="while-loop">4.4 while / do-while</h3>
+            <div class="code-block">
+<span class="type">int</span> i = <span class="num-val">0</span>;
+<span class="keyword">while</span> (i &lt; <span class="num-val">5</span>) { cout &lt;&lt; i; i++; }
+
+<span class="keyword">do</span> { cout &lt;&lt; i; i++; } <span class="keyword">while</span> (i &lt; <span class="num-val">5</span>);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <code>while</code> ពិនិត្យលក្ខខណ្ឌមុនធ្វើ។ <code>do-while</code> ធ្វើម្តងមុន រួចទើបពិនិត្យ។ ដូច្នេះ <code>do-while</code> ធ្វើយ៉ាងតិចម្តងជាដរាប។
+            </div>
+
+            <h3 id="break-continue">4.5 break / continue</h3>
+            <div class="code-block">
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">10</span>; i++) {
+    <span class="keyword">if</span> (i == <span class="num-val">3</span>) <span class="keyword">continue</span>;
+    <span class="keyword">if</span> (i == <span class="num-val">7</span>) <span class="keyword">break</span>;
+    cout &lt;&lt; i;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <code>continue</code> រំលង loop ជុំបច្ចុប្បន្ន ហើយបន្តទៅជុំបន្ទាប់។ <code>break</code> បញ្ឈប់ loop ទាំងស្រុង។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Functions</h2>
+
+            <h3 id="func-basics">5.1 Function Basics</h3>
+            <div class="code-block">
+<span class="type">void</span> <span class="func">greet</span>() {
+    cout &lt;&lt; <span class="str">"Hello!"</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> <em>Function</em> គឺជាកូដដែលអាចហៅឡើងវិញបាន។ <code>void</code> មានន័យថា function នេះមិន return តម្លៃទេ។ ហៅដោយ <code>greet();</code>។
+            </div>
+
+            <h3 id="params">5.2 Parameters & Return</h3>
+            <div class="code-block">
+<span class="type">int</span> <span class="func">add</span>(<span class="type">int</span> a, <span class="type">int</span> b) {
+    <span class="keyword">return</span> a + b;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Function អាចទទួល <em>parameters</em> (a, b) និង <em>return</em> តម្លៃ (a+b)។ ឧទាហរណ៍ <code>add(2, 3)</code> return 5។
+            </div>
+
+            <h3 id="overload">5.3 Function Overloading</h3>
+            <div class="code-block">
+<span class="type">int</span> <span class="func">add</span>(<span class="type">int</span> a, <span class="type">int</span> b) { <span class="keyword">return</span> a + b; }
+<span class="type">double</span> <span class="func">add</span>(<span class="type">double</span> a, <span class="type">double</span> b) { <span class="keyword">return</span> a + b; }
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Overloading</em> អនុញ្ញាតឲ្យ function មានឈ្មោះដូចគ្នា ប៉ុន្តែ parameters ខុសគ្នា។ Compiler ជ្រើសរើស version ត្រឹមត្រូវដោយស្វ័យប្រវត្តិ។
+            </div>
+
+            <h3 id="recursion">5.4 Recursion</h3>
+            <div class="code-block">
+<span class="type">int</span> <span class="func">factorial</span>(<span class="type">int</span> n) {
+    <span class="keyword">if</span> (n &lt;= <span class="num-val">1</span>) <span class="keyword">return</span> <span class="num-val">1</span>;
+    <span class="keyword">return</span> n * <span class="func">factorial</span>(n - <span class="num-val">1</span>);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Recursion</em> គឺ function ដែលហៅខ្លួនឯង។ ត្រូវមាន <em>base case</em> ដើម្បីបញ្ឈប់។ ឧទាហរណ៍ factorial(5) = 5×4×3×2×1 = 120។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Arrays & Strings</h2>
+
+            <h3 id="arrays">6.1 Arrays</h3>
+            <div class="code-block">
+<span class="type">int</span> nums[<span class="num-val">5</span>] = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>, <span class="num-val">4</span>, <span class="num-val">5</span>};
+cout &lt;&lt; nums[<span class="num-val">0</span>];  <span class="comment">// 1</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Array</em> គឺជាបណ្តុំនៃតម្លៃដែលមាន type ដូចគ្នា។ Index ចាប់ផ្តើមពី 0។ ដូច្នេះ <code>nums[0]</code> គឺតម្លៃទីមួយ។
+            </div>
+
+            <h3 id="multi-arrays">6.2 Multi-dimensional</h3>
+            <div class="code-block">
+<span class="type">int</span> matrix[<span class="num-val">2</span>][<span class="num-val">3</span>] = {{<span class="num-val">1</span>,<span class="num-val">2</span>,<span class="num-val">3</span>}, {<span class="num-val">4</span>,<span class="num-val">5</span>,<span class="num-val">6</span>}};
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Array 2D គឺដូចជា table មួយ ដែលមានជួរដេក និងជួរឈរ។ ប្រើសម្រាប់ matrix, game board ។ល។
+            </div>
+
+            <h3 id="cstrings">6.3 C-Strings</h3>
+            <div class="code-block">
+<span class="type">char</span> name[] = <span class="str">"John"</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C-String គឺ array នៃ <code>char</code> ដែលបញ្ចប់ដោយ <code>'\0'</code>។ ប្រើតិចក្នុង C++ ទំនើប។
+            </div>
+
+            <h3 id="std-string">6.4 std::string</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;string&gt;</span>
+string name = <span class="str">"John"</span>;
+cout &lt;&lt; name.<span class="func">length</span>();  <span class="comment">// 4</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>std::string</code> ងាយស្រួលជាង C-String។ អាចប្រើ <code>.length()</code>, <code>.append()</code>, <code>+</code> ជាដើម។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Pointers & References</h2>
+
+            <h3 id="pointers">7.1 Pointers</h3>
+            <div class="code-block">
+<span class="type">int</span> x = <span class="num-val">10</span>;
+<span class="type">int</span>* ptr = &amp;x;
+cout &lt;&lt; *ptr;  <span class="comment">// 10</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Pointer</em> គឺ variable ដែលផ្ទុក <em>address</em> របស់ variable ផ្សេង។ <code>&amp;x</code> យក address, <code>*ptr</code> យកតម្លៃត្រង់ address នោះ។
+            </div>
+
+            <h3 id="references">7.2 References</h3>
+            <div class="code-block">
+<span class="type">int</span> x = <span class="num-val">10</span>;
+<span class="type">int</span>&amp; ref = x;
+ref = <span class="num-val">20</span>;  <span class="comment">// x ក្លាយជា 20</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Reference</em> គឺជាឈ្មោះផ្សេងរបស់ variable។ ការផ្លាស់ប្តូរ reference ក៏ផ្លាស់ប្តូរ variable ដើមដែរ។
+            </div>
+
+            <h3 id="dynamic">7.3 Dynamic Memory</h3>
+            <div class="code-block">
+<span class="type">int</span>* p = <span class="keyword">new</span> <span class="type">int</span>(<span class="num-val">5</span>);
+<span class="keyword">delete</span> p;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>new</code> បង្កើត memory ថ្មី (heap) ខណៈ <code>delete</code> បញ្ចេញវាវិញ។ បើភ្លេច <code>delete</code> នឹងកើត <em>memory leak</em>។
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. OOP - Classes</h2>
+
+            <h3 id="classes">8.1 Classes & Objects</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span> {
+<span class="keyword">public</span>:
+    string name;
+    <span class="type">int</span> age;
+};
+
+<span class="type">Student</span> s1;
+s1.name = <span class="str">"Dara"</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Class</em> គឺជាគំរូ (blueprint) សម្រាប់បង្កើត object។ <em>Object</em> គឺជាកូពីនៃ class។ ឧទាហរណ៍ <code>Student</code> ជា class, <code>s1</code> ជា object។
+            </div>
+
+            <h3 id="constructors">8.2 Constructors</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span> {
+<span class="keyword">public</span>:
+    <span class="type">Student</span>(string n) { name = n; }
+    string name;
+};
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Constructor</em> គឺ function ពិសេសដែលហៅដោយស្វ័យប្រវត្តិនៅពេលបង្កើត object។ វាមានឈ្មោះដូច class និងគ្មាន return type។
+            </div>
+
+            <h3 id="encapsulation">8.3 Encapsulation</h3>
+            <div class="code-block">
+<span class="keyword">private</span>:
+    <span class="type">int</span> age;
+
+<span class="keyword">public</span>:
+    <span class="type">void</span> <span class="func">setAge</span>(<span class="type">int</span> a) { age = a; }
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Encapsulation</em> គឺការលាក់ data (private) និងផ្តល់ access តាម methods (public)។ ជួយការពារ data មិនឲ្យកែដោយផ្ទាល់។
+            </div>
+
+            <h3 id="this">8.4 this Pointer</h3>
+            <div class="code-block">
+<span class="type">void</span> <span class="func">setAge</span>(<span class="type">int</span> age) {
+    <span class="keyword">this</span>-&gt;age = age;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>this</code> គឺ pointer ទៅ object បច្ចុប្បន្ន។ ប្រើដើម្បីបែងចែក parameter និង member variable ដែលមានឈ្មោះដូចគ្នា។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Inheritance & Polymorphism</h2>
+
+            <h3 id="inheritance">9.1 Inheritance</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="type">void</span> <span class="func">eat</span>() { cout &lt;&lt; <span class="str">"Eating"</span>; }
+};
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="type">void</span> <span class="func">bark</span>() { cout &lt;&lt; <span class="str">"Woof"</span>; }
+};
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Inheritance</em> គឺ class កូន (Dog) ទទួលមរតកពី class មេ (Animal)។ Dog អាចប្រើ <code>eat()</code> បាន ព្រោះវាទទួលពី Animal។
+            </div>
+
+            <h3 id="polymorphism">9.2 Polymorphism</h3>
+            <p>អនុញ្ញាតឱ្យ function ដូចគ្នាបង្ហាញឥរិយាបថផ្សេងៗគ្នាអាស្រ័យលើ object។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ឧទាហរណ៍ <code>sound()</code> អាចបន្លឺសម្លេងខុសគ្នានៅពេលហៅលើ Dog ឬ Cat។ នេះហៅថា <em>Polymorphism</em>។
+            </div>
+
+            <h3 id="virtual">9.3 Virtual Functions</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="type">void</span> <span class="func">sound</span>() { cout &lt;&lt; <span class="str">"..."</span>; }
+};
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>virtual</code> ធ្វើឲ្យ function អាច override បាននៅ class កូន។ នេះជាមូលដ្ឋាននៃ Polymorphism។
+            </div>
+
+            <h3 id="abstract">9.4 Abstract Classes</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Shape</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="type">void</span> <span class="func">draw</span>() = <span class="num-val">0</span>;  <span class="comment">// pure virtual</span>
+};
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Abstract Class</em> គឺ class ដែលមិនអាចបង្កើត object ផ្ទាល់បាន។ វាមាន pure virtual function (<code>= 0</code>) ដែល class កូនត្រូវ implement។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Templates & STL</h2>
+
+            <h3 id="templates">10.1 Templates</h3>
+            <div class="code-block">
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+T <span class="func">max</span>(T a, T b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Template</em> អនុញ្ញាតឲ្យ function ឬ class ដំណើរការជាមួយ type ណាមួយ។ ឧទាហរណ៍ <code>max&lt;int&gt;(2,5)</code> ឬ <code>max&lt;double&gt;(2.5, 3.7)</code> ។
+            </div>
+
+            <h3 id="vector">10.2 Vector</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;vector&gt;</span>
+vector&lt;<span class="type">int</span>&gt; v = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>};
+v.<span class="func">push_back</span>(<span class="num-val">4</span>);  <span class="comment">// បន្ថែម 4</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>vector</code> គឺ array ដែលអាចបន្ថែម/ដក element បានយ៉ាងរស់រវើក។ ល្អជាង array ធម្មតា។
+            </div>
+
+            <h3 id="map">10.3 Map</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;map&gt;</span>
+map&lt;string, <span class="type">int</span>&gt; ages;
+ages[<span class="str">"Dara"</span>] = <span class="num-val">20</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>map</code> គឺជាបណ្តុំ key-value។ ឧទាហរណ៍ ឈ្មោះ → អាយុ។ ងាយស្រួលរកមើលតាម key។
+            </div>
+
+            <h3 id="algorithms">10.4 Algorithms</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;algorithm&gt;</span>
+<span class="func">sort</span>(v.<span class="func">begin</span>(), v.<span class="func">end</span>());  <span class="comment">// តម្រៀប</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> STL Algorithms ដូចជា <code>sort</code>, <code>find</code>, <code>reverse</code> ជួយសម្រួលការងារជាមួយ containers។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Exception Handling</h2>
+
+            <h3 id="try-catch">11.1 try / catch</h3>
+            <div class="code-block">
+<span class="keyword">try</span> {
+    <span class="keyword">throw</span> <span class="num-val">404</span>;
+} <span class="keyword">catch</span> (<span class="type">int</span> e) {
+    cout &lt;&lt; <span class="str">"Error: "</span> &lt;&lt; e;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>try</code> គឺ block ដែលអាចមានកំហុស។ <code>throw</code> បោះ error។ <code>catch</code> ចាប់ error នោះដើម្បីដោះស្រាយ។
+            </div>
+
+            <h3 id="throw">11.2 throw</h3>
+            <p>ប្រើសម្រាប់បោះ exception នៅពេលមានបញ្ហា (ឧ. ចែកនឹងសូន្យ)។</p>
+
+            <h3 id="custom-exc">11.3 Custom Exceptions</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">MyError</span> : <span class="keyword">public</span> exception {
+    <span class="keyword">const char</span>* <span class="func">what</span>() <span class="keyword">const noexcept</span> {
+        <span class="keyword">return</span> <span class="str">"My custom error"</span>;
+    }
+};
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> អ្នកអាចបង្កើត exception ផ្ទាល់ខ្លួនដោយស្នងពី <code>std::exception</code>។ មានប្រយោជន៍សម្រាប់កំណត់ error ជាក់លាក់។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. File I/O</h2>
+
+            <h3 id="file-write">12.1 Write to File</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;fstream&gt;</span>
+ofstream file(<span class="str">"data.txt"</span>);
+file &lt;&lt; <span class="str">"Hello file!"</span>;
+file.<span class="func">close</span>();
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>ofstream</code> ប្រើសម្រាប់សរសេរទៅ file។ បើក file, សរសេរ, បន្ទាប់មក <code>close()</code>។
+            </div>
+
+            <h3 id="file-read">12.2 Read from File</h3>
+            <div class="code-block">
+ifstream file(<span class="str">"data.txt"</span>);
+string line;
+<span class="keyword">while</span> (<span class="func">getline</span>(file, line)) {
+    cout &lt;&lt; line;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>ifstream</code> ប្រើសម្រាប់អាន file។ <code>getline</code> អានម្តងមួយបន្ទាត់រហូតដល់ចប់។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Smart Pointers</h2>
+
+            <h3 id="unique-ptr">13.1 unique_ptr</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;memory&gt;</span>
+unique_ptr&lt;<span class="type">int</span>&gt; p = <span class="func">make_unique</span>&lt;<span class="type">int</span>&gt;(<span class="num-val">5</span>);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>unique_ptr</code> គឺ pointer ដែលមានម្ចាស់តែម្នាក់។ វាលុប memory ដោយស្វ័យប្រវត្តិនៅពេលបញ្ចប់ scope។ មិនចាំបាច់ <code>delete</code> ទេ។
+            </div>
+
+            <h3 id="shared-ptr">13.2 shared_ptr</h3>
+            <div class="code-block">
+shared_ptr&lt;<span class="type">int</span>&gt; p1 = <span class="func">make_shared</span>&lt;<span class="type">int</span>&gt;(<span class="num-val">10</span>);
+shared_ptr&lt;<span class="type">int</span>&gt; p2 = p1;  <span class="comment">// ចែករំលែក</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>shared_ptr</code> អនុញ្ញាតឲ្យ pointer ច្រើនចែករំលែក object តែមួយ។ Memory ត្រូវលុបនៅពេល pointer ចុងក្រោយបញ្ចប់។
+            </div>
+
+            <h3 id="weak-ptr">13.3 weak_ptr</h3>
+            <div class="code-block">
+weak_ptr&lt;<span class="type">int</span>&gt; wp = p1;  <span class="comment">// គ្មានម្ចាស់</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>weak_ptr</code> ជា reference ខ្សោយទៅ <code>shared_ptr</code> ដោយមិនបង្កើន reference count។ ប្រើដើម្បីការពារ <em>circular reference</em>។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Modern C++</h2>
+
+            <h3 id="auto">14.1 auto</h3>
+            <div class="code-block">
+<span class="keyword">auto</span> x = <span class="num-val">10</span>;          <span class="comment">// int</span>
+<span class="keyword">auto</span> name = string(<span class="str">"Dara"</span>);  <span class="comment">// string</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>auto</code> អនុញ្ញាតឲ្យ Compiler ស្គាល់ type ដោយស្វ័យប្រវត្តិ ដោយផ្អែកលើតម្លៃ។ កូដខ្លី និងអានងាយ។
+            </div>
+
+            <h3 id="lambda">14.2 Lambda</h3>
+            <div class="code-block">
+<span class="keyword">auto</span> add = [](<span class="type">int</span> a, <span class="type">int</span> b) { <span class="keyword">return</span> a + b; };
+cout &lt;&lt; <span class="func">add</span>(<span class="num-val">2</span>, <span class="num-val">3</span>);  <span class="comment">// 5</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Lambda</em> គឺ function ខ្លីៗដែលសរសេរនៅនឹងកន្លែង។ ងាយស្រួលសម្រាប់ callback ឬ function តូចៗ។
+            </div>
+
+            <h3 id="range-for">14.3 Range-based for</h3>
+            <div class="code-block">
+vector&lt;<span class="type">int</span>&gt; v = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>};
+<span class="keyword">for</span> (<span class="type">int</span> n : v) {
+    cout &lt;&lt; n &lt;&lt; <span class="str">" "</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <em>Range-based for</em> ជួយ loop លើ container ដោយមិនចាំបាច់ប្រើ index។ ខ្លី និងសុវត្ថិភាពជាង។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. Best Practices</h2>
+            <ul>
+                <li>ប្រើ <code>const</code> នៅពេលអាចធ្វើបាន</li>
+                <li>ប្រើ <code>std::vector</code> ជំនួស array</li>
+                <li>ប្រើ Smart Pointers ជំនួស raw pointers</li>
+                <li>ប្រើ <code>auto</code> នៅពេល type ច្បាស់</li>
+                <li>រក្សា Code ឲ្យអានងាយ</li>
+                <li>Comment តែពេលចាំបាច់</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> ការសរសេរកូដឲ្យមានគុណភាព មិនត្រឹមតែដំណើរការបានទេ តែត្រូវអានងាយ ថែទាំងាយ និងសុវត្ថិភាព។ ឧទាហរណ៍ ប្រើ <code>std::vector</code> ជំនួស array ដើម្បីជៀសវាងបញ្ហា memory។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖</strong> អនុវត្តគម្រោងតូចៗ ដូចជា Calculator, To-do List, ឬ Game តូចៗ ដើម្បីយល់ C++ លឿនជាងអានទ្រឹស្តីតែម្នាក់ឯង។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fas fa-code"></i> Hello.cpp</div>
+            <div class="preview-body">
+<pre><span style="color:#f472b6">#include</span> <span style="color:#86efac">&lt;iostream&gt;</span>
+<span style="color:#c084fc">using namespace</span> std;
+
+<span style="color:#fbbf24">int</span> <span style="color:#38bdf8">main</span>() {
+    cout &lt;&lt; <span style="color:#86efac">"Hello, C++!"</span>;
+    <span style="color:#c084fc">return</span> <span style="color:#86efac">0</span>;
+}</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, C++!
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">C++ Basics</a></li>
+                <li><a href="#">OOP Concepts</a></li>
+                <li><a href="#">STL Guide</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

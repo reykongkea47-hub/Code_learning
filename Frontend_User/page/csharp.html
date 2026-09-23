@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code_Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/page.css">
+<link rel="stylesheet" href="../style/navbar.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+ 
+<!-- TOP TECH NAV -->
+ <section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> C# Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា C#?</a></li>
+                <li><a href="#dotnet">1.2. .NET Framework</a></li>
+                <li><a href="#setup">1.3. ការដំឡើង</a></li>
+                <li><a href="#first-program">1.4. កម្មវិធីដំបូង</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Variables & Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#variables">2.1. Variables</a></li>
+                <li><a href="#data-types">2.2. Data Types</a></li>
+                <li><a href="#var-dynamic">2.3. var & dynamic</a></li>
+                <li><a href="#constants">2.4. Constants</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Operators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arithmetic">3.1. Arithmetic</a></li>
+                <li><a href="#comparison">3.2. Comparison</a></li>
+                <li><a href="#logical">3.3. Logical</a></li>
+                <li><a href="#null-coalescing">3.4. Null-Coalescing</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Control Flow
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else">4.1. if / else</a></li>
+                <li><a href="#switch">4.2. switch</a></li>
+                <li><a href="#loops">4.3. Loops</a></li>
+                <li><a href="#foreach">4.4. foreach</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Methods
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#method-basics">5.1. Basics</a></li>
+                <li><a href="#params">5.2. Parameters</a></li>
+                <li><a href="#overload">5.3. Overloading</a></li>
+                <li><a href="#optional">5.4. Optional & params</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Arrays & Strings
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arrays">6.1. Arrays</a></li>
+                <li><a href="#multi-arrays">6.2. 2D Arrays</a></li>
+                <li><a href="#strings">6.3. Strings</a></li>
+                <li><a href="#string-methods">6.4. String Methods</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> OOP - Classes
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#classes">7.1. Classes & Objects</a></li>
+                <li><a href="#constructors">7.2. Constructors</a></li>
+                <li><a href="#properties">7.3. Properties</a></li>
+                <li><a href="#static">7.4. static</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Inheritance & Polymorphism
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#inheritance">8.1. Inheritance</a></li>
+                <li><a href="#virtual">8.2. virtual / override</a></li>
+                <li><a href="#abstract">8.3. Abstract</a></li>
+                <li><a href="#interface">8.4. Interfaces</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Collections
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#list">9.1. List&lt;T&gt;</a></li>
+                <li><a href="#dictionary">9.2. Dictionary</a></li>
+                <li><a href="#hashset">9.3. HashSet</a></li>
+                <li><a href="#linq">9.4. LINQ</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Generics
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#generic-class">10.1. Generic Classes</a></li>
+                <li><a href="#generic-method">10.2. Generic Methods</a></li>
+                <li><a href="#constraints">10.3. Constraints</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Exception Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#try-catch">11.1. try / catch</a></li>
+                <li><a href="#finally">11.2. finally</a></li>
+                <li><a href="#custom-exc">11.3. Custom Exception</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> File I/O
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#read-file">12.1. Read File</a></li>
+                <li><a href="#write-file">12.2. Write File</a></li>
+                <li><a href="#stream">12.3. StreamReader/Writer</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Async / Await
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#async">13.1. async / await</a></li>
+                <li><a href="#task">13.2. Task</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Modern C#
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#lambda">14.1. Lambda</a></li>
+                <li><a href="#pattern">14.2. Pattern Matching</a></li>
+                <li><a href="#records">14.3. Records</a></li>
+                <li><a href="#nullable">14.4. Nullable Types</a></li>
+            </ul>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> C# Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. C# Introduction - ការណែនាំ C#</h2>
+
+            <h3 id="intro">1.1 អ្វីជា C#?</h3>
+            <p>C# (អានថា "C Sharp") គឺជាភាសាសរសេរកម្មវិធី <strong>object-oriented</strong> ដែលបង្កើតឡើងដោយ <strong>Microsoft</strong> ក្នុងឆ្នាំ 2000។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖</strong> C# ដំណើរការលើ <em>.NET Framework</em> ឬ <em>.NET Core</em> (ឥឡូវហៅថា .NET 5+)។ វាជាភាសាដ៏ពេញនិយមសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Windows Apps</strong> — Desktop applications</li>
+                    <li><strong>Web Apps</strong> — ASP.NET Core</li>
+                    <li><strong>Game Development</strong> — Unity Engine</li>
+                    <li><strong>Mobile Apps</strong> — Xamarin / MAUI</li>
+                    <li><strong>Cloud Services</strong> — Azure</li>
+                </ul>
+            </div>
+
+            <h3 id="dotnet">1.2 .NET Framework</h3>
+            <ul>
+                <li><strong>.NET Framework</strong> — ជំនាន់ចាស់ (Windows only)</li>
+                <li><strong>.NET Core</strong> — Cross-platform (Windows, Mac, Linux)</li>
+                <li><strong>.NET 5/6/7/8</strong> — ជំនាន់ថ្មីបំផុត (unified)</li>
+                <li><strong>Mono</strong> — សម្រាប់ Unity / Mobile</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> .NET គឺជាប្រព័ន្ធដែលរួមមាន runtime (CLR) និង libraries។ C# code ត្រូវបាន compile ទៅជា <em>IL (Intermediate Language)</em> ហើយរត់លើ CLR។
+            </div>
+
+            <h3 id="setup">1.3 ការដំឡើង</h3>
+            <ul>
+                <li><strong>.NET SDK</strong> — ទាញយកពី dotnet.microsoft.com</li>
+                <li><strong>Visual Studio</strong> — IDE ពេញលេញ (Windows/Mac)</li>
+                <li><strong>VS Code</strong> — Editor ស្រាល + C# extension</li>
+                <li><strong>Rider</strong> — JetBrains IDE</li>
+            </ul>
+
+            <div class="code-block">
+<span class="comment"># ពិនិត្យការដំឡើង</span>
+dotnet --version
+
+<span class="comment"># បង្កើត project ថ្មី</span>
+dotnet new console -n MyApp
+cd MyApp
+dotnet run
+            </div>
+
+            <h3 id="first-program">1.4 កម្មវិធីដំបូង</h3>
+            <div class="code-block">
+<span class="keyword">using</span> System;
+
+<span class="keyword">namespace</span> MyApp {
+    <span class="keyword">class</span> <span class="type">Program</span> {
+        <span class="keyword">static void</span> <span class="func">Main</span>(<span class="type">string</span>[] args) {
+            Console.<span class="func">WriteLine</span>(<span class="str">"Hello, C#!"</span>);
+        }
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់លម្អិត៖:</strong>
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><code>using System;</code> — import namespace</li>
+                    <li><code>namespace</code> — រៀបចំ code ជាក្រុម</li>
+                    <li><code>class Program</code> — កំណត់ class មួយ</li>
+                    <li><code>static void Main()</code> — ចំណុចចាប់ផ្តើម</li>
+                    <li><code>Console.WriteLine()</code> — បង្ហាញអត្ថបទ</li>
+                </ul>
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖</strong> ក្នុង C# 10+ អ្នកអាចប្រើ <strong>top-level statements</strong> ដោយមិនចាំបាច់សរសេរ class៖ <code>Console.WriteLine("Hello");</code></div>
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Variables & Data Types</h2>
+
+            <h3 id="variables">2.1 Variables</h3>
+            <div class="code-block">
+<span class="type">int</span> age = <span class="num-val">20</span>;
+<span class="type">double</span> price = <span class="num-val">9.99</span>;
+<span class="type">char</span> grade = <span class="str">'A'</span>;
+<span class="type">bool</span> isActive = <span class="keyword">true</span>;
+<span class="type">string</span> name = <span class="str">"Dara"</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C# ជាភាសា <em>strongly-typed</em> — ត្រូវប្រកាស type ជានិច្ច។ Variable ត្រូវតែ initialize មុនប្រើ (ខុសពី C++)។
+            </div>
+
+            <h3 id="data-types">2.2 Data Types</h3>
+            <ul>
+                <li><code>int</code> — ចំនួនគត់ (4 bytes)</li>
+                <li><code>long</code> — ចំនួនធំ (8 bytes)</li>
+                <li><code>float</code>, <code>double</code>, <code>decimal</code> — ទសភាគ</li>
+                <li><code>bool</code> — true / false</li>
+                <li><code>char</code> — អក្សរ (2 bytes — Unicode)</li>
+                <li><code>string</code> — អត្ថបទ</li>
+                <li><code>object</code> — base type ទាំងអស់</li>
+            </ul>
+
+            <h3 id="var-dynamic">2.3 var & dynamic</h3>
+            <div class="code-block">
+<span class="keyword">var</span> x = <span class="num-val">10</span>;              <span class="comment">// int</span>
+<span class="keyword">var</span> name = <span class="str">"Dara"</span>;         <span class="comment">// string</span>
+
+<span class="keyword">dynamic</span> y = <span class="num-val">10</span>;
+y = <span class="str">"Hello"</span>;  <span class="comment">// អាចផ្លាស់ប្តូរ type បាន</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>var</code> ឲ្យ compiler ស្គាល់ type ដោយស្វ័យប្រវត្តិ (មិនអាចផ្លាស់ប្តូរបាន)។ <code>dynamic</code> អាចផ្លាស់ប្តូរ type បាន ប៉ុន្តែមាន performance ទាបជាង។
+            </div>
+
+            <h3 id="constants">2.4 Constants</h3>
+            <div class="code-block">
+<span class="keyword">const double</span> PI = <span class="num-val">3.14159</span>;
+<span class="keyword">readonly int</span> MaxUsers = <span class="num-val">100</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>const</code> ជាតម្លៃថេរពេល compile។ <code>readonly</code> អាចកំណត់នៅ runtime ក្នុង constructor។
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Operators</h2>
+
+            <h3 id="arithmetic">3.1 Arithmetic</h3>
+            <div class="code-block">
+<span class="type">int</span> sum = <span class="num-val">5</span> + <span class="num-val">3</span>;   <span class="comment">// 8</span>
+<span class="type">int</span> mod = <span class="num-val">10</span> % <span class="num-val">3</span>;   <span class="comment">// 1</span>
+<span class="type">double</span> pow = Math.<span class="func">Pow</span>(<span class="num-val">2</span>, <span class="num-val">3</span>);  <span class="comment">// 8</span>
+            </div>
+
+            <h3 id="comparison">3.2 Comparison</h3>
+            <div class="code-block">
+==  !=  &gt;  &lt;  &gt;=  &lt;=
+            </div>
+
+            <h3 id="logical">3.3 Logical</h3>
+            <div class="code-block">
+&amp;&amp;  <span class="comment">// AND</span>
+||  <span class="comment">// OR</span>
+!   <span class="comment">// NOT</span>
+            </div>
+
+            <h3 id="null-coalescing">3.4 Null-Coalescing</h3>
+            <div class="code-block">
+<span class="type">string</span> name = <span class="keyword">null</span>;
+<span class="type">string</span> result = name ?? <span class="str">"Guest"</span>;  <span class="comment">// "Guest"</span>
+
+<span class="comment">// Null-conditional</span>
+<span class="type">int</span>? length = name?.Length;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>??</code> return តម្លៃខាងស្តាំ បើខាងឆ្វេងជា null។ <code>?.</code> ចូលប្រើ member ដោយសុវត្ថិភាព (មិន throw exception បើ null)។
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Control Flow</h2>
+
+            <h3 id="if-else">4.1 if / else</h3>
+            <div class="code-block">
+<span class="keyword">if</span> (age &gt;= <span class="num-val">18</span>) {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Adult"</span>);
+} <span class="keyword">else if</span> (age &gt;= <span class="num-val">13</span>) {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Teen"</span>);
+} <span class="keyword">else</span> {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Child"</span>);
+}
+            </div>
+
+            <h3 id="switch">4.2 switch</h3>
+            <div class="code-block">
+<span class="keyword">switch</span> (day) {
+    <span class="keyword">case</span> <span class="num-val">1</span>:
+        Console.<span class="func">WriteLine</span>(<span class="str">"Monday"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="num-val">2</span>:
+        Console.<span class="func">WriteLine</span>(<span class="str">"Tuesday"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        Console.<span class="func">WriteLine</span>(<span class="str">"Unknown"</span>);
+        <span class="keyword">break</span>;
+}
+            </div>
+
+            <h3 id="loops">4.3 Loops</h3>
+            <div class="code-block">
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">5</span>; i++) {
+    Console.<span class="func">Write</span>(i + <span class="str">" "</span>);
+}
+
+<span class="type">int</span> j = <span class="num-val">0</span>;
+<span class="keyword">while</span> (j &lt; <span class="num-val">5</span>) { j++; }
+
+<span class="keyword">do</span> { j++; } <span class="keyword">while</span> (j &lt; <span class="num-val">10</span>);
+            </div>
+
+            <h3 id="foreach">4.4 foreach</h3>
+            <div class="code-block">
+<span class="type">int</span>[] nums = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>};
+<span class="keyword">foreach</span> (<span class="type">int</span> n <span class="keyword">in</span> nums) {
+    Console.<span class="func">WriteLine</span>(n);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>foreach</code> ជា loop ពិសេសសម្រាប់ arrays និង collections។ ខ្លី និងសុវត្ថិភាពជាង <code>for</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Methods</h2>
+
+            <h3 id="method-basics">5.1 Basics</h3>
+            <div class="code-block">
+<span class="keyword">static void</span> <span class="func">Greet</span>() {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Hello!"</span>);
+}
+            </div>
+
+            <h3 id="params">5.2 Parameters & Return</h3>
+            <div class="code-block">
+<span class="keyword">static int</span> <span class="func">Add</span>(<span class="type">int</span> a, <span class="type">int</span> b) {
+    <span class="keyword">return</span> a + b;
+}
+            </div>
+
+            <h3 id="overload">5.3 Overloading</h3>
+            <div class="code-block">
+<span class="keyword">static int</span> <span class="func">Add</span>(<span class="type">int</span> a, <span class="type">int</span> b) { <span class="keyword">return</span> a + b; }
+<span class="keyword">static double</span> <span class="func">Add</span>(<span class="type">double</span> a, <span class="type">double</span> b) { <span class="keyword">return</span> a + b; }
+            </div>
+
+            <h3 id="optional">5.4 Optional & params</h3>
+            <div class="code-block">
+<span class="comment">// Optional parameters</span>
+<span class="keyword">static void</span> <span class="func">Greet</span>(<span class="type">string</span> name = <span class="str">"Guest"</span>) {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Hello, "</span> + name);
+}
+
+<span class="comment">// params (variable arguments)</span>
+<span class="keyword">static int</span> <span class="func">Sum</span>(<span class="keyword">params int</span>[] nums) {
+    <span class="type">int</span> total = <span class="num-val">0</span>;
+    <span class="keyword">foreach</span> (<span class="type">int</span> n <span class="keyword">in</span> nums) total += n;
+    <span class="keyword">return</span> total;
+}
+
+<span class="func">Sum</span>(<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>, <span class="num-val">4</span>);  <span class="comment">// 10</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>params</code> អនុញ្ញាតឲ្យបញ្ជូន arguments ច្រើនជា array។ <code>optional</code> parameter មាន default value។
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Arrays & Strings</h2>
+
+            <h3 id="arrays">6.1 Arrays</h3>
+            <div class="code-block">
+<span class="type">int</span>[] nums = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>};
+Console.<span class="func">WriteLine</span>(nums[<span class="num-val">0</span>]);  <span class="comment">// 1</span>
+Console.<span class="func">WriteLine</span>(nums.Length); <span class="comment">// 3</span>
+            </div>
+
+            <h3 id="multi-arrays">6.2 2D Arrays</h3>
+            <div class="code-block">
+<span class="type">int</span>[,] matrix = { {<span class="num-val">1</span>,<span class="num-val">2</span>}, {<span class="num-val">3</span>,<span class="num-val">4</span>} };
+Console.<span class="func">WriteLine</span>(matrix[<span class="num-val">1</span>, <span class="num-val">0</span>]);  <span class="comment">// 3</span>
+            </div>
+
+            <h3 id="strings">6.3 Strings</h3>
+            <div class="code-block">
+<span class="type">string</span> name = <span class="str">"Dara"</span>;
+<span class="type">string</span> greeting = <span class="str">$"Hello, {name}!"</span>;  <span class="comment">// Interpolation</span>
+
+<span class="comment">// Verbatim string</span>
+<span class="type">string</span> path = <span class="str">@"C:\Users\Dara"</span>;
+            </div>
+
+            <h3 id="string-methods">6.4 String Methods</h3>
+            <div class="code-block">
+name.<span class="func">Length</span>            <span class="comment">// 4</span>
+name.<span class="func">ToUpper</span>()         <span class="comment">// DARA</span>
+name.<span class="func">ToLower</span>()         <span class="comment">// dara</span>
+name.<span class="func">Substring</span>(<span class="num-val">0</span>, <span class="num-val">2</span>)  <span class="comment">// Da</span>
+name.<span class="func">Contains</span>(<span class="str">"ar"</span>)     <span class="comment">// true</span>
+name.<span class="func">Replace</span>(<span class="str">"a"</span>, <span class="str">"A"</span>)  <span class="comment">// DArA</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> String interpolation <code>$"..."</code> ងាយស្រួលជាង concatenation។ Verbatim string <code>@"..."</code> មិនបកប្រែ escape characters។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. OOP - Classes</h2>
+
+            <h3 id="classes">7.1 Classes & Objects</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span> {
+    <span class="keyword">public string</span> Name;
+    <span class="keyword">public int</span> Age;
+
+    <span class="keyword">public void</span> <span class="func">Greet</span>() {
+        Console.<span class="func">WriteLine</span>(<span class="str">$"Hi, I'm {Name}"</span>);
+    }
+}
+
+<span class="type">Student</span> s1 = <span class="keyword">new</span> <span class="type">Student</span>();
+s1.Name = <span class="str">"Dara"</span>;
+s1.<span class="func">Greet</span>();
+            </div>
+
+            <h3 id="constructors">7.2 Constructors</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Student</span> {
+    <span class="keyword">public string</span> Name;
+
+    <span class="keyword">public</span> <span class="func">Student</span>(<span class="type">string</span> name) {
+        Name = name;
+    }
+}
+            </div>
+
+            <h3 id="properties">7.3 Properties</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Person</span> {
+    <span class="keyword">private int</span> age;
+
+    <span class="keyword">public int</span> Age {
+        <span class="keyword">get</span> { <span class="keyword">return</span> age; }
+        <span class="keyword">set</span> {
+            <span class="keyword">if</span> (value &gt;= <span class="num-val">0</span>) age = value;
+        }
+    }
+
+    <span class="comment">// Auto-property</span>
+    <span class="keyword">public string</span> Name { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+}
+            </div>
+
+            <h3 id="static">7.4 static</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Counter</span> {
+    <span class="keyword">public static int</span> Count = <span class="num-val">0</span>;
+
+    <span class="keyword">public</span> <span class="func">Counter</span>() { Count++; }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C# ប្រើ <em>properties</em> ជំនួស getter/setter methods។ <code>auto-property</code> <code>{ get; set; }</code> ខ្លី និងងាយស្រួល។
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Inheritance & Polymorphism</h2>
+
+            <h3 id="inheritance">8.1 Inheritance</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Animal</span> {
+    <span class="keyword">public void</span> <span class="func">Eat</span>() {
+        Console.<span class="func">WriteLine</span>(<span class="str">"Eating"</span>);
+    }
+}
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="type">Animal</span> {
+    <span class="keyword">public void</span> <span class="func">Bark</span>() {
+        Console.<span class="func">WriteLine</span>(<span class="str">"Woof"</span>);
+    }
+}
+            </div>
+
+            <h3 id="virtual">8.2 virtual / override</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Animal</span> {
+    <span class="keyword">public virtual void</span> <span class="func">Sound</span>() {
+        Console.<span class="func">WriteLine</span>(<span class="str">"..."</span>);
+    }
+}
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="type">Animal</span> {
+    <span class="keyword">public override void</span> <span class="func">Sound</span>() {
+        Console.<span class="func">WriteLine</span>(<span class="str">"Woof!"</span>);
+    }
+}
+            </div>
+
+            <h3 id="abstract">8.3 Abstract</h3>
+            <div class="code-block">
+<span class="keyword">abstract class</span> <span class="type">Shape</span> {
+    <span class="keyword">public abstract double</span> <span class="func">Area</span>();
+}
+
+<span class="keyword">class</span> <span class="type">Circle</span> : <span class="type">Shape</span> {
+    <span class="keyword">public double</span> Radius { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+
+    <span class="keyword">public override double</span> <span class="func">Area</span>() {
+        <span class="keyword">return</span> Math.PI * Radius * Radius;
+    }
+}
+            </div>
+
+            <h3 id="interface">8.4 Interfaces</h3>
+            <div class="code-block">
+<span class="keyword">interface</span> <span class="type">IFlyable</span> {
+    <span class="keyword">void</span> <span class="func">Fly</span>();
+}
+
+<span class="keyword">class</span> <span class="type">Bird</span> : <span class="type">IFlyable</span> {
+    <span class="keyword">public void</span> <span class="func">Fly</span>() {
+        Console.<span class="func">WriteLine</span>(<span class="str">"Flying!"</span>);
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C# ប្រើ <code>:</code> សម្រាប់ inheritance។ <code>virtual</code> ឲ្យ override បាន។ <code>abstract</code> មិនអាចបង្កើត object ផ្ទាល់។ Interface ជាកិច្ចសន្យា។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Collections</h2>
+
+            <h3 id="list">9.1 List&lt;T&gt;</h3>
+            <div class="code-block">
+<span class="keyword">using</span> System.Collections.Generic;
+
+List&lt;<span class="type">string</span>&gt; names = <span class="keyword">new</span> List&lt;<span class="type">string</span>&gt;();
+names.<span class="func">Add</span>(<span class="str">"Dara"</span>);
+names.<span class="func">Add</span>(<span class="str">"Sok"</span>);
+names[<span class="num-val">0</span>];              <span class="comment">// Dara</span>
+names.Count;             <span class="comment">// 2</span>
+            </div>
+
+            <h3 id="dictionary">9.2 Dictionary</h3>
+            <div class="code-block">
+Dictionary&lt;<span class="type">string</span>, <span class="type">int</span>&gt; ages = <span class="keyword">new</span>();
+ages[<span class="str">"Dara"</span>] = <span class="num-val">20</span>;
+ages[<span class="str">"Dara"</span>];            <span class="comment">// 20</span>
+            </div>
+
+            <h3 id="hashset">9.3 HashSet</h3>
+            <div class="code-block">
+HashSet&lt;<span class="type">int</span>&gt; nums = <span class="keyword">new</span> HashSet&lt;<span class="type">int</span>&gt;();
+nums.<span class="func">Add</span>(<span class="num-val">1</span>);
+nums.<span class="func">Add</span>(<span class="num-val">1</span>);  <span class="comment">// មិនបន្ថែមទេ (duplicate)</span>
+            </div>
+
+            <h3 id="linq">9.4 LINQ</h3>
+            <div class="code-block">
+<span class="keyword">using</span> System.Linq;
+
+<span class="keyword">var</span> adults = people
+    .<span class="func">Where</span>(p =&gt; p.Age &gt;= <span class="num-val">18</span>)
+    .<span class="func">OrderBy</span>(p =&gt; p.Name)
+    .<span class="func">Select</span>(p =&gt; p.Name)
+    .<span class="func">ToList</span>();
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>List&lt;T&gt;</code> ជា array ដែលអាចបត់បែន។ <code>Dictionary</code> ជា key-value។ <strong>LINQ</strong> ជាមុខងារដ៏មានឥទ្ធិឫទ្ធិសម្រាប់ query collections។
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Generics</h2>
+
+            <h3 id="generic-class">10.1 Generic Classes</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">Box</span>&lt;T&gt; {
+    <span class="keyword">private</span> T value;
+
+    <span class="keyword">public void</span> <span class="func">Set</span>(T value) { <span class="keyword">this</span>.value = value; }
+    <span class="keyword">public</span> T <span class="func">Get</span>() { <span class="keyword">return</span> value; }
+}
+
+<span class="type">Box</span>&lt;<span class="type">string</span>&gt; b = <span class="keyword">new</span> <span class="type">Box</span>&lt;<span class="type">string</span>&gt;();
+b.<span class="func">Set</span>(<span class="str">"Hello"</span>);
+            </div>
+
+            <h3 id="generic-method">10.2 Generic Methods</h3>
+            <div class="code-block">
+<span class="keyword">static void</span> <span class="func">Print</span>&lt;T&gt;(T item) {
+    Console.<span class="func">WriteLine</span>(item);
+}
+            </div>
+
+            <h3 id="constraints">10.3 Constraints</h3>
+            <div class="code-block">
+<span class="keyword">static void</span> <span class="func">Print</span>&lt;T&gt;(T item) <span class="keyword">where</span> T : <span class="type">class</span> {
+    Console.<span class="func">WriteLine</span>(item);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Generics អនុញ្ញាតឲ្យសរសេរ code ដែលដំណើរការជាមួយ type ណាមួយ ដោយរក្សា type safety និង performance។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Exception Handling</h2>
+
+            <h3 id="try-catch">11.1 try / catch</h3>
+            <div class="code-block">
+<span class="keyword">try</span> {
+    <span class="type">int</span> result = <span class="num-val">10</span> / <span class="num-val">0</span>;
+} <span class="keyword">catch</span> (DivideByZeroException ex) {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Error: "</span> + ex.Message);
+}
+            </div>
+
+            <h3 id="finally">11.2 finally</h3>
+            <div class="code-block">
+<span class="keyword">try</span> {
+    <span class="comment">// risky code</span>
+} <span class="keyword">catch</span> (Exception ex) {
+    Console.<span class="func">WriteLine</span>(ex.Message);
+} <span class="keyword">finally</span> {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Always runs"</span>);
+}
+            </div>
+
+            <h3 id="custom-exc">11.3 Custom Exception</h3>
+            <div class="code-block">
+<span class="keyword">class</span> <span class="type">MyException</span> : Exception {
+    <span class="keyword">public</span> <span class="func">MyException</span>(<span class="type">string</span> message) : <span class="keyword">base</span>(message) { }
+}
+
+<span class="keyword">throw new</span> <span class="type">MyException</span>(<span class="str">"Something went wrong"</span>);
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C# ប្រើ <code>try-catch-finally</code>។ ចាប់ exception ជាក់លាក់មុន exception ទូទៅ (<code>Exception</code>)។ បង្កើត custom exception ដោយស្នងពី <code>Exception</code>។
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. File I/O</h2>
+
+            <h3 id="read-file">12.1 Read File</h3>
+            <div class="code-block">
+<span class="keyword">using</span> System.IO;
+
+<span class="type">string</span> content = File.<span class="func">ReadAllText</span>(<span class="str">"data.txt"</span>);
+Console.<span class="func">WriteLine</span>(content);
+            </div>
+
+            <h3 id="write-file">12.2 Write File</h3>
+            <div class="code-block">
+File.<span class="func">WriteAllText</span>(<span class="str">"data.txt"</span>, <span class="str">"Hello, File!"</span>);
+            </div>
+
+            <h3 id="stream">12.3 StreamReader/Writer</h3>
+            <div class="code-block">
+<span class="keyword">using</span> (StreamWriter writer = <span class="keyword">new</span> StreamWriter(<span class="str">"data.txt"</span>)) {
+    writer.<span class="func">WriteLine</span>(<span class="str">"Line 1"</span>);
+    writer.<span class="func">WriteLine</span>(<span class="str">"Line 2"</span>);
+}
+
+<span class="keyword">using</span> (StreamReader reader = <span class="keyword">new</span> StreamReader(<span class="str">"data.txt"</span>)) {
+    <span class="type">string</span> line;
+    <span class="keyword">while</span> ((line = reader.<span class="func">ReadLine</span>()) != <span class="keyword">null</span>) {
+        Console.<span class="func">WriteLine</span>(line);
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>File.ReadAllText</code> / <code>WriteAllText</code> ខ្លីសម្រាប់ file តូច។ <code>using</code> block បិទ resource ដោយស្វ័យប្រវត្តិ។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Async / Await</h2>
+
+            <h3 id="async">13.1 async / await</h3>
+            <div class="code-block">
+<span class="keyword">async</span> Task&lt;<span class="type">string</span>&gt; <span class="func">GetDataAsync</span>() {
+    <span class="keyword">using var</span> client = <span class="keyword">new</span> HttpClient();
+    <span class="type">string</span> result = <span class="keyword">await</span> client.<span class="func">GetStringAsync</span>(<span class="str">"https://api.example.com"</span>);
+    <span class="keyword">return</span> result;
+}
+
+<span class="type">string</span> data = <span class="keyword">await</span> <span class="func">GetDataAsync</span>();
+            </div>
+
+            <h3 id="task">13.2 Task</h3>
+            <div class="code-block">
+Task.<span class="func">Run</span>(() =&gt; {
+    Console.<span class="func">WriteLine</span>(<span class="str">"Running in background"</span>);
+});
+
+Task&lt;<span class="type">int</span>&gt; task = Task.<span class="func">Run</span>(() =&gt; <span class="num-val">42</span>);
+<span class="type">int</span> result = <span class="keyword">await</span> task;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>async/await</code> ធ្វើឲ្យកូដ asynchronous មើលទៅដូច synchronous។ ល្អសម្រាប់ I/O, network, និង database។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Modern C#</h2>
+
+            <h3 id="lambda">14.1 Lambda</h3>
+            <div class="code-block">
+Func&lt;<span class="type">int</span>, <span class="type">int</span>, <span class="type">int</span>&gt; add = (a, b) =&gt; a + b;
+Console.<span class="func">WriteLine</span>(<span class="func">add</span>(<span class="num-val">2</span>, <span class="num-val">3</span>));  <span class="comment">// 5</span>
+            </div>
+
+            <h3 id="pattern">14.2 Pattern Matching</h3>
+            <div class="code-block">
+<span class="keyword">object</span> obj = <span class="num-val">42</span>;
+
+<span class="keyword">if</span> (obj <span class="keyword">is int</span> n) {
+    Console.<span class="func">WriteLine</span>(<span class="str">$"It's an int: {n}"</span>);
+}
+
+<span class="keyword">string</span> result = obj <span class="keyword">switch</span> {
+    <span class="type">int</span> i =&gt; <span class="str">$"Integer: {i}"</span>,
+    <span class="type">string</span> s =&gt; <span class="str">$"String: {s}"</span>,
+    _ =&gt; <span class="str">"Unknown"</span>
+};
+            </div>
+
+            <h3 id="records">14.3 Records</h3>
+            <div class="code-block">
+<span class="keyword">public record</span> <span class="type">Person</span>(<span class="type">string</span> Name, <span class="type">int</span> Age);
+
+<span class="keyword">var</span> p = <span class="keyword">new</span> <span class="type">Person</span>(<span class="str">"Dara"</span>, <span class="num-val">20</span>);
+Console.<span class="func">WriteLine</span>(p);  <span class="comment">// Person { Name = Dara, Age = 20 }</span>
+            </div>
+
+            <h3 id="nullable">14.4 Nullable Types</h3>
+            <div class="code-block">
+<span class="type">int</span>? age = <span class="keyword">null</span>;
+<span class="keyword">if</span> (age.<span class="func">HasValue</span>) {
+    Console.<span class="func">WriteLine</span>(age.Value);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>record</code> សម្រាប់ immutable data។ <code>pattern matching</code> សរសេរ code ខ្លី និងច្បាស់។ <code>?</code> បន្ទាប់ពី type ធ្វើឲ្យវាអាចជា null។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. C# Project</h2>
+            <p>សាកល្បងបង្កើតកម្មវិធី <strong>Student Manager</strong> តូចមួយ៖</p>
+            <div class="code-block">
+<span class="keyword">using</span> System;
+<span class="keyword">using</span> System.Collections.Generic;
+<span class="keyword">using</span> System.Linq;
+
+<span class="keyword">public class</span> <span class="type">Student</span> {
+    <span class="keyword">public string</span> Name { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+    <span class="keyword">public int</span> Age { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+
+    <span class="keyword">public override string</span> <span class="func">ToString</span>() {
+        <span class="keyword">return</span> <span class="str">$"{Name} ({Age})"</span>;
+    }
+}
+
+<span class="keyword">class</span> <span class="type">Program</span> {
+    <span class="keyword">static void</span> <span class="func">Main</span>() {
+        List&lt;<span class="type">Student</span>&gt; students = <span class="keyword">new</span> List&lt;<span class="type">Student</span>&gt; {
+            <span class="keyword">new</span> <span class="type">Student</span> { Name = <span class="str">"Dara"</span>, Age = <span class="num-val">20</span> },
+            <span class="keyword">new</span> <span class="type">Student</span> { Name = <span class="str">"Sok"</span>, Age = <span class="num-val">22</span> },
+            <span class="keyword">new</span> <span class="type">Student</span> { Name = <span class="str">"Anna"</span>, Age = <span class="num-val">19</span> }
+        };
+
+        <span class="comment">// Filter + Sort with LINQ</span>
+        <span class="keyword">var</span> sorted = students
+            .<span class="func">Where</span>(s =&gt; s.Age &gt;= <span class="num-val">20</span>)
+            .<span class="func">OrderBy</span>(s =&gt; s.Age)
+            .<span class="func">ToList</span>();
+
+        <span class="keyword">foreach</span> (<span class="keyword">var</span> s <span class="keyword">in</span> sorted) {
+            Console.<span class="func">WriteLine</span>(s);
+        }
+    }
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ class, auto-properties, List, LINQ (Where, OrderBy), និង <code>ToString()</code> override។ សាកល្បងបន្ថែម៖ Add, Remove, ឬ Search functionality។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> សាកល្បងគម្រោងតូចៗ — Todo List, Calculator, Bank System, ឬ Game តូចៗជាមួយ Unity ដើម្បីយល់ C# លឿនជាងអានទ្រឹស្តី។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fas fa-hashtag"></i> Program.cs</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">using</span> System;
+
+<span style="color:#c084fc">class</span> <span style="color:#fbbf24">Program</span> {
+    <span style="color:#c084fc">static void</span> <span style="color:#38bdf8">Main</span>() {
+        Console.<span style="color:#38bdf8">WriteLine</span>(<span style="color:#86efac">"Hello, C#!"</span>);
+    }
+}</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, C#!
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">C# Basics</a></li>
+                <li><a href="#">OOP Concepts</a></li>
+                <li><a href="#">ASP.NET Core</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login_CodeLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="./style/information.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="brand">
+        <div class="brand-icon"><i class="fas fa-code"></i></div>
+        <span class="brand-text">Code_Learning</span>
+    </div>
+    <div class="nav-links">
+        <a href="2.html">Courses</a>
+        <a href="signup.html">Signup</a>
+    </div>
+</nav>
+
+<!-- AUTH WRAP -->
+<div class="auth-wrap">
+    <div class="auth-container">
+
+        <!-- LEFT PANEL -->
+        <div class="auth-info">
+            <div class="auth-info-content">
+                <div class="badge">
+                    <i class="fas fa-sparkles"></i> Welcome Back
+                </div>
+
+                <h2>
+                    Continue your<br>
+                    <span>learning journey.</span>
+                </h2>
+
+                <p>
+                    Log in to access your courses, track your progress, and pick up right where you left off.
+                </p>
+
+                <div class="auth-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-play-circle"></i></div>
+                        <span>Resume your lessons</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <span>Track your progress</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                        <span>Unlock achievements</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-info-footer">
+                <i class="fas fa-shield-halved"></i>
+                <span>Your account is protected with 256-bit encryption.</span>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="auth-panel">
+            <h1>Welcome back</h1>
+            <p class="sub">Log in to continue your courses.</p>
+
+            <div class="form-msg" id="form-msg"></div>
+
+            <form id="login-form" novalidate>
+
+                <div class="field">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <div class="input-wrap">
+                        <i class="fas fa-at input-icon"></i>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="password">
+                        <i class="fas fa-key"></i> Password
+                    </label>
+                    <div class="input-wrap">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="••••••••"
+                            required
+                            autocomplete="current-password"
+                        >
+                        <button type="button" class="toggle-pass" data-target="password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label class="checkbox-wrap">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submit-btn">
+                    <i class="fas fa-right-to-bracket"></i>
+                    <span>Log in</span>
+                </button>
+
+            </form>
+
+            <div class="divider">or continue with</div>
+
+            <div class="social-row">
+                <a href="#" class="btn-social google">
+                    <i class="fab fa-google"></i> Google
+                </a>
+                <a href="#" class="btn-social github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+
+            <div class="switch-auth">
+                No account yet?
+                <a href="signup.html">Sign up</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('login-form');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const rememberCheck = document.getElementById('remember');
+    const submitBtn = document.getElementById('submit-btn');
+    const msgBox = document.getElementById('form-msg');
+
+    // Restore remembered email
+    const savedEmail = localStorage.getItem('code_learning_remember');
+    if (savedEmail) {
+        emailInput.value = savedEmail;
+        rememberCheck.checked = true;
+    }
+
+    // Toggle password
+    document.querySelectorAll('.toggle-pass').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const input = document.getElementById(btn.dataset.target);
+            const icon = btn.querySelector('i');
+            const isPass = input.type === 'password';
+            input.type = isPass ? 'text' : 'password';
+            icon.classList.toggle('fa-eye', !isPass);
+            icon.classList.toggle('fa-eye-slash', isPass);
+        });
+    });
+
+    function showMessage(text, type = 'error') {
+        const icons = {
+            error: 'fa-circle-exclamation',
+            success: 'fa-circle-check'
+        };
+        msgBox.className = `form-msg ${type}`;
+        msgBox.innerHTML = `<i class="fas ${icons[type]}"></i> <span>${text}</span>`;
+    }
+
+    function hideMessage() {
+        msgBox.className = 'form-msg';
+        msgBox.innerHTML = '';
+    }
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        hideMessage();
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        // Validate
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showMessage('Please enter a valid email address', 'error');
+            emailInput.focus();
+            return;
+        }
+
+        if (password.length < 6) {
+            showMessage('Password must be at least 6 characters', 'error');
+            passwordInput.focus();
+            return;
+        }
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner"></i> <span>Signing in...</span>';
+
+        setTimeout(() => {
+            // Get users from localStorage
+            const users = JSON.parse(localStorage.getItem('code_learning_users') || '[]');
+            const found = users.find(u => u.email === email && u.password === password);
+
+            if (found) {
+                // Save session
+                localStorage.setItem('code_learning_current_user', JSON.stringify({
+                    id: found.id,
+                    name: found.name,
+                    email: found.email,
+                    joined: found.joined
+                }));
+
+                // Remember
+                if (rememberCheck.checked) {
+                    localStorage.setItem('code_learning_remember', email);
+                } else {
+                    localStorage.removeItem('code_learning_remember');
+                }
+
+                showMessage('Login successful! Redirecting...', 'success');
+
+                setTimeout(() => {
+                    window.location.href = '2.html';
+                }, 1000);
+            } else {
+                showMessage('Invalid email or password', 'error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-right-to-bracket"></i> <span>Log in</span>';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }, 800);
+    });
+
+    // Clear error on input
+    [emailInput, passwordInput].forEach(input => {
+        input.addEventListener('input', hideMessage);
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> CodeLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/page.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <!-- 1 -->
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> C Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា C?</a></li>
+                <li><a href="#setup">1.2. ការដំឡើង</a></li>
+                <li><a href="#first-program">1.3. កម្មវិធីដំបូង</a></li>
+                <li><a href="#comments">1.4. Comment</a></li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Variables & Data Types
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#variables">2.1. Variables</a></li>
+                <li><a href="#data-types">2.2. Data Types</a></li>
+                <li><a href="#format-specifiers">2.3. Format Specifiers</a></li>
+                <li><a href="#constants">2.4. Constants</a></li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Input / Output
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#printf">3.1. printf()</a></li>
+                <li><a href="#scanf">3.2. scanf()</a></li>
+                <li><a href="#getchar">3.3. getchar / putchar</a></li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Operators
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#arithmetic">4.1. Arithmetic</a></li>
+                <li><a href="#comparison">4.2. Comparison</a></li>
+                <li><a href="#logical">4.3. Logical</a></li>
+                <li><a href="#bitwise">4.4. Bitwise</a></li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Control Flow
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#if-else">5.1. if / else</a></li>
+                <li><a href="#switch">5.2. switch</a></li>
+                <li><a href="#loops">5.3. Loops</a></li>
+                <li><a href="#break-continue">5.4. break / continue</a></li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Functions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#func-basics">6.1. Basics</a></li>
+                <li><a href="#params">6.2. Parameters</a></li>
+                <li><a href="#return">6.3. Return Values</a></li>
+                <li><a href="#recursion">6.4. Recursion</a></li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Arrays
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#array-basics">7.1. Basics</a></li>
+                <li><a href="#multi-arrays">7.2. Multidimensional</a></li>
+                <li><a href="#string">7.3. Strings</a></li>
+                <li><a href="#string-func">7.4. String Functions</a></li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Pointers
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#pointer-basics">8.1. Basics</a></li>
+                <li><a href="#pointer-array">8.2. Pointer & Array</a></li>
+                <li><a href="#pointer-func">8.3. Pointer & Function</a></li>
+                <li><a href="#null-pointer">8.4. NULL Pointer</a></li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Structures & Unions
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#struct">9.1. Struct</a></li>
+                <li><a href="#union">9.2. Union</a></li>
+                <li><a href="#typedef">9.3. typedef</a></li>
+                <li><a href="#enum">9.4. enum</a></li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Dynamic Memory
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#malloc">10.1. malloc()</a></li>
+                <li><a href="#calloc-realloc">10.2. calloc / realloc</a></li>
+                <li><a href="#free">10.3. free()</a></li>
+            </ul>
+        </div>
+
+        <!-- 11 -->
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> File I/O
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#file-open">11.1. fopen / fclose</a></li>
+                <li><a href="#file-read-write">11.2. Read / Write</a></li>
+                <li><a href="#file-modes">11.3. File Modes</a></li>
+            </ul>
+        </div>
+
+        <!-- 12 -->
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> Preprocessor
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#define">12.1. #define</a></li>
+                <li><a href="#macros">12.2. Macros</a></li>
+                <li><a href="#header">12.3. Header Files</a></li>
+            </ul>
+        </div>
+
+        <!-- 13 -->
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Error Handling
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#errno">13.1. errno</a></li>
+                <li><a href="#perror">13.2. perror</a></li>
+            </ul>
+        </div>
+
+        <!-- 14 -->
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Best Practices
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+
+        <!-- 15 -->
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> C Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. C Introduction - ការណែនាំ C</h2>
+
+            <h3 id="intro">1.1 អ្វីជា C?</h3>
+            <p>C គឺជាភាសា <strong>procedural</strong> ដែលបង្កើតឡើងដោយ <strong>Dennis Ritchie</strong> ក្នុងឆ្នាំ 1972 នៅ Bell Labs។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C គឺជាភាសា <em>middle-level</em> ដែលរួមបញ្ចូលទាំង high-level និង low-level។ វាជាមូលដ្ឋាននៃភាសា C++, Java, C#, PHP, JavaScript, Python។ ប្រើសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Operating Systems</strong> — Linux, Windows kernel</li>
+                    <li><strong>Embedded Systems</strong> — Arduino, IoT</li>
+                    <li><strong>Compilers</strong> — Python, PHP interpreters</li>
+                    <li><strong>Databases</strong> — MySQL, SQLite</li>
+                </ul>
+            </div>
+
+            <h3 id="setup">1.2 ការដំឡើង</h3>
+            <ul>
+                <li><strong>Compiler:</strong> GCC, Clang, MSVC</li>
+                <li><strong>IDE:</strong> VS Code, Code::Blocks, Dev-C++</li>
+                <li><strong>Online:</strong> replit.com, onlinegdb.com</li>
+            </ul>
+
+            <div class="code-block">
+<span class="comment"># ពិនិត្យ GCC</span>
+gcc --version
+
+<span class="comment"># Compile និង Run</span>
+gcc hello.c -o hello
+./hello
+            </div>
+
+            <h3 id="first-program">1.3 កម្មវិធីដំបូង</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+<span class="type">int</span> <span class="func">main</span>() {
+    <span class="func">printf</span>(<span class="str">"Hello, C!\n"</span>);
+    <span class="keyword">return</span> <span class="num-val">0</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់លម្អិត៖:</strong>
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><code>#include &lt;stdio.h&gt;</code> — បញ្ចូល library សម្រាប់ input/output</li>
+                    <li><code>int main()</code> — ចំណុចចាប់ផ្តើមរបស់កម្មវិធី</li>
+                    <li><code>printf()</code> — បង្ហាញអត្ថបទ</li>
+                    <li><code>\n</code> — បន្ទាត់ថ្មី (newline)</li>
+                    <li><code>return 0;</code> — បញ្ជាក់ការបញ្ចប់ដោយជោគជ័យ</li>
+                </ul>
+            </div>
+
+            <h3 id="comments">1.4 Comment</h3>
+            <div class="code-block">
+<span class="comment">// Single-line comment</span>
+<span class="comment">/* Multi-line
+   comment */</span>
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Variables & Data Types</h2>
+
+            <h3 id="variables">2.1 Variables</h3>
+            <div class="code-block">
+<span class="type">int</span> age = <span class="num-val">20</span>;
+<span class="type">float</span> price = <span class="num-val">9.99</span>;
+<span class="type">char</span> grade = <span class="str">'A'</span>;
+<span class="type">double</span> pi = <span class="num-val">3.14159</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C ជាភាសា <em>statically-typed</em> — ត្រូវប្រកាស type ជានិច្ច។ Variable ត្រូវតែ initialize មុនប្រើ (មិនដូច Java ដែល auto-init)។
+            </div>
+
+            <h3 id="data-types">2.2 Data Types</h3>
+            <table>
+                <thead>
+                    <tr><th>Type</th><th>Size</th><th>Range</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>char</code></td><td>1 byte</td><td>-128 ដល់ 127</td></tr>
+                    <tr><td><code>int</code></td><td>4 bytes</td><td>-2.1B ដល់ 2.1B</td></tr>
+                    <tr><td><code>float</code></td><td>4 bytes</td><td>~7 digits</td></tr>
+                    <tr><td><code>double</code></td><td>8 bytes</td><td>~15 digits</td></tr>
+                    <tr><td><code>void</code></td><td>0</td><td>គ្មានតម្លៃ</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="format-specifiers">2.3 Format Specifiers</h3>
+            <table>
+                <thead>
+                    <tr><th>Specifier</th><th>Type</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>%d</code></td><td>int</td></tr>
+                    <tr><td><code>%f</code></td><td>float / double</td></tr>
+                    <tr><td><code>%c</code></td><td>char</td></tr>
+                    <tr><td><code>%s</code></td><td>string</td></tr>
+                    <tr><td><code>%ld</code></td><td>long</td></tr>
+                    <tr><td><code>%x</code></td><td>hexadecimal</td></tr>
+                    <tr><td><code>%p</code></td><td>pointer</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="constants">2.4 Constants</h3>
+            <div class="code-block">
+<span class="keyword">const</span> <span class="type">double</span> PI = <span class="num-val">3.14159</span>;
+
+<span class="comment">// ឬប្រើ #define</span>
+<span class="include">#define</span> <span class="macro">MAX</span> <span class="num-val">100</span>
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Input / Output</h2>
+
+            <h3 id="printf">3.1 printf()</h3>
+            <div class="code-block">
+<span class="func">printf</span>(<span class="str">"Hello, World!\n"</span>);
+
+<span class="type">int</span> age = <span class="num-val">20</span>;
+<span class="func">printf</span>(<span class="str">"Age: %d\n"</span>, age);
+
+<span class="type">float</span> price = <span class="num-val">9.99</span>;
+<span class="func">printf</span>(<span class="str">"Price: %.2f\n"</span>, price);  <span class="comment">// 9.99</span>
+            </div>
+
+            <h3 id="scanf">3.2 scanf()</h3>
+            <div class="code-block">
+<span class="type">int</span> age;
+<span class="func">printf</span>(<span class="str">"Enter age: "</span>);
+<span class="func">scanf</span>(<span class="str">"%d"</span>, &amp;age);      <span class="comment">// ប្រើ &</span>
+
+<span class="type">char</span> name[<span class="num-val">50</span>];
+<span class="func">scanf</span>(<span class="str">"%s"</span>, name);       <span class="comment">// Array មិនត្រូវការ &</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>scanf()</code> ត្រូវការ <code>&amp;</code> (address-of) សម្រាប់ variable ធម្មតា ដើម្បីដឹងទីតាំងក្នុង memory។ Array គឺជា pointer ស្រាប់ ដូច្នេះមិនត្រូវការ <code>&amp;</code>។
+            </div>
+
+            <h3 id="getchar">3.3 getchar / putchar</h3>
+            <div class="code-block">
+<span class="type">char</span> c = <span class="func">getchar</span>();   <span class="comment">// អាន 1 តួអក្សរ</span>
+<span class="func">putchar</span>(c);              <span class="comment">// បង្ហាញ 1 តួអក្សរ</span>
+            </div>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Operators</h2>
+
+            <h3 id="arithmetic">4.1 Arithmetic</h3>
+            <div class="code-block">
+<span class="type">int</span> sum = <span class="num-val">5</span> + <span class="num-val">3</span>;   <span class="comment">// 8</span>
+<span class="type">int</span> mod = <span class="num-val">10</span> % <span class="num-val">3</span>;   <span class="comment">// 1</span>
+sum++;                    <span class="comment">// increment</span>
+sum--;                    <span class="comment">// decrement</span>
+            </div>
+
+            <h3 id="comparison">4.2 Comparison</h3>
+            <div class="code-block">
+==  !=  &gt;  &lt;  &gt;=  &lt;=
+            </div>
+
+            <h3 id="logical">4.3 Logical</h3>
+            <div class="code-block">
+&amp;&amp;  <span class="comment">// AND</span>
+||  <span class="comment">// OR</span>
+!   <span class="comment">// NOT</span>
+            </div>
+
+            <h3 id="bitwise">4.4 Bitwise</h3>
+            <div class="code-block">
+&amp;   <span class="comment">// AND</span>
+|   <span class="comment">// OR</span>
+^   <span class="comment">// XOR</span>
+~   <span class="comment">// NOT</span>
+&lt;&lt;  <span class="comment">// Left shift</span>
+&gt;&gt;  <span class="comment">// Right shift</span>
+
+<span class="comment">// ឧទាហរណ៍</span>
+<span class="num-val">5</span> &amp; <span class="num-val">3</span>   <span class="comment">// 1 (0101 & 0011 = 0001)</span>
+<span class="num-val">5</span> | <span class="num-val">3</span>   <span class="comment">// 7</span>
+<span class="num-val">5</span> &lt;&lt; <span class="num-val">1</span>  <span class="comment">// 10 (×2)</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Bitwise operators ធ្វើការលើ bits។ <code>&lt;&lt; 1</code> ស្មើនឹងគុណនឹង 2, <code>&gt;&gt; 1</code> ស្មើនឹងចែកនឹង 2។ ល្អសម្រាប់ performance ខ្ពស់។
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Control Flow</h2>
+
+            <h3 id="if-else">5.1 if / else</h3>
+            <div class="code-block">
+<span class="keyword">if</span> (age &gt;= <span class="num-val">18</span>) {
+    <span class="func">printf</span>(<span class="str">"Adult\n"</span>);
+} <span class="keyword">else if</span> (age &gt;= <span class="num-val">13</span>) {
+    <span class="func">printf</span>(<span class="str">"Teen\n"</span>);
+} <span class="keyword">else</span> {
+    <span class="func">printf</span>(<span class="str">"Child\n"</span>);
+}
+            </div>
+
+            <h3 id="switch">5.2 switch</h3>
+            <div class="code-block">
+<span class="keyword">switch</span> (day) {
+    <span class="keyword">case</span> <span class="num-val">1</span>:
+        <span class="func">printf</span>(<span class="str">"Monday\n"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="num-val">2</span>:
+        <span class="func">printf</span>(<span class="str">"Tuesday\n"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        <span class="func">printf</span>(<span class="str">"Unknown\n"</span>);
+}
+            </div>
+
+            <h3 id="loops">5.3 Loops</h3>
+            <div class="code-block">
+<span class="comment">// for loop</span>
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">5</span>; i++) {
+    <span class="func">printf</span>(<span class="str">"%d "</span>, i);
+}
+
+<span class="comment">// while loop</span>
+<span class="type">int</span> j = <span class="num-val">0</span>;
+<span class="keyword">while</span> (j &lt; <span class="num-val">5</span>) { j++; }
+
+<span class="comment">// do-while</span>
+<span class="keyword">do</span> { j++; } <span class="keyword">while</span> (j &lt; <span class="num-val">10</span>);
+            </div>
+
+            <h3 id="break-continue">5.4 break / continue</h3>
+            <div class="code-block">
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">10</span>; i++) {
+    <span class="keyword">if</span> (i == <span class="num-val">3</span>) <span class="keyword">continue</span>;
+    <span class="keyword">if</span> (i == <span class="num-val">7</span>) <span class="keyword">break</span>;
+    <span class="func">printf</span>(<span class="str">"%d "</span>, i);
+}
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Functions</h2>
+
+            <h3 id="func-basics">6.1 Basics</h3>
+            <div class="code-block">
+<span class="comment">// Function declaration</span>
+<span class="type">void</span> <span class="func">greet</span>() {
+    <span class="func">printf</span>(<span class="str">"Hello!\n"</span>);
+}
+
+<span class="comment">// Call</span>
+<span class="func">greet</span>();
+            </div>
+
+            <h3 id="params">6.2 Parameters</h3>
+            <div class="code-block">
+<span class="comment">// Function definition</span>
+<span class="type">int</span> <span class="func">add</span>(<span class="type">int</span> a, <span class="type">int</span> b) {
+    <span class="keyword">return</span> a + b;
+}
+
+<span class="type">int</span> result = <span class="func">add</span>(<span class="num-val">2</span>, <span class="num-val">3</span>);  <span class="comment">// 5</span>
+            </div>
+
+            <h3 id="return">6.3 Return Values</h3>
+            <div class="code-block">
+<span class="type">float</span> <span class="func">average</span>(<span class="type">int</span> a, <span class="type">int</span> b) {
+    <span class="keyword">return</span> (a + b) / <span class="num-val">2.0</span>;
+}
+            </div>
+
+            <h3 id="recursion">6.4 Recursion</h3>
+            <div class="code-block">
+<span class="type">int</span> <span class="func">factorial</span>(<span class="type">int</span> n) {
+    <span class="keyword">if</span> (n &lt;= <span class="num-val">1</span>) <span class="keyword">return</span> <span class="num-val">1</span>;
+    <span class="keyword">return</span> n * <span class="func">factorial</span>(n - <span class="num-val">1</span>);
+}
+
+<span class="func">factorial</span>(<span class="num-val">5</span>);  <span class="comment">// 120</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Recursion គឺ function ដែលហៅខ្លួនឯង។ ត្រូវមាន <em>base case</em> ដើម្បីបញ្ឈប់។ ប្រើសម្រាប់ algorithm ដូច factorial, Fibonacci, tree traversal។
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Arrays</h2>
+
+            <h3 id="array-basics">7.1 Basics</h3>
+            <div class="code-block">
+<span class="type">int</span> nums[<span class="num-val">5</span>] = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>, <span class="num-val">4</span>, <span class="num-val">5</span>};
+<span class="func">printf</span>(<span class="str">"%d\n"</span>, nums[<span class="num-val">0</span>]);  <span class="comment">// 1</span>
+
+<span class="comment">// Loop តាម array</span>
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; <span class="num-val">5</span>; i++) {
+    <span class="func">printf</span>(<span class="str">"%d "</span>, nums[i]);
+}
+            </div>
+
+            <h3 id="multi-arrays">7.2 Multidimensional</h3>
+            <div class="code-block">
+<span class="type">int</span> matrix[<span class="num-val">2</span>][<span class="num-val">3</span>] = {
+    {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>},
+    {<span class="num-val">4</span>, <span class="num-val">5</span>, <span class="num-val">6</span>}
+};
+
+<span class="func">printf</span>(<span class="str">"%d\n"</span>, matrix[<span class="num-val">1</span>][<span class="num-val">0</span>]);  <span class="comment">// 4</span>
+            </div>
+
+            <h3 id="string">7.3 Strings</h3>
+            <div class="code-block">
+<span class="type">char</span> name[<span class="num-val">50</span>] = <span class="str">"Dara"</span>;
+<span class="type">char</span> greeting[] = <span class="str">"Hello"</span>;
+
+<span class="func">printf</span>(<span class="str">"%s\n"</span>, name);  <span class="comment">// Dara</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C គ្មាន string type ទេ — ប្រើ array នៃ <code>char</code> ដែលបញ្ចប់ដោយ <code>'\0'</code> (null terminator)។
+            </div>
+
+            <h3 id="string-func">7.4 String Functions</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;string.h&gt;</span>
+
+<span class="type">char</span> dest[<span class="num-val">50</span>];
+<span class="func">strcpy</span>(dest, <span class="str">"Hello"</span>);        <span class="comment">// Copy</span>
+<span class="func">strlen</span>(<span class="str">"Hello"</span>);              <span class="comment">// 5</span>
+<span class="func">strcmp</span>(<span class="str">"a"</span>, <span class="str">"b"</span>);            <span class="comment">// < 0</span>
+<span class="func">strcat</span>(dest, <span class="str">" World"</span>);        <span class="comment">// Concatenate</span>
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Pointers</h2>
+
+            <h3 id="pointer-basics">8.1 Basics</h3>
+            <div class="code-block">
+<span class="type">int</span> x = <span class="num-val">10</span>;
+<span class="type">int</span> *ptr = &amp;x;         <span class="comment">// ptr ផ្ទុក address របស់ x</span>
+
+<span class="func">printf</span>(<span class="str">"%d\n"</span>, *ptr);  <span class="comment">// 10 (dereference)</span>
+<span class="func">printf</span>(<span class="str">"%p\n"</span>, ptr);   <span class="comment">// address</span>
+            </div>
+
+            <h3 id="pointer-array">8.2 Pointer & Array</h3>
+            <div class="code-block">
+<span class="type">int</span> arr[<span class="num-val">3</span>] = {<span class="num-val">1</span>, <span class="num-val">2</span>, <span class="num-val">3</span>};
+<span class="type">int</span> *p = arr;         <span class="comment">// arr គឺ pointer ទៅ element ដំបូង</span>
+
+<span class="func">printf</span>(<span class="str">"%d\n"</span>, *p);       <span class="comment">// 1</span>
+<span class="func">printf</span>(<span class="str">"%d\n"</span>, *(p + 1)); <span class="comment">// 2</span>
+            </div>
+
+            <h3 id="pointer-func">8.3 Pointer & Function</h3>
+            <div class="code-block">
+<span class="comment">// Pass by reference</span>
+<span class="type">void</span> <span class="func">increment</span>(<span class="type">int</span> *n) {
+    (*n)++;
+}
+
+<span class="type">int</span> x = <span class="num-val">5</span>;
+<span class="func">increment</span>(&amp;x);   <span class="comment">// x ក្លាយជា 6</span>
+            </div>
+
+            <h3 id="null-pointer">8.4 NULL Pointer</h3>
+            <div class="code-block">
+<span class="type">int</span> *ptr = <span class="macro">NULL</span>;
+
+<span class="keyword">if</span> (ptr != <span class="macro">NULL</span>) {
+    <span class="func">printf</span>(<span class="str">"%d\n"</span>, *ptr);
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Pointer ជាចំណុចសំខាន់បំផុតក្នុង C។ វាផ្ទុក <em>memory address</em> ហើយអនុញ្ញាតឲ្យកែតម្លៃដោយផ្ទាល់ និង pass by reference។
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Structures & Unions</h2>
+
+            <h3 id="struct">9.1 Struct</h3>
+            <div class="code-block">
+<span class="keyword">struct</span> <span class="type">Student</span> {
+    <span class="type">char</span> name[<span class="num-val">50</span>];
+    <span class="type">int</span> age;
+    <span class="type">float</span> gpa;
+};
+
+<span class="keyword">struct</span> <span class="type">Student</span> s1 = {<span class="str">"Dara"</span>, <span class="num-val">20</span>, <span class="num-val">3.5</span>};
+<span class="func">printf</span>(<span class="str">"%s\n"</span>, s1.name);
+            </div>
+
+            <h3 id="union">9.2 Union</h3>
+            <div class="code-block">
+<span class="keyword">union</span> <span class="type">Data</span> {
+    <span class="type">int</span> i;
+    <span class="type">float</span> f;
+    <span class="type">char</span> c;
+};
+
+<span class="keyword">union</span> <span class="type">Data</span> d;
+d.i = <span class="num-val">10</span>;
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> <code>struct</code> ផ្ទុក members ដោយឡែកពីគ្នា។ <code>union</code> ផ្ទុក members នៅកន្លែងតែមួយ (ប្រើម្តងមួយ) — សន្សំ memory។
+            </div>
+
+            <h3 id="typedef">9.3 typedef</h3>
+            <div class="code-block">
+<span class="keyword">typedef struct</span> {
+    <span class="type">char</span> name[<span class="num-val">50</span>];
+    <span class="type">int</span> age;
+} <span class="type">Person</span>;
+
+<span class="type">Person</span> p1 = {<span class="str">"Dara"</span>, <span class="num-val">20</span>};  <span class="comment">// មិនចាំបាច់សរសេរ struct</span>
+            </div>
+
+            <h3 id="enum">9.4 enum</h3>
+            <div class="code-block">
+<span class="keyword">enum</span> <span class="type">Day</span> { MON, TUE, WED, THU, FRI, SAT, SUN };
+
+<span class="keyword">enum</span> <span class="type">Day</span> today = WED;
+<span class="func">printf</span>(<span class="str">"%d\n"</span>, today);  <span class="comment">// 2</span>
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Dynamic Memory</h2>
+
+            <h3 id="malloc">10.1 malloc()</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+
+<span class="type">int</span> *ptr = (<span class="type">int</span>*) <span class="func">malloc</span>(<span class="num-val">5</span> * <span class="keyword">sizeof</span>(<span class="type">int</span>));
+
+<span class="keyword">if</span> (ptr == <span class="macro">NULL</span>) {
+    <span class="func">printf</span>(<span class="str">"Memory allocation failed\n"</span>);
+}
+            </div>
+
+            <h3 id="calloc-realloc">10.2 calloc / realloc</h3>
+            <div class="code-block">
+<span class="comment">// calloc — ចាប់ផ្តើមដោយ 0</span>
+<span class="type">int</span> *arr = (<span class="type">int</span>*) <span class="func">calloc</span>(<span class="num-val">5</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>));
+
+<span class="comment">// realloc — ប្តូរទំហំ</span>
+arr = (<span class="type">int</span>*) <span class="func">realloc</span>(arr, <span class="num-val">10</span> * <span class="keyword">sizeof</span>(<span class="type">int</span>));
+            </div>
+
+            <h3 id="free">10.3 free()</h3>
+            <div class="code-block">
+<span class="func">free</span>(ptr);    <span class="comment">// បញ្ចេញ memory</span>
+ptr = <span class="macro">NULL</span>;  <span class="comment">// ការពារ dangling pointer</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C គ្មាន garbage collector។ ត្រូវហៅ <code>free()</code> ដោយខ្លួនឯង ដើម្បីការពារ memory leak។ បើភ្លេច នឹងធ្វើឲ្យកម្មវិធីប្រើ memory ច្រើនឡើងៗ។
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. File I/O</h2>
+
+            <h3 id="file-open">11.1 fopen / fclose</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+FILE *fp = <span class="func">fopen</span>(<span class="str">"data.txt"</span>, <span class="str">"w"</span>);
+
+<span class="keyword">if</span> (fp == <span class="macro">NULL</span>) {
+    <span class="func">printf</span>(<span class="str">"Cannot open file\n"</span>);
+    <span class="keyword">return</span> <span class="num-val">1</span>;
+}
+
+<span class="func">fclose</span>(fp);
+            </div>
+
+            <h3 id="file-read-write">11.2 Read / Write</h3>
+            <div class="code-block">
+<span class="comment">// សរសេរ</span>
+<span class="func">fprintf</span>(fp, <span class="str">"Hello File!\n"</span>);
+<span class="func">fputs</span>(<span class="str">"Hello\n"</span>, fp);
+<span class="func">fputc</span>(<span class="str">'A'</span>, fp);
+
+<span class="comment">// អាន</span>
+<span class="type">char</span> buffer[<span class="num-val">100</span>];
+<span class="func">fgets</span>(buffer, <span class="num-val">100</span>, fp);
+<span class="func">fscanf</span>(fp, <span class="str">"%s"</span>, buffer);
+            </div>
+
+            <h3 id="file-modes">11.3 File Modes</h3>
+            <table>
+                <thead><tr><th>Mode</th><th>និយមន័យ</th></tr></thead>
+                <tbody>
+                    <tr><td><code>"r"</code></td><td>អានតែ</td></tr>
+                    <tr><td><code>"w"</code></td><td>សរសេរ (លុបចាស់)</td></tr>
+                    <tr><td><code>"a"</code></td><td>បន្ថែម (append)</td></tr>
+                    <tr><td><code>"r+"</code></td><td>អាន + សរសេរ</td></tr>
+                    <tr><td><code>"rb"</code></td><td>អាន binary</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. Preprocessor</h2>
+
+            <h3 id="define">12.1 #define</h3>
+            <div class="code-block">
+<span class="include">#define</span> <span class="macro">PI</span> <span class="num-val">3.14159</span>
+<span class="include">#define</span> <span class="macro">MAX</span> <span class="num-val">100</span>
+
+<span class="func">printf</span>(<span class="str">"%f\n"</span>, PI);
+            </div>
+
+            <h3 id="macros">12.2 Macros</h3>
+            <div class="code-block">
+<span class="include">#define</span> <span class="macro">SQUARE</span>(x) ((x) * (x))
+<span class="include">#define</span> <span class="macro">MAX</span>(a, b) ((a) &gt; (b) ? (a) : (b))
+
+<span class="func">printf</span>(<span class="str">"%d\n"</span>, <span class="macro">SQUARE</span>(<span class="num-val">5</span>));   <span class="comment">// 25</span>
+            </div>
+
+            <h3 id="header">12.3 Header Files</h3>
+            <div class="code-block">
+<span class="comment">// mylib.h</span>
+<span class="include">#ifndef</span> <span class="macro">MYLIB_H</span>
+<span class="include">#define</span> <span class="macro">MYLIB_H</span>
+
+<span class="type">int</span> <span class="func">add</span>(<span class="type">int</span> a, <span class="type">int</span> b);
+
+<span class="include">#endif</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Macros គឺការជំនួសអត្ថបទដោយ preprocessor មុនពេល compile។ ប្រើ <code>()</code> ជុំវិញ parameters ដើម្បីការពារ bug។
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Error Handling</h2>
+
+            <h3 id="errno">13.1 errno</h3>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;errno.h&gt;</span>
+
+FILE *fp = <span class="func">fopen</span>(<span class="str">"nonexistent.txt"</span>, <span class="str">"r"</span>);
+<span class="keyword">if</span> (fp == <span class="macro">NULL</span>) {
+    <span class="func">printf</span>(<span class="str">"Error code: %d\n"</span>, errno);
+}
+            </div>
+
+            <h3 id="perror">13.2 perror</h3>
+            <div class="code-block">
+<span class="func">perror</span>(<span class="str">"File error"</span>);
+<span class="comment">// Output: File error: No such file or directory</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C គ្មាន try/catch ដូច Java។ ត្រូវពិនិត្យ return values (<code>NULL</code>, <code>-1</code>) និងប្រើ <code>errno</code> ឬ <code>perror()</code> ដើម្បីបង្ហាញ error message។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Best Practices</h2>
+            <ul>
+                <li>ប្រើ <code>const</code> នៅពេលអាចធ្វើបាន</li>
+                <li>Initialize variable ជានិច្ច</li>
+                <li>ពិនិត្យ <code>NULL</code> មុនប្រើ pointer</li>
+                <li>ប្រើ <code>sizeof</code> ជំនួស hardcode size</li>
+                <li>Free memory ជានិច្ច</li>
+                <li>ប្រើ <code>fgets()</code> ជំនួស <code>gets()</code> (safe)</li>
+                <li>បិទ file ជានិច្ច</li>
+                <li>រក្សា function តូច</li>
+                <li>Comment code ឲ្យច្បាស់</li>
+            </ul>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> C មាន flexibility ខ្ពស់ ប៉ុន្តែត្រូវការការយកចិត្តទុកដាក់ខ្ពស់។ Bug តូចៗអាចបណ្តាលឲ្យ <em>segmentation fault</em> ឬ <em>memory leak</em>។
+            </div>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. C Project</h2>
+            <p>សាកល្បងបង្កើត <strong>Student Manager</strong> តូចមួយដោយប្រើ struct និង file I/O៖</p>
+            <div class="code-block">
+<span class="include">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="include">#include</span> <span class="str">&lt;string.h&gt;</span>
+
+<span class="include">#define</span> <span class="macro">MAX</span> <span class="num-val">100</span>
+
+<span class="keyword">typedef struct</span> {
+    <span class="type">char</span> name[<span class="num-val">50</span>];
+    <span class="type">int</span> age;
+    <span class="type">float</span> gpa;
+} <span class="type">Student</span>;
+
+<span class="type">int</span> <span class="func">main</span>() {
+    <span class="type">Student</span> students[<span class="macro">MAX</span>];
+    <span class="type">int</span> count = <span class="num-val">0</span>;
+
+    <span class="comment">// បន្ថែម 3 នាក់</span>
+    <span class="func">strcpy</span>(students[<span class="num-val">0</span>].name, <span class="str">"Dara"</span>);
+    students[<span class="num-val">0</span>].age = <span class="num-val">20</span>;
+    students[<span class="num-val">0</span>].gpa = <span class="num-val">3.5</span>;
+
+    <span class="func">strcpy</span>(students[<span class="num-val">1</span>].name, <span class="str">"Sok"</span>);
+    students[<span class="num-val">1</span>].age = <span class="num-val">22</span>;
+    students[<span class="num-val">1</span>].gpa = <span class="num-val">3.8</span>;
+
+    <span class="func">strcpy</span>(students[<span class="num-val">2</span>].name, <span class="str">"Anna"</span>);
+    students[<span class="num-val">2</span>].age = <span class="num-val">19</span>;
+    students[<span class="num-val">2</span>].gpa = <span class="num-val">3.9</span>;
+
+    count = <span class="num-val">3</span>;
+
+    <span class="comment">// បង្ហាញ</span>
+    <span class="func">printf</span>(<span class="str">"=== Student List ===\n"</span>);
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; count; i++) {
+        <span class="func">printf</span>(<span class="str">"%s (Age: %d, GPA: %.1f)\n"</span>,
+               students[i].name,
+               students[i].age,
+               students[i].gpa);
+    }
+
+    <span class="comment">// Save to file</span>
+    FILE *fp = <span class="func">fopen</span>(<span class="str">"students.txt"</span>, <span class="str">"w"</span>);
+    <span class="keyword">if</span> (fp) {
+        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="num-val">0</span>; i &lt; count; i++) {
+            <span class="func">fprintf</span>(fp, <span class="str">"%s %d %.1f\n"</span>,
+                    students[i].name,
+                    students[i].age,
+                    students[i].gpa);
+        }
+        <span class="func">fclose</span>(fp);
+        <span class="func">printf</span>(<span class="str">"\nSaved to students.txt\n"</span>);
+    }
+
+    <span class="keyword">return</span> <span class="num-val">0</span>;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ struct, array, string functions និង file I/O។ សាកល្បងបន្ថែម៖ menu, add/delete student, ឬ search តាមឈ្មោះ។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> C ជាភាសាដ៏សំខាន់សម្រាប់អ្នកចង់យល់ពី low-level programming។ សាកល្បងគម្រោងតូចៗ — Calculator, Bank System, ឬ Game តូចៗ។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fas fa-code"></i> hello.c</div>
+            <div class="preview-body">
+<pre><span style="color:#f472b6">#include</span> <span style="color:#86efac">&lt;stdio.h&gt;</span>
+
+<span style="color:#fbbf24">int</span> <span style="color:#38bdf8">main</span>() {
+    <span style="color:#38bdf8">printf</span>(<span style="color:#86efac">"Hello, C!\n"</span>);
+    <span style="color:#c084fc">return</span> <span style="color:#86efac">0</span>;
+}</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-terminal"></i> Output
+            </div>
+            <div class="output-box">
+                Hello, C!
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">C Basics</a></li>
+                <li><a href="#">Pointers</a></li>
+                <li><a href="#">File I/O</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

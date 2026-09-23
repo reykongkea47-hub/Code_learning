@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>មេរៀន Bootstrap - CodeKhmerLearning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/page.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-code"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="../2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="toc-group active">
+            <a href="#lesson-1" class="toc-item">
+                <span class="num">1</span> Bootstrap Introduction
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">1.1. អ្វីជា Bootstrap?</a></li>
+                <li><a href="#why">1.2. ហេតុអ្វីប្រើ?</a></li>
+                <li><a href="#install">1.3. ការដំឡើង</a></li>
+                <li><a href="#first-page">1.4. ទំព័រដំបូង</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-2" class="toc-item">
+                <span class="num">2</span> Container & Grid System
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#container">2.1. Container</a></li>
+                <li><a href="#grid-basics">2.2. Grid Basics</a></li>
+                <li><a href="#breakpoints">2.3. Breakpoints</a></li>
+                <li><a href="#offset">2.4. Offset & Order</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-3" class="toc-item">
+                <span class="num">3</span> Typography
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#headings">3.1. Headings</a></li>
+                <li><a href="#display">3.2. Display Headings</a></li>
+                <li><a href="#text-utils">3.3. Text Utilities</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-4" class="toc-item">
+                <span class="num">4</span> Buttons & Badges
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#btn-basics">4.1. Buttons</a></li>
+                <li><a href="#btn-outline">4.2. Outline Buttons</a></li>
+                <li><a href="#btn-group">4.3. Button Group</a></li>
+                <li><a href="#badges">4.4. Badges</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-5" class="toc-item">
+                <span class="num">5</span> Forms
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#form-basics">5.1. Form Basics</a></li>
+                <li><a href="#input-groups">5.2. Input Groups</a></li>
+                <li><a href="#form-validation">5.3. Validation</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-6" class="toc-item">
+                <span class="num">6</span> Tables
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#table-basic">6.1. Basic Table</a></li>
+                <li><a href="#table-striped">6.2. Striped & Hover</a></li>
+                <li><a href="#table-responsive">6.3. Responsive</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-7" class="toc-item">
+                <span class="num">7</span> Cards & Images
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#card-basic">7.1. Card Basics</a></li>
+                <li><a href="#card-layout">7.2. Card Layout</a></li>
+                <li><a href="#images">7.3. Images</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-8" class="toc-item">
+                <span class="num">8</span> Alerts & Modals
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#alerts">8.1. Alerts</a></li>
+                <li><a href="#modal">8.2. Modal</a></li>
+                <li><a href="#toast">8.3. Toast</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-9" class="toc-item">
+                <span class="num">9</span> Navbar & Navigation
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#navbar">9.1. Navbar</a></li>
+                <li><a href="#nav-tabs">9.2. Nav & Tabs</a></li>
+                <li><a href="#breadcrumb">9.3. Breadcrumb</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-10" class="toc-item">
+                <span class="num">10</span> Utilities
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#spacing">10.1. Spacing</a></li>
+                <li><a href="#colors">10.2. Colors</a></li>
+                <li><a href="#display-utils">10.3. Display & Flex</a></li>
+                <li><a href="#positioning">10.4. Positioning</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-11" class="toc-item">
+                <span class="num">11</span> Components Extra
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#accordion">11.1. Accordion</a></li>
+                <li><a href="#carousel">11.2. Carousel</a></li>
+                <li><a href="#progress">11.3. Progress</a></li>
+                <li><a href="#pagination">11.4. Pagination</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-12" class="toc-item">
+                <span class="num">12</span> JavaScript Plugins
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#tooltips">12.1. Tooltips</a></li>
+                <li><a href="#popovers">12.2. Popovers</a></li>
+                <li><a href="#collapse">12.3. Collapse</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-13" class="toc-item">
+                <span class="num">13</span> Customization
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#sass">13.1. SASS Variables</a></li>
+                <li><a href="#custom-css">13.2. Custom CSS</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-14" class="toc-item">
+                <span class="num">14</span> Best Practices
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+
+        <div class="toc-group">
+            <a href="#lesson-15" class="toc-item">
+                <span class="num">15</span> Bootstrap Project
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- LESSON 1 -->
+        <section id="lesson-1" class="lesson-section">
+            <h2 class="lesson-title">1. Bootstrap Introduction - ការណែនាំ Bootstrap</h2>
+
+            <h3 id="intro">1.1 អ្វីជា Bootstrap?</h3>
+            <p>Bootstrap គឺជា <strong>CSS Framework</strong> ដ៏ពេញនិយមបំផុត ដែលបង្កើតឡើងដោយ Twitter ក្នុងឆ្នាំ 2011។</p>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> Bootstrap ផ្តល់ជូន class ដែលរួចរាល់សម្រាប់បង្កើត UI លឿន។ វាមាន grid system ដ៏មានឥទ្ធិឫទ្ធិ, components ច្រើន, និង JavaScript plugins។ ប្រើសម្រាប់៖
+                <ul style="margin: 0.5rem 0 0 1.3rem;">
+                    <li><strong>Admin Dashboards</strong> — ផ្ទាំងគ្រប់គ្រង</li>
+                    <li><strong>Landing Pages</strong> — ទំព័រផ្សព្វផ្សាយ</li>
+                    <li><strong>E-commerce</strong> — គេហទំព័រលក់ទំនិញ</li>
+                    <li><strong>Blog Templates</strong> — ទំព័រប្លុក</li>
+                </ul>
+            </div>
+
+            <h3 id="why">1.2 ហេតុអ្វីប្រើ Bootstrap?</h3>
+            <ul>
+                <li><strong>រហ័ស</strong> — មាន components រួចរាល់</li>
+                <li><strong>Responsive</strong> — ដំណើរការលើគ្រប់អេក្រង់</li>
+                <li><strong>Consistent</strong> — Design ស្មើគ្នា</li>
+                <li><strong>Browser Support</strong> — គាំទ្រគ្រប់ browser</li>
+                <li><strong>Community</strong> — សហគមន៍ធំ</li>
+            </ul>
+
+            <h3 id="install">1.3 ការដំឡើង</h3>
+
+            <h4>វិធី ១៖ ប្រើ CDN (ងាយស្រួលបំផុត)</h4>
+            <div class="code-block">
+<span class="comment">&lt;!-- CSS --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">href</span>=<span class="str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span><span class="tag">&gt;</span>
+
+<span class="comment">&lt;!-- JS --&gt;</span>
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+            </div>
+
+            <h4>វិធី ២៖ ដំឡើងក្នុងគម្រោង</h4>
+            <div class="code-block">
+npm install bootstrap
+            </div>
+
+            <h3 id="first-page">1.4 ទំព័រដំបូង</h3>
+            <div class="code-block">
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"km"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"viewport"</span> <span class="attr">content</span>=<span class="str">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">href</span>=<span class="str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Bootstrap Page<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="str">"text-primary"</span><span class="tag">&gt;</span>Hello, Bootstrap!<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>Click me<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 2 -->
+        <div class="section-divider"></div>
+        <section id="lesson-2" class="lesson-section">
+            <h2 class="lesson-title">2. Container & Grid System</h2>
+
+            <h3 id="container">2.1 Container</h3>
+            <ul>
+                <li><code>.container</code> — ទទឹងថេរ (responsive)</li>
+                <li><code>.container-fluid</code> — ពេញអេក្រង់ (100%)</li>
+                <li><code>.container-sm</code> / <code>.container-lg</code> — breakpoint ជាក់លាក់</li>
+            </ul>
+
+            <h3 id="grid-basics">2.2 Grid Basics</h3>
+            <p>Bootstrap grid ប្រើ <strong>12 columns</strong> ជាមូលដ្ឋាន។</p>
+
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"row"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-6"</span><span class="tag">&gt;</span>ពាក់កណ្តាល (6/12)<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-6"</span><span class="tag">&gt;</span>ពាក់កណ្តាល (6/12)<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"row"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-4"</span><span class="tag">&gt;</span>1/3<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-4"</span><span class="tag">&gt;</span>1/3<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-4"</span><span class="tag">&gt;</span>1/3<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="breakpoints">2.3 Breakpoints</h3>
+            <table>
+                <thead>
+                    <tr><th>Class</th><th>ទំហំ</th><th>ឧទាហរណ៍</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>col-*</code></td><td>&lt; 576px</td><td>Extra small</td></tr>
+                    <tr><td><code>col-sm-*</code></td><td>≥ 576px</td><td>Small</td></tr>
+                    <tr><td><code>col-md-*</code></td><td>≥ 768px</td><td>Medium (Tablet)</td></tr>
+                    <tr><td><code>col-lg-*</code></td><td>≥ 992px</td><td>Large (Laptop)</td></tr>
+                    <tr><td><code>col-xl-*</code></td><td>≥ 1200px</td><td>Extra large</td></tr>
+                    <tr><td><code>col-xxl-*</code></td><td>≥ 1400px</td><td>XXL</td></tr>
+                </tbody>
+            </table>
+
+            <div class="code-block">
+<span class="comment">&lt;!-- ១ ជួរលើទូរស័ព្ទ ២ ជួរលើ tablet ៤ ជួរលើ desktop --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"row"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-12 col-md-6 col-lg-3"</span><span class="tag">&gt;</span>ប្រអប់<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="offset">2.4 Offset & Order</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- Offset --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-4 offset-4"</span><span class="tag">&gt;</span>កណ្តាល<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Order --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col order-2"</span><span class="tag">&gt;</span>ទី ២<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col order-1"</span><span class="tag">&gt;</span>ទី ១<span class="tag">&lt;/div&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 3 -->
+        <div class="section-divider"></div>
+        <section id="lesson-3" class="lesson-section">
+            <h2 class="lesson-title">3. Typography</h2>
+
+            <h3 id="headings">3.1 Headings</h3>
+            <div class="code-block">
+<span class="tag">&lt;h1&gt;</span>Heading 1<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span>Heading 2<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span>Heading 3<span class="tag">&lt;/h3&gt;</span>
+<span class="comment">&lt;!-- ឬ --&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"h1"</span><span class="tag">&gt;</span>មើលទៅដូច H1<span class="tag">&lt;/p&gt;</span>
+            </div>
+
+            <h3 id="display">3.2 Display Headings</h3>
+            <div class="code-block">
+<span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="str">"display-1"</span><span class="tag">&gt;</span>Display 1<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="str">"display-4"</span><span class="tag">&gt;</span>Display 4<span class="tag">&lt;/h1&gt;</span>
+            </div>
+
+            <h3 id="text-utils">3.3 Text Utilities</h3>
+            <table>
+                <thead><tr><th>Class</th><th>និយមន័យ</th></tr></thead>
+                <tbody>
+                    <tr><td><code>text-start</code></td><td>ឆ្វេង</td></tr>
+                    <tr><td><code>text-center</code></td><td>កណ្តាល</td></tr>
+                    <tr><td><code>text-end</code></td><td>ស្តាំ</td></tr>
+                    <tr><td><code>text-uppercase</code></td><td>អក្សរធំ</td></tr>
+                    <tr><td><code>text-lowercase</code></td><td>អក្សរតូច</td></tr>
+                    <tr><td><code>text-capitalize</code></td><td>អក្សរធំដើមពាក្យ</td></tr>
+                    <tr><td><code>fw-bold</code></td><td>ដិត</td></tr>
+                    <tr><td><code>fst-italic</code></td><td>ផ្អៀង</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- LESSON 4 -->
+        <div class="section-divider"></div>
+        <section id="lesson-4" class="lesson-section">
+            <h2 class="lesson-title">4. Buttons & Badges</h2>
+
+            <h3 id="btn-basics">4.1 Buttons</h3>
+            <div class="code-block">
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>Primary<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-secondary"</span><span class="tag">&gt;</span>Secondary<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-success"</span><span class="tag">&gt;</span>Success<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-danger"</span><span class="tag">&gt;</span>Danger<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-warning"</span><span class="tag">&gt;</span>Warning<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-info"</span><span class="tag">&gt;</span>Info<span class="tag">&lt;/button&gt;</span>
+            </div>
+
+            <h4>ទំហំ Button</h4>
+            <div class="code-block">
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary btn-sm"</span><span class="tag">&gt;</span>តូច<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>ធម្មតា<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary btn-lg"</span><span class="tag">&gt;</span>ធំ<span class="tag">&lt;/button&gt;</span>
+            </div>
+
+            <h3 id="btn-outline">4.2 Outline Buttons</h3>
+            <div class="code-block">
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-outline-primary"</span><span class="tag">&gt;</span>Outline<span class="tag">&lt;/button&gt;</span>
+            </div>
+
+            <h3 id="btn-group">4.3 Button Group</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"btn-group"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>Left<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>Middle<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>Right<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="badges">4.4 Badges</h3>
+            <div class="code-block">
+<span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"badge bg-primary"</span><span class="tag">&gt;</span>New<span class="tag">&lt;/span&gt;</span>
+<span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"badge bg-success rounded-pill"</span><span class="tag">&gt;</span>99+<span class="tag">&lt;/span&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 5 -->
+        <div class="section-divider"></div>
+        <section id="lesson-5" class="lesson-section">
+            <h2 class="lesson-title">5. Forms</h2>
+
+            <h3 id="form-basics">5.1 Form Basics</h3>
+            <div class="code-block">
+<span class="tag">&lt;form&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mb-3"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">class</span>=<span class="str">"form-label"</span><span class="tag">&gt;</span>អ៊ីមែល<span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"email"</span> <span class="attr">class</span>=<span class="str">"form-control"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mb-3"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">class</span>=<span class="str">"form-label"</span><span class="tag">&gt;</span>ពាក្យសម្ងាត់<span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"password"</span> <span class="attr">class</span>=<span class="str">"form-control"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-check"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;input</span> <span class="attr">class</span>=<span class="str">"form-check-input"</span> <span class="attr">type</span>=<span class="str">"checkbox"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;label</span> <span class="attr">class</span>=<span class="str">"form-check-label"</span><span class="tag">&gt;</span>ចងចាំ<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+
+    <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="str">"submit"</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>បញ្ជូន<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </div>
+
+            <h3 id="input-groups">5.2 Input Groups</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"input-group mb-3"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"input-group-text"</span><span class="tag">&gt;</span>@<span class="tag">&lt;/span&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">class</span>=<span class="str">"form-control"</span> <span class="attr">placeholder</span>=<span class="str">"username"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="form-validation">5.3 Validation</h3>
+            <div class="code-block">
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">class</span>=<span class="str">"form-control is-valid"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"valid-feedback"</span><span class="tag">&gt;</span>ត្រឹមត្រូវ!<span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">class</span>=<span class="str">"form-control is-invalid"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"invalid-feedback"</span><span class="tag">&gt;</span>សូមបំពេញ<span class="tag">&lt;/div&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 6 -->
+        <div class="section-divider"></div>
+        <section id="lesson-6" class="lesson-section">
+            <h2 class="lesson-title">6. Tables</h2>
+
+            <h3 id="table-basic">6.1 Basic Table</h3>
+            <div class="code-block">
+<span class="tag">&lt;table</span> <span class="attr">class</span>=<span class="str">"table"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;thead&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;th&gt;</span>#<span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th&gt;</span>ឈ្មោះ<span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th&gt;</span>អ៊ីមែល<span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/thead&gt;</span>
+    <span class="tag">&lt;tbody&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td&gt;</span>1<span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span>Dara<span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span>dara@example.com<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </div>
+
+            <h3 id="table-striped">6.2 Striped & Hover</h3>
+            <div class="code-block">
+<span class="tag">&lt;table</span> <span class="attr">class</span>=<span class="str">"table table-striped table-hover"</span><span class="tag">&gt;</span>
+    ...
+<span class="tag">&lt;/table&gt;</span>
+            </div>
+
+            <h3 id="table-responsive">6.3 Responsive</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"table-responsive"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;table</span> <span class="attr">class</span>=<span class="str">"table"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/table&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 7 -->
+        <div class="section-divider"></div>
+        <section id="lesson-7" class="lesson-section">
+            <h2 class="lesson-title">7. Cards & Images</h2>
+
+            <h3 id="card-basic">7.1 Card Basics</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card"</span> <span class="attr">style</span>=<span class="str">"width: 18rem;"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">class</span>=<span class="str">"card-img-top"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card-body"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;h5</span> <span class="attr">class</span>=<span class="str">"card-title"</span><span class="tag">&gt;</span>ចំណងជើង<span class="tag">&lt;/h5&gt;</span>
+        <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"card-text"</span><span class="tag">&gt;</span>អត្ថបទពិពណ៌នា...<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>មើល<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="card-layout">7.2 Card Layout (Grid)</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"row row-cols-1 row-cols-md-3 g-4"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card h-100"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    ...
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="images">7.3 Images</h3>
+            <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">class</span>=<span class="str">"img-fluid"</span><span class="tag">&gt;</span>       <span class="comment">&lt;!-- Responsive --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">class</span>=<span class="str">"rounded"</span><span class="tag">&gt;</span>         <span class="comment">&lt;!-- ជ្រុង --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">class</span>=<span class="str">"rounded-circle"</span><span class="tag">&gt;</span>  <span class="comment">&lt;!-- រង្វង់ --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">class</span>=<span class="str">"img-thumbnail"</span><span class="tag">&gt;</span>     <span class="comment">&lt;!-- ស៊ុម --&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 8 -->
+        <div class="section-divider"></div>
+        <section id="lesson-8" class="lesson-section">
+            <h2 class="lesson-title">8. Alerts & Modals</h2>
+
+            <h3 id="alerts">8.1 Alerts</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-success"</span><span class="tag">&gt;</span>ជោគជ័យ!<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-danger"</span><span class="tag">&gt;</span>កំហុស!<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-warning alert-dismissible fade show"</span><span class="tag">&gt;</span>
+    ព្រមាន!
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-close"</span> <span class="attr">data-bs-dismiss</span>=<span class="str">"alert"</span><span class="tag">&gt;&lt;/button&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="modal">8.2 Modal</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- Button បើក --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span> <span class="attr">data-bs-toggle</span>=<span class="str">"modal"</span> <span class="attr">data-bs-target</span>=<span class="str">"#myModal"</span><span class="tag">&gt;</span>
+    បើក Modal
+<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Modal --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal fade"</span> <span class="attr">id</span>=<span class="str">"myModal"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-dialog"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-content"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-header"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;h5</span> <span class="attr">class</span>=<span class="str">"modal-title"</span><span class="tag">&gt;</span>ចំណងជើង<span class="tag">&lt;/h5&gt;</span>
+                <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-close"</span> <span class="attr">data-bs-dismiss</span>=<span class="str">"modal"</span><span class="tag">&gt;&lt;/button&gt;</span>
+            <span class="tag">&lt;/div&gt;</span>
+            <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-body"</span><span class="tag">&gt;</span>មាតិកា...<span class="tag">&lt;/div&gt;</span>
+            <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-footer"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-secondary"</span> <span class="attr">data-bs-dismiss</span>=<span class="str">"modal"</span><span class="tag">&gt;</span>បិទ<span class="tag">&lt;/button&gt;</span>
+                <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>យល់ព្រម<span class="tag">&lt;/button&gt;</span>
+            <span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="toast">8.3 Toast</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"toast show"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"toast-header"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;strong</span> <span class="attr">class</span>=<span class="str">"me-auto"</span><span class="tag">&gt;</span>ជូនដំណឹង<span class="tag">&lt;/strong&gt;</span>
+        <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-close"</span> <span class="attr">data-bs-dismiss</span>=<span class="str">"toast"</span><span class="tag">&gt;&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"toast-body"</span><span class="tag">&gt;</span>សារ...<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 9 -->
+        <div class="section-divider"></div>
+        <section id="lesson-9" class="lesson-section">
+            <h2 class="lesson-title">9. Navbar & Navigation</h2>
+
+            <h3 id="navbar">9.1 Navbar</h3>
+            <div class="code-block">
+<span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="str">"navbar navbar-expand-lg navbar-dark bg-dark"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"navbar-brand"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>Logo<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"navbar-toggler"</span> <span class="attr">data-bs-toggle</span>=<span class="str">"collapse"</span> <span class="attr">data-bs-target</span>=<span class="str">"#nav"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"navbar-toggler-icon"</span><span class="tag">&gt;&lt;/span&gt;</span>
+        <span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"collapse navbar-collapse"</span> <span class="attr">id</span>=<span class="str">"nav"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="str">"navbar-nav ms-auto"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"nav-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"nav-link active"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>ទំព័រដើម<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"nav-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"nav-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>អំពី<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+            </div>
+
+            <h3 id="nav-tabs">9.2 Nav & Tabs</h3>
+            <div class="code-block">
+<span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="str">"nav nav-tabs"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"nav-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"nav-link active"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>Tab 1<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"nav-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"nav-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>Tab 2<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+            </div>
+
+            <h3 id="breadcrumb">9.3 Breadcrumb</h3>
+            <div class="code-block">
+<span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;ol</span> <span class="attr">class</span>=<span class="str">"breadcrumb"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"breadcrumb-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>ទំព័រដើម<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"breadcrumb-item active"</span><span class="tag">&gt;</span>មេរៀន<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ol&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 10 -->
+        <div class="section-divider"></div>
+        <section id="lesson-10" class="lesson-section">
+            <h2 class="lesson-title">10. Utilities</h2>
+
+            <h3 id="spacing">10.1 Spacing</h3>
+            <p>Format: <code>{property}{sides}-{size}</code></p>
+            <ul>
+                <li><strong>Property:</strong> <code>m</code> (margin), <code>p</code> (padding)</li>
+                <li><strong>Sides:</strong> <code>t</code> (top), <code>b</code> (bottom), <code>s</code> (start), <code>e</code> (end), <code>x</code> (left+right), <code>y</code> (top+bottom), blank (all)</li>
+                <li><strong>Size:</strong> 0, 1, 2, 3, 4, 5 (0 = 0, 5 = 3rem)</li>
+            </ul>
+
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mt-3 mb-4 px-2 py-1"</span><span class="tag">&gt;&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="colors">10.2 Colors</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- Text color --&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-primary"</span><span class="tag">&gt;</span>Primary<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-success"</span><span class="tag">&gt;</span>Success<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-danger"</span><span class="tag">&gt;</span>Danger<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-muted"</span><span class="tag">&gt;</span>Muted<span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Background --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-primary text-white"</span><span class="tag">&gt;</span>Primary BG<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="display-utils">10.3 Display & Flex</h3>
+            <div class="code-block">
+<span class="comment">&lt;!-- Display --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"d-none d-md-block"</span><span class="tag">&gt;&lt;/div&gt;</span>
+<span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"d-inline"</span><span class="tag">&gt;&lt;/span&gt;</span>
+
+<span class="comment">&lt;!-- Flex --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"d-flex justify-content-between align-items-center"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div&gt;</span>Left<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div&gt;</span>Right<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="positioning">10.4 Positioning</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"position-relative"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"position-absolute top-0 end-0"</span><span class="tag">&gt;</span>Top Right<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 11 -->
+        <div class="section-divider"></div>
+        <section id="lesson-11" class="lesson-section">
+            <h2 class="lesson-title">11. Components Extra</h2>
+
+            <h3 id="accordion">11.1 Accordion</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"accordion"</span> <span class="attr">id</span>=<span class="str">"acc"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"accordion-item"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="str">"accordion-header"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"accordion-button"</span> <span class="attr">data-bs-toggle</span>=<span class="str">"collapse"</span> <span class="attr">data-bs-target</span>=<span class="str">"#item1"</span><span class="tag">&gt;</span>
+                ចំណងជើង ១
+            <span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;/h2&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">id</span>=<span class="str">"item1"</span> <span class="attr">class</span>=<span class="str">"accordion-collapse collapse show"</span> <span class="attr">data-bs-parent</span>=<span class="str">"#acc"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"accordion-body"</span><span class="tag">&gt;</span>មាតិកា...<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="carousel">11.2 Carousel</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"carousel slide"</span> <span class="attr">data-bs-ride</span>=<span class="str">"carousel"</span> <span class="attr">id</span>=<span class="str">"car"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"carousel-inner"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"carousel-item active"</span><span class="tag">&gt;&lt;img</span> <span class="attr">src</span>=<span class="str">"1.jpg"</span><span class="tag">&gt;&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"carousel-item"</span><span class="tag">&gt;&lt;img</span> <span class="attr">src</span>=<span class="str">"2.jpg"</span><span class="tag">&gt;&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"carousel-control-prev"</span> <span class="attr">data-bs-target</span>=<span class="str">"#car"</span> <span class="attr">data-bs-slide</span>=<span class="str">"prev"</span><span class="tag">&gt;&lt;/button&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"carousel-control-next"</span> <span class="attr">data-bs-target</span>=<span class="str">"#car"</span> <span class="attr">data-bs-slide</span>=<span class="str">"next"</span><span class="tag">&gt;&lt;/button&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="progress">11.3 Progress</h3>
+            <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"progress"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"progress-bar"</span> <span class="attr">style</span>=<span class="str">"width: 75%"</span><span class="tag">&gt;</span>75%<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Striped --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"progress-bar progress-bar-striped progress-bar-animated"</span><span class="tag">&gt;&lt;/div&gt;</span>
+            </div>
+
+            <h3 id="pagination">11.4 Pagination</h3>
+            <div class="code-block">
+<span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="str">"pagination"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"page-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"page-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>មុន<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"page-item active"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"page-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"page-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"page-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"page-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"page-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>បន្ទាប់<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 12 -->
+        <div class="section-divider"></div>
+        <section id="lesson-12" class="lesson-section">
+            <h2 class="lesson-title">12. JavaScript Plugins</h2>
+
+            <h3 id="tooltips">12.1 Tooltips</h3>
+            <div class="code-block">
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span> <span class="attr">data-bs-toggle</span>=<span class="str">"tooltip"</span> <span class="attr">data-bs-title</span>=<span class="str">"នេះជា tooltip"</span><span class="tag">&gt;</span>
+    ដាក់ Mouse លើ
+<span class="tag">&lt;/button&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+    <span class="kw">const</span> tooltips = document.<span class="func">querySelectorAll</span>(<span class="str">'[data-bs-toggle="tooltip"]'</span>);
+    tooltips.<span class="func">forEach</span>(el =&gt; <span class="kw">new</span> bootstrap.<span class="type">Tooltip</span>(el));
+<span class="tag">&lt;/script&gt;</span>
+            </div>
+
+            <h3 id="popovers">12.2 Popovers</h3>
+            <div class="code-block">
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-secondary"</span>
+        <span class="attr">data-bs-toggle</span>=<span class="str">"popover"</span>
+        <span class="attr">data-bs-title</span>=<span class="str">"ចំណងជើង"</span>
+        <span class="attr">data-bs-content</span>=<span class="str">"មាតិកា..."</span><span class="tag">&gt;</span>
+    ចុច
+<span class="tag">&lt;/button&gt;</span>
+            </div>
+
+            <h3 id="collapse">12.3 Collapse</h3>
+            <div class="code-block">
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span> <span class="attr">data-bs-toggle</span>=<span class="str">"collapse"</span> <span class="attr">data-bs-target</span>=<span class="str">"#demo"</span><span class="tag">&gt;</span>
+    បង្ហាញ / លាក់
+<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"collapse"</span> <span class="attr">id</span>=<span class="str">"demo"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card card-body"</span><span class="tag">&gt;</span>មាតិកា...<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+        </section>
+
+        <!-- LESSON 13 -->
+        <div class="section-divider"></div>
+        <section id="lesson-13" class="lesson-section">
+            <h2 class="lesson-title">13. Customization</h2>
+
+            <h3 id="sass">13.1 SASS Variables</h3>
+            <div class="code-block">
+<span class="comment">// _custom.scss</span>
+<span class="kw">$primary</span>: #7952b3;
+<span class="kw">$border-radius</span>: 0.5rem;
+
+@import <span class="str">"bootstrap/scss/bootstrap"</span>;
+            </div>
+
+            <h3 id="custom-css">13.2 Custom CSS</h3>
+            <div class="code-block">
+<span class="comment">/* បន្ថែម CSS ផ្ទាល់ខ្លួន */</span>
+.btn-custom {
+    background: linear-gradient(135deg, #7952b3, #9059ff);
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, #5c3d91, #7952b3);
+    color: white;
+}
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> អ្នកអាច override Bootstrap variables ដោយប្រើ SASS ឬបន្ថែម CSS ផ្ទាល់ខ្លួននៅក្រោយ Bootstrap CSS។
+            </div>
+        </section>
+
+        <!-- LESSON 14 -->
+        <div class="section-divider"></div>
+        <section id="lesson-14" class="lesson-section">
+            <h2 class="lesson-title">14. Best Practices</h2>
+            <ul>
+                <li>ប្រើ <code>container</code> ជាប្រអប់ខាងក្រៅ</li>
+                <li>ប្រើ grid classes ជំនួស custom CSS</li>
+                <li>ប្រើ utility classes សម្រាប់ spacing</li>
+                <li>រក្សា HTML semantic និង accessible</li>
+                <li>ប្រើ <code>row-cols-*</code> សម្រាប់ responsive cards</li>
+                <li>មិន override Bootstrap ច្រើនពេក</li>
+                <li>ប្រើ JS bundle សម្រាប់ plugins</li>
+                <li>Test លើគ្រប់ breakpoint</li>
+            </ul>
+        </section>
+
+        <!-- LESSON 15 -->
+        <div class="section-divider"></div>
+        <section id="lesson-15" class="lesson-section">
+            <h2 class="lesson-title">15. Bootstrap Project</h2>
+            <p>សាកល្បងបង្កើត <strong>Landing Page</strong> តូចមួយ៖</p>
+            <div class="code-block">
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"km"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">href</span>=<span class="str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Landing Page<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="comment">&lt;!-- Navbar --&gt;</span>
+    <span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="str">"navbar navbar-expand-lg navbar-dark bg-primary"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"navbar-brand"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>Code_Learning<span class="tag">&lt;/a&gt;</span>
+            <span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="str">"navbar-nav ms-auto"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"nav-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"nav-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>ទំព័រដើម<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"nav-item"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"nav-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>មេរៀន<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/nav&gt;</span>
+
+    <span class="comment">&lt;!-- Hero --&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"bg-light py-5"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container text-center"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;h1</span> <span class="attr">class</span>=<span class="str">"display-4 fw-bold mb-3"</span><span class="tag">&gt;</span>រៀនសរសេរកូដ<span class="tag">&lt;/h1&gt;</span>
+            <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"lead mb-4"</span><span class="tag">&gt;</span>ចាប់ផ្តើមជាមួយ Code_Learning<span class="tag">&lt;/p&gt;</span>
+            <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"btn btn-primary btn-lg"</span><span class="tag">&gt;</span>ចាប់ផ្តើម<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+
+    <span class="comment">&lt;!-- Cards --&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container py-5"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"row row-cols-1 row-cols-md-3 g-4"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card h-100"</span><span class="tag">&gt;</span>
+                    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card-body"</span><span class="tag">&gt;</span>
+                        <span class="tag">&lt;h5</span> <span class="attr">class</span>=<span class="str">"card-title"</span><span class="tag">&gt;</span>HTML<span class="tag">&lt;/h5&gt;</span>
+                        <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"card-text"</span><span class="tag">&gt;</span>មូលដ្ឋានគ្រឹះនៃគេហទំព័រ<span class="tag">&lt;/p&gt;</span>
+                    <span class="tag">&lt;/div&gt;</span>
+                <span class="tag">&lt;/div&gt;</span>
+            <span class="tag">&lt;/div&gt;</span>
+            <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+            <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+
+    <span class="comment">&lt;!-- Footer --&gt;</span>
+    <span class="tag">&lt;footer</span> <span class="attr">class</span>=<span class="str">"bg-dark text-white text-center py-4"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"mb-0"</span><span class="tag">&gt;</span>© 2026 Code_Learning<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/footer&gt;</span>
+
+    <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </div>
+
+            <div class="kh-explain">
+                <strong>📘 ការពន្យល់៖:</strong> គម្រោងនេះប្រើ Navbar, Hero, Card Grid និង Footer។ សាកល្បងបន្ថែម៖ Carousel, Form, ឬ Modal។
+            </div>
+
+            <div class="note-box tip">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>គន្លឹះ៖:</strong> Bootstrap ល្អសម្រាប់អ្នកដែលចង់បង្កើតគេហទំព័រលឿន និងមាន components ច្រើនរួចរាល់។ សាកល្បងគម្រោងតូចៗ — Portfolio, Landing Page, Admin Panel។</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fab fa-bootstrap"></i> index.html</div>
+            <div class="preview-body">
+<pre><span style="color:#f472b6">&lt;!DOCTYPE html&gt;</span>
+<span style="color:#f472b6">&lt;html&gt;</span>
+<span style="color:#f472b6">&lt;head&gt;</span>
+  <span style="color:#f472b6">&lt;link</span> <span style="color:#fbbf24">href</span>=<span style="color:#86efac">"bootstrap.min.css"</span> <span style="color:#fbbf24">rel</span>=<span style="color:#86efac">"stylesheet"</span><span style="color:#f472b6">&gt;</span>
+<span style="color:#f472b6">&lt;/head&gt;</span>
+<span style="color:#f472b6">&lt;body&gt;</span>
+  <span style="color:#f472b6">&lt;div</span> <span style="color:#fbbf24">class</span>=<span style="color:#86efac">"container mt-4"</span><span style="color:#f472b6">&gt;</span>
+    <span style="color:#f472b6">&lt;h1</span> <span style="color:#fbbf24">class</span>=<span style="color:#86efac">"text-primary"</span><span style="color:#f472b6">&gt;</span>Hello Bootstrap!<span style="color:#f472b6">&lt;/h1&gt;</span>
+    <span style="color:#f472b6">&lt;button</span> <span style="color:#fbbf24">class</span>=<span style="color:#86efac">"btn btn-primary"</span><span style="color:#f472b6">&gt;</span>Click<span style="color:#f472b6">&lt;/button&gt;</span>
+  <span style="color:#f472b6">&lt;/div&gt;</span>
+<span style="color:#f472b6">&lt;/body&gt;</span>
+<span style="color:#f472b6">&lt;/html&gt;</span></pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#7952b3;">
+                <i class="fas fa-eye"></i> លទ្ធផល
+            </div>
+            <div class="output-box">
+                <h2 style="font-size:1.5rem;color:#7952b3;margin-bottom:0.5rem;">Hello Bootstrap!</h2>
+                <button style="background:#7952b3;color:#fff;padding:0.5rem 1rem;border:none;border-radius:6px;font-weight:600;">Click me</button>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">Bootstrap Basics</a></li>
+                <li><a href="#">Components</a></li>
+                <li><a href="#">Grid System</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-section, .content h3, .content h4');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
