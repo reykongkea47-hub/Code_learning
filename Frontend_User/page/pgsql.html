@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="eg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Code_Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Battambang:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../style/navbar.css">
+<link rel="stylesheet" href="../style/tech_stack.css">
+<link rel="stylesheet" href="../style/page.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <i class="fas fa-database"></i>
+        <span>Code_Learning</span>
+    </a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+        <li><a href="2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+        <li><a href="/Frontend_User/profile.html">Profile</a></li>
+        <li><a href="../project.html"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="../Community.html"><i class="fas fa-users"></i> Community</a></li>
+    </ul>
+</nav>
+
+<!-- TOP TECH NAV -->
+<section class="tech-bar">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="tech-scroll">
+        <a href="./index.html">HTML</a>
+        <a href="./css.html">CSS</a>
+        <a href="./javascript.html">JAVASCRIPT</a>
+        <a href="./sql.html">SQL</a>
+        <a href="./python.html">PYTHON</a>
+        <a href="./java.html">JAVA</a>
+        <a href="./php.html">PHP</a>
+        <a href="./C.html">C</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./csharp.html">C#</a>
+        <a href="./bootstrap.html">BOOTSTRAP</a>
+        <a href="./react.html">REACT</a>
+         <a href="./pgsql.html">Pgsql</a>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</section>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="toc-group active">
+            <a href="#intro" class="toc-item">
+                <span class="num">1</span> PostgreSQL Tutorial
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#intro" class="active">PostgreSQL Home</a></li>
+                <li><a href="#what-is">PostgreSQL Intro</a></li>
+                <li><a href="#install">PostgreSQL Install</a></li>
+                <li><a href="#get-started">PostgreSQL Get Started</a></li>
+                <li><a href="#pgadmin">PostgreSQL pgAdmin 4</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#database" class="toc-item">
+                <span class="num">2</span> Database
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#create-table">CREATE TABLE</a></li>
+                <li><a href="#insert-into">INSERT INTO</a></li>
+                <li><a href="#fetch-data">Fetch Data</a></li>
+                <li><a href="#add-column">ADD COLUMN</a></li>
+                <li><a href="#update">UPDATE</a></li>
+                <li><a href="#alter-column">ALTER COLUMN</a></li>
+                <li><a href="#drop-column">DROP COLUMN</a></li>
+                <li><a href="#delete">DELETE</a></li>
+                <li><a href="#drop-table">DROP TABLE</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#syntax" class="toc-item">
+                <span class="num">3</span> PostgreSQL Syntax
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#select">SELECT</a></li>
+                <li><a href="#select-distinct">SELECT DISTINCT</a></li>
+                <li><a href="#where">WHERE</a></li>
+                <li><a href="#order-by">ORDER BY</a></li>
+                <li><a href="#limit">LIMIT</a></li>
+                <li><a href="#min-max">MIN and MAX</a></li>
+                <li><a href="#count">COUNT</a></li>
+                <li><a href="#sum">SUM</a></li>
+                <li><a href="#avg">AVG</a></li>
+                <li><a href="#like">LIKE</a></li>
+                <li><a href="#in">IN</a></li>
+                <li><a href="#between">BETWEEN</a></li>
+                <li><a href="#as">AS</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#joins" class="toc-item">
+                <span class="num">4</span> Joins
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#joins">Joins</a></li>
+                <li><a href="#inner-join">INNER JOIN</a></li>
+                <li><a href="#left-join">LEFT JOIN</a></li>
+                <li><a href="#right-join">RIGHT JOIN</a></li>
+                <li><a href="#full-join">FULL JOIN</a></li>
+                <li><a href="#cross-join">CROSS JOIN</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#advanced" class="toc-item">
+                <span class="num">5</span> Advanced
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#union">UNION</a></li>
+                <li><a href="#group-by">GROUP BY</a></li>
+                <li><a href="#having">HAVING</a></li>
+                <li><a href="#exists">EXISTS</a></li>
+                <li><a href="#any">ANY</a></li>
+                <li><a href="#all">ALL</a></li>
+                <li><a href="#case">CASE</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-group">
+            <a href="#cert" class="toc-item">
+                <span class="num">6</span> Certificate & Exercises
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+            <ul class="toc-sub">
+                <li><a href="#cert">PostgreSQL Cert</a></li>
+                <li><a href="#certificate">Certificate</a></li>
+                <li><a href="#exercises">Exercises</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#syllabus">Syllabus</a></li>
+                <li><a href="#study-plan">Study Plan</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- ========== INTRODUCTION ========== -->
+        <h2 class="lesson-title" id="intro">PostgreSQL Tutorial - ការណែនាំ PostgreSQL</h2>
+        <p>PostgreSQL គឺជាប្រព័ន្ធគ្រប់គ្រង database ប្រភេទ <strong>object-relational</strong> ដែលមានអាយុកាលជាង 35 ឆ្នាំ និងត្រូវបានប្រើប្រាស់យ៉ាងទូលំទូលាយក្នុងពិភពលោក។</p>
+
+        <div class="kh-explain">
+            <strong>📘 ការពន្យល់៖:</strong> PostgreSQL គឺ <em>open-source</em>, ឥតគិតថ្លៃ, មានសុវត្ថិភាពខ្ពស់, គាំទ្រ ACID និងមាន features ជាច្រើនដូចជា JSON, full-text search, និង window functions។
+        </div>
+
+        <h3 id="what-is">PostgreSQL Intro</h3>
+        <p>PostgreSQL (ហៅកាត់ថា <strong>Postgres</strong>) ត្រូវបានបង្កើតឡើងនៅ UC Berkeley ក្នុងឆ្នាំ 1986។</p>
+        <ul>
+            <li>✅ គាំទ្រ SQL ពេញលេញ</li>
+            <li>✅ ACID compliant</li>
+            <li>✅ គាំទ្រ JSON / JSONB</li>
+            <li>✅ Cross-platform</li>
+        </ul>
+
+        <h3 id="install">PostgreSQL Install</h3>
+        <p>ទាញយកពី <strong>postgresql.org</strong> រួចដំឡើងតាមប្រព័ន្ធប្រតិបត្តិការរបស់អ្នក៖</p>
+        <div class="code-block">
+<span class="comment"># Ubuntu / Debian</span>
+sudo apt install postgresql postgresql-contrib
+
+<span class="comment"># MacOS</span>
+brew install postgresql
+
+<span class="comment"># Windows</span>
+<span class="comment"># ទាញយក installer ពី postgresql.org</span>
+        </div>
+
+        <h3 id="get-started">PostgreSQL Get Started</h3>
+        <p>ចាប់ផ្តើមជាមួយ PostgreSQL៖</p>
+        <div class="code-block">
+<span class="comment"># ចូលទៅ PostgreSQL</span>
+psql -U postgres
+
+<span class="comment"># បង្កើត database</span>
+<span class="keyword">CREATE DATABASE</span> <span class="table">mydb</span>;
+
+<span class="comment"># ជ្រើស database</span>
+\c mydb
+        </div>
+
+        <h3 id="pgadmin">PostgreSQL pgAdmin 4</h3>
+        <p><strong>pgAdmin 4</strong> គឺជា GUI tool ដ៏ពេញនិយមសម្រាប់គ្រប់គ្រង PostgreSQL។</p>
+        <ul>
+            <li>ទាញយកពី <strong>pgadmin.org</strong></li>
+            <li>ភ្ជាប់ទៅ server: <code>localhost:5432</code></li>
+            <li>គ្រប់គ្រង database, tables, queries</li>
+        </ul>
+
+        <!-- ========== DATABASE ========== -->
+        <div class="section-divider"></div>
+        <h2 class="lesson-title" id="database">Database - គ្រប់គ្រង Database</h2>
+
+        <h3 id="create-table">CREATE TABLE</h3>
+        <div class="code-block">
+<span class="keyword">CREATE TABLE</span> <span class="table">users</span> (
+    <span class="column">id</span> <span class="type">SERIAL PRIMARY KEY</span>,
+    <span class="column">name</span> <span class="type">VARCHAR</span>(<span class="num-val">100</span>) <span class="keyword">NOT NULL</span>,
+    <span class="column">email</span> <span class="type">VARCHAR</span>(<span class="num-val">150</span>) <span class="keyword">UNIQUE</span>,
+    <span class="column">age</span> <span class="type">INT</span>,
+    <span class="column">created_at</span> <span class="type">TIMESTAMP DEFAULT NOW</span>()
+);
+        </div>
+
+        <h3 id="insert-into">INSERT INTO</h3>
+        <div class="code-block">
+<span class="keyword">INSERT INTO</span> <span class="table">users</span> (<span class="column">name</span>, <span class="column">email</span>, <span class="column">age</span>)
+<span class="keyword">VALUES</span> (<span class="str">'Dara'</span>, <span class="str">'dara@example.com'</span>, <span class="num-val">20</span>);
+
+<span class="keyword">INSERT INTO</span> <span class="table">users</span> (<span class="column">name</span>, <span class="column">email</span>, <span class="column">age</span>) <span class="keyword">VALUES</span>
+(<span class="str">'Sok'</span>, <span class="str">'sok@example.com'</span>, <span class="num-val">22</span>),
+(<span class="str">'Anna'</span>, <span class="str">'anna@example.com'</span>, <span class="num-val">19</span>);
+        </div>
+
+        <h3 id="fetch-data">Fetch Data</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>;
+<span class="keyword">SELECT</span> <span class="column">name</span>, <span class="column">email</span> <span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <h3 id="add-column">ADD COLUMN</h3>
+        <div class="code-block">
+<span class="keyword">ALTER TABLE</span> <span class="table">users</span> <span class="keyword">ADD COLUMN</span> <span class="column">phone</span> <span class="type">VARCHAR</span>(<span class="num-val">20</span>);
+        </div>
+
+        <h3 id="update">UPDATE</h3>
+        <div class="code-block">
+<span class="keyword">UPDATE</span> <span class="table">users</span>
+<span class="keyword">SET</span> <span class="column">age</span> = <span class="num-val">21</span>
+<span class="keyword">WHERE</span> <span class="column">name</span> = <span class="str">'Dara'</span>;
+        </div>
+
+        <h3 id="alter-column">ALTER COLUMN</h3>
+        <div class="code-block">
+<span class="keyword">ALTER TABLE</span> <span class="table">users</span>
+<span class="keyword">ALTER COLUMN</span> <span class="column">name</span> <span class="type">TYPE VARCHAR</span>(<span class="num-val">200</span>);
+        </div>
+
+        <h3 id="drop-column">DROP COLUMN</h3>
+        <div class="code-block">
+<span class="keyword">ALTER TABLE</span> <span class="table">users</span> <span class="keyword">DROP COLUMN</span> <span class="column">phone</span>;
+        </div>
+
+        <h3 id="delete">DELETE</h3>
+        <div class="code-block">
+<span class="keyword">DELETE FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> &lt; <span class="num-val">18</span>;
+        </div>
+
+        <h3 id="drop-table">DROP TABLE</h3>
+        <div class="code-block">
+<span class="keyword">DROP TABLE</span> <span class="table">users</span>;
+        </div>
+
+        <!-- ========== SYNTAX & OPERATORS ========== -->
+        <div class="section-divider"></div>
+        <h2 class="lesson-title" id="syntax">PostgreSQL Syntax & Operators</h2>
+
+        <h3 id="operators">Operators</h3>
+        <table>
+            <thead>
+                <tr><th>Operator</th><th>និយមន័យ</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>=</code></td><td>ស្មើ</td></tr>
+                <tr><td><code>&lt;&gt;</code> ឬ <code>!=</code></td><td>មិនស្មើ</td></tr>
+                <tr><td><code>&gt;</code>, <code>&lt;</code></td><td>ធំ / តូច</td></tr>
+                <tr><td><code>LIKE</code></td><td>ផ្គូផ្គង pattern</td></tr>
+                <tr><td><code>IN</code></td><td>ស្ថិតក្នុងបញ្ជី</td></tr>
+                <tr><td><code>BETWEEN</code></td><td>ក្នុងចន្លោះ</td></tr>
+            </tbody>
+        </table>
+
+        <h3 id="select">SELECT</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <h3 id="select-distinct">SELECT DISTINCT</h3>
+        <div class="code-block">
+<span class="keyword">SELECT DISTINCT</span> <span class="column">age</span> <span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <h3 id="where">WHERE</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> &gt; <span class="num-val">18</span>;
+        </div>
+
+        <h3 id="order-by">ORDER BY</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">ORDER BY</span> <span class="column">age</span> <span class="keyword">DESC</span>;
+        </div>
+
+        <h3 id="limit">LIMIT</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">LIMIT</span> <span class="num-val">10</span>;
+        </div>
+
+        <h3 id="min-max">MIN and MAX</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="func">MIN</span>(<span class="column">age</span>), <span class="func">MAX</span>(<span class="column">age</span>) <span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <h3 id="count">COUNT</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="func">COUNT</span>(*) <span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <h3 id="sum">SUM</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="func">SUM</span>(<span class="column">price</span>) <span class="keyword">FROM</span> <span class="table">orders</span>;
+        </div>
+
+        <h3 id="avg">AVG</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="func">AVG</span>(<span class="column">age</span>) <span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <h3 id="like">LIKE</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">name</span> <span class="keyword">LIKE</span> <span class="str">'D%'</span>;
+        </div>
+
+        <h3 id="in">IN</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> <span class="keyword">IN</span> (<span class="num-val">18</span>, <span class="num-val">20</span>, <span class="num-val">25</span>);
+        </div>
+
+        <h3 id="between">BETWEEN</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> <span class="keyword">BETWEEN</span> <span class="num-val">18</span> <span class="keyword">AND</span> <span class="num-val">30</span>;
+        </div>
+
+        <h3 id="as">AS</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="column">name</span> <span class="keyword">AS</span> username, <span class="column">age</span> <span class="keyword">AS</span> user_age <span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <!-- ========== JOINS ========== -->
+        <div class="section-divider"></div>
+        <h2 class="lesson-title" id="joins">PostgreSQL Joins</h2>
+        <p>JOIN ត្រូវបានប្រើសម្រាប់ភ្ជាប់តារាងច្រើនចូលគ្នា។</p>
+
+        <h3 id="inner-join">INNER JOIN</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> u.<span class="column">name</span>, o.<span class="column">total</span>
+<span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">INNER JOIN</span> <span class="table">orders</span> o <span class="keyword">ON</span> u.<span class="column">id</span> = o.<span class="column">user_id</span>;
+        </div>
+
+        <h3 id="left-join">LEFT JOIN</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> u.<span class="column">name</span>, o.<span class="column">total</span>
+<span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">LEFT JOIN</span> <span class="table">orders</span> o <span class="keyword">ON</span> u.<span class="column">id</span> = o.<span class="column">user_id</span>;
+        </div>
+
+        <h3 id="right-join">RIGHT JOIN</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> u.<span class="column">name</span>, o.<span class="column">total</span>
+<span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">RIGHT JOIN</span> <span class="table">orders</span> o <span class="keyword">ON</span> u.<span class="column">id</span> = o.<span class="column">user_id</span>;
+        </div>
+
+        <h3 id="full-join">FULL JOIN</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> u.<span class="column">name</span>, o.<span class="column">total</span>
+<span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">FULL OUTER JOIN</span> <span class="table">orders</span> o <span class="keyword">ON</span> u.<span class="column">id</span> = o.<span class="column">user_id</span>;
+        </div>
+
+        <h3 id="cross-join">CROSS JOIN</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">colors</span> <span class="keyword">CROSS JOIN</span> <span class="table">sizes</span>;
+        </div>
+
+        <!-- ========== ADVANCED ========== -->
+        <div class="section-divider"></div>
+        <h2 class="lesson-title" id="advanced">PostgreSQL Advanced</h2>
+
+        <h3 id="union">UNION</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="column">name</span> <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">UNION</span>
+<span class="keyword">SELECT</span> <span class="column">name</span> <span class="keyword">FROM</span> <span class="table">customers</span>;
+        </div>
+
+        <h3 id="group-by">GROUP BY</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="column">age</span>, <span class="func">COUNT</span>(*) <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">GROUP BY</span> <span class="column">age</span>;
+        </div>
+
+        <h3 id="having">HAVING</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="column">age</span>, <span class="func">COUNT</span>(*) <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">GROUP BY</span> <span class="column">age</span>
+<span class="keyword">HAVING</span> <span class="func">COUNT</span>(*) &gt; <span class="num-val">5</span>;
+        </div>
+
+        <h3 id="exists">EXISTS</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span> u
+<span class="keyword">WHERE EXISTS</span> (
+    <span class="keyword">SELECT</span> <span class="num-val">1</span> <span class="keyword">FROM</span> <span class="table">orders</span> <span class="keyword">WHERE</span> <span class="column">user_id</span> = u.<span class="column">id</span>
+);
+        </div>
+
+        <h3 id="any">ANY</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">WHERE</span> <span class="column">age</span> &gt; <span class="keyword">ANY</span> (<span class="keyword">SELECT</span> <span class="column">age</span> <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> &gt; <span class="num-val">25</span>);
+        </div>
+
+        <h3 id="all">ALL</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="table">users</span>
+<span class="keyword">WHERE</span> <span class="column">age</span> &gt; <span class="keyword">ALL</span> (<span class="keyword">SELECT</span> <span class="column">age</span> <span class="keyword">FROM</span> <span class="table">users</span> <span class="keyword">WHERE</span> <span class="column">age</span> &lt; <span class="num-val">20</span>);
+        </div>
+
+        <h3 id="case">CASE</h3>
+        <div class="code-block">
+<span class="keyword">SELECT</span> <span class="column">name</span>,
+    <span class="keyword">CASE</span>
+        <span class="keyword">WHEN</span> <span class="column">age</span> &lt; <span class="num-val">18</span> <span class="keyword">THEN</span> <span class="str">'Minor'</span>
+        <span class="keyword">WHEN</span> <span class="column">age</span> &lt; <span class="num-val">60</span> <span class="keyword">THEN</span> <span class="str">'Adult'</span>
+        <span class="keyword">ELSE</span> <span class="str">'Senior'</span>
+    <span class="keyword">END</span> <span class="keyword">AS</span> category
+<span class="keyword">FROM</span> <span class="table">users</span>;
+        </div>
+
+        <!-- ========== CERT & EXERCISES ========== -->
+        <div class="section-divider"></div>
+        <h2 class="lesson-title" id="cert">PostgreSQL Certificate & Exercises</h2>
+
+        <h3 id="exercises">Exercises</h3>
+        <p>សាកល្បងលំហាត់ PostgreSQL ជាច្រើនប្រភេទដើម្បីពង្រឹងជំនាញរបស់អ្នក។</p>
+
+        <h3 id="quiz">Quiz</h3>
+        <p>សាកល្បងសំណួរ Quiz ដើម្បីវាស់ស្ទង់ចំណេះដឹងរបស់អ្នក។</p>
+
+        <h3 id="syllabus">Syllabus</h3>
+        <p>មើល Syllabus ពេញលេញនៃវគ្គសិក្សា PostgreSQL។</p>
+
+        <h3 id="study-plan">Study Plan</h3>
+        <p>រៀបចំការសិក្សាតាមផែនការច្បាស់លាស់ ដើម្បីទទួលបានលទ្ធផលល្អបំផុត។</p>
+
+        <div class="note-box tip">
+            <i class="fas fa-lightbulb"></i>
+            <div><strong>គន្លឹះ៖</strong> សាកល្បងសរសេរ query ជាមួយ database ពិត ដើម្បីយល់ពី PostgreSQL លឿនជាងអានទ្រឹស្តី។ ប្រើ pgAdmin 4 ឬ psql ជាមួយ tool។</div>
+        </div>
+
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview">
+        <div class="preview-card">
+            <div class="preview-title"><i class="fas fa-database"></i> query.sql</div>
+            <div class="preview-body">
+<pre><span style="color:#c084fc">SELECT</span> * <span style="color:#c084fc">FROM</span> <span style="color:#f472b6">users</span>
+<span style="color:#c084fc">WHERE</span> <span style="color:#86efac">age</span> &gt; <span style="color:#fbbf24">18</span>
+<span style="color:#c084fc">ORDER BY</span> <span style="color:#86efac">name</span>;</pre>
+            </div>
+        </div>
+
+        <div class="preview-card">
+            <div class="preview-title" style="color:#22c55e;">
+                <i class="fas fa-table"></i> Result
+            </div>
+            <div class="output-box">
+                <table class="table-preview">
+                    <thead>
+                        <tr><th>id</th><th>name</th><th>age</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Anna</td><td>22</td></tr>
+                        <tr><td>2</td><td>Dara</td><td>20</td></tr>
+                        <tr><td>3</td><td>Sok</td><td>25</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="#" class="footer-logo">
+                <i class="fas fa-database"></i>
+                <span>Code_Learning</span>
+            </a>
+            <p class="footer-desc">
+                រៀនសរសេរកូដ បង្កើតគម្រោងពិតប្រាកដ និងរីកចម្រើនជាមួយសហគមន៍។
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular</h4>
+            <ul>
+                <li><a href="#">PostgreSQL Basics</a></li>
+                <li><a href="#">PostgreSQL Joins</a></li>
+                <li><a href="#">PostgreSQL Advanced</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@codekhmer.com</li>
+                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Code_Learning. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocGroups = document.querySelectorAll('.toc-group');
+    const links = document.querySelectorAll('.sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            const parentGroup = link.closest('.toc-group');
+            if (parentGroup) {
+                tocGroups.forEach(g => g.classList.remove('active'));
+                parentGroup.classList.add('active');
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('.lesson-title, .content h3');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            if (pageYOffset >= top - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                    const parent = a.closest('.toc-group');
+                    if (parent) {
+                        tocGroups.forEach(g => g.classList.remove('active'));
+                        parent.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

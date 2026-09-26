@@ -201,3 +201,71 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+function getCurrentUser() {
+    try {
+        return JSON.parse(localStorage.getItem("user") || "null");
+    } catch (error) {
+        return null;
+    }
+}
+
+function updateUserNavigation() {
+    const user = getCurrentUser();
+
+    const guestNav = document.getElementById("guest-nav");
+    const userNav = document.getElementById("user-nav");
+    const newUserSection = document.getElementById("new-user-section");
+
+    if (!guestNav || !userNav) {
+        return;
+    }
+
+    if (user) {
+        guestNav.classList.add("hidden");
+        userNav.classList.remove("hidden");
+
+        if (newUserSection) {
+            newUserSection.classList.add("hidden");
+        }
+    } else {
+        guestNav.classList.remove("hidden");
+        userNav.classList.add("hidden");
+
+        if (newUserSection) {
+            newUserSection.classList.remove("hidden");
+        }
+    }
+
+    setupNavbarLogout();
+}
+
+function setupNavbarLogout() {
+    const logoutButton = document.getElementById("logout-btn");
+
+    if (!logoutButton) {
+        return;
+    }
+
+    logoutButton.onclick = async function () {
+        try {
+            await fetch(
+                "http://127.0.0.1:8000/api/auth/logout.php",
+                {
+                    method: "POST",
+                    credentials: "include"
+                }
+            );
+        } catch (error) {
+            console.log("Logout API error:", error);
+        }
+
+        localStorage.removeItem("user");
+        localStorage.removeItem("code_learning_current_user");
+
+        window.location.href = "2.html";
+    };
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateUserNavigation();
+});

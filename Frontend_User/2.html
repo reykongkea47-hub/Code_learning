@@ -1,50 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code_Learning · Navbar (Light)</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Code_Learning · Home</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+
     <link rel="stylesheet" href="./style/navbar.css">
     <link rel="stylesheet" href="./style/harosection.css">
     <link rel="stylesheet" href="./style/tech_stack.css">
-<link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/footer.css">
 </head>
- <nav class="navbar">
+
+<body>
+
+<nav class="navbar">
+
     <a href="2.html" class="nav-brand">
         <i class="fas fa-code"></i>
         <span>Code_Learning</span>
     </a>
 
     <input type="checkbox" id="menu-checkbox">
-    <label for="menu-checkbox" class="menu-toggle" aria-label="Toggle navigation">
+
+    <label
+        for="menu-checkbox"
+        class="menu-toggle"
+        aria-label="Toggle navigation"
+    >
         <i class="fas fa-bars"></i>
     </label>
 
     <ul class="nav-links">
-        <li><a href="2.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
-        <li><a href="./project.html"><i class="fas fa-code-branch"></i> Projects</a></li>
-        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
-        <li><a href="#"><i class="fas fa-newspaper"></i> Blog</a></li>
+        <li>
+            <a href="2.html">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-book-open"></i>
+                Courses
+            </a>
+        </li>
+
+        <li>
+            <a href="./project.html">
+                <i class="fas fa-code-branch"></i>
+                Projects
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-users"></i>
+                Community
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-newspaper"></i>
+                Blog
+            </a>
+        </li>
     </ul>
 
-    <!-- Navbar CTA — auto fill by JS -->
-    <div class="nav-cta"></div>
+    <div class="nav-cta" id="nav-cta">
+        <div id="guest-nav">
+            <a href="login.html" class="nav-login">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign In
+            </a>
+
+            <a href="signup.html" class="nav-signup">
+                <i class="fas fa-user-plus"></i>
+                Create Account
+            </a>
+        </div>
+    </div>
+
 </nav>
 
-<!-- Script -->
-<script src="js/app.js"></script>
-<script src="js/profile.js"></script>
-
-
-<!-- ========== TECH STACK BAR ========== -->
 <section class="tech-bar">
-    <button class="scroll-btn scroll-left" aria-label="Scroll left">
+
+    <button
+        class="scroll-btn scroll-left"
+        aria-label="Scroll left"
+    >
         <i class="fas fa-chevron-left"></i>
     </button>
-       <div class="tech-scroll">
+
+    <div class="tech-scroll">
+
         <a href="./page/index.html">HTML</a>
         <a href="./page/css.html">CSS</a>
         <a href="./page/javascript.html">JAVASCRIPT</a>
@@ -57,142 +113,280 @@
         <a href="./page/csharp.html">C#</a>
         <a href="./page/bootstrap.html">BOOTSTRAP</a>
         <a href="./page/react.html">REACT</a>
+
     </div>
 
-    <button class="scroll-btn scroll-right" aria-label="Scroll right">
+    <button
+        class="scroll-btn scroll-right"
+        aria-label="Scroll right"
+    >
         <i class="fas fa-chevron-right"></i>
     </button>
+
 </section>
-  <!--harosection-->
-   <!-- ========== HERO SECTION (Split Layout) ========== -->
+
 <section class="hero">
+
     <div class="hero-container">
-        
-        <!-- LEFT SIDE: Text Content -->
+
         <div class="hero-text">
-            <span class="hero-badge">✨ #1 Platform for Learning Code</span>
+
+            <span class="hero-badge">
+                ✨ #1 Platform for Learning Code
+            </span>
+
             <h1 class="hero-title">
                 Code Your<br>
                 <span class="hero-highlight">Future</span> Today
             </h1>
+
             <p class="hero-subtitle">
-                From beginner to pro — learn Python, JavaScript, React, and more with interactive lessons and real projects.
+                From beginner to pro — learn Python, JavaScript, React,
+                and more with interactive lessons and real projects.
             </p>
+
             <div class="hero-buttons">
-                <a href="#" class="btn-primary">Start Learning →</a>
-                <a href="#" class="btn-secondary">▶ Watch Demo</a>
+
+                <a href="#" class="btn-primary">
+                    Start Learning →
+                </a>
+
+                <a href="#" class="btn-secondary">
+                    ▶ Watch Demo
+                </a>
+
             </div>
+
             <div class="hero-trust">
-                <span>Trusted by developers at</span>
+
+                <span>
+                    Trusted by developers at
+                </span>
+
                 <div class="trust-logos">
                     <span>Google</span>
                     <span>Meta</span>
                     <span>Netflix</span>
                     <span>Spotify</span>
                 </div>
+
             </div>
+
         </div>
 
-        <!-- RIGHT SIDE: Code Editor Mockup -->
         <div class="hero-visual">
+
             <div class="code-editor">
+
                 <div class="editor-header">
+
                     <div class="editor-dots">
                         <span class="dot red"></span>
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
                     </div>
-                    <span class="editor-title">hello.js</span>
+
+                    <span class="editor-title">
+                        hello.js
+                    </span>
+
                 </div>
+
                 <div class="editor-body">
+
                     <pre><code><span class="code-keyword">function</span> <span class="code-func">greet</span>(<span class="code-param">name</span>) {
   <span class="code-keyword">return</span> <span class="code-string">`Hello, ${name}!`</span>;
 }
 
 <span class="code-comment">// Welcome to Code_Learning 🚀</span>
+
 <span class="code-func">console</span>.<span class="code-method">log</span>(<span class="code-func">greet</span>(<span class="code-string">"Developer"</span>));</code></pre>
+
                 </div>
+
                 <div class="editor-footer">
-                    <span class="status-dot"></span> Running...
+                    <span class="status-dot"></span>
+                    Running...
                 </div>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
-<!-- ========== FOOTER ========== -->
+
+<section
+    class="new-user-section"
+    id="new-user-section"
+>
+
+    <div class="new-user-card">
+
+        <div class="new-user-content">
+
+            <span class="new-user-label">
+                NEW TO CODE_LEARNING?
+            </span>
+
+            <h2>
+                Start your coding journey today.
+            </h2>
+
+            <p>
+                Create your free account to access your profile,
+                explore courses, and track your learning progress.
+            </p>
+
+        </div>
+
+        <div class="new-user-actions">
+
+            <a
+                href="signup.html"
+                class="new-user-create"
+            >
+                <i class="fas fa-user-plus"></i>
+                Create Account
+            </a>
+
+            <a
+                href="login.html"
+                class="new-user-login"
+            >
+                Already have an account?
+                <span>Sign In</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
 <footer class="footer">
+
     <div class="footer-container">
 
-        <!-- Brand + Social -->
         <div class="footer-col footer-brand">
+
             <a href="#" class="footer-logo">
                 <i class="fas fa-code"></i>
                 <span>Code_Learning</span>
             </a>
+
             <p class="footer-desc">
-                Learn to code, build real projects, and grow with a community of developers.
+                Learn to code, build real projects,
+                and grow with a community of developers.
             </p>
+
             <div class="footer-socials">
-                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+
+                <a
+                    href="https://github.com/yourusername"
+                    target="_blank"
+                    aria-label="GitHub"
+                >
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook">
+
+                <a
+                    href="https://facebook.com/yourusername"
+                    target="_blank"
+                    aria-label="Facebook"
+                >
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram">
+
+                <a
+                    href="https://t.me/yourusername"
+                    target="_blank"
+                    aria-label="Telegram"
+                >
                     <i class="fab fa-telegram-plane"></i>
                 </a>
-                <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+
+                <a
+                    href="https://instagram.com/yourusername"
+                    target="_blank"
+                    aria-label="Instagram"
+                >
                     <i class="fab fa-instagram"></i>
                 </a>
+
             </div>
+
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-col">
+
             <h4>Quick Links</h4>
+
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="2.html">Home</a></li>
                 <li><a href="#">Courses</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
+
         </div>
 
-        <!-- Resources -->
         <div class="footer-col">
+
             <h4>Resources</h4>
+
             <ul>
                 <li><a href="#">Documentation</a></li>
                 <li><a href="#">Tutorials</a></li>
                 <li><a href="#">Community</a></li>
                 <li><a href="#">Support</a></li>
             </ul>
+
         </div>
 
-        <!-- Contact -->
         <div class="footer-col">
+
             <h4>Contact</h4>
+
             <ul>
-                <li><i class="fas fa-envelope"></i> hello@codelearning.com</li>
-                <li><i class="fas fa-phone"></i> +855 12 345 678</li>
-                <li><i class="fas fa-map-marker-alt"></i> Phnom Penh, Cambodia</li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    hello@codelearning.com
+                </li>
+
+                <li>
+                    <i class="fas fa-phone"></i>
+                    +855 12 345 678
+                </li>
+
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Phnom Penh, Cambodia
+                </li>
             </ul>
+
         </div>
 
     </div>
 
-    <!-- Bottom bar -->
     <div class="footer-bottom">
-        <p>© 2026 Code_Learning. All rights reserved.</p>
+
         <p>
-            <a href="#">Privacy Policy</a> ·
+            © 2026 Code_Learning. All rights reserved.
+        </p>
+
+        <p>
+            <a href="#">Privacy Policy</a>
+            ·
             <a href="#">Terms of Service</a>
         </p>
-    </div>
-</footer>
-<script src="js/app.js"></script>
- </body>
 
+    </div>
+
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
 </html>

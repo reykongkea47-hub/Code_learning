@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog — Code_Learning</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/blog.css">
+    <link rel="stylesheet" href="./style/footer.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <i class="fas fa-code"></i>
+            <span>Code_Learning</span>
+        </a>
+
+        <input type="checkbox" id="menu-checkbox">
+
+        <label
+            for="menu-checkbox"
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-book-open"></i>
+                    Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="projects.html">
+                    <i class="fas fa-code-branch"></i>
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="community.html">
+                    <i class="fas fa-users"></i>
+                    Community
+                </a>
+            </li>
+
+            <li>
+                <a href="blog.html" class="active">
+                    <i class="fas fa-newspaper"></i>
+                    Blog
+                </a>
+            </li>
+        </ul>
+
+        <div class="nav-cta" id="nav-cta"></div>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                <i class="fas fa-newspaper"></i>
+                Insights & Tutorials
+            </span>
+
+            <h1>
+                Stories from the
+                <span>Code World</span>
+            </h1>
+
+            <p>
+                Tips, tutorials, and stories about programming,
+                web development, and building real projects.
+            </p>
+
+            <div class="hero-search">
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search articles..."
+                >
+
+                <button type="button" id="search-btn">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="blog-container">
+
+        <main class="posts-section">
+
+            <h2>
+                <i class="fas fa-star"></i>
+                Featured Article
+            </h2>
+
+            <div
+                class="featured-post"
+                id="featured-post"
+            ></div>
+
+            <h2 class="latest-title">
+                <i class="fas fa-clock"></i>
+                Latest Articles
+            </h2>
+
+            <div
+                class="posts-grid"
+                id="posts-grid"
+            ></div>
+
+        </main>
+
+        <aside class="sidebar">
+
+            <div class="sidebar-card">
+                <h3>
+                    <i class="fas fa-folder"></i>
+                    Categories
+                </h3>
+
+                <ul class="category-list">
+                    <li>
+                        <a href="#">
+                            HTML
+                            <span class="count">12</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            CSS
+                            <span class="count">18</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            JavaScript
+                            <span class="count">24</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            React
+                            <span class="count">15</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Python
+                            <span class="count">20</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Database
+                            <span class="count">8</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Career
+                            <span class="count">6</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>
+                    <i class="fas fa-fire"></i>
+                    Popular Posts
+                </h3>
+
+                <ul
+                    class="popular-list"
+                    id="popular-list"
+                ></ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>
+                    <i class="fas fa-tags"></i>
+                    Popular Tags
+                </h3>
+
+                <div class="tags-cloud">
+                    <span class="tag">#javascript</span>
+                    <span class="tag">#react</span>
+                    <span class="tag">#css</span>
+                    <span class="tag">#html</span>
+                    <span class="tag">#python</span>
+                    <span class="tag">#webdev</span>
+                    <span class="tag">#coding</span>
+                    <span class="tag">#tutorial</span>
+                    <span class="tag">#tips</span>
+                    <span class="tag">#beginners</span>
+                    <span class="tag">#career</span>
+                    <span class="tag">#database</span>
+                </div>
+            </div>
+
+            <div class="sidebar-card newsletter">
+                <h3>
+                    <i class="fas fa-envelope"></i>
+                    Newsletter
+                </h3>
+
+                <p>
+                    Get the latest articles delivered to your inbox every week.
+                </p>
+
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    placeholder="your@email.com"
+                >
+
+                <button
+                    type="button"
+                    onclick="subscribe()"
+                >
+                    <i class="fas fa-paper-plane"></i>
+                    Subscribe
+                </button>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col footer-brand">
+
+                <a href="#" class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span>Code_Learning</span>
+                </a>
+
+                <p class="footer-desc">
+                    Learn to code, build real projects,
+                    and grow with a community of developers.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a
+                        href="https://github.com/yourusername"
+                        target="_blank"
+                        aria-label="GitHub"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a
+                        href="https://facebook.com/yourusername"
+                        target="_blank"
+                        aria-label="Facebook"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="https://t.me/yourusername"
+                        target="_blank"
+                        aria-label="Telegram"
+                    >
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+
+                    <a
+                        href="https://instagram.com/yourusername"
+                        target="_blank"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+
+                <ul>
+                    <li>
+                        <a href="#">Documentation</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Tutorials</a>
+                    </li>
+
+                    <li>
+                        <a href="community.html">Community</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+
+                <ul>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        hello@codelearning.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        +855 12 345 678
+                    </li>
+
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Phnom Penh, Cambodia
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Code_Learning. All rights reserved.
+            </p>
+
+            <p>
+                <a href="#">Privacy Policy</a>
+                ·
+                <a href="#">Terms of Service</a>
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/blog.js"></script>
+
+
+
+</body>
+</html>

@@ -1,7 +1,21 @@
 <?php
 
 header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: http://127.0.0.1:5501");
+
+$allowedOrigins = [
+    "http://127.0.0.1:5500",
+    "http://127.0.0.1:5501",
+    "http://localhost:5500",
+    "http://localhost:5501"
+];
+
+$origin = $_SERVER["HTTP_ORIGIN"] ?? "";
+
+if (in_array($origin, $allowedOrigins, true)) {
+    header("Access-Control-Allow-Origin: " . $origin);
+}
+
+header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Methods: GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
@@ -13,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
 require_once "../../config/database.php";
 
 try {
-
     $sql = "SELECT id, name, email, role
             FROM users
             ORDER BY id DESC";
@@ -29,7 +42,6 @@ try {
     ]);
 
 } catch (PDOException $e) {
-
     http_response_code(500);
 
     echo json_encode([

@@ -1,65 +1,94 @@
-const API_BASE = "http://localhost:8000";
+
+const API_BASE = "http://127.0.0.1:8000";
 
 async function apiRequest(path, options = {}) {
-    const res = await fetch(`${API_BASE}${path}`, {
+    const response = await fetch(`${API_BASE}${path}`, {
+        credentials: "include",
         headers: {
             "Content-Type": "application/json",
-            ...options.headers,
+            Accept: "application/json",
+            ...options.headers
         },
-        ...options,
+        ...options
     });
 
-    const data = await res.json().catch(() => ({}));
+    const data = await response.json().catch(() => ({}));
 
-    if (!res.ok || data.success === false) {
+    if (!response.ok || data.success === false) {
         throw new Error(data.message || "Request failed");
     }
 
     return data;
 }
 
-function showMsg(el, text, type = "error") {
-    if (!el) return;
+function showMsg(element, text, type = "error") {
+    if (!element) return;
 
-    el.textContent = text;
-    el.className = `form-msg ${type}`;
+    element.textContent = text;
+    element.className = `form-msg ${type}`;
 }
 
-function escapeHtml(str) {
+function escapeHtml(value) {
     const div = document.createElement("div");
-    div.textContent = str ?? "";
+    div.textContent = value ?? "";
     return div.innerHTML;
+}
+
+function getAdmin() {
+    try {
+        return JSON.parse(localStorage.getItem("admin") || "null");
+    } catch {
+        return null;
+    }
 }
 
 const loginForm = document.getElementById("login-form");
 
 if (loginForm) {
-    loginForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
+    loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-        const msg = document.getElementById("form-msg");
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
+        const message = document.getElementById("form-msg");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+
+        const email = emailInput?.value.trim() || "";
+        const password = passwordInput?.value || "";
+
+        if (!email || !password) {
+            showMsg(message, "Please enter email and password");
+            return;
+        }
 
         try {
-            const data = await apiRequest("/api/auth/login.php", {
+            const data = await apiRequest("/api/admin/auth/login.php", {
                 method: "POST",
                 body: JSON.stringify({
-                    email: email,
-                    password: password,
-                }),
+                    email,
+                    password
+                })
             });
 
-            if (!data.user || data.user.role !== "admin") {
-                showMsg(msg, "This account does not have admin access");
+            if (!data.user) {
+                throw new Error("User information was not returned");
+            }
+
+            if (data.user.role !== "admin") {
+                showMsg(
+                    message,
+                    "This account does not have admin access"
+                );
                 return;
             }
 
-            localStorage.setItem("admin", JSON.stringify(data.user));
+            localStorage.setItem(
+                "admin",
+                JSON.stringify(data.user)
+            );
 
             showMsg(
-                msg,
-                "Logged in — redirecting...",
+                message,
+                "Login successful. Redirecting...",
                 "success"
             );
 
@@ -67,8 +96,9 @@ if (loginForm) {
                 window.location.href = "dashboard.html";
             }, 800);
 
-        } catch (err) {
-            showMsg(msg, err.message);
+        } catch (error) {
+            console.error("Login error:", error);
+            showMsg(message, error.message || "Failed to fetch");
         }
     });
 }
@@ -76,317 +106,311 @@ if (loginForm) {
 const courseTableBody = document.getElementById("course-table-body");
 
 if (courseTableBody) {
-    const admin = JSON.parse(
-        localStorage.getItem("admin") || "null"
-    );
+    const admin = getAdmin();
 
-    if (!admin) {
+    if (!admin || admin.role !== "admin") {
         window.location.href = "login.html";
     } else {
         const adminName = document.getElementById("admin-name");
+        const adminAvatar = document.getElementById("admin-avatar");
 
         if (adminName) {
             adminName.textContent = admin.name || "Admin";
         }
 
-        loadCourses();
+        if (adminAvatar) {
+            adminAvatar.textContent = (admin.name || "A")
+                .charAt(0)
+                .toUpperCase();
+        }
+
         loadUsers();
+        loadCourses();
     }
 
-    document
-        .getElementById("logout-link")
-        ?.addEventListener("click", async (e) => {
-            e.preventDefault();
+    const logoutLink = document.getElementById("logout-link");
 
-            await apiRequest("/api/auth/logout.php", {
-                method: "POST",
-            }).catch(() => {});
+    if (logoutLink) {
+        logoutLink.addEventListener("click", async (event) => {
+            event.preventDefault();
+
+            try {
+                await apiRequest("/api/admin/auth/logout.php", {
+                    method: "POST"
+                });
+            } catch (error) {
+                console.warn("Logout API error:", error);
+            }
 
             localStorage.removeItem("admin");
-
             window.location.href = "login.html";
         });
+    }
 
-    document
-        .getElementById("add-course-form")
-        ?.addEventListener("submit", async (e) => {
-            e.preventDefault();
+    const addCourseForm = document.getElementById("add-course-form");
 
-            const msg = document.getElementById("course-form-msg");
+    if (addCourseForm) {
+        addCourseForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
 
-            const title = document
-                .getElementById("title")
-                .value
-                .trim();
+            const message = document.getElementById("course-form-msg");
+            const title = document.getElementById("title")?.value.trim() || "";
+            const instructor = document.getElementById("instructor")?.value.trim() || "";
+            const description = document.getElementById("description")?.value.trim() || "";
 
-            const description = document
-                .getElementById("description")
-                .value
-                .trim();
-
-            const instructor = document
-                .getElementById("instructor")
-                .value
-                .trim();
+            if (!title || !instructor || !description) {
+                showMsg(
+                    message,
+                    "Please fill in all course fields"
+                );
+                return;
+            }
 
             try {
                 await apiRequest("/api/courses/index.php", {
                     method: "POST",
                     body: JSON.stringify({
-                        title: title,
-                        description: description,
-                        instructor: instructor,
-                    }),
+                        title,
+                        instructor,
+                        description
+                    })
                 });
 
                 showMsg(
-                    msg,
-                    "Course added",
+                    message,
+                    "Course added successfully",
                     "success"
                 );
 
-                e.target.reset();
-
+                addCourseForm.reset();
                 loadCourses();
 
-            } catch (err) {
-                showMsg(msg, err.message);
+            } catch (error) {
+                console.error("Add course error:", error);
+                showMsg(
+                    message,
+                    error.message || "Failed to add course"
+                );
             }
         });
+    }
 }
 
-function loadCourses() {
-    apiRequest("/api/courses/index.php")
-        .then((data) => {
-            if (!data.courses || !data.courses.length) {
-                courseTableBody.innerHTML = `
-                    <tr>
-                        <td colspan="4" class="empty-state">
-                            No courses yet
-                        </td>
-                    </tr>
-                `;
-                return;
-            }
+async function loadUsers() {
+    const totalUsersElement =
+        document.getElementById("total-users");
 
-            courseTableBody.innerHTML = data.courses
-                .map(
-                    (c) => `
-                        <tr>
-                            <td>
-                                ${escapeHtml(c.id ?? "—")}
-                            </td>
+    const activeStudentsElement =
+        document.getElementById("active-students");
 
-                            <td>
-                                ${escapeHtml(c.title)}
-                            </td>
+    const usersTableBody =
+        document.getElementById("users-table-body");
 
-                            <td>
-                                ${escapeHtml(c.instructor || "—")}
-                            </td>
+    const recentUsersBody =
+        document.getElementById("recent-users-body");
 
-                            <td>
-                                ${escapeHtml(c.description || "—")}
-                            </td>
-                        </tr>
-                    `
-                )
-                .join("");
-        })
-        .catch((err) => {
-            console.error("Failed to load courses:", err);
+    try {
+        const data = await apiRequest(
+            "/api/admin/users.php"
+        );
 
-            courseTableBody.innerHTML = `
-                <tr>
-                    <td colspan="4" class="empty-state">
-                        Could not load courses
-                    </td>
-                </tr>
-            `;
-        });
-}
+        console.log("Users API:", data);
 
-function loadUsers() {
-    apiRequest("/api/admin/users.php")
-        .then((data) => {
-            console.log("Users API:", data);
+        const users = Array.isArray(data.users)
+            ? data.users
+            : [];
 
-            const users = data.users || [];
+        const totalUsers = Number(
+            data.count ?? users.length
+        );
 
-            const totalUsers =
-                document.getElementById("total-users");
+        console.log("Total users:", totalUsers);
+        console.log("Users:", users);
 
-            if (totalUsers) {
-                totalUsers.textContent = users.length;
-            }
+        if (totalUsersElement) {
+            totalUsersElement.textContent = totalUsers;
+        }
 
-            const usersTableBody =
-                document.getElementById("users-table-body");
+        const studentCount = users.filter(
+            (user) => user.role === "student"
+        ).length;
 
-            if (usersTableBody) {
-                if (!users.length) {
-                    usersTableBody.innerHTML = `
-                        <tr>
-                            <td colspan="6" class="empty-state">
-                                No users yet
-                            </td>
-                        </tr>
-                    `;
-                } else {
-                    usersTableBody.innerHTML = users
-                        .map(
-                            (user) => `
-                                <tr>
-                                    <td>
-                                        ${escapeHtml(user.id)}
-                                    </td>
+        if (activeStudentsElement) {
+            activeStudentsElement.textContent = studentCount;
+        }
 
-                                    <td>
-                                        <div class="user-cell">
-                                            <div class="user-avatar">
-                                                ${escapeHtml(
-                                                    (user.name || "U")
-                                                        .charAt(0)
-                                                        .toUpperCase()
-                                                )}
-                                            </div>
-                                            ${escapeHtml(user.name)}
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        ${escapeHtml(user.email)}
-                                    </td>
-
-                                    <td>
-                                        <span class="badge badge-success">
-                                            ${escapeHtml(user.role)}
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="badge badge-success">
-                                            Active
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        —
-                                    </td>
-                                </tr>
-                            `
-                        )
-                        .join("");
-                }
-            }
-
-            const recentUsersBody =
-                document.getElementById("recent-users-body");
-
-            if (recentUsersBody) {
-                if (!users.length) {
-                    recentUsersBody.innerHTML = `
-                        <tr>
-                            <td colspan="4" class="empty-state">
-                                No users yet
-                            </td>
-                        </tr>
-                    `;
-                } else {
-                    recentUsersBody.innerHTML = users
-                        .slice(0, 5)
-                        .map(
-                            (user) => `
-                                <tr>
-                                    <td>
-                                        <div class="user-cell">
-                                            <div class="user-avatar">
-                                                ${escapeHtml(
-                                                    (user.name || "U")
-                                                        .charAt(0)
-                                                        .toUpperCase()
-                                                )}
-                                            </div>
-                                            ${escapeHtml(user.name)}
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        ${escapeHtml(user.email)}
-                                    </td>
-
-                                    <td>
-                                        <span class="badge badge-success">
-                                            ${escapeHtml(user.role)}
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="badge badge-success">
-                                            Active
-                                        </span>
-                                    </td>
-                                </tr>
-                            `
-                        )
-                        .join("");
-                }
-            }
-
-            createUserChart(users);
-
-        })
-        .catch((err) => {
-            console.error("Failed to load users:", err);
-
-            const totalUsers =
-                document.getElementById("total-users");
-
-            if (totalUsers) {
-                totalUsers.textContent = "0";
-            }
-
-            const usersTableBody =
-                document.getElementById("users-table-body");
-
-            if (usersTableBody) {
+        if (usersTableBody) {
+            if (!users.length) {
                 usersTableBody.innerHTML = `
                     <tr>
                         <td colspan="6" class="empty-state">
-                            Could not load users
+                            No users yet
                         </td>
                     </tr>
                 `;
+            } else {
+                usersTableBody.innerHTML = users
+                    .map((user) => {
+                        const name = user.name || "Unknown";
+                        const email = user.email || "—";
+                        const role = user.role || "—";
+                        const avatar = name
+                            .charAt(0)
+                            .toUpperCase();
+
+                        return `
+                            <tr>
+                                <td>
+                                    ${escapeHtml(user.id)}
+                                </td>
+
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">
+                                            ${escapeHtml(avatar)}
+                                        </div>
+
+                                        ${escapeHtml(name)}
+                                    </div>
+                                </td>
+
+                                <td>
+                                    ${escapeHtml(email)}
+                                </td>
+
+                                <td>
+                                    <span class="badge badge-success">
+                                        ${escapeHtml(role)}
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="badge badge-success">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    —
+                                </td>
+                            </tr>
+                        `;
+                    })
+                    .join("");
             }
+        }
 
-            const recentUsersBody =
-                document.getElementById("recent-users-body");
-
-            if (recentUsersBody) {
+        if (recentUsersBody) {
+            if (!users.length) {
                 recentUsersBody.innerHTML = `
                     <tr>
                         <td colspan="4" class="empty-state">
-                            Could not load users
+                            No users yet
                         </td>
                     </tr>
                 `;
+            } else {
+                recentUsersBody.innerHTML = users
+                    .slice(0, 5)
+                    .map((user) => {
+                        const name = user.name || "Unknown";
+                        const email = user.email || "—";
+                        const role = user.role || "—";
+                        const avatar = name
+                            .charAt(0)
+                            .toUpperCase();
+
+                        return `
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">
+                                            ${escapeHtml(avatar)}
+                                        </div>
+
+                                        ${escapeHtml(name)}
+                                    </div>
+                                </td>
+
+                                <td>
+                                    ${escapeHtml(email)}
+                                </td>
+
+                                <td>
+                                    <span class="badge badge-success">
+                                        ${escapeHtml(role)}
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="badge badge-success">
+                                        Active
+                                    </span>
+                                </td>
+                            </tr>
+                        `;
+                    })
+                    .join("");
             }
-        });
+        }
+
+        createUserChart(users);
+
+    } catch (error) {
+        console.error("Failed to load users:", error);
+
+        if (totalUsersElement) {
+            totalUsersElement.textContent = "0";
+        }
+
+        if (activeStudentsElement) {
+            activeStudentsElement.textContent = "0";
+        }
+
+        if (usersTableBody) {
+            usersTableBody.innerHTML = `
+                <tr>
+                    <td colspan="6" class="empty-state">
+                        Could not load users
+                    </td>
+                </tr>
+            `;
+        }
+
+        if (recentUsersBody) {
+            recentUsersBody.innerHTML = `
+                <tr>
+                    <td colspan="4" class="empty-state">
+                        Could not load users
+                    </td>
+                </tr>
+            `;
+        }
+    }
 }
 
 function createUserChart(users) {
     const canvas = document.getElementById("userChart");
 
-    if (!canvas) {
+    if (!canvas || typeof Chart === "undefined") {
         return;
     }
+
+    const adminCount = users.filter(
+        (user) => user.role === "admin"
+    ).length;
 
     const userCount = users.filter(
         (user) => user.role === "user"
     ).length;
 
-    const adminCount = users.filter(
-        (user) => user.role === "admin"
+    const studentCount = users.filter(
+        (user) => user.role === "student"
+    ).length;
+
+    const otherCount = users.filter(
+        (user) =>
+            !["admin", "user", "student"].includes(user.role)
     ).length;
 
     if (window.userChart instanceof Chart) {
@@ -395,17 +419,122 @@ function createUserChart(users) {
 
     window.userChart = new Chart(canvas, {
         type: "doughnut",
+
         data: {
-            labels: ["Users", "Admins"],
+            labels: [
+                "Admins",
+                "Users",
+                "Students",
+                "Other"
+            ],
+
             datasets: [
                 {
-                    data: [userCount, adminCount],
-                },
-            ],
+                    data: [
+                        adminCount,
+                        userCount,
+                        studentCount,
+                        otherCount
+                    ]
+                }
+            ]
         },
+
         options: {
             responsive: true,
             maintainAspectRatio: false,
-        },
+
+            plugins: {
+                legend: {
+                    position: "bottom"
+                }
+            }
+        }
     });
+}
+
+async function loadCourses() {
+    if (!courseTableBody) {
+        return;
+    }
+
+    try {
+        const data = await apiRequest(
+            "/api/courses/index.php"
+        );
+
+        const courses = Array.isArray(data.courses)
+            ? data.courses
+            : [];
+
+        const courseCount =
+            data.count ?? courses.length;
+
+        updateCourseCount(courseCount);
+
+        if (!courses.length) {
+            courseTableBody.innerHTML = `
+                <tr>
+                    <td colspan="4" class="empty-state">
+                        No courses yet
+                    </td>
+                </tr>
+            `;
+
+            return;
+        }
+
+        courseTableBody.innerHTML = courses
+            .map((course) => {
+                return `
+                    <tr>
+                        <td>
+                            ${escapeHtml(course.id ?? "—")}
+                        </td>
+
+                        <td>
+                            ${escapeHtml(course.title ?? "—")}
+                        </td>
+
+                        <td>
+                            ${escapeHtml(
+                                course.instructor || "—"
+                            )}
+                        </td>
+
+                        <td>
+                            ${escapeHtml(
+                                course.description || "—"
+                            )}
+                        </td>
+                    </tr>
+                `;
+            })
+            .join("");
+
+    } catch (error) {
+        console.error(
+            "Failed to load courses:",
+            error
+        );
+
+        courseTableBody.innerHTML = `
+            <tr>
+                <td colspan="4" class="empty-state">
+                    Could not load courses
+                </td>
+            </tr>
+        `;
+
+        updateCourseCount(0);
+    }
+}
+
+function updateCourseCount(count) {
+    const element =
+        document.getElementById("total-courses");
+
+    if (element) {
+        element.textContent = count;
+    }
 }
